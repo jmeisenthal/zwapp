@@ -16,5 +16,9 @@
     "url": "https://github.com/jmeisenthal/zwapp/issues"
   },
   "homepage": "https://github.com/jmeisenthal/zwapp#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
+  }
 }
