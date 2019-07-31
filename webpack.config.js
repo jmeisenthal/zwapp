@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const extractLess = new MiniCssExtractPlugin({filename: 'css/zwapp.css', chunkFilename: '[id].css'});
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -23,6 +24,7 @@ module.exports = {
     ],
   },
   plugins: [
-  	extractLess
+  	extractLess,
+    new CopyPlugin([{ from: './php/index.php'}])
   ],
 };
