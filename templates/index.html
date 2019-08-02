@@ -1,8 +1,15 @@
 <html>
     <head>
         <title>{{ application }}</title>
+        <script src="https://kit.fontawesome.com/d6d448df16.js"></script>
+        {% block stylesheets %}
+            <link href="css/zwapp.css" rel="stylesheet"/>
+        {% endblock %}
     </head>
     <body>
         <h1>Welcome to {{ application }}!</h1>
+        <main>
+            <i class="fas fa-rocket"></i>
+        </main>
     </body>
 </html>

@@ -5,7 +5,9 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  entry: './js/zwapp.js',
   output: {
+  	filename: 'main.js',
   	path: __dirname + '/public',
 
   },
