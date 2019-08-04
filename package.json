@@ -16,7 +16,9 @@
     "url": "https://github.com/jmeisenthal/zwapp/issues"
   },
   "homepage": "https://github.com/jmeisenthal/zwapp#readme",
-  "dependencies": {},
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
   "devDependencies": {
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.1.0",

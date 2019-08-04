@@ -14,7 +14,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.less$/,
+        test: /\.less|css$/,
         use: [
         	{ 
         		loader: MiniCssExtractPlugin.loader,
@@ -23,10 +23,12 @@ module.exports = {
         	{ loader: 'less-loader' }
     	]
       },
-    ],
+     ],
   },
   plugins: [
   	extractLess,
-    new CopyPlugin([{ from: './php/index.php'}])
+    new CopyPlugin([
+    	{ from: './php/index.php'},
+	])
   ],
 };

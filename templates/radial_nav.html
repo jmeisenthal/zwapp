@@ -1,9 +1,12 @@
-<div class="radial_nav radial_nav--state-{%- block state -%}initial{%- endblock -%}">
+{% set state = state ?: 'initial' %}
+
+<div class="radial_nav radial_nav--state-{{ state }}">
 	<div class="radial_nav__choices">
 		{% block choices %}
 		{% endblock %}
 	</div>
 
-	<button class="radial_nav__button" onclick="{%- block click_funct -%}{% -endblock -%}">
+	<button class="radial_nav__button" onclick="{{ click_funct ?: 'foo()' }}">
+		<i class="fas fa-{{ (state == 'initial') ? 'plus' : 'times' }}"></i>
 	</button>
 </div>

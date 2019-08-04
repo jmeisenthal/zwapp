@@ -1,0 +1,38 @@
+@import 'vars';
+@import 'atomic';
+@radial_nav__button-fs: @font-size-large-button;
+
+.radial_nav {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 100;
+}
+
+.radial_nav__button {
+	font-size: @radial_nav__button-fs;
+	border-style: solid;
+	border-width: 4px;
+	border-bottom-style: none;
+	border-color: @color_orange;
+	border-top-right-radius: 100%;
+	border-top-left-radius: 100%;
+	background-color: @color_daffodil;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;	width: 2em;
+	height: 2em;
+	box-sizing: content-box;
+
+	&:hover {
+		border-width: 7px;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
