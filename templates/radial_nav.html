@@ -2,8 +2,9 @@
 
 <div class="radial_nav radial_nav--state-{{ state }}">
 	<div class="radial_nav__choices">
-		{% block choices %}
-		{% endblock %}
+		{# {% block choices %} #}
+			{# {% include 'radial_nav__choice.html' %} #}
+		{# {% endblock %} #}
 	</div>
 
 	<button class="radial_nav__button" onclick="{{ click_funct ?: 'foo()' }}">

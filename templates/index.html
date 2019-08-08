@@ -9,7 +9,8 @@
     <body>
         <h1>Welcome to {{ application }}!</h1>
         <main>
-            {% include 'radial_nav.html' %}
+            {% include 'radial_nav.html' with { state: 'initial' } %}
         </main>
     </body>
+    <script type="text/javascript" src="main.js"></script>
 </html>

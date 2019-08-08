@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/jmeisenthal/zwapp#readme",
   "dependencies": {
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
