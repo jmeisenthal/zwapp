@@ -18,6 +18,7 @@ abstract class Query
 
 	function __construct($type, $query_data, $id = NULL)
 	{
+		error_log("Test3");
 		$this->type = $type;
 		$this->query_data = self::ComicVine_KEY + $query_data;
 		$this->id = $id;
@@ -39,9 +40,19 @@ abstract class Query
 		return $this->result;
 	}
 
-	// public function __get($name) {
-	// 	return $this->get_result()->name;
-	// }
+	public function __get($prop) {
+		return $this->get_result()->$prop;
+	}
+
+	abstract protected function getProperties();
+
+	public function to_array() {
+		$arr = [];
+		foreach ($this->getProperties() as $value) {
+			$arr[$value] = $this->$value;
+		}
+		return $arr;
+	}
 }
 
 /**
@@ -55,12 +66,16 @@ class Publisher extends Query
 		parent::__construct('publisher', ["format"=>"json", "field_list"=>"image,id,name"], $id);
 	}
 
-	// public function __get($name) {
-	// 	if ($name == 'icon_url') {
-	// 		return $this->get_result()->image->icon_url;
-	// 	}
-	// 	return parent::__get($name);
-	// }
+	protected function getProperties() {
+		return ["id", "name", "icon_url"];
+	}
+
+	public function __get($prop) {
+		if ($prop == 'icon_url') {
+			return $this->get_result()->image->icon_url;
+		}
+		return parent::__get($prop);
+	}
 
 	public function get_name() {
 		return $this->get_result()->name;
