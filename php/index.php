@@ -1,14 +1,8 @@
 
 <?php
-	$vendor = dirname(__FILE__) . "/../vendor/";
+	require('php/init_twig.php');
 
-	require_once($vendor . "autoload.php");
-
-	$loader = new Twig\Loader\FilesystemLoader(dirname(__FILE__) . "/../templates");
-	$twig = new \Twig\Environment($loader);
-	
-	$template = $twig->load('index.html');
-	$template->display(array('application'=>'Zwapp!'));
+	$twig->load('index.html')->display(array('application'=>'Zwapp!'));
 ?>
 
 

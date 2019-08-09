@@ -29,7 +29,7 @@ module.exports = {
   	extractLess,
     new CopyPlugin([
     	{ from: './php/index.php'},
-    	{ from: './php/*'},
+    	{ from: './php/**/*'},
     	{ from: './img/*'}
 	])
   ],
