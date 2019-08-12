@@ -36,7 +36,7 @@ abstract class Query
 			$this->execute_query();
 		}
 
-		error_log("Result name: " . print_r($this->result->name, true));
+		// error_log("Result name: " . print_r($this->result->name, true));
 		return $this->result;
 	}
 
@@ -75,18 +75,6 @@ class Publisher extends Query
 			return $this->get_result()->image->icon_url;
 		}
 		return parent::__get($prop);
-	}
-
-	public function get_name() {
-		return $this->get_result()->name;
-	}
-
-	public function get_id() {
-		return $this->get_result()->id;
-	}
-
-	public function get_icon_url() {
-		return $this->get_result()->image->icon_url;
 	}
 }
 

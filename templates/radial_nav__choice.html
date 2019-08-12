@@ -1,3 +1,8 @@
-<div class="radial_nav__choice">
-	<button type="button" class="radial_nav__choice_button"><img src="{{ icon_url }}" height="50px" width="50px"></button>
+{% set button_id = 'choice_' ~ id %}
+
+<div class="radial_nav__choice transit">
+	<div class="transit__inner">
+		<label for="{{ button_id }}">{{ name }}</label>
+		<button id="{{ button_id }}" type="button" class="radial_nav__choice_button"><img src="{{ icon_url }}" height="50px" width="50px"></button>
+	</div>
 </div>

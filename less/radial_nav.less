@@ -1,11 +1,16 @@
 @import 'vars';
 @import 'atomic';
 @radial_nav__button-fs: @font-size-large-button;
+@radial_nav__choice-height: 60px;
+@radial_nav-height: 3 * @radial_nav__choice-height;
 
 .radial_nav {
 	position: fixed;
+//	display: flex;
+	// align-items: flex-end;
 	bottom: 0;
 	width: 100%;
+//	height: @radial_nav-height;
 	text-align: center;
 	z-index: 100;
 }
@@ -24,7 +29,8 @@
     justify-content: center;
     align-items: center;
     margin-left: auto;
-    margin-right: auto;	width: 2em;
+    margin-right: auto;	
+    width: 2em;
 	height: 2em;
 	box-sizing: content-box;
 
@@ -40,6 +46,24 @@
 		font-size: @radial_nav__button-fs + 4px;
 	}
 }
+
+.radial_nav__choice {
+	position: absolute;
+	width: 25%;
+//	text-align: left;
+	bottom: 0;
+	left: 50%;
+	padding-left: 35px + 12px;
+}
+
+.radial_nav__choice--1 {
+
+}
+.radial_nav__choice--2 {
+	transform: translate(20%, @radial_nav__choice-height);
+}
+
+
 
 .radial_nav__choice_button {
 	width: 50px;

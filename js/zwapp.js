@@ -25,7 +25,7 @@ function comicVineQuery(queryType, params, callback) {
 
 $(function() {
 	$.ajax({
-		url: 'php/service/publisher.php?id=10',
+		url: 'php/service/publisher.php?id=10,31,364,101,521',
 	})
 	.done(function(response) {
 		console.log("success");
