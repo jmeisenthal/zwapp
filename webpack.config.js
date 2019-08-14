@@ -23,6 +23,12 @@ module.exports = {
         	{ loader: 'less-loader' }
     	]
       },
+      {
+      	test: /\.svg$/,
+      	// loader: 'svg-inline-loader'
+      	loader: 'url-loader'
+      	// loader: 'file-loader?name=../img/[name].[ext]'
+      }
      ],
   },
   plugins: [

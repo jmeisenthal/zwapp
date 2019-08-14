@@ -1,13 +1,40 @@
 @import 'vars';
 
+@bubble-fg: @font-color_default;
+@bubble-fg_esc: escape("@{bubble-fg}");
+@bubble-bg: @color_white;
+@bubble-bg_esc: escape("@{bubble-bg}");
+@bubble-arrow-size: 15px;
+@bubble-data-uri: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.59607 142.21489" version="1.1" width="@{bubble-arrow-size}" height="@{bubble-arrow-size}" style="enable-background:new"><g transform="translate(-43.070584,-42.704396)"><path style="fill:@{bubble-bg_esc};stroke:none;stroke-width:21;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 46.869047,181.33929 C 100.54167,88.357143 56.696428,43.755952 56.696428,43.755952 l 91.470232,0.755952 C 147.84193,170.44874 84.311133,162.58719 46.869047,181.33929 Z" /><path style="fill:none;stroke:@{bubble-fg_esc};stroke-width:21;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 148.16666,44.511904 C 147.84193,170.44874 84.311133,162.58719 46.869047,181.33929 100.54167,88.357143 56.696428,43.755952 56.696428,43.755952" /></g></svg>';
+
 .speech-bubble {
 	&:extend(.font-title);
 	font-size: @font-size-title-small;
-	background-color: @color_white;
-	color: @font-color_default;
+	background-color: @bubble-bg;
+	color: @bubble-fg;
 	border-style: solid;
 	border-width: 3px;
 	border-radius: 6px;
 	padding: 3px;
-	margin-bottom: 6px;
+	margin-bottom: @bubble-arrow-size - 3px; // bubble-arrow height - border-width
+	position: relative;
+
+	&::after {
+		content: url(@bubble-data-uri);
+
+		width: @bubble-arrow-size;
+		height: @bubble-arrow-size;
+		position: absolute;
+		fill: green;
+		bottom: -@bubble-arrow-size + 1px;
+		right: 15%;
+	}
+}
+
+.bubble-arrow__stroke {
+	stroke: @bubble-fg;
+	stroke-width: 3;
+}
+.bubble-arrow__fill {
+	fill: @bubble-bg;
 }
