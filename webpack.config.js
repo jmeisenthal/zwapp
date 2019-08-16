@@ -23,12 +23,21 @@ module.exports = {
         	{ loader: 'less-loader' }
     	]
       },
+      // {
+      // 	test: /\.svg$/,
+      // 	// loader: 'svg-inline-loader'
+      // 	loader: 'url-loader'
+      // 	// loader: 'file-loader?name=../img/[name].[ext]'
+      // },
       {
-      	test: /\.svg$/,
-      	// loader: 'svg-inline-loader'
-      	loader: 'url-loader'
-      	// loader: 'file-loader?name=../img/[name].[ext]'
-      }
+      	test: /\.png|svg$/,
+      	loader: 'file-loader',
+      	options: {
+      		name: '[name].[ext]',
+      		outputPath: 'img',
+      		publicPath: '../img' // For url()'s caled in .less; otherwise url resolves to css/img/...'
+      	}
+      },
      ],
   },
   plugins: [
@@ -36,7 +45,7 @@ module.exports = {
     new CopyPlugin([
     	{ from: './php/index.php'},
     	{ from: './php/**/*'},
-    	{ from: './img/*'}
+     	{ from: './img/*'}
 	])
   ],
 };

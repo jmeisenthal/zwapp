@@ -10,7 +10,14 @@
 @color_black: #000000;
 @color_white: #FFFFFF;
 
-@font-color_default: @color_dark-purple;
+@color-bg_default:@color_white;
+@color-fg_default:@color_dark-purple;
+@font-color_default: @color-fg_default;
 
 // Font sizes
 @font-size-title-small: 14px;
+
+//Borders:
+@border-width_default: 2px;
+@border-width_hover: 4px;
+@border_default: solid @border-width_default @color-fg_default;
