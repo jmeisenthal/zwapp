@@ -7,6 +7,8 @@
 @bubble-arrow-size: 15px;
 @bubble-data-uri: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.59607 142.21489" version="1.1" width="@{bubble-arrow-size}" height="@{bubble-arrow-size}" style="enable-background:new"><g transform="translate(-43.070584,-42.704396)"><path style="fill:@{bubble-bg_esc};stroke:none;stroke-width:21;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 46.869047,181.33929 C 100.54167,88.357143 56.696428,43.755952 56.696428,43.755952 l 91.470232,0.755952 C 147.84193,170.44874 84.311133,162.58719 46.869047,181.33929 Z" /><path style="fill:none;stroke:@{bubble-fg_esc};stroke-width:21;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 148.16666,44.511904 C 147.84193,170.44874 84.311133,162.58719 46.869047,181.33929 100.54167,88.357143 56.696428,43.755952 56.696428,43.755952" /></g></svg>';
 
+@hero-duration: 4s;
+@hero
 .speech-bubble {
 	&:extend(.font-title);
 	font-size: @font-size-title-small;
@@ -47,70 +49,5 @@
 
 	&:hover {
 		border-width: @border-width_hover;
-	}
-}
-
-
-.background-hero {
-	// font-family: 'Acme';
-	// font-family: 'Bowlby One SC';
-	font-family: 'Bangers';
-	// font-family: 'Carter One';
-	// font-family: 'Luckiest Guy';
-	// font-family: 'Spicy Rice';
-	// transform: rotate(-90deg);
-	position: fixed;
-    z-index: -1;
-    animation-name: background-hero;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
-}
-
-@keyframes background-hero {
-	0%	{
-		transform: translate(-100%, -100%) rotate(90deg);
-    	left: 100%;
-    	top: 100%;   
-    	opacity: 0;	
-	}
-	35%	{
-		transform: translate(-40px, 0) rotate(0);
-    	left: 12px;
-    	top: 32px;   	
-    	opacity: 1;
-	}
-	60%	{
-		transform: translate(30px, 0) rotate(0);
-    	left: 12px;
-    	top: 32px;   	
-	}
-	100%	{
-		transform: translate(0, 0) rotate(0);
-    	left: 12px;
-    	top: 32px;   	
-	}
-}
-
-.background-burst {
-	position: fixed;
-	z-index: -2;
-	width: 240px;
-	height: 240px;
-    animation-name: background-burst;
-    animation-delay: 2s;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    // animation-timing-function: linear;
-}
-
-@keyframes background-burst {
-	from {
-		opacity: 0;
-		transform: rotate(45deg) scale(0.5);
-	}
-	to {
-		opacity: 1;
-		transform: rotate(0) scale(1);
 	}
 }

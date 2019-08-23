@@ -7,12 +7,16 @@
         {% endblock %}
     </head>
     <body>
-        <div class="background-hero">
-            {% include 'zwapp-title.svg' %}
-        </div>
-        <div class="background-burst">
-            {% include 'starburst.svg' %}
-        </div>
+        <div class="background-container">
+            <div class="background-hero">
+                <div class="background-title">
+                    {% include 'zwapp-title.svg' %}
+                </div>
+                <div class="background-burst">
+                    {% include 'starburst.svg' %}
+                </div>
+            </div>
+       </div>
 {#         <h1>Welcome to {{ application }}!</h1>
  #}        <main>
             {% include 'radial_nav.html' with { state: 'initial' } %}
