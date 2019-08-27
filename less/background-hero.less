@@ -30,8 +30,6 @@
 	// font-family: 'Spicy Rice';
 	position: absolute;
     z-index: -1;
-	// left: 12px;
-	// top: 32px;   	
     animation-name: background-title;
     animation-timing-function: linear;
     animation-fill-mode: both;
@@ -85,39 +83,6 @@
 			top: @top;
 		}
 	});
-
-	// 0%	{
-	// 	transform: rotate(45deg) translate(0);
-	// 	background-color: blue;
- //    	left: 100%;
- //    	top: 100%;   
- // 	}
-	// 25%	{
- //    	left: 25%;
- //    	top: 35%;   
-	// 	transform: rotate(155deg) translate(-25%, 0);
-	// 	background-color: #00000000;
- // 	}
-	// 50%	{
- //    	left: 50%;
- //    	top: 50%;   
-	// 	transform: rotate(90deg) translate(-50%, 0);
- // 	}
-	// 75%	{
- //    	left: 50%;
- //    	top: 50%;   
-	// 	transform: rotate(90deg) translate(-50%, 0);
- // 	}
-	// 90%	{
- //    	left: 50%;
- //    	top: 50%;   
-	// 	transform: rotate(90deg) translate(-50%, 0);
- // 	}
-	// 100%	{
- //    	left: 24px;
- //    	top: 24px;   
-	// 	transform: rotate(0) translate(0);
- // 	}
 }
 
 @keyframes background-title {
@@ -127,32 +92,6 @@
 			transform:scale(@scale) translate(12px, 32px);
 		}
 	});
-	// 0%	{
-	// 	transform: scale(0.1) translate(12px, 32px);
-	// }
-	// 25%	{
-	// 	transform: scale(0.5) translate(12px, 32px);
-	// }
-	// 50%	{
-	// 	transform: scale(1.0) translate(12px, 32px);
-	// 	// left: 12px;
-	// 	// top: 32px;   	
-	// }
-	// 75%	{
-	// 	transform: scale(2.0) translate(12px, 32px);
-	// 	// left: 24px;
-	// 	// top: 64px;   	
-	// }
-	// 90%	{
-	// 	transform: scale(2.0) translate(12px, 32px);
-	// 	// left: 24px;
-	// 	// top: 64px;   	
-	// }
-	// 100%	{
-	// 	transform: scale(1.0) translate(12px, 32px);
-	// 	// left: 12px;
-	// 	// top: 32px;   	
-	// }
 }
 
 @keyframes background-burst {
@@ -166,27 +105,4 @@
 			transform: rotate(@rotate) scale(@scale);
 		}
 	});
-	// 0% {
-	// 	opacity: 0;
-	// }
-	// 25% {
-	// 	opacity: 0;
-	// 	transform: scale(0.5);
-	// }
-	// 50% {
-	// 	opacity: 1;
-	// 	transform: rotate(0) scale(1);
-	// }
-	// 75% {
-	// 	opacity: 1;
-	// 	transform: rotate(45deg) scale(1);
-	// }
-	// 90% {
-	// 	opacity: 1;
-	// 	transform: rotate(0) scale(2);
-	// }
-	// 100% {
-	// 	opacity: 1;
-	// 	transform: rotate(0) scale(1);
-	// }
 }

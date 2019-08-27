@@ -1,4 +1,5 @@
-@font-size-large-button: 24px;
+@icon-size-large-button: 24px;
+@icon-size-large-button-hover: 32px;
 
 @color_yale-blue: #145B90;
 @color_hunter-green: #347d3c;
@@ -19,8 +20,18 @@
 
 //Borders:
 @border-width_default: 2px;
-@border-width_hover: 4px;
+@border-width-hover_default: 4px;
+@border_default: solid @border-width_default @color-fg_default;
+@border-width_thick: 4px;
+@border-width-hover_thick: 7px;
 @border_default: solid @border-width_default @color-fg_default;
 
 // Animations
-@animation-init-duration: 10s;
+@animation-init-duration: 5s;
+
+#hi-res() {
+	@border-width_thick: 8px;
+	@border-width_thick-hover: 14px;
+	@icon-size-large-button: 72px;
+	@icon-size-large-button-hover: 84px;
+}

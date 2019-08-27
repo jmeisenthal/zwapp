@@ -1,22 +1,15 @@
 @import 'vars';
 @import 'atomic';
-@radial_nav__button-fs: @font-size-large-button;
-@radial_nav__choice-height: 60px;
-@radial_nav-height: 3 * @radial_nav__choice-height;
 
 .radial_nav {
 	position: fixed;
-//	display: flex;
-	// align-items: flex-end;
 	bottom: 0;
 	width: 100%;
-//	height: @radial_nav-height;
 	text-align: center;
 	z-index: 100;
 }
 
 .radial_nav__button {
-	font-size: @radial_nav__button-fs;
 	border-style: solid;
 	border-width: 4px;
 	border-bottom-style: none;
@@ -34,33 +27,78 @@
 	height: 2em;
 	box-sizing: content-box;
 
-	&:hover, &:active {
-		border-width: 7px;
-	}
+	// &:hover, &:active {
+	// 	border-width: 7px;
+	// }
 
 	&:focus {
 		outline: none;
 	}
 
-	&:active {
-		font-size: @radial_nav__button-fs + 4px;
-	}
+	// &:active {
+	// 	font-size: @radial_nav__button-fs + 4px;
+	// }
 }
 
 .radial_nav__choice {
 	position: absolute;
-	width: 25%;
-//	text-align: left;
-	bottom: 0;
-	left: 50%;
-	padding-left: 84px + 35px;
+	// width: 25%;
+	// bottom: 0;
+	// left: 50%;
+	// padding-left: 84px + 35px;
 }
 
 
 
 .radial_nav__choice_button {
 	&:extend(.strip-button all);
-	padding: 3px;
-	margin-left: (84px - 50px)/2;
-	margin-right: (84px - 50px)/2;
+	// padding: 3px;
+	// margin-left: (84px - 50px)/2;
+	// margin-right: (84px - 50px)/2;
 }
+
+//========================================
+//
+//	Responsive styles
+//	
+//====================
+
+// Default values:
+@radial_nav--responsive: {
+	.radial_nav__button {
+		border-width: @border-width_thick;
+		&:hover, &:active {
+			border-width: @border-width-hover_thick;
+		}
+
+		font-size: @icon-size-large-button;
+		&:active {
+			font-size: @icon-size-large-button-hover;
+		}
+	}
+
+	.radial_nav__choice {
+		width: 25%;
+		bottom: 0;
+		left: 50%;
+		padding-left: 84px + 35px;
+	}
+
+
+
+	.radial_nav__choice_button {
+		padding: 3px;
+		margin-left: (84px - 50px)/2; 
+		margin-right: (84px - 50px)/2;
+	}
+};
+
+
+
+@radial_nav--responsive();
+.hi-res-mobile({
+	#hi-res();
+	@radial_nav--responsive();
+});
+
+

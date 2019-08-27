@@ -12,3 +12,21 @@ html {
 button {
 	color: @font-color_default;
 }
+
+// Hide main while hero splashes:
+main {
+	animation-name: main-init;
+	animation-duration: @animation-init-duration;
+}
+
+@keyframes main-init {
+	0% {
+		opacity: 0;
+	}
+	90% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

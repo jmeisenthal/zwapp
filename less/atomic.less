@@ -1,3 +1,5 @@
+@import 'vars';
+
 @transit_limit: 5;
 @transit_offset: 180deg / (@transit_limit - 1);
 
@@ -36,4 +38,38 @@
 
 .animation-init-duration {
 	animation-duration: @animation-init-duration;
+}
+
+
+// Won't work
+.media(@responsive-getter) {
+	// Default values:
+	@responsive-getter();
+	@responsive();
+
+	// .hi-res-mobile({
+	// 	#hi-res();
+	// 	@ruleset();
+	// });
+
+	// @ruleseth: {
+	// 	#hi-res();
+	// 	.foo {
+	// 		width: @border-width_thick;
+	// 	}
+ //    	@ruleset();		
+	// };
+	@media (-webkit-min-device-pixel-ratio: 2.1), (min-resolution: 201.6dpi){ 
+		#hi-res();
+ 		@responsive-getter();
+		@responsive();
+ //   	@ruleset();		
+		// @ruleseth();
+	}
+}
+
+.hi-res-mobile(@rule) {
+	@media (-webkit-min-device-pixel-ratio: 2.1), (min-resolution: 201.6dpi){ 
+    	@rule();
+	}
 }
