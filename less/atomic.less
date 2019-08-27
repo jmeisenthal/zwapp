@@ -41,35 +41,21 @@
 }
 
 
-// Won't work
-.media(@responsive-getter) {
+// Compiles the given ruleset in each media range using the variable values defined for each media range namespace
+.media(@ruleset) {
 	// Default values:
-	@responsive-getter();
-	@responsive();
+	#media_default();
+	@ruleset();
 
-	// .hi-res-mobile({
-	// 	#hi-res();
-	// 	@ruleset();
-	// });
-
-	// @ruleseth: {
-	// 	#hi-res();
-	// 	.foo {
-	// 		width: @border-width_thick;
-	// 	}
- //    	@ruleset();		
-	// };
+	// Hi Res:
 	@media (-webkit-min-device-pixel-ratio: 2.1), (min-resolution: 201.6dpi){ 
-		#hi-res();
- 		@responsive-getter();
-		@responsive();
- //   	@ruleset();		
-		// @ruleseth();
+		#media_hi-res();
+   		@ruleset();		
 	}
 }
 
-.hi-res-mobile(@rule) {
-	@media (-webkit-min-device-pixel-ratio: 2.1), (min-resolution: 201.6dpi){ 
-    	@rule();
-	}
-}
+// .hi-res-mobile(@rule) {
+// 	@media (-webkit-min-device-pixel-ratio: 2.1), (min-resolution: 201.6dpi){ 
+//     	@rule();
+// 	}
+// }
