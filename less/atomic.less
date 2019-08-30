@@ -1,4 +1,12 @@
-@import 'vars';
+@import (reference) 'vars';
+
+.border--solid {
+	border-style: solid !important;
+}
+
+.border-color_default {
+	color: @color-fg_default !important;
+}
 
 @transit_limit: 5;
 @transit_offset: 180deg / (@transit_limit - 1);
@@ -7,6 +15,9 @@
 	display: flex;
 	align-items: flex-end;
 	transform-origin: left 50%;
+	width: 25%;
+	bottom: 0;
+	left: 50%;
 }
 
 .generate_transits(@count: @transit_limit) when (@count > 0) {
@@ -16,7 +27,7 @@
 		transform: rotate(-@transit_offset * (@transit_limit - @count));
 
 		.transit__inner {
-		transform: rotate(@transit_offset * (@transit_limit - @count));
+		transform: translateX(100%) rotate(@transit_offset * (@transit_limit - @count));
 		}
 	}
 }
@@ -40,16 +51,50 @@
 	animation-duration: @animation-init-duration;
 }
 
+// Media-adjusted classes:
+.media({
+	@sizes: small medium large;
+	each(@sizes, {
+		.border-width_@{value} {
+			@prop: 'border-width_@{value}';
+			border-width: @media_vars[@@prop];
+		}
+		.border-width-hover_@{value} {
+			&:hover {
+				@prop: 'border-width-hover_@{value}';
+				border-width: @media_vars[@@prop];
+			}
+		}
+	});	
+
+	@radii: default large;
+	each(@radii, {
+		.border-radius_@{value} {
+			@prop: 'border-radius_@{value}';
+			border-radius: @media_vars[@@prop];
+		}
+	});
+});
 
 // Compiles the given ruleset in each media range using the variable values defined for each media range namespace
 .media(@ruleset) {
 	// Default values:
-	#media_default();
-	@ruleset();
+	// @media_vars: @media_default;
+	// @ruleset();
+	// #media_default();
+	// @ruleset();
+	// @media_vars: undefined;
+
+	@media all {
+		@media_vars: @media_default;
+		// #media_default();
+		@ruleset();		
+	}
 
 	// Hi Res:
 	@media (-webkit-min-device-pixel-ratio: 2.1), (min-resolution: 201.6dpi){ 
-		#media_hi-res();
+		@media_vars: @media_hi-res;
+		// #media_hi-res();
    		@ruleset();		
 	}
 }
@@ -59,3 +104,4 @@
 //     	@rule();
 // 	}
 // }
+// 

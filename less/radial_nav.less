@@ -23,9 +23,14 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto;	
+    padding: 0;
     width: 2em;
 	height: 2em;
 	box-sizing: content-box;
+	position: absolute;
+	left: 50%;
+	bottom:0;
+	transform: translateX(-50%);
 
 	// &:hover, &:active {
 	// 	border-width: 7px;
@@ -55,6 +60,10 @@
 	// padding: 3px;
 	// margin-left: (84px - 50px)/2;
 	// margin-right: (84px - 50px)/2;
+	
+	img {
+		object-fit: contain;
+	}
 }
 
 //========================================
@@ -62,43 +71,68 @@
 //	Responsive styles
 //	
 //====================
+.media({
+	// .radial_nav__button {
+	// 	border-width: @border-width_thick;
+	// 	&:hover, &:active {
+	// 		border-width: @border-width-hover_thick;
+	// 	}
 
-// Default values:
-@radial_nav--responsive: {
+	// 	font-size: @icon-size-large-button;
+	// 	&:active {
+	// 		font-size: @icon-size-large-button-hover;
+	// 	}
+	// }
+
+	// .radial_nav__choice {
+	// 	// padding-laft offsets the distance of choice button from the center
+	// 	// half of nav button: @icon-size-large-button + @border-width_thick
+	// 	padding-left: @icon-size-large-button + @border-width_thick;
+	// }
+
+
+	// .radial_nav__choice_button {
+	// 	padding: @button-padding-small;
+	// 	margin-left: (84px - @button-img-size)/2; 
+	// 	margin-right: (84px - @button-img-size)/2;
+
+	// 	img {
+	// 		height: @button-img-size;
+	// 		width: @button-img-size;
+	// 	}
+	// }
 	.radial_nav__button {
-		border-width: @border-width_thick;
+		border-width: @media_vars[@border-width_thick];
 		&:hover, &:active {
-			border-width: @border-width-hover_thick;
+			border-width: @media_vars[@border-width-hover_thick];
 		}
 
-		font-size: @icon-size-large-button;
+		font-size: @media_vars[@icon-size-large-button];
 		&:active {
-			font-size: @icon-size-large-button-hover;
+			font-size: @media_vars[@icon-size-large-button-hover];
 		}
 	}
 
 	.radial_nav__choice {
-		width: 25%;
-		bottom: 0;
-		left: 50%;
-		padding-left: 84px + 35px;
+		// padding-laft offsets the distance of choice button from the center
+		// half of nav button: @icon-size-large-button + @border-width_thick
+		padding-left: @media_vars[@icon-size-large-button] + @media_vars[@border-width_thick];
 	}
-
 
 
 	.radial_nav__choice_button {
-		padding: 3px;
-		margin-left: (84px - 50px)/2; 
-		margin-right: (84px - 50px)/2;
+		padding: @media_vars[@button-padding-small];
+		// Set width to be ~equal to the total height of button + label
+		// width: @media_vars[@button-img-size] + 2 * ()
+		margin-left: (84px - @media_vars[@button-img-size])/2; 
+		margin-right: (84px - @media_vars[@button-img-size])/2;
+
+		img {
+			height: @media_vars[@button-img-size];
+			width: @media_vars[@button-img-size];
+		}
 	}
-};
+});
 
-
-.media(@radial_nav--responsive);
-// @radial_nav--responsive();
-// .hi-res-mobile({
-// 	#hi-res();
-// 	@radial_nav--responsive();
-// });
 
 

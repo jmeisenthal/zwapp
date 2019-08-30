@@ -1,4 +1,5 @@
 @import 'vars';
+@import 'atomic';
 
 @bubble-fg: @font-color_default;
 @bubble-fg_esc: escape("@{bubble-fg}");
@@ -10,31 +11,22 @@
 
 .speech-bubble {
 	&:extend(.font-title);
-	font-size: @font-size-title-small;
 	background-color: @bubble-bg;
 	color: @bubble-fg;
 	border-style: solid;
-	border-width: 3px;
-	border-radius: 6px;
-	padding: 3px;
-	margin-bottom: @bubble-arrow-size - 3px; // bubble-arrow height - border-width
-	position: relative;
+	position: absolute;
+	bottom: 100%;
 
 	&::after {
 		content: url(@bubble-data-uri);
 
-		width: @bubble-arrow-size;
-		height: @bubble-arrow-size;
 		position: absolute;
-		fill: green;
-		bottom: -@bubble-arrow-size + 1px;
 		right: 15%;
 	}
 }
 
 .bubble-arrow__stroke {
 	stroke: @bubble-fg;
-	stroke-width: 3;
 }
 .bubble-arrow__fill {
 	fill: @bubble-bg;
@@ -44,9 +36,33 @@
 .strip-button {
 	background-color: @color_white;
 	border: @border_default;
-	border-radius: 3px;
-
-	&:hover {
-		border-width: @border-width-hover_default;
-	}
 }
+
+.media({
+	.speech-bubble {
+		font-size: @media_vars[@font-size-title-small];
+		border-width: @media_vars[@border-width_medium];
+		border-radius: 6px;
+		padding: 3px;
+		margin-bottom: @bubble-arrow-size - 3px; // bubble-arrow height - border-width
+
+		&::after {
+			width: @bubble-arrow-size;
+			height: @bubble-arrow-size;
+			bottom: -@bubble-arrow-size + 1px;
+		}
+	}
+
+	.bubble-arrow__stroke {
+		stroke-width: 3;
+	}
+
+
+	.strip-button {
+		border-radius: 3px;
+
+		&:hover {
+			border-width: @border-width-hover_default;
+		}
+	}
+});
