@@ -5,8 +5,10 @@
 }
 
 .border-color_default {
-	color: @color-fg_default !important;
+	border-color: @color-fg_default !important;
 }
+
+.border--default:extend(.border--solid, .border-color_default, .border-width_small all, .border-width-hover_small all, .border-radius_default all) {}
 
 @transit_limit: 5;
 @transit_offset: 180deg / (@transit_limit - 1);
@@ -27,7 +29,7 @@
 		transform: rotate(-@transit_offset * (@transit_limit - @count));
 
 		.transit__inner {
-		transform: translateX(100%) rotate(@transit_offset * (@transit_limit - @count));
+			transform: translateX(150%) rotate(@transit_offset * (@transit_limit - @count));
 		}
 	}
 }
@@ -60,7 +62,7 @@
 			border-width: @media_vars[@@prop];
 		}
 		.border-width-hover_@{value} {
-			&:hover {
+			&:hover, &:active {
 				@prop: 'border-width-hover_@{value}';
 				border-width: @media_vars[@@prop];
 			}
@@ -74,6 +76,10 @@
 			border-radius: @media_vars[@@prop];
 		}
 	});
+
+	.padding_small {
+		padding: @media_vars[@padding_small];
+	}
 });
 
 // Compiles the given ruleset in each media range using the variable values defined for each media range namespace
@@ -91,8 +97,9 @@
 		@ruleset();		
 	}
 
-	// Hi Res:
-	@media (-webkit-min-device-pixel-ratio: 2.1), (min-resolution: 201.6dpi){ 
+	// Hi Res Mobile:
+	// Select media on hi-res (DPR) combined with small device width:;
+	@media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 414px) { 
 		@media_vars: @media_hi-res;
 		// #media_hi-res();
    		@ruleset();		

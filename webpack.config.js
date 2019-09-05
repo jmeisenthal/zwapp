@@ -38,14 +38,23 @@ module.exports = {
       		publicPath: '../img' // For url()'s caled in .less; otherwise url resolves to css/img/...'
       	}
       },
-     ],
+      {
+        test: /\.(woff(2)?|ttf|TTF|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts',
+          publicPath: '../fonts'
+        }
+     }
+   ],
   },
   plugins: [
   	extractLess,
-    new CopyPlugin([
-    	{ from: './php/index.php'},
-    	{ from: './php/**/*'},
-     	{ from: './img/*'}
-	])
+ //    new CopyPlugin([
+ //    	{ from: './php/index.php'},
+ //    	{ from: './php/**/*'},
+ //     	{ from: './img/*'}
+	// ])
   ],
 };

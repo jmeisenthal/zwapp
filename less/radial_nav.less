@@ -10,8 +10,8 @@
 }
 
 .radial_nav__button {
+	&:extend(.border-width_large all, .border-width-hover_large all);
 	border-style: solid;
-	border-width: 4px;
 	border-bottom-style: none;
 	border-color: @color_orange;
 	border-top-right-radius: 100%;
@@ -32,17 +32,9 @@
 	bottom:0;
 	transform: translateX(-50%);
 
-	// &:hover, &:active {
-	// 	border-width: 7px;
-	// }
-
 	&:focus {
 		outline: none;
 	}
-
-	// &:active {
-	// 	font-size: @radial_nav__button-fs + 4px;
-	// }
 }
 
 .radial_nav__choice {
@@ -102,11 +94,6 @@
 	// 	}
 	// }
 	.radial_nav__button {
-		border-width: @media_vars[@border-width_thick];
-		&:hover, &:active {
-			border-width: @media_vars[@border-width-hover_thick];
-		}
-
 		font-size: @media_vars[@icon-size-large-button];
 		&:active {
 			font-size: @media_vars[@icon-size-large-button-hover];
@@ -116,12 +103,11 @@
 	.radial_nav__choice {
 		// padding-laft offsets the distance of choice button from the center
 		// half of nav button: @icon-size-large-button + @border-width_thick
-		padding-left: @media_vars[@icon-size-large-button] + @media_vars[@border-width_thick];
+		padding-left: @media_vars[@icon-size-large-button] + @media_vars[@border-width_large];
 	}
 
 
 	.radial_nav__choice_button {
-		padding: @media_vars[@button-padding-small];
 		// Set width to be ~equal to the total height of button + label
 		// width: @media_vars[@button-img-size] + 2 * ()
 		margin-left: (84px - @media_vars[@button-img-size])/2; 

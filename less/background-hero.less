@@ -16,15 +16,17 @@
     animation-name: background-hero;
     animation-timing-function: linear;
     animation-fill-mode: both;
-	width: 240px;
-	height: 240px;
+	// width: 360px;
+	// height: 360px;
 }
 
 .background-title {
 	&:extend(.animation-init-duration);
 	// font-family: 'Acme';
 	// font-family: 'Bowlby One SC';
-	font-family: 'Bangers';
+	// font-family: san-serif;
+	font-family: 'Badaboom';
+	// font-family: 'Bangers';
 	// font-family: 'Carter One';
 	// font-family: 'Luckiest Guy';
 	// font-family: 'Spicy Rice';
@@ -51,10 +53,20 @@
     // animation-timing-function: linear;
 }
 
+
+	// .hero-title-font-size {
+	// 	font-size: @media_vars[@hero-title-font-size];
+	// }
+
+	// .hero-title-cap-font-size {
+	// 	font-size: @media_vars[@hero-title-cap-font-size];
+	// }
+
+
 @frame-step: 			0%, 	25%, 	50%, 	75%, 	90%, 	100%;
 @frame-rotate: 			45deg, 	155deg, 90deg, 	90deg, 	90deg, 	0deg;
-@frame-hero-left: 		100%	25%		50%		50%		50%		24px;
-@frame-hero-top: 		100%	35%		50%		50%		50%		24px;
+@frame-hero-left: 		100%	25%		50%		50%		50%		0;//24px;
+@frame-hero-top: 		100%	35%		50%		50%		50%		0;//24px;
 @frame-hero-x: 			0		-25%	-50%	-50%	-50%	0;
 @frame-title-scale: 	0.1		0.5		1		2		2		1;
 @frame-burst-opacity: 	0		0		1		1		1		1;
@@ -106,3 +118,10 @@
 		}
 	});
 }
+
+.media({
+	.background-hero {
+		width: @media_vars[@background-hero-size];
+		height: @media_vars[@background-hero-size];
+	}
+});

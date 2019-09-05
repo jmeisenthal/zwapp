@@ -10,12 +10,13 @@
 
 
 .speech-bubble {
-	&:extend(.font-title);
+	&:extend(.font-title, .padding_small all);
 	background-color: @bubble-bg;
 	color: @bubble-fg;
 	border-style: solid;
 	position: absolute;
 	bottom: 100%;
+	white-space: nowrap;
 
 	&::after {
 		content: url(@bubble-data-uri);
@@ -34,8 +35,9 @@
 
 
 .strip-button {
+	&:extend(.border--default all, .padding_small all);
 	background-color: @color_white;
-	border: @border_default;
+	// border: @border_default;
 }
 
 .media({
@@ -43,7 +45,6 @@
 		font-size: @media_vars[@font-size-title-small];
 		border-width: @media_vars[@border-width_medium];
 		border-radius: 6px;
-		padding: 3px;
 		margin-bottom: @bubble-arrow-size - 3px; // bubble-arrow height - border-width
 
 		&::after {
@@ -58,11 +59,11 @@
 	}
 
 
-	.strip-button {
-		border-radius: 3px;
+	// .strip-button {
+	// 	// border-radius: 3px;
 
-		&:hover {
-			border-width: @border-width-hover_default;
-		}
-	}
+	// 	&:hover {
+	// 		border-width: @border-width-hover_default;
+	// 	}
+	// }
 });

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns="http://www.w3.org/2000/svg"
-   viewBox="0 0 240.5982 164.7661"
+   viewBox="0 0 240 175"
    version="1.1"
    id="SVGRoot">
   <defs
@@ -37,19 +37,14 @@
      transform="translate(333.80727,1379.5388)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:64px;line-height:1.25;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:url(#radialGradient7860);stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:64px;line-height:1.25;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:url(#radialGradient7860);stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers"
        id="text7712"><textPath
          xlink:href="#path7760"
-         id="textPath7762"
-         style="stroke:url(#radialGradient7860);stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers"><tspan
-   id="tspan7710"
-   style="stroke:url(#radialGradient7860);stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers"><tspan
+         id="textPath7762"><tspan
+   id="tspan7710"><tspan
      id="tspan7726"
-     style="font-size:96px;fill:#ffff00;stroke:url(#radialGradient7860);stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers">Z</tspan><tspan
-     id="tspan7714"
-     style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:64px;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;stroke:url(#radialGradient7860);stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers">WAPP</tspan><tspan
-     id="tspan7728"
-     style="font-size:64px;fill:#ffff00;stroke:url(#radialGradient7860);stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers">!</tspan></tspan></textPath></text>
+     style="font-size:96px;">Z</tspan><tspan
+     id="tspan7714">WAPP!&nbsp;</tspan></tspan></textPath></text>
     <path
        style="fill:none;paint-order:stroke fill markers"
        d="m -286,-1220 c 157,-130 361,-101 361,-101 l -3,2"
