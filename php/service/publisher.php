@@ -21,4 +21,6 @@
 			$twig->load($template)->display($cache->$id->to_array());			
 		}
 	}
+
+	// wiki query for char by appearance:https://comicvine.gamespot.com/characters/?sortBy=appearance
  ?>

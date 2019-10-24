@@ -51,10 +51,10 @@ module.exports = {
   },
   plugins: [
   	extractLess,
- //    new CopyPlugin([
- //    	{ from: './php/index.php'},
- //    	{ from: './php/**/*'},
- //     	{ from: './img/*'}
-	// ])
+    new CopyPlugin([
+    	{ from: './php/index.php'},
+    	{ from: './php/**/*'},
+     	{ from: './img/*'}
+	])
   ],
 };
