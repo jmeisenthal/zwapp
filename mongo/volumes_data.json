@@ -1,0 +1,2214 @@
+{ "_id": "4050-18058", "name": "Detective Comics", "sort": 1 }
+{ "_id": "4050-18005", "name": "Action Comics", "sort": 2 }
+{ "_id": "4050-796", "name": "Batman", "sort": 3 }
+{ "_id": "4050-2127", "name": "The Amazing Spider-Man", "sort": 4 }
+{ "_id": "4050-9628", "name": "Archie", "sort": 5 }
+{ "_id": "4050-9318", "name": "MAD", "sort": 6 }
+{ "_id": "4050-773", "name": "Superman", "sort": 7 }
+{ "_id": "4050-3105", "name": "Adventure Comics", "sort": 8 }
+{ "_id": "4050-2045", "name": "Fantastic Four", "sort": 9 }
+{ "_id": "4050-22916", "name": "Pep Comics", "sort": 10 }
+{ "_id": "4050-3092", "name": "The Uncanny X-Men", "sort": 11 }
+{ "_id": "4050-2128", "name": "The Avengers", "sort": 12 }
+{ "_id": "4050-1101", "name": "Laugh Comics", "sort": 13 }
+{ "_id": "4050-2190", "name": "Daredevil", "sort": 14 }
+{ "_id": "4050-2406", "name": "The Incredible Hulk", "sort": 15 }
+{ "_id": "4050-2400", "name": "Captain America", "sort": 16 }
+{ "_id": "4050-29250", "name": "Archie's Girls Betty and Veronica", "sort": 17 }
+{ "_id": "4050-2407", "name": "Iron Man", "sort": 18 }
+{ "_id": "4050-11430", "name": "Archie Giant Series Magazine", "sort": 19 }
+{ "_id": "4050-18525", "name": "Wonder Woman", "sort": 20 }
+{ "_id": "4050-18006", "name": "World's Finest Comics", "sort": 21 }
+{ "_id": "4050-19439", "name": "House of Mystery", "sort": 22 }
+{ "_id": "4050-18796", "name": "Archie's Double Digest Magazine", "sort": 23 }
+{ "_id": "4050-1472", "name": "Our Army at War", "sort": 24 }
+{ "_id": "4050-4008", "name": "Hellblazer", "sort": 25 }
+{ "_id": "4050-2294", "name": "Thor", "sort": 26 }
+{ "_id": "4050-2293", "name": "Marvel Tales", "sort": 27 }
+{ "_id": "4050-11074", "name": "Sonic the Hedgehog", "sort": 28 }
+{ "_id": "4050-1820", "name": "G.I. Combat", "sort": 29 }
+{ "_id": "4050-11009", "name": "Life With Archie", "sort": 30 }
+{ "_id": "4050-11038", "name": "Betty and Veronica", "sort": 31 }
+{ "_id": "4050-28073", "name": "Betty and Veronica Double Digest", "sort": 32 }
+{ "_id": "4050-2471", "name": "Conan the Barbarian", "sort": 33 }
+{ "_id": "4050-35976", "name": "Archie's Joke Book Magazine", "sort": 34 }
+{ "_id": "4050-11531", "name": "Archie Digest Magazine", "sort": 35 }
+{ "_id": "4050-2870", "name": "The Spectacular Spider-Man", "sort": 36 }
+{ "_id": "4050-1819", "name": "Blackhawk", "sort": 37 }
+{ "_id": "4050-2014", "name": "Justice League of America", "sort": 38 }
+{ "_id": "4050-1176", "name": "Tarzan", "sort": 39 }
+{ "_id": "4050-18839", "name": "Looney Tunes", "sort": 40 }
+{ "_id": "4050-3790", "name": "The Flash", "sort": 41 }
+{ "_id": "4050-1995", "name": "The Flash", "sort": 42 }
+{ "_id": "4050-1328", "name": "Strange Adventures", "sort": 43 }
+{ "_id": "4050-2701", "name": "The Savage Sword of Conan", "sort": 44 }
+{ "_id": "4050-19154", "name": "Superboy", "sort": 45 }
+{ "_id": "4050-3824", "name": "Wonder Woman", "sort": 46 }
+{ "_id": "4050-3816", "name": "Superman", "sort": 47 }
+{ "_id": "4050-3778", "name": "Adventures of Superman", "sort": 48 }
+{ "_id": "4050-11649", "name": "Jughead", "sort": 49 }
+{ "_id": "4050-1199", "name": "Kid Colt Outlaw", "sort": 50 }
+{ "_id": "4050-22893", "name": "Archie's Pals 'N' Gals", "sort": 51 }
+{ "_id": "4050-12013", "name": "Veronica", "sort": 52 }
+{ "_id": "4050-2115", "name": "Young Romance", "sort": 53 }
+{ "_id": "4050-19441", "name": "Millie the Model", "sort": 54 }
+{ "_id": "4050-29743", "name": "Betty and Veronica Digest Magazine", "sort": 55 }
+{ "_id": "4050-1543", "name": "Star Spangled War Stories", "sort": 56 }
+{ "_id": "4050-2839", "name": "Green Lantern", "sort": 57 }
+{ "_id": "4050-23522", "name": "Jughead's Double Digest Magazine", "sort": 58 }
+{ "_id": "4050-1683", "name": "The Brave and the Bold", "sort": 59 }
+{ "_id": "4050-11428", "name": "Betty and Me", "sort": 60 }
+{ "_id": "4050-95537", "name": "Laugh Comics Digest", "sort": 61 }
+{ "_id": "4050-11037", "name": "Betty", "sort": 62 }
+{ "_id": "4050-4250", "name": "Wolverine", "sort": 63 }
+{ "_id": "4050-86278", "name": "PEP Digital", "sort": 64 }
+{ "_id": "4050-4975", "name": "Robin", "sort": 65 }
+{ "_id": "4050-4363", "name": "Green Lantern", "sort": 66 }
+{ "_id": "4050-1618", "name": "Our Fighting Forces", "sort": 67 }
+{ "_id": "4050-33414", "name": "Girls' Love Stories", "sort": 68 }
+{ "_id": "4050-4720", "name": "Batman: Legends of the Dark Knight", "sort": 69 }
+{ "_id": "4050-33954", "name": "Jughead with Archie Digest Magazine", "sort": 70 }
+{ "_id": "4050-4058", "name": "Marvel Comics Presents", "sort": 71 }
+{ "_id": "4050-6211", "name": "Fantastic Four", "sort": 72 }
+{ "_id": "4050-20115", "name": "Archie's Pal Jughead Comics", "sort": 73 }
+{ "_id": "4050-11901", "name": "The Adventures of Little Archie", "sort": 74 }
+{ "_id": "4050-18066", "name": "Strange Tales", "sort": 75 }
+{ "_id": "4050-5845", "name": "Usagi Yojimbo", "sort": 76 }
+{ "_id": "4050-19172", "name": "Superman's Pal, Jimmy Olsen", "sort": 77 }
+{ "_id": "4050-3739", "name": "Dark Horse Presents", "sort": 78 }
+{ "_id": "4050-24359", "name": "Archie and Me", "sort": 79 }
+{ "_id": "4050-19497", "name": "Girls' Romances", "sort": 80 }
+{ "_id": "4050-22966", "name": "Archie & Friends", "sort": 81 }
+{ "_id": "4050-38744", "name": "Everything's Archie", "sort": 82 }
+{ "_id": "4050-3138", "name": "G.I. Joe: A Real American Hero", "sort": 83 }
+{ "_id": "4050-5755", "name": "Nightwing", "sort": 84 }
+{ "_id": "4050-1244", "name": "Secret Hearts", "sort": 85 }
+{ "_id": "4050-2569", "name": "The Defenders", "sort": 86 }
+{ "_id": "4050-4511", "name": "Disney Adventures", "sort": 87 }
+{ "_id": "4050-2576", "name": "Marvel Team-Up", "sort": 88 }
+{ "_id": "4050-4511", "name": "Disney Adventures", "sort": 89 }
+{ "_id": "4050-9723", "name": "Fables", "sort": 90 }
+{ "_id": "4050-27083", "name": "Mutt & Jeff", "sort": 91 }
+{ "_id": "4050-3857", "name": "Silver Surfer", "sort": 92 }
+{ "_id": "4050-1821", "name": "Heart Throbs", "sort": 93 }
+{ "_id": "4050-26195", "name": "Archie's Pals 'n' Gals Double Digest Magazine", "sort": 94 }
+{ "_id": "4050-1684", "name": "Falling In Love", "sort": 95 }
+{ "_id": "4050-2133", "name": "The X-Men", "sort": 96 }
+{ "_id": "4050-19176", "name": "Marvel Age", "sort": 97 }
+{ "_id": "4050-1329", "name": "Tomahawk", "sort": 98 }
+{ "_id": "4050-4003", "name": "Green Arrow", "sort": 99 }
+{ "_id": "4050-50034", "name": "DC Digital Comics Sneak Peeks", "sort": 100 }
+{ "_id": "4050-19245", "name": "Superman's Girl Friend, Lois Lane", "sort": 101 }
+{ "_id": "4050-4571", "name": "Superman: The Man of Steel", "sort": 102 }
+{ "_id": "4050-1583", "name": "Two-Gun Kid", "sort": 103 }
+{ "_id": "4050-2023", "name": "The Rawhide Kid", "sort": 104 }
+{ "_id": "4050-7257", "name": "Ultimate Spider-Man", "sort": 105 }
+{ "_id": "4050-6209", "name": "Daredevil", "sort": 106 }
+{ "_id": "4050-2850", "name": "Warlord", "sort": 107 }
+{ "_id": "4050-3519", "name": "Web of Spider-Man", "sort": 108 }
+{ "_id": "4050-3217", "name": "Alpha Flight", "sort": 109 }
+{ "_id": "4050-21332", "name": "Star Spangled Comics", "sort": 110 }
+{ "_id": "4050-4604", "name": "X-Force", "sort": 111 }
+{ "_id": "4050-6498", "name": "Birds of Prey", "sort": 112 }
+{ "_id": "4050-4201", "name": "Legion of Super-Heroes", "sort": 113 }
+{ "_id": "4050-1043", "name": "Real Screen Comics", "sort": 114 }
+{ "_id": "4050-36409", "name": "Archie's Pal Jughead", "sort": 115 }
+{ "_id": "4050-3465", "name": "Swamp Thing", "sort": 116 }
+{ "_id": "4050-5957", "name": "JLA", "sort": 117 }
+{ "_id": "4050-4052", "name": "Excalibur", "sort": 118 }
+{ "_id": "4050-1497", "name": "Journey into Mystery", "sort": 119 }
+{ "_id": "4050-1062", "name": "Patsy Walker", "sort": 120 }
+{ "_id": "4050-2507", "name": "Weird War Tales", "sort": 121 }
+{ "_id": "4050-2890", "name": "Sgt. Rock", "sort": 122 }
+{ "_id": "4050-19320", "name": "More Fun Comics", "sort": 123 }
+{ "_id": "4050-6724", "name": "Sgt. Fury", "sort": 124 }
+{ "_id": "4050-2397", "name": "The Unexpected", "sort": 125 }
+{ "_id": "4050-1553", "name": "All-American Men of War", "sort": 126 }
+{ "_id": "4050-4249", "name": "What If...?", "sort": 127 }
+{ "_id": "4050-4605", "name": "X-Men", "sort": 128 }
+{ "_id": "4050-18109", "name": "X-Factor", "sort": 129 }
+{ "_id": "4050-29225", "name": "Archie at Riverdale High", "sort": 130 }
+{ "_id": "4050-1898", "name": "Archie Comics", "sort": 131 }
+{ "_id": "4050-2503", "name": "Ghosts", "sort": 132 }
+{ "_id": "4050-1406", "name": "Mystery In Space", "sort": 133 }
+{ "_id": "4050-8517", "name": "Patsy and Hedy", "sort": 134 }
+{ "_id": "4050-2697", "name": "Master of Kung Fu", "sort": 135 }
+{ "_id": "4050-18678", "name": "Sensation Comics", "sort": 136 }
+{ "_id": "4050-1321", "name": "Adventures of Bob Hope", "sort": 137 }
+{ "_id": "4050-4993", "name": "Cable", "sort": 138 }
+{ "_id": "4050-2914", "name": "Star Wars", "sort": 139 }
+{ "_id": "4050-11653", "name": "Reggie and Me", "sort": 140 }
+{ "_id": "4050-1471", "name": "Fox and the Crow", "sort": 141 }
+{ "_id": "4050-28516", "name": "Marvel Previews", "sort": 142 }
+{ "_id": "4050-22908", "name": "Archie's TV Laugh-Out", "sort": 143 }
+{ "_id": "4050-1772", "name": "Tales of the Unexpected", "sort": 144 }
+{ "_id": "4050-19438", "name": "Flash Comics", "sort": 145 }
+{ "_id": "4050-1770", "name": "Showcase", "sort": 146 }
+{ "_id": "4050-3855", "name": "The Punisher", "sort": 147 }
+{ "_id": "4050-20663", "name": "All-American Comics", "sort": 148 }
+{ "_id": "4050-6218", "name": "Spider-Girl", "sort": 149 }
+{ "_id": "4050-5261", "name": "Superboy", "sort": 150 }
+{ "_id": "4050-1276", "name": "Love Romances", "sort": 151 }
+{ "_id": "4050-7258", "name": "Ultimate X-Men", "sort": 152 }
+{ "_id": "4050-6558", "name": "Incredible Hulk", "sort": 153 }
+{ "_id": "4050-35462", "name": "Scooby-Doo, Where Are You?", "sort": 154 }
+{ "_id": "4050-10414", "name": "Teen Titans", "sort": 155 }
+{ "_id": "4050-2008", "name": "Tales to Astonish", "sort": 156 }
+{ "_id": "4050-3234", "name": "The New Mutants", "sort": 157 }
+{ "_id": "4050-6983", "name": "Exiles", "sort": 158 }
+{ "_id": "4050-2696", "name": "Marvel Two-in-One", "sort": 159 }
+{ "_id": "4050-4421", "name": "Spider-Man", "sort": 160 }
+{ "_id": "4050-83493", "name": "DC Comics Bombshells", "sort": 161 }
+{ "_id": "4050-6306", "name": "100 Bullets", "sort": 162 }
+{ "_id": "4050-2007", "name": "Tales of Suspense", "sort": 163 }
+{ "_id": "4050-1771", "name": "Sugar and Spike", "sort": 164 }
+{ "_id": "4050-2943", "name": "DC Comics Presents", "sort": 165 }
+{ "_id": "4050-3837", "name": "Conan Saga", "sort": 166 }
+{ "_id": "4050-4955", "name": "Catwoman", "sort": 167 }
+{ "_id": "4050-4724", "name": "Batman: Shadow of the Bat", "sort": 168 }
+{ "_id": "4050-23630", "name": "Crazy Magazine", "sort": 169 }
+{ "_id": "4050-57337", "name": "Super Duck Comics", "sort": 170 }
+{ "_id": "4050-4397", "name": "Ghost Rider", "sort": 171 }
+{ "_id": "4050-2353", "name": "Marvel Super-Heroes", "sort": 172 }
+{ "_id": "4050-25981", "name": "Sonic Universe", "sort": 173 }
+{ "_id": "4050-36743", "name": "World of Archie Double Digest", "sort": 174 }
+{ "_id": "4050-23607", "name": "Archie's Madhouse", "sort": 175 }
+{ "_id": "4050-36467", "name": "Direct Currents", "sort": 176 }
+{ "_id": "4050-2887", "name": "Jonah Hex", "sort": 177 }
+{ "_id": "4050-2114", "name": "Young Love", "sort": 178 }
+{ "_id": "4050-4049", "name": "Doctor Strange, Sorcerer Supreme", "sort": 179 }
+{ "_id": "4050-7760", "name": "Betty & Veronica Spectacular", "sort": 180 }
+{ "_id": "4050-5509", "name": "Impulse", "sort": 181 }
+{ "_id": "4050-7084", "name": "Avengers", "sort": 182 }
+{ "_id": "4050-6504", "name": "Iron Man", "sort": 183 }
+{ "_id": "4050-4198", "name": "Justice League America", "sort": 184 }
+{ "_id": "4050-3976", "name": "Animal Man", "sort": 185 }
+{ "_id": "4050-49552", "name": "Legends of the Dark Knight", "sort": 186 }
+{ "_id": "4050-1866", "name": "Challengers of the Unknown", "sort": 187 }
+{ "_id": "4050-3786", "name": "Doom Patrol", "sort": 188 }
+{ "_id": "4050-6331", "name": "JSA", "sort": 189 }
+{ "_id": "4050-2439", "name": "The Witching Hour", "sort": 190 }
+{ "_id": "4050-1687", "name": "My Greatest Adventure", "sort": 191 }
+{ "_id": "4050-1171", "name": "Western Comics", "sort": 192 }
+{ "_id": "4050-39432", "name": "Wilbur", "sort": 193 }
+{ "_id": "4050-6226", "name": "Thor", "sort": 194 }
+{ "_id": "4050-19757", "name": "The 'Nam", "sort": 195 }
+{ "_id": "4050-1818", "name": "Adventures of Jerry Lewis", "sort": 196 }
+{ "_id": "4050-61213", "name": "The Mighty Thor", "sort": 197 }
+{ "_id": "4050-6020", "name": "Thunderbolts", "sort": 198 }
+{ "_id": "4050-7328", "name": "Catwoman", "sort": 199 }
+{ "_id": "4050-5259", "name": "Starman", "sort": 200 }
+{ "_id": "4050-4971", "name": "Legionnaires", "sort": 201 }
+{ "_id": "4050-21618", "name": "Miss America Magazine", "sort": 202 }
+{ "_id": "4050-4014", "name": "The New Titans", "sort": 203 }
+{ "_id": "4050-2676", "name": "Doctor Strange", "sort": 204 }
+{ "_id": "4050-2636", "name": "Ghost Rider", "sort": 205 }
+{ "_id": "4050-91273", "name": "Batman", "sort": 206 }
+{ "_id": "4050-5766", "name": "Supergirl", "sort": 207 }
+{ "_id": "4050-91774", "name": "Wonder Woman", "sort": 208 }
+{ "_id": "4050-91750", "name": "The Flash", "sort": 209 }
+{ "_id": "4050-4066", "name": "The Punisher War Journal", "sort": 210 }
+{ "_id": "4050-91098", "name": "Detective Comics", "sort": 211 }
+{ "_id": "4050-1768", "name": "House of Secrets", "sort": 212 }
+{ "_id": "4050-4214", "name": "Star Trek: The Next Generation", "sort": 213 }
+{ "_id": "4050-3370", "name": "The Transformers", "sort": 214 }
+{ "_id": "4050-4212", "name": "Star Trek", "sort": 215 }
+{ "_id": "4050-33308", "name": "Funny Stuff", "sort": 216 }
+{ "_id": "4050-1133", "name": "A Date with Judy", "sort": 217 }
+{ "_id": "4050-33307", "name": "Buzzy", "sort": 218 }
+{ "_id": "4050-5230", "name": "Aquaman", "sort": 219 }
+{ "_id": "4050-22745", "name": "Sabrina the Teenage Witch", "sort": 220 }
+{ "_id": "4050-5300", "name": "Generation X", "sort": 221 }
+{ "_id": "4050-2959", "name": "Power Man and Iron Fist", "sort": 222 }
+{ "_id": "4050-18128", "name": "Thunderbolts", "sort": 223 }
+{ "_id": "4050-5567", "name": "X-Man", "sort": 224 }
+{ "_id": "4050-10809", "name": "Wolverine", "sort": 225 }
+{ "_id": "4050-5239", "name": "The Books of Magic", "sort": 226 }
+{ "_id": "4050-9744", "name": "Lucifer", "sort": 227 }
+{ "_id": "4050-9113", "name": "Green Arrow", "sort": 228 }
+{ "_id": "4050-4407", "name": "The New Warriors", "sort": 229 }
+{ "_id": "4050-4207", "name": "The Sandman", "sort": 230 }
+{ "_id": "4050-45143", "name": "Jughead's Jokes", "sort": 231 }
+{ "_id": "4050-3010", "name": "Rom", "sort": 232 }
+{ "_id": "4050-2435", "name": "House of Secrets", "sort": 233 }
+{ "_id": "4050-20665", "name": "Marvel's Greatest Comics", "sort": 234 }
+{ "_id": "4050-2833", "name": "All-Star Comics", "sort": 235 }
+{ "_id": "4050-7207", "name": "Batman: Gotham Knights", "sort": 236 }
+{ "_id": "4050-64763", "name": "Batman '66", "sort": 237 }
+{ "_id": "4050-7205", "name": "Batgirl", "sort": 238 }
+{ "_id": "4050-2413", "name": "Sub-Mariner", "sort": 239 }
+{ "_id": "4050-100663", "name": "Injustice 2", "sort": 240 }
+{ "_id": "4050-79398", "name": "Star Wars", "sort": 241 }
+{ "_id": "4050-18007", "name": "DMZ", "sort": 242 }
+{ "_id": "4050-11499", "name": "Captain America", "sort": 243 }
+{ "_id": "4050-6000", "name": "Deadpool", "sort": 244 }
+{ "_id": "4050-2989", "name": "The Best of DC", "sort": 245 }
+{ "_id": "4050-2582", "name": "Tomb of Dracula", "sort": 246 }
+{ "_id": "4050-18909", "name": "L.E.G.I.O.N.", "sort": 247 }
+{ "_id": "4050-4976", "name": "Sandman Mystery Theatre", "sort": 248 }
+{ "_id": "4050-18677", "name": "Jonah Hex", "sort": 249 }
+{ "_id": "4050-4375", "name": "Shade, the Changing Man", "sort": 250 }
+{ "_id": "4050-34986", "name": "The Powerpuff Girls", "sort": 251 }
+{ "_id": "4050-20691", "name": "X-Men: Legacy", "sort": 252 }
+{ "_id": "4050-47896", "name": "Smallville: Season Eleven", "sort": 253 }
+{ "_id": "4050-10746", "name": "Astonishing X-Men", "sort": 254 }
+{ "_id": "4050-18012", "name": "Supergirl", "sort": 255 }
+{ "_id": "4050-19019", "name": "Cartoon Network Action Pack", "sort": 256 }
+{ "_id": "4050-22955", "name": "Deadpool", "sort": 257 }
+{ "_id": "4050-1169", "name": "Mr. District Attorney", "sort": 258 }
+{ "_id": "4050-1134", "name": "Gang Busters", "sort": 259 }
+{ "_id": "4050-18216", "name": "Green Lantern", "sort": 260 }
+{ "_id": "4050-1169", "name": "Mr. District Attorney", "sort": 261 }
+{ "_id": "4050-3070", "name": "All-Star Squadron", "sort": 262 }
+{ "_id": "4050-5516", "name": "Preacher", "sort": 263 }
+{ "_id": "4050-18356", "name": "Lobo", "sort": 264 }
+{ "_id": "4050-92750", "name": "Harley Quinn", "sort": 265 }
+{ "_id": "4050-5767", "name": "Superman Adventures", "sort": 266 }
+{ "_id": "4050-36650", "name": "Betty & Veronica Friends Double Digest", "sort": 267 }
+{ "_id": "4050-6685", "name": "X-Men Classic", "sort": 268 }
+{ "_id": "4050-92569", "name": "Nightwing", "sort": 269 }
+{ "_id": "4050-2895", "name": "Unknown Soldier", "sort": 270 }
+{ "_id": "4050-11497", "name": "New Avengers", "sort": 271 }
+{ "_id": "4050-3115", "name": "The Fury of Firestorm", "sort": 272 }
+{ "_id": "4050-6239", "name": "Buffy the Vampire Slayer", "sort": 273 }
+{ "_id": "4050-4754", "name": "The Spectre", "sort": 274 }
+{ "_id": "4050-18856", "name": "Comic Cavalcade", "sort": 275 }
+{ "_id": "4050-3310", "name": "Legion of Super-Heroes", "sort": 276 }
+{ "_id": "4050-33723", "name": "Barbie", "sort": 277 }
+{ "_id": "4050-2050", "name": "Aquaman", "sort": 278 }
+{ "_id": "4050-18248", "name": "Green Lantern Corps", "sort": 279 }
+{ "_id": "4050-21487", "name": "Invincible Iron Man", "sort": 280 }
+{ "_id": "4050-1403", "name": "All-Star Western", "sort": 281 }
+{ "_id": "4050-1242", "name": "Peter Porkchops", "sort": 282 }
+{ "_id": "4050-3358", "name": "Power Pack", "sort": 283 }
+{ "_id": "4050-4406", "name": "Namor, the Sub-Mariner", "sort": 284 }
+{ "_id": "4050-4398", "name": "Guardians of the Galaxy", "sort": 285 }
+{ "_id": "4050-6496", "name": "Black Panther", "sort": 286 }
+{ "_id": "4050-11907", "name": "Josie and the Pussycats", "sort": 287 }
+{ "_id": "4050-2401", "name": "Captain Marvel", "sort": 288 }
+{ "_id": "4050-10950", "name": "Katy Keene", "sort": 289 }
+{ "_id": "4050-9645", "name": "Deathstroke the Terminator", "sort": 290 }
+{ "_id": "4050-18127", "name": "Justice League of America", "sort": 291 }
+{ "_id": "4050-18094", "name": "Marvel Adventures: Spider-Man", "sort": 292 }
+{ "_id": "4050-2575", "name": "Marvel Premiere", "sort": 293 }
+{ "_id": "4050-5750", "name": "Hitman", "sort": 294 }
+{ "_id": "4050-10379", "name": "Ultimate Fantastic Four", "sort": 295 }
+{ "_id": "4050-4243", "name": "The Sensational She-Hulk", "sort": 296 }
+{ "_id": "4050-4242", "name": "Quasar", "sort": 297 }
+{ "_id": "4050-9419", "name": "Y: The Last Man", "sort": 298 }
+{ "_id": "4050-18247", "name": "Scalped", "sort": 299 }
+{ "_id": "4050-1168", "name": "Leave it to Binky", "sort": 300 }
+{ "_id": "4050-3143", "name": "Marvel Fanfare", "sort": 301 }
+{ "_id": "4050-6146", "name": "Batman: Gotham Adventures", "sort": 302 }
+{ "_id": "4050-5989", "name": "Transmetropolitan", "sort": 303 }
+{ "_id": "4050-5744", "name": "The Dreaming", "sort": 304 }
+{ "_id": "4050-2560", "name": "Weird Western Tales", "sort": 305 }
+{ "_id": "4050-4230", "name": "Marc Spector: Moon Knight", "sort": 306 }
+{ "_id": "4050-18208", "name": "Wonder Woman", "sort": 307 }
+{ "_id": "4050-2626", "name": "The Unwritten", "sort": 308 }
+{ "_id": "4050-91078", "name": "Action Comics", "sort": 309 }
+{ "_id": "4050-2551", "name": "Kamandi, The Last Boy on Earth", "sort": 310 }
+{ "_id": "4050-2668", "name": "The Superman Family", "sort": 311 }
+{ "_id": "4050-25107", "name": "Animaniacs", "sort": 312 }
+{ "_id": "4050-22452", "name": "Cartoon Network Block Party", "sort": 313 }
+{ "_id": "4050-4358", "name": "The Demon", "sort": 314 }
+{ "_id": "4050-3008", "name": "Micronauts", "sort": 315 }
+{ "_id": "4050-78701", "name": "The Amazing Spider-Man", "sort": 316 }
+{ "_id": "4050-43361", "name": "Batman: Arkham Unhinged", "sort": 317 }
+{ "_id": "4050-9142", "name": "Peter Parker: Spider-Man", "sort": 318 }
+{ "_id": "4050-20291", "name": "Hulk", "sort": 319 }
+{ "_id": "4050-2702", "name": "Spidey Super Stories", "sort": 320 }
+{ "_id": "4050-91285", "name": "Green Lanterns", "sort": 321 }
+{ "_id": "4050-42594", "name": "Detective Comics", "sort": 322 }
+{ "_id": "4050-42488", "name": "Justice League", "sort": 323 }
+{ "_id": "4050-7298", "name": "Sabrina the Teenage Witch", "sort": 324 }
+{ "_id": "4050-42986", "name": "Superman", "sort": 325 }
+{ "_id": "4050-3782", "name": "Captain Atom", "sort": 326 }
+{ "_id": "4050-42808", "name": "Green Lantern", "sort": 327 }
+{ "_id": "4050-42721", "name": "Batman", "sort": 328 }
+{ "_id": "4050-42563", "name": "Action Comics", "sort": 329 }
+{ "_id": "4050-9420", "name": "Young Justice", "sort": 330 }
+{ "_id": "4050-2113", "name": "Metal Men", "sort": 331 }
+{ "_id": "4050-18494", "name": "Avengers West Coast", "sort": 332 }
+{ "_id": "4050-3318", "name": "Star Trek", "sort": 333 }
+{ "_id": "4050-43018", "name": "The Flash", "sort": 334 }
+{ "_id": "4050-3033", "name": "Legion of Super-Heroes", "sort": 335 }
+{ "_id": "4050-40107", "name": "Mega Man", "sort": 336 }
+{ "_id": "4050-26194", "name": "Reggie's Wise Guy Jokes", "sort": 337 }
+{ "_id": "4050-43022", "name": "Aquaman", "sort": 338 }
+{ "_id": "4050-42953", "name": "Wonder Woman", "sort": 339 }
+{ "_id": "4050-18231", "name": "Batman Confidential", "sort": 340 }
+{ "_id": "4050-42598", "name": "Green Arrow", "sort": 341 }
+{ "_id": "4050-3035", "name": "The New Adventures of Superboy", "sort": 342 }
+{ "_id": "4050-18052", "name": "Justice Society of America", "sort": 343 }
+{ "_id": "4050-11105", "name": "JLA: Classified", "sort": 344 }
+{ "_id": "4050-19721", "name": "Azrael: Agent of the Bat", "sort": 345 }
+{ "_id": "4050-3308", "name": "Infinity, Inc.", "sort": 346 }
+{ "_id": "4050-2279", "name": "Teen Titans", "sort": 347 }
+{ "_id": "4050-42722", "name": "Catwoman", "sort": 348 }
+{ "_id": "4050-91738", "name": "Aquaman", "sort": 349 }
+{ "_id": "4050-3308", "name": "Infinity, Inc.", "sort": 350 }
+{ "_id": "4050-75410", "name": "Batman: The Jiro Kuwata Batmanga", "sort": 351 }
+{ "_id": "4050-5260", "name": "Steel", "sort": 352 }
+{ "_id": "4050-2279", "name": "Teen Titans", "sort": 353 }
+{ "_id": "4050-18575", "name": "Star Wars: Legacy", "sort": 354 }
+{ "_id": "4050-21777", "name": "Trinity", "sort": 355 }
+{ "_id": "4050-11905", "name": "That Wilkin Boy", "sort": 356 }
+{ "_id": "4050-64341", "name": "Suzie Comics", "sort": 357 }
+{ "_id": "4050-18053", "name": "52", "sort": 358 }
+{ "_id": "4050-62857", "name": "Astro City", "sort": 359 }
+{ "_id": "4050-72915", "name": "Batman Eternal", "sort": 360 }
+{ "_id": "4050-18937", "name": "Star Wars: Knights of the Old Republic", "sort": 361 }
+{ "_id": "4050-24146", "name": "Animal Antics", "sort": 362 }
+{ "_id": "4050-18564", "name": "Countdown to Final Crisis", "sort": 363 }
+{ "_id": "4050-85076", "name": "The Amazing Spider-Man", "sort": 364 }
+{ "_id": "4050-3324", "name": "Tales of the Teen Titans", "sort": 365 }
+{ "_id": "4050-76430", "name": "Sensation Comics Featuring Wonder Woman", "sort": 366 }
+{ "_id": "4050-10731", "name": "X-Men", "sort": 367 }
+{ "_id": "4050-60518", "name": "Adventures of Superman", "sort": 368 }
+{ "_id": "4050-20035", "name": "Northlanders", "sort": 369 }
+{ "_id": "4050-1404", "name": "Big Town", "sort": 370 }
+{ "_id": "4050-4587", "name": "Darkhawk", "sort": 371 }
+{ "_id": "4050-4297", "name": "Cheval Noir", "sort": 372 }
+{ "_id": "4050-91284", "name": "Green Arrow", "sort": 373 }
+{ "_id": "4050-4199", "name": "Justice League Europe", "sort": 374 }
+{ "_id": "4050-87624", "name": "Old Man Logan", "sort": 375 }
+{ "_id": "4050-20512", "name": "Tiny Titans", "sort": 376 }
+{ "_id": "4050-3616", "name": "Secret Origins", "sort": 377 }
+{ "_id": "4050-17990", "name": "Ms. Marvel", "sort": 378 }
+{ "_id": "4050-19141", "name": "Jack of Fables", "sort": 379 }
+{ "_id": "4050-3071", "name": "Arak, Son of Thunder", "sort": 380 }
+{ "_id": "4050-10612", "name": "Conan", "sort": 381 }
+{ "_id": "4050-2960", "name": "Spider-Woman", "sort": 382 }
+{ "_id": "4050-10415", "name": "Outsiders", "sort": 383 }
+{ "_id": "4050-1616", "name": "Hopalong Cassidy", "sort": 384 }
+{ "_id": "4050-93205", "name": "Suicide Squad", "sort": 385 }
+{ "_id": "4050-26327", "name": "New Mutants", "sort": 386 }
+{ "_id": "4050-4042", "name": "ALF", "sort": 387 }
+{ "_id": "4050-9145", "name": "The Titans", "sort": 388 }
+{ "_id": "4050-3208", "name": "Vigilante", "sort": 389 }
+{ "_id": "4050-10612", "name": "Conan", "sort": 390 }
+{ "_id": "4050-4297", "name": "Cheval Noir", "sort": 391 }
+{ "_id": "4050-20512", "name": "Tiny Titans", "sort": 392 }
+{ "_id": "4050-3208", "name": "Vigilante", "sort": 393 }
+{ "_id": "4050-3616", "name": "Secret Origins", "sort": 394 }
+{ "_id": "4050-3071", "name": "Arak, Son of Thunder", "sort": 395 }
+{ "_id": "4050-73528", "name": "The New 52: Futures End", "sort": 396 }
+{ "_id": "4050-9402", "name": "Hawkman", "sort": 397 }
+{ "_id": "4050-3316", "name": "The New Teen Titans", "sort": 398 }
+{ "_id": "4050-19025", "name": "Booster Gold", "sort": 399 }
+{ "_id": "4050-18095", "name": "Marvel Adventures: Fantastic Four", "sort": 400 }
+{ "_id": "4050-85601", "name": "The Unbeatable Squirrel Girl", "sort": 401 }
+{ "_id": "4050-56135", "name": "Buffy the Vampire Slayer Classic", "sort": 402 }
+{ "_id": "4050-56627", "name": "Dark Horse Insider", "sort": 403 }
+{ "_id": "4050-11903", "name": "Little Archie Comics Digest Magazine", "sort": 404 }
+{ "_id": "4050-78767", "name": "Fables: The Wolf Among Us", "sort": 405 }
+{ "_id": "4050-93375", "name": "Deathstroke", "sort": 406 }
+{ "_id": "4050-5490", "name": "Azrael", "sort": 407 }
+{ "_id": "4050-2132", "name": "Sgt. Fury and His Howling Commandos", "sort": 408 }
+{ "_id": "4050-4232", "name": "Nick Fury, Agent of SHIELD", "sort": 409 }
+{ "_id": "4050-26704", "name": "Flippity & Flop", "sort": 410 }
+{ "_id": "4050-22714", "name": "Sabrina the Teenage Witch", "sort": 411 }
+{ "_id": "4050-86245", "name": "Moon Girl and Devil Dinosaur", "sort": 412 }
+{ "_id": "4050-2918", "name": "What If?", "sort": 413 }
+{ "_id": "4050-2847", "name": "Super Friends", "sort": 414 }
+{ "_id": "4050-2577", "name": "Marvel Triple Action", "sort": 415 }
+{ "_id": "4050-39301", "name": "Venom", "sort": 416 }
+{ "_id": "4050-24374", "name": "Zip Comics", "sort": 417 }
+{ "_id": "4050-9411", "name": "X-Treme X-Men", "sort": 418 }
+{ "_id": "4050-18078", "name": "New X-Men", "sort": 419 }
+{ "_id": "4050-2738", "name": "Secrets of Haunted House", "sort": 420 }
+{ "_id": "4050-2409", "name": "The Mighty Marvel Western", "sort": 421 }
+{ "_id": "4050-54428", "name": "Avengers", "sort": 422 }
+{ "_id": "4050-11057", "name": "Justice League Unlimited", "sort": 423 }
+{ "_id": "4050-44767", "name": "Dark Horse Extra", "sort": 424 }
+{ "_id": "4050-1468", "name": "The Adventures of Rex the Wonder Dog", "sort": 425 }
+{ "_id": "4050-3521", "name": "West Coast Avengers", "sort": 426 }
+{ "_id": "4050-86343", "name": "Daredevil", "sort": 427 }
+{ "_id": "4050-1704", "name": "Gunsmoke Western", "sort": 428 }
+{ "_id": "4050-18354", "name": "Spider-Man 2099", "sort": 429 }
+{ "_id": "4050-38005", "name": "The Saga of Swamp Thing", "sort": 430 }
+{ "_id": "4050-4028", "name": "Starman", "sort": 431 }
+{ "_id": "4050-11650", "name": "Jughead", "sort": 432 }
+{ "_id": "4050-38005", "name": "The Saga of Swamp Thing", "sort": 433 }
+{ "_id": "4050-42692", "name": "Batman and Robin", "sort": 434 }
+{ "_id": "4050-91298", "name": "Superman", "sort": 435 }
+{ "_id": "4050-3626", "name": "Classic X-Men", "sort": 436 }
+{ "_id": "4050-4028", "name": "Starman", "sort": 437 }
+{ "_id": "4050-18632", "name": "The Goon", "sort": 438 }
+{ "_id": "4050-4808", "name": "The Ren & Stimpy Show", "sort": 439 }
+{ "_id": "4050-18445", "name": "Doom 2099", "sort": 440 }
+{ "_id": "4050-43539", "name": "Wolverine & the X-Men", "sort": 441 }
+{ "_id": "4050-2584", "name": "Werewolf by Night", "sort": 442 }
+{ "_id": "4050-9121", "name": "New X-Men", "sort": 443 }
+{ "_id": "4050-42996", "name": "Justice League Dark", "sort": 444 }
+{ "_id": "4050-7071", "name": "Miss America", "sort": 445 }
+{ "_id": "4050-92373", "name": "Justice League", "sort": 446 }
+{ "_id": "4050-42599", "name": "Swamp Thing", "sort": 447 }
+{ "_id": "4050-4818", "name": "Warlock and the Infinity Watch", "sort": 448 }
+{ "_id": "4050-23193", "name": "Leading Comics", "sort": 449 }
+{ "_id": "4050-3973", "name": "Action Comics Weekly", "sort": 450 }
+{ "_id": "4050-21513", "name": "House of Mystery", "sort": 451 }
+{ "_id": "4050-36950", "name": "Batwoman", "sort": 452 }
+{ "_id": "4050-3083", "name": "Dazzler", "sort": 453 }
+{ "_id": "4050-83121", "name": "Archie", "sort": 454 }
+{ "_id": "4050-2437", "name": "The Phantom Stranger", "sort": 455 }
+{ "_id": "4050-34221", "name": "X-Men", "sort": 456 }
+{ "_id": "4050-42804", "name": "Red Lanterns", "sort": 457 }
+{ "_id": "4050-42949", "name": "Supergirl", "sort": 458 }
+{ "_id": "4050-42916", "name": "Green Lantern Corps", "sort": 459 }
+{ "_id": "4050-4807", "name": "The Punisher: War Zone", "sort": 460 }
+{ "_id": "4050-3995", "name": "Doctor Fate", "sort": 461 }
+{ "_id": "4050-53919", "name": "All-New X-Men", "sort": 462 }
+{ "_id": "4050-2765", "name": "The Invaders", "sort": 463 }
+{ "_id": "4050-11502", "name": "Black Panther", "sort": 464 }
+{ "_id": "4050-42919", "name": "Red Hood and the Outlaws", "sort": 465 }
+{ "_id": "4050-7262", "name": "Legends of the DC Universe", "sort": 466 }
+{ "_id": "4050-2909", "name": "Marvel Comics Super Special", "sort": 467 }
+{ "_id": "4050-43007", "name": "Green Lantern: New Guardians", "sort": 468 }
+{ "_id": "4050-20776", "name": "Tales of the Legion of Super-Heroes", "sort": 469 }
+{ "_id": "4050-61307", "name": "B.P.R.D. Hell On Earth", "sort": 470 }
+{ "_id": "4050-35263", "name": "Wolverine", "sort": 471 }
+{ "_id": "4050-22894", "name": "Betty's Diary", "sort": 472 }
+{ "_id": "4050-19230", "name": "Sonic X", "sort": 473 }
+{ "_id": "4050-3036", "name": "The New Teen Titans", "sort": 474 }
+{ "_id": "4050-21677", "name": "Star Wars: Empire", "sort": 475 }
+{ "_id": "4050-86759", "name": "Injustice: Gods Among Us Year Five", "sort": 476 }
+{ "_id": "4050-27671", "name": "Sweet Tooth", "sort": 477 }
+{ "_id": "4050-9958", "name": "Gotham Central", "sort": 478 }
+{ "_id": "4050-1467", "name": "Adventures of Dean Martin & Jerry Lewis", "sort": 479 }
+{ "_id": "4050-33633", "name": "Avengers Academy", "sort": 480 }
+{ "_id": "4050-18201", "name": "Buffy the Vampire Slayer Season Eight", "sort": 481 }
+{ "_id": "4050-66022", "name": "Batman Beyond 2.0", "sort": 482 }
+{ "_id": "4050-9517", "name": "Aquaman", "sort": 483 }
+{ "_id": "4050-7273", "name": "Darkstars", "sort": 484 }
+{ "_id": "4050-33350", "name": "Secret Avengers", "sort": 485 }
+{ "_id": "4050-68836", "name": "The Vampire Diaries", "sort": 486 }
+{ "_id": "4050-30568", "name": "Tales From Riverdale Digest", "sort": 487 }
+{ "_id": "4050-51016", "name": "Laugh Digest Magazine", "sort": 488 }
+{ "_id": "4050-18120", "name": "JSA Classified", "sort": 489 }
+{ "_id": "4050-18100", "name": "Marvel Adventures: Avengers", "sort": 490 }
+{ "_id": "4050-92542", "name": "Batgirl", "sort": 491 }
+{ "_id": "4050-2177", "name": "Doom Patrol", "sort": 492 }
+{ "_id": "4050-80292", "name": "Batman: Arkham Knight", "sort": 493 }
+{ "_id": "4050-2469", "name": "Amazing Adventures", "sort": 494 }
+{ "_id": "4050-2445", "name": "My Love", "sort": 495 }
+{ "_id": "4050-86114", "name": "Ms. Marvel", "sort": 496 }
+{ "_id": "4050-2051", "name": "The Atom", "sort": 497 }
+{ "_id": "4050-6176", "name": "Martian Manhunter", "sort": 498 }
+{ "_id": "4050-4967", "name": "Justice League Task Force", "sort": 499 }
+{ "_id": "4050-27659", "name": "Jughead & Friends Digest Magazine", "sort": 500 }
+{ "_id": "4050-38006", "name": "Donald Duck Adventures", "sort": 501 }
+{ "_id": "4050-3199", "name": "The Omega Men", "sort": 502 }
+{ "_id": "4050-21159", "name": "Titans", "sort": 503 }
+{ "_id": "4050-3052", "name": "Moon Knight", "sort": 504 }
+{ "_id": "4050-18293", "name": "She-Hulk", "sort": 505 }
+{ "_id": "4050-2481", "name": "Where Monsters Dwell", "sort": 506 }
+{ "_id": "4050-2446", "name": "Our Love Story", "sort": 507 }
+{ "_id": "4050-25944", "name": "Green Lantern", "sort": 508 }
+{ "_id": "4050-20215", "name": "Star Wars: Republic", "sort": 509 }
+{ "_id": "4050-9494", "name": "Harley Quinn", "sort": 510 }
+{ "_id": "4050-7226", "name": "The Legion", "sort": 511 }
+{ "_id": "4050-11797", "name": "Manhunter", "sort": 512 }
+{ "_id": "4050-103689", "name": "Bombshells: United", "sort": 513 }
+{ "_id": "4050-3144", "name": "Marvel Graphic Novel", "sort": 514 }
+{ "_id": "4050-41410", "name": "Daredevil", "sort": 515 }
+{ "_id": "4050-34674", "name": "Life With Archie", "sort": 516 }
+{ "_id": "4050-85094", "name": "Doctor Strange", "sort": 517 }
+{ "_id": "4050-85750", "name": "Deadpool", "sort": 518 }
+{ "_id": "4050-5788", "name": "The Sensational Spider-Man", "sort": 519 }
+{ "_id": "4050-3805", "name": "The Question", "sort": 520 }
+{ "_id": "4050-35835", "name": "Uncanny X-Force", "sort": 521 }
+{ "_id": "4050-11450", "name": "Marvel Super Action", "sort": 522 }
+{ "_id": "4050-22932", "name": "Cheryl Blossom", "sort": 523 }
+{ "_id": "4050-96284", "name": "Star Wars: Doctor Aphra", "sort": 524 }
+{ "_id": "4050-90976", "name": "Zip", "sort": 525 }
+{ "_id": "4050-101232", "name": "Injustice 2", "sort": 526 }
+{ "_id": "4050-1061", "name": "Nellie the Nurse", "sort": 527 }
+{ "_id": "4050-18462", "name": "Nova", "sort": 528 }
+{ "_id": "4050-79262", "name": "Mortal Kombat X", "sort": 529 }
+{ "_id": "4050-100603", "name": "X-Men: Gold", "sort": 530 }
+{ "_id": "4050-18239", "name": "The Mighty Avengers", "sort": 531 }
+{ "_id": "4050-95402", "name": "Avengers", "sort": 532 }
+{ "_id": "4050-6938", "name": "Marvel Classics Comics", "sort": 533 }
+{ "_id": "4050-57181", "name": "Uncanny X-Men", "sort": 534 }
+{ "_id": "4050-95201", "name": "Batman Beyond", "sort": 535 }
+{ "_id": "4050-5629", "name": "Star Wars: X-Wing Rogue Squadron", "sort": 536 }
+{ "_id": "4050-55835", "name": "Injustice: Gods Among Us", "sort": 537 }
+{ "_id": "4050-4716", "name": "The Batman Adventures", "sort": 538 }
+{ "_id": "4050-49191", "name": "Mind MGMT", "sort": 539 }
+{ "_id": "4050-3974", "name": "Advanced Dungeons & Dragons", "sort": 540 }
+{ "_id": "4050-3336", "name": "Conan the King", "sort": 541 }
+{ "_id": "4050-28494", "name": "Leading Screen Comics", "sort": 542 }
+{ "_id": "4050-2670", "name": "Mad House", "sort": 543 }
+{ "_id": "4050-22841", "name": "Secret Six", "sort": 544 }
+{ "_id": "4050-52931", "name": "Arrow", "sort": 545 }
+{ "_id": "4050-2278", "name": "Swing With Scooter", "sort": 546 }
+{ "_id": "4050-19530", "name": "Ghost", "sort": 547 }
+{ "_id": "4050-39855", "name": "Dark Horse Presents", "sort": 548 }
+{ "_id": "4050-921", "name": "Boy Commandos", "sort": 549 }
+{ "_id": "4050-18443", "name": "Blue Beetle", "sort": 550 }
+{ "_id": "4050-33227", "name": "Avengers", "sort": 551 }
+{ "_id": "4050-6458", "name": "Captain Marvel", "sort": 552 }
+{ "_id": "4050-22455", "name": "The Official Handbook of the Marvel Universe: Master Edition", "sort": 553 }
+{ "_id": "4050-92577", "name": "Titans", "sort": 554 }
+{ "_id": "4050-5518", "name": "Sovereign Seven", "sort": 555 }
+{ "_id": "4050-90720", "name": "Scooby Apocalypse", "sort": 556 }
+{ "_id": "4050-4200", "name": "Legends of the Dark Knight", "sort": 557 }
+{ "_id": "4050-74090", "name": "Infinite Crisis: Fight For the Multiverse", "sort": 558 }
+{ "_id": "4050-59507", "name": "Abe Sapien", "sort": 559 }
+{ "_id": "4050-3789", "name": "Firestorm, the Nuclear Man", "sort": 560 }
+{ "_id": "4050-100712", "name": "X-Men: Blue", "sort": 561 }
+{ "_id": "4050-3245", "name": "The Thing", "sort": 562 }
+{ "_id": "4050-2470", "name": "Astonishing Tales", "sort": 563 }
+{ "_id": "4050-43019", "name": "All-Star Western", "sort": 564 }
+{ "_id": "4050-3107", "name": "Arion, Lord of Atlantis", "sort": 565 }
+{ "_id": "4050-42806", "name": "Birds of Prey", "sort": 566 }
+{ "_id": "4050-2622", "name": "Shazam!", "sort": 567 }
+{ "_id": "4050-42685", "name": "Superboy", "sort": 568 }
+{ "_id": "4050-18831", "name": "Thor", "sort": 569 }
+{ "_id": "4050-39761", "name": "Journey into Mystery", "sort": 570 }
+{ "_id": "4050-112161", "name": "The Amazing Spider-Man", "sort": 571 }
+{ "_id": "4050-18419", "name": "Avengers: The Initiative", "sort": 572 }
+{ "_id": "4050-33777", "name": "New Avengers", "sort": 573 }
+{ "_id": "4050-95242", "name": "Teen Titans", "sort": 574 }
+{ "_id": "4050-18207", "name": "The Brave and the Bold", "sort": 575 }
+{ "_id": "4050-85930", "name": "All-New Wolverine", "sort": 576 }
+{ "_id": "4050-18073", "name": "X-Men 2099", "sort": 577 }
+{ "_id": "4050-53273", "name": "Archie Marries Betty", "sort": 578 }
+{ "_id": "4050-4810", "name": "Silver Sable and the Wild Pack", "sort": 579 }
+{ "_id": "4050-18220", "name": "Iron Man", "sort": 580 }
+{ "_id": "4050-48505", "name": "Earth 2", "sort": 581 }
+{ "_id": "4050-18138", "name": "Ghost Rider", "sort": 582 }
+{ "_id": "4050-11157", "name": "Firestorm", "sort": 583 }
+{ "_id": "4050-9408", "name": "Elektra", "sort": 584 }
+{ "_id": "4050-93948", "name": "Supergirl", "sort": 585 }
+{ "_id": "4050-85311", "name": "Spider-Gwen", "sort": 586 }
+{ "_id": "4050-2033", "name": "Sea Devils", "sort": 587 }
+{ "_id": "4050-53275", "name": "Archie Marries Veronica", "sort": 588 }
+{ "_id": "4050-42602", "name": "Batwing", "sort": 589 }
+{ "_id": "4050-37983", "name": "Archie's Weird Mysteries", "sort": 590 }
+{ "_id": "4050-32051", "name": "American Vampire", "sort": 591 }
+{ "_id": "4050-22910", "name": "Dexter's Laboratory", "sort": 592 }
+{ "_id": "4050-1324", "name": "Hollywood Funny Folks", "sort": 593 }
+{ "_id": "4050-25491", "name": "The Chronicles of Conan", "sort": 594 }
+{ "_id": "4050-19440", "name": "Modeling With Millie", "sort": 595 }
+{ "_id": "4050-55552", "name": "Superior Spider-Man", "sort": 596 }
+{ "_id": "4050-10065", "name": "Justice League Adventures", "sort": 597 }
+{ "_id": "4050-18467", "name": "The Punisher 2099", "sort": 598 }
+{ "_id": "4050-3998", "name": "Dragonlance", "sort": 599 }
+{ "_id": "4050-4589", "name": "Deathlok", "sort": 600 }
+{ "_id": "4050-3224", "name": "The Further Adventures of Indiana Jones", "sort": 601 }
+{ "_id": "4050-111428", "name": "Justice League", "sort": 602 }
+{ "_id": "4050-3087", "name": "Ka-Zar the Savage", "sort": 603 }
+{ "_id": "4050-51341", "name": "Marvel Previews", "sort": 604 }
+{ "_id": "4050-44810", "name": "Outlanders", "sort": 605 }
+{ "_id": "4050-42947", "name": "Ultimate Comics X-Men", "sort": 606 }
+{ "_id": "4050-42719", "name": "Batman: The Dark Knight", "sort": 607 }
+{ "_id": "4050-111428", "name": "Justice League", "sort": 608 }
+{ "_id": "4050-42719", "name": "Batman: The Dark Knight", "sort": 609 }
+{ "_id": "4050-22892", "name": "Katy Keene", "sort": 610 }
+{ "_id": "4050-4600", "name": "Sleepwalker", "sort": 611 }
+{ "_id": "4050-55330", "name": "New Avengers", "sort": 612 }
+{ "_id": "4050-48417", "name": "Worlds' Finest", "sort": 613 }
+{ "_id": "4050-2859", "name": "Howard the Duck", "sort": 614 }
+{ "_id": "4050-2516", "name": "Marvel Spotlight", "sort": 615 }
+{ "_id": "4050-37405", "name": "Archie & Friends Double Digest", "sort": 616 }
+{ "_id": "4050-2189", "name": "The Amazing Spider-Man Annual", "sort": 617 }
+{ "_id": "4050-2700", "name": "Power Man", "sort": 618 }
+{ "_id": "4050-2479", "name": "Western Gunfighters", "sort": 619 }
+{ "_id": "4050-18470", "name": "Ravage 2099", "sort": 620 }
+{ "_id": "4050-40350", "name": "Cartoon Cartoons", "sort": 621 }
+{ "_id": "4050-3986", "name": "Checkmate", "sort": 622 }
+{ "_id": "4050-33788", "name": "Marvel Requirer", "sort": 623 }
+{ "_id": "4050-76530", "name": "Dark Horse Presents", "sort": 624 }
+{ "_id": "4050-43004", "name": "Teen Titans", "sort": 625 }
+{ "_id": "4050-83810", "name": "DC Comics Bombshells", "sort": 626 }
+{ "_id": "4050-18184", "name": "Fairest", "sort": 627 }
+{ "_id": "4050-11226", "name": "The Losers", "sort": 628 }
+{ "_id": "4050-6217", "name": "Mutant X", "sort": 629 }
+{ "_id": "4050-81991", "name": "Harrow County", "sort": 630 }
+{ "_id": "4050-18509", "name": "The Spirit", "sort": 631 }
+{ "_id": "4050-11495", "name": "Psi-Force", "sort": 632 }
+{ "_id": "4050-3640", "name": "Justice", "sort": 633 }
+{ "_id": "4050-11042", "name": "Sabrina the Teenage Witch", "sort": 634 }
+{ "_id": "4050-3307", "name": "Blue Devil", "sort": 635 }
+{ "_id": "4050-4798", "name": "Morbius: The Living Vampire", "sort": 636 }
+{ "_id": "4050-4365", "name": "Hawkworld", "sort": 637 }
+{ "_id": "4050-4135", "name": "Flaming Carrot Comics", "sort": 638 }
+{ "_id": "4050-29993", "name": "Limited Collectors' Edition", "sort": 639 }
+{ "_id": "4050-23194", "name": "All-Flash Quarterly", "sort": 640 }
+{ "_id": "4050-19227", "name": "Knuckles the Echidna", "sort": 641 }
+{ "_id": "4050-3627", "name": "D.P.7", "sort": 642 }
+{ "_id": "4050-29238", "name": "Essential Vertigo: The Sandman", "sort": 643 }
+{ "_id": "4050-3194", "name": "Batman and the Outsiders", "sort": 644 }
+{ "_id": "4050-54429", "name": "Thunderbolts", "sort": 645 }
+{ "_id": "4050-24869", "name": "Peter Panda", "sort": 646 }
+{ "_id": "4050-4210", "name": "The Shadow Strikes", "sort": 647 }
+{ "_id": "4050-42821", "name": "Ultimate Comics Spider-Man", "sort": 648 }
+{ "_id": "4050-42803", "name": "Suicide Squad", "sort": 649 }
+{ "_id": "4050-57535", "name": "Nova", "sort": 650 }
+{ "_id": "4050-3814", "name": "The Spectre", "sort": 651 }
+{ "_id": "4050-57535", "name": "Nova", "sort": 652 }
+{ "_id": "4050-2472", "name": "Adventure into Fear", "sort": 653 }
+{ "_id": "4050-3826", "name": "Young All-Stars", "sort": 654 }
+{ "_id": "4050-3654", "name": "Strikeforce: Morituri", "sort": 655 }
+{ "_id": "4050-89380", "name": "Star Wars: Poe Dameron", "sort": 656 }
+{ "_id": "4050-42720", "name": "Nightwing", "sort": 657 }
+{ "_id": "4050-42596", "name": "Stormwatch", "sort": 658 }
+{ "_id": "4050-48343", "name": "Ultimate Spider-Man", "sort": 659 }
+{ "_id": "4050-4210", "name": "The Shadow Strikes", "sort": 660 }
+{ "_id": "4050-69322", "name": "Harley Quinn", "sort": 661 }
+{ "_id": "4050-25646", "name": "Spider-Man: The Manga", "sort": 662 }
+{ "_id": "4050-19617", "name": "John Byrne's Next Men", "sort": 663 }
+{ "_id": "4050-18427", "name": "Checkmate", "sort": 664 }
+{ "_id": "4050-18105", "name": "Moon Knight", "sort": 665 }
+{ "_id": "4050-2477", "name": "Ringo Kid", "sort": 666 }
+{ "_id": "4050-11872", "name": "Runaways", "sort": 667 }
+{ "_id": "4050-49666", "name": "The Massive", "sort": 668 }
+{ "_id": "4050-11059", "name": "Legion of Super-Heroes", "sort": 669 }
+{ "_id": "4050-42600", "name": "Animal Man", "sort": 670 }
+{ "_id": "4050-72408", "name": "Buffy the Vampire Slayer Season 10", "sort": 671 }
+{ "_id": "4050-2476", "name": "The Outlaw Kid", "sort": 672 }
+{ "_id": "4050-20065", "name": "Marvel Vision", "sort": 673 }
+{ "_id": "4050-86113", "name": "Mighty Thor", "sort": 674 }
+{ "_id": "4050-18241", "name": "Exterminators", "sort": 675 }
+{ "_id": "4050-65344", "name": "Batman '66", "sort": 676 }
+{ "_id": "4050-21736", "name": "Marvel Knights: 4", "sort": 677 }
+{ "_id": "4050-85318", "name": "Uncanny Avengers", "sort": 678 }
+{ "_id": "4050-42915", "name": "Creepy Archives", "sort": 679 }
+{ "_id": "4050-2032", "name": "Rip Hunter ... Time Master", "sort": 680 }
+{ "_id": "4050-22895", "name": "Laugh", "sort": 681 }
+{ "_id": "4050-21000", "name": "DC Super Friends", "sort": 682 }
+{ "_id": "4050-2129", "name": "Fantastic Four Annual", "sort": 683 }
+{ "_id": "4050-20587", "name": "The Ray", "sort": 684 }
+{ "_id": "4050-18390", "name": "Weapon X", "sort": 685 }
+{ "_id": "4050-11315", "name": "Swamp Thing", "sort": 686 }
+{ "_id": "4050-4603", "name": "Wonder Man", "sort": 687 }
+{ "_id": "4050-2916", "name": "Tarzan", "sort": 688 }
+{ "_id": "4050-20588", "name": "Incredible Hercules", "sort": 689 }
+{ "_id": "4050-11894", "name": "Guy Gardner: Warrior", "sort": 690 }
+{ "_id": "4050-53725", "name": "Iron Man", "sort": 691 }
+{ "_id": "4050-99040", "name": "Justice League of America", "sort": 692 }
+{ "_id": "4050-2129", "name": "Fantastic Four Annual", "sort": 693 }
+{ "_id": "4050-4603", "name": "Wonder Man", "sort": 694 }
+{ "_id": "4050-87820", "name": "Spider-Man", "sort": 695 }
+{ "_id": "4050-9319", "name": "Lone Wolf and Cub", "sort": 696 }
+{ "_id": "4050-73420", "name": "The Amazing Spider-Man", "sort": 697 }
+{ "_id": "4050-4203", "name": "Mister Miracle", "sort": 698 }
+{ "_id": "4050-57960", "name": "Guardians of the Galaxy", "sort": 699 }
+{ "_id": "4050-32937", "name": "iZombie", "sort": 700 }
+{ "_id": "4050-90118", "name": "The Punisher", "sort": 701 }
+{ "_id": "4050-2907", "name": "John Carter Warlord of Mars", "sort": 702 }
+{ "_id": "4050-2694", "name": "Marvel Treasury Edition", "sort": 703 }
+{ "_id": "4050-20511", "name": "X-Force", "sort": 704 }
+{ "_id": "4050-25640", "name": "Secret Warriors", "sort": 705 }
+{ "_id": "4050-5965", "name": "Resurrection Man", "sort": 706 }
+{ "_id": "4050-21508", "name": "Beavis & Butt-Head", "sort": 707 }
+{ "_id": "4050-94612", "name": "Champions", "sort": 708 }
+{ "_id": "4050-3455", "name": "The Outsiders", "sort": 709 }
+{ "_id": "4050-11906", "name": "Josie", "sort": 710 }
+{ "_id": "4050-2512", "name": "Creatures on the Loose", "sort": 711 }
+{ "_id": "4050-70778", "name": "Archie's Funhouse Double Digest", "sort": 712 }
+{ "_id": "4050-4191", "name": "Hawk and Dove", "sort": 713 }
+{ "_id": "4050-2894", "name": "Superboy and the Legion of Super-Heroes", "sort": 714 }
+{ "_id": "4050-25833", "name": "R.E.B.E.L.S.", "sort": 715 }
+{ "_id": "4050-23045", "name": "Vampire Hunter D", "sort": 716 }
+{ "_id": "4050-22213", "name": "G.I. Joe: Special Missions", "sort": 717 }
+{ "_id": "4050-18669", "name": "New Gods", "sort": 718 }
+{ "_id": "4050-3109", "name": "Batman Annual", "sort": 719 }
+{ "_id": "4050-100709", "name": "Weapon X", "sort": 720 }
+{ "_id": "4050-3851", "name": "Marvel Masterworks", "sort": 721 }
+{ "_id": "4050-26326", "name": "Power Girl", "sort": 722 }
+{ "_id": "4050-25643", "name": "Adventure Comics", "sort": 723 }
+{ "_id": "4050-72995", "name": "Jughead and Archie Double Digest", "sort": 724 }
+{ "_id": "4050-22445", "name": "The Spectre", "sort": 725 }
+{ "_id": "4050-21819", "name": "Bionicle", "sort": 726 }
+{ "_id": "4050-27380", "name": "Eerie Archives", "sort": 727 }
+{ "_id": "4050-18206", "name": "The Immortal Iron Fist", "sort": 728 }
+{ "_id": "4050-85998", "name": "The Legend of Wonder Woman", "sort": 729 }
+{ "_id": "4050-2006", "name": "Kathy", "sort": 730 }
+{ "_id": "4050-38217", "name": "DC Universe Online Legends", "sort": 731 }
+{ "_id": "4050-26706", "name": "Top-Notch Comics", "sort": 732 }
+{ "_id": "4050-103100", "name": "Marvel Previews", "sort": 733 }
+{ "_id": "4050-20725", "name": "Fear Agent", "sort": 734 }
+{ "_id": "4050-91632", "name": "Dark Horse Insider", "sort": 735 }
+{ "_id": "4050-89613", "name": "Moon Knight", "sort": 736 }
+{ "_id": "4050-22445", "name": "The Spectre", "sort": 737 }
+{ "_id": "4050-26706", "name": "Top-Notch Comics", "sort": 738 }
+{ "_id": "4050-26326", "name": "Power Girl", "sort": 739 }
+{ "_id": "4050-79310", "name": "Wonder Woman '77", "sort": 740 }
+{ "_id": "4050-2178", "name": "Hawkman", "sort": 741 }
+{ "_id": "4050-85998", "name": "The Legend of Wonder Woman", "sort": 742 }
+{ "_id": "4050-91632", "name": "Dark Horse Insider", "sort": 743 }
+{ "_id": "4050-25305", "name": "Sonic the Hedgehog Archives", "sort": 744 }
+{ "_id": "4050-45101", "name": "Scarlet Spider", "sort": 745 }
+{ "_id": "4050-27381", "name": "Ultimate Spider-Man", "sort": 746 }
+{ "_id": "4050-18152", "name": "Punisher War Journal", "sort": 747 }
+{ "_id": "4050-8077", "name": "X-Men: The Manga", "sort": 748 }
+{ "_id": "4050-5562", "name": "Untold Tales of Spider-Man", "sort": 749 }
+{ "_id": "4050-21896", "name": "Conan the Cimmerian", "sort": 750 }
+{ "_id": "4050-89627", "name": "The Unbelievable Gwenpool", "sort": 751 }
+{ "_id": "4050-2888", "name": "Men of War", "sort": 752 }
+{ "_id": "4050-9478", "name": "X-Statix", "sort": 753 }
+{ "_id": "4050-2442", "name": "Chili", "sort": 754 }
+{ "_id": "4050-1773", "name": "Three Mouseketeers", "sort": 755 }
+{ "_id": "4050-52880", "name": "Uncanny Avengers", "sort": 756 }
+{ "_id": "4050-43624", "name": "The Spirit Archives", "sort": 757 }
+{ "_id": "4050-26651", "name": "Red Robin", "sort": 758 }
+{ "_id": "4050-22453", "name": "Outsiders", "sort": 759 }
+{ "_id": "4050-92966", "name": "Red Hood & the Outlaws", "sort": 760 }
+{ "_id": "4050-18197", "name": "Who's Who: The Definitive Directory of the DC Universe", "sort": 761 }
+{ "_id": "4050-7511", "name": "Funny Folks", "sort": 762 }
+{ "_id": "4050-62383", "name": "X-Men", "sort": 763 }
+{ "_id": "4050-5336", "name": "War Machine", "sort": 764 }
+{ "_id": "4050-26891", "name": "Gotham City Sirens", "sort": 765 }
+{ "_id": "4050-2015", "name": "Many Loves of Dobie Gillis", "sort": 766 }
+{ "_id": "4050-25804", "name": "The Outsiders", "sort": 767 }
+{ "_id": "4050-9111", "name": "Gambit", "sort": 768 }
+{ "_id": "4050-77406", "name": "Earth 2: World's End", "sort": 769 }
+{ "_id": "4050-38466", "name": "Young Justice", "sort": 770 }
+{ "_id": "4050-85080", "name": "Batman & Robin Eternal", "sort": 771 }
+{ "_id": "4050-26584", "name": "Batman and Robin", "sort": 772 }
+{ "_id": "4050-4864", "name": "Dark Horse Comics", "sort": 773 }
+{ "_id": "4050-73235", "name": "Conan the Avenger", "sort": 774 }
+{ "_id": "4050-5403", "name": "X", "sort": 775 }
+{ "_id": "4050-2504", "name": "Mister Miracle", "sort": 776 }
+{ "_id": "4050-45573", "name": "Justice League Beyond", "sort": 777 }
+{ "_id": "4050-3596", "name": "Booster Gold", "sort": 778 }
+{ "_id": "4050-53922", "name": "X-Men: Legacy", "sort": 779 }
+{ "_id": "4050-20805", "name": "Cable", "sort": 780 }
+{ "_id": "4050-54110", "name": "Captain America", "sort": 781 }
+{ "_id": "4050-18455", "name": "The All New Atom", "sort": 782 }
+{ "_id": "4050-46569", "name": "Avengers Assemble", "sort": 783 }
+{ "_id": "4050-18296", "name": "Captain Marvel", "sort": 784 }
+{ "_id": "4050-42521", "name": "Angel & Faith", "sort": 785 }
+{ "_id": "4050-23617", "name": "Unknown Soldier", "sort": 786 }
+{ "_id": "4050-6788", "name": "Orion", "sort": 787 }
+{ "_id": "4050-18767", "name": "Mad Classics", "sort": 788 }
+{ "_id": "4050-5492", "name": "The Batman and Robin Adventures", "sort": 789 }
+{ "_id": "4050-104320", "name": "Runaways", "sort": 790 }
+{ "_id": "4050-5044", "name": "Secret Defenders", "sort": 791 }
+{ "_id": "4050-18024", "name": "Marvel Team-Up", "sort": 792 }
+{ "_id": "4050-89350", "name": "Black Panther", "sort": 793 }
+{ "_id": "4050-3490", "name": "The Marvel Saga The Official History of the Marvel Universe", "sort": 794 }
+{ "_id": "4050-75263", "name": "The Essential Spirit Collection", "sort": 795 }
+{ "_id": "4050-6329", "name": "Hourman", "sort": 796 }
+{ "_id": "4050-2434", "name": "From Beyond the Unknown", "sort": 797 }
+{ "_id": "4050-5247", "name": "The Invisibles", "sort": 798 }
+{ "_id": "4050-4803", "name": "Nomad", "sort": 799 }
+{ "_id": "4050-44351", "name": "Conan the Barbarian", "sort": 800 }
+{ "_id": "4050-3053", "name": "The Savage She-Hulk", "sort": 801 }
+{ "_id": "4050-18412", "name": "Ghost Rider 2099", "sort": 802 }
+{ "_id": "4050-101960", "name": "Darth Vader", "sort": 803 }
+{ "_id": "4050-9405", "name": "Hunter: The Age of Magic", "sort": 804 }
+{ "_id": "4050-63709", "name": "Captain Midnight", "sort": 805 }
+{ "_id": "4050-53920", "name": "Thor: God of Thunder", "sort": 806 }
+{ "_id": "4050-4184", "name": "Forgotten Realms", "sort": 807 }
+{ "_id": "4050-42820", "name": "Buffy the Vampire Slayer Season Nine", "sort": 808 }
+{ "_id": "4050-2566", "name": "Chamber of Chills", "sort": 809 }
+{ "_id": "4050-21550", "name": "Guardians of the Galaxy", "sort": 810 }
+{ "_id": "4050-18693", "name": "Shadowpact", "sort": 811 }
+{ "_id": "4050-85312", "name": "Spider-Man 2099", "sort": 812 }
+{ "_id": "4050-72779", "name": "Angel & Faith Season 10", "sort": 813 }
+{ "_id": "4050-5751", "name": "House of Secrets", "sort": 814 }
+{ "_id": "4050-57406", "name": "X", "sort": 815 }
+{ "_id": "4050-100966", "name": "Ben Reilly: Scarlet Spider", "sort": 816 }
+{ "_id": "4050-79990", "name": "Darth Vader", "sort": 817 }
+{ "_id": "4050-32561", "name": "Brightest Day", "sort": 818 }
+{ "_id": "4050-11119", "name": "Star Wars Tales", "sort": 819 }
+{ "_id": "4050-10947", "name": "Essential Vertigo: Swamp Thing", "sort": 820 }
+{ "_id": "4050-66450", "name": "Spider-Man Collectible Series", "sort": 821 }
+{ "_id": "4050-35409", "name": "Daken: Dark Wolverine", "sort": 822 }
+{ "_id": "4050-18019", "name": "New Excalibur", "sort": 823 }
+{ "_id": "4050-9393", "name": "Codename: Knockout", "sort": 824 }
+{ "_id": "4050-9393", "name": "Codename: Knockout", "sort": 824 }
+{ "_id": "4050-9393", "name": "Codename: Knockout", "sort": 824 }
+{ "_id": "4050-9393", "name": "Codename: Knockout", "sort": 824 }
+{ "_id": "4050-9393", "name": "Codename: Knockout", "sort": 824 }
+{ "_id": "4050-27067", "name": "Creepy", "sort": 825 }
+{ "_id": "4050-6421", "name": "Batman Beyond", "sort": 826 }
+{ "_id": "4050-23333", "name": "Gears of War", "sort": 827 }
+{ "_id": "4050-94582", "name": "Injustice: Ground Zero", "sort": 828 }
+{ "_id": "4050-18019", "name": "New Excalibur", "sort": 829 }
+{ "_id": "4050-3595", "name": "Blue Beetle", "sort": 830 }
+{ "_id": "4050-89777", "name": "Dept. H", "sort": 831 }
+{ "_id": "4050-11119", "name": "Star Wars Tales", "sort": 832 }
+{ "_id": "4050-2556", "name": "Swamp Thing", "sort": 833 }
+{ "_id": "4050-85274", "name": "Captain America: Sam Wilson", "sort": 834 }
+{ "_id": "4050-81822", "name": "Injustice: Gods Among Us Year Four", "sort": 835 }
+{ "_id": "4050-5055", "name": "Thunderstrike", "sort": 836 }
+{ "_id": "4050-71060", "name": "ElfQuest: The Final Quest", "sort": 837 }
+{ "_id": "4050-66176", "name": "Justice League Beyond 2.0", "sort": 838 }
+{ "_id": "4050-35303", "name": "Incredible Hulks", "sort": 839 }
+{ "_id": "4050-32628", "name": "Marvel Adventures Super Heroes", "sort": 840 }
+{ "_id": "4050-26670", "name": "X-Men Forever", "sort": 841 }
+{ "_id": "4050-89297", "name": "DC Comics Previews Catalog", "sort": 842 }
+{ "_id": "4050-83637", "name": "Marvel Previews", "sort": 843 }
+{ "_id": "4050-9320", "name": "Team Titans", "sort": 844 }
+{ "_id": "4050-77226", "name": "Injustice: Gods Among Us Year Three", "sort": 845 }
+{ "_id": "4050-3994", "name": "Doc Savage", "sort": 846 }
+{ "_id": "4050-70687", "name": "Injustice: Gods Among Us Year Two", "sort": 847 }
+{ "_id": "4050-2559", "name": "Weird Mystery Tales", "sort": 848 }
+{ "_id": "4050-42952", "name": "Legion of Super-Heroes", "sort": 849 }
+{ "_id": "4050-33082", "name": "Justice League: Generation Lost", "sort": 850 }
+{ "_id": "4050-110496", "name": "Avengers", "sort": 851 }
+{ "_id": "4050-22702", "name": "Air", "sort": 852 }
+{ "_id": "4050-93381", "name": "The Hellblazer", "sort": 853 }
+{ "_id": "4050-17998", "name": "Friendly Neighborhood Spider-Man", "sort": 854 }
+{ "_id": "4050-86408", "name": "The Totally Awesome Hulk", "sort": 855 }
+{ "_id": "4050-10947", "name": "Essential Vertigo: Swamp Thing", "sort": 856 }
+{ "_id": "4050-83348", "name": "Ultimate Spider-Man Infinite Comic", "sort": 857 }
+{ "_id": "4050-76709", "name": "Arrow: Season 2.5", "sort": 858 }
+{ "_id": "4050-98913", "name": "The Wild Storm", "sort": 859 }
+{ "_id": "4050-31710", "name": "Dale Evans Comics", "sort": 860 }
+{ "_id": "4050-25515", "name": "All-American Western", "sort": 861 }
+{ "_id": "4050-66450", "name": "Spider-Man Collectible Series", "sort": 862 }
+{ "_id": "4050-18343", "name": "Loveless", "sort": 863 }
+{ "_id": "4050-42811", "name": "Demon Knights", "sort": 864 }
+{ "_id": "4050-11391", "name": "Mystique", "sort": 865 }
+{ "_id": "4050-32888", "name": "Marvel Adventures Spider-Man", "sort": 866 }
+{ "_id": "4050-27438", "name": "Cartoon Network Presents", "sort": 867 }
+{ "_id": "4050-111425", "name": "The Immortal Hulk", "sort": 868 }
+{ "_id": "4050-2901", "name": "Godzilla", "sort": 869 }
+{ "_id": "4050-35409", "name": "Daken: Dark Wolverine", "sort": 870 }
+{ "_id": "4050-19986", "name": "Teen Titans", "sort": 871 }
+{ "_id": "4050-103516", "name": "Gotham City Garage", "sort": 872 }
+{ "_id": "4050-75697", "name": "Teen Titans", "sort": 873 }
+{ "_id": "4050-53584", "name": "Batman: Li'l Gotham", "sort": 874 }
+{ "_id": "4050-2574", "name": "Jungle Action", "sort": 875 }
+{ "_id": "4050-52031", "name": "Ame-Comi Girls", "sort": 876 }
+{ "_id": "4050-4759", "name": "Valor", "sort": 877 }
+{ "_id": "4050-3113", "name": "Supergirl", "sort": 878 }
+{ "_id": "4050-21748", "name": "Deadpool Classic", "sort": 879 }
+{ "_id": "4050-18496", "name": "American Virgin", "sort": 880 }
+{ "_id": "4050-95572", "name": "Amazing Spider-Man: Renew Your Vows", "sort": 881 }
+{ "_id": "4050-5243", "name": "Fate", "sort": 882 }
+{ "_id": "4050-2350", "name": "The Avengers Annual", "sort": 883 }
+{ "_id": "4050-4418", "name": "RoboCop", "sort": 884 }
+{ "_id": "4050-66760", "name": "FBP: Federal Bureau of Physics", "sort": 885 }
+{ "_id": "4050-3002", "name": "Battlestar Galactica", "sort": 886 }
+{ "_id": "4050-55802", "name": "Savage Wolverine", "sort": 887 }
+{ "_id": "4050-2648", "name": "Vault of Evil", "sort": 888 }
+{ "_id": "4050-51843", "name": "The Phantom Stranger", "sort": 889 }
+{ "_id": "4050-43884", "name": "Avenging Spider-Man", "sort": 890 }
+{ "_id": "4050-25830", "name": "All Funny Comics", "sort": 891 }
+{ "_id": "4050-94266", "name": "Cyborg", "sort": 892 }
+{ "_id": "4050-3339", "name": "Doctor Who", "sort": 893 }
+{ "_id": "4050-64289", "name": "Super Powers Collection", "sort": 894 }
+{ "_id": "4050-2910", "name": "Ms. Marvel", "sort": 895 }
+{ "_id": "4050-39763", "name": "The Mighty Thor", "sort": 896 }
+{ "_id": "4050-31887", "name": "Astro Boy", "sort": 897 }
+{ "_id": "4050-6598", "name": "The Batman Chronicles", "sort": 898 }
+{ "_id": "4050-102272", "name": "Peter Parker: The Spectacular Spider-Man", "sort": 899 }
+{ "_id": "4050-85120", "name": "Marvel Universe Guardians of the Galaxy", "sort": 900 }
+{ "_id": "4050-73088", "name": "Sinestro", "sort": 901 }
+{ "_id": "4050-59156", "name": "Constantine", "sort": 902 }
+{ "_id": "4050-49241", "name": "Pat the Brat", "sort": 903 }
+{ "_id": "4050-39453", "name": "FF", "sort": 904 }
+{ "_id": "4050-82471", "name": "Earth 2: Society", "sort": 905 }
+{ "_id": "4050-11537", "name": "Mad House Glads", "sort": 906 }
+{ "_id": "4050-50941", "name": "Hawkeye", "sort": 907 }
+{ "_id": "4050-24373", "name": "World of Archie", "sort": 908 }
+{ "_id": "4050-18642", "name": "Testament", "sort": 909 }
+{ "_id": "4050-25544", "name": "Batman: The Brave and the Bold", "sort": 910 }
+{ "_id": "4050-75537", "name": "New Suicide Squad", "sort": 911 }
+{ "_id": "4050-21975", "name": "The Savage Sword of Conan", "sort": 912 }
+{ "_id": "4050-55318", "name": "The New Archies", "sort": 913 }
+{ "_id": "4050-19533", "name": "Ghost", "sort": 914 }
+{ "_id": "4050-11040", "name": "The Flintstones", "sort": 915 }
+{ "_id": "4050-28726", "name": "FOOM", "sort": 916 }
+{ "_id": "4050-6505", "name": "Monsters on the Prowl", "sort": 917 }
+{ "_id": "4050-24373", "name": "World of Archie", "sort": 918 }
+{ "_id": "4050-4952", "name": "Black Orchid", "sort": 919 }
+{ "_id": "4050-18642", "name": "Testament", "sort": 920 }
+{ "_id": "4050-10608", "name": "H-E-R-O", "sort": 921 }
+{ "_id": "4050-2650", "name": "Weird Wonder Tales", "sort": 922 }
+{ "_id": "4050-95845", "name": "Venom", "sort": 923 }
+{ "_id": "4050-82471", "name": "Earth 2: Society", "sort": 924 }
+{ "_id": "4050-5048", "name": "Spider-Man Unlimited", "sort": 925 }
+{ "_id": "4050-42226", "name": "Archie Annual", "sort": 926 }
+{ "_id": "4050-27258", "name": "Doom Patrol", "sort": 927 }
+{ "_id": "4050-9202", "name": "X-Men: The Hidden Years", "sort": 928 }
+{ "_id": "4050-94296", "name": "Trinity", "sort": 929 }
+{ "_id": "4050-5956", "name": "The Invisibles, Volume Two", "sort": 930 }
+{ "_id": "4050-81092", "name": "Uncanny Inhumans", "sort": 931 }
+{ "_id": "4050-50941", "name": "Hawkeye", "sort": 932 }
+{ "_id": "4050-20664", "name": "Marvel Collectors' Item Classics", "sort": 933 }
+{ "_id": "4050-11537", "name": "Mad House Glads", "sort": 934 }
+{ "_id": "4050-2693", "name": "Man-Thing", "sort": 935 }
+{ "_id": "4050-93179", "name": "Batgirl and the Birds of Prey", "sort": 936 }
+{ "_id": "4050-42987", "name": "The Fury of Firestorm: The Nuclear Man", "sort": 937 }
+{ "_id": "4050-5242", "name": "Damage", "sort": 938 }
+{ "_id": "4050-6006", "name": "Ka-Zar", "sort": 939 }
+{ "_id": "4050-1097", "name": "Real Fact Comics", "sort": 940 }
+{ "_id": "4050-72417", "name": "Daredevil", "sort": 941 }
+{ "_id": "4050-3621", "name": "Teen Titans Spotlight", "sort": 942 }
+{ "_id": "4050-2639", "name": "Marvel Double Feature", "sort": 943 }
+{ "_id": "4050-22319", "name": "Marvel Adventures Super Heroes", "sort": 944 }
+{ "_id": "4050-21049", "name": "Wolverine: First Class", "sort": 945 }
+{ "_id": "4050-5034", "name": "Night Thrasher", "sort": 946 }
+{ "_id": "4050-72111", "name": "Magneto", "sort": 947 }
+{ "_id": "4050-3112", "name": "Captain Carrot and His Amazing Zoo Crew", "sort": 948 }
+{ "_id": "4050-70704", "name": "Avengers World", "sort": 949 }
+{ "_id": "4050-43005", "name": "The Savage Hawkman", "sort": 950 }
+{ "_id": "4050-2632", "name": "Crypt of Shadows", "sort": 951 }
+{ "_id": "4050-32605", "name": "Little Archie Digest Magazine", "sort": 952 }
+{ "_id": "4050-105297", "name": "Archie and Me Comics Digest", "sort": 953 }
+{ "_id": "4050-48230", "name": "Aliens Magazine", "sort": 954 }
+{ "_id": "4050-42807", "name": "Deathstroke", "sort": 955 }
+{ "_id": "4050-26754", "name": "Batman: Streets of Gotham", "sort": 956 }
+{ "_id": "4050-11857", "name": "The Flintstones and the Jetsons", "sort": 957 }
+{ "_id": "4050-42288", "name": "Superman Beyond", "sort": 958 }
+{ "_id": "4050-19189", "name": "Supergirl and the Legion of Super-Heroes", "sort": 959 }
+{ "_id": "4050-11345", "name": "Human Target", "sort": 960 }
+{ "_id": "4050-11043", "name": "Scooby Doo", "sort": 961 }
+{ "_id": "4050-2867", "name": "Nova", "sort": 962 }
+{ "_id": "4050-35496", "name": "X-23", "sort": 963 }
+{ "_id": "4050-11291", "name": "Alpha Flight", "sort": 964 }
+{ "_id": "4050-9100", "name": "Hellstorm: Prince of Lies", "sort": 965 }
+{ "_id": "4050-7168", "name": "Journey into Mystery", "sort": 966 }
+{ "_id": "4050-5779", "name": "Elektra", "sort": 967 }
+{ "_id": "4050-70705", "name": "Black Widow", "sort": 968 }
+{ "_id": "4050-3011", "name": "Shogun Warriors", "sort": 969 }
+{ "_id": "4050-2727", "name": "The Batman Family", "sort": 970 }
+{ "_id": "4050-111415", "name": "Doctor Strange", "sort": 971 }
+{ "_id": "4050-86334", "name": "All-New X-Men", "sort": 972 }
+{ "_id": "4050-21401", "name": "Marvel Age: Spider-Man", "sort": 973 }
+{ "_id": "4050-55553", "name": "Star Wars", "sort": 974 }
+{ "_id": "4050-18671", "name": "New Warriors", "sort": 975 }
+{ "_id": "4050-43017", "name": "I, Vampire", "sort": 976 }
+{ "_id": "4050-11052", "name": "Fallen Angel", "sort": 977 }
+{ "_id": "4050-23402", "name": "Marvel Masterworks: The Amazing Spider-Man", "sort": 978 }
+{ "_id": "4050-6760", "name": "Swamp Thing", "sort": 979 }
+{ "_id": "4050-5391", "name": "Madman Comics", "sort": 980 }
+{ "_id": "4050-18663", "name": "Amazing Fantasy", "sort": 981 }
+{ "_id": "4050-2643", "name": "Strange Tales", "sort": 982 }
+{ "_id": "4050-5842", "name": "Tarzan", "sort": 983 }
+{ "_id": "4050-85756", "name": "Extraordinary X-Men", "sort": 984 }
+{ "_id": "4050-4218", "name": "Avengers Spotlight", "sort": 985 }
+{ "_id": "4050-42885", "name": "DC Universe Presents", "sort": 986 }
+{ "_id": "4050-18766", "name": "Legion of Super-Heroes in the 31st Century", "sort": 987 }
+{ "_id": "4050-18546", "name": "New Adventure Comics", "sort": 988 }
+{ "_id": "4050-108966", "name": "The Terrifics", "sort": 989 }
+{ "_id": "4050-3497", "name": "The Official Handbook of the Marvel Universe", "sort": 990 }
+{ "_id": "4050-54112", "name": "Indestructible Hulk", "sort": 991 }
+{ "_id": "4050-2860", "name": "The Incredible Hulk Annual", "sort": 992 }
+{ "_id": "4050-35197", "name": "Marvel Masterworks: The Fantastic Four", "sort": 993 }
+{ "_id": "4050-22114", "name": "Jack Kirby's Fourth World", "sort": 994 }
+{ "_id": "4050-18104", "name": "Spider-Man Loves Mary Jane", "sort": 995 }
+{ "_id": "4050-70703", "name": "All-New X-Factor", "sort": 996 }
+{ "_id": "4050-2727", "name": "The Batman Family", "sort": 997 }
+{ "_id": "4050-3859", "name": "Solo Avengers", "sort": 998 }
+{ "_id": "4050-3497", "name": "The Official Handbook of the Marvel Universe", "sort": 999 }
+{ "_id": "4050-85290", "name": "Guardians of the Galaxy", "sort": 1000 }
+{ "_id": "4050-71435", "name": "The Punisher", "sort": 1001 }
+{ "_id": "4050-11111", "name": "Plastic Man", "sort": 1002 }
+{ "_id": "4050-4861", "name": "Classic Star Wars", "sort": 1003 }
+{ "_id": "4050-111415", "name": "Doctor Strange", "sort": 1004 }
+{ "_id": "4050-77678", "name": "Deathstroke", "sort": 1005 }
+{ "_id": "4050-68149", "name": "Coffin Hill", "sort": 1006 }
+{ "_id": "4050-18546", "name": "New Adventure Comics", "sort": 1007 }
+{ "_id": "4050-3353", "name": "Micronauts: The New Voyages", "sort": 1008 }
+{ "_id": "4050-75536", "name": "Grayson", "sort": 1009 }
+{ "_id": "4050-47791", "name": "Batman: Arkham Unhinged", "sort": 1010 }
+{ "_id": "4050-55553", "name": "Star Wars", "sort": 1011 }
+{ "_id": "4050-20073", "name": "The Original Ghost Rider", "sort": 1012 }
+{ "_id": "4050-3304", "name": "Atari Force", "sort": 1013 }
+{ "_id": "4050-11503", "name": "The Crusades", "sort": 1014 }
+{ "_id": "4050-5933", "name": "Adventures in the DC Universe", "sort": 1015 }
+{ "_id": "4050-2402", "name": "Captain Savage", "sort": 1016 }
+{ "_id": "4050-90698", "name": "Captain America: Steve Rogers", "sort": 1017 }
+{ "_id": "4050-3051", "name": "King Conan", "sort": 1018 }
+{ "_id": "4050-2640", "name": "Marvel Spectacular", "sort": 1019 }
+{ "_id": "4050-54644", "name": "Cable and X-Force", "sort": 1020 }
+{ "_id": "4050-41245", "name": "Captain America", "sort": 1021 }
+{ "_id": "4050-18736", "name": "Rex Mundi", "sort": 1022 }
+{ "_id": "4050-3809", "name": "The Shadow", "sort": 1023 }
+{ "_id": "4050-87190", "name": "Uncanny X-Men", "sort": 1024 }
+{ "_id": "4050-2903", "name": "The Human Fly", "sort": 1025 }
+{ "_id": "4050-48550", "name": "Smallville: Season Eleven", "sort": 1026 }
+{ "_id": "4050-4196", "name": "The Huntress", "sort": 1027 }
+{ "_id": "4050-3798", "name": "Justice League International", "sort": 1028 }
+{ "_id": "4050-86704", "name": "Lucifer", "sort": 1029 }
+{ "_id": "4050-2858", "name": "The Eternals", "sort": 1030 }
+{ "_id": "4050-2638", "name": "Kull the Destroyer", "sort": 1031 }
+{ "_id": "4050-59980", "name": "He-Man and the Masters of the Universe", "sort": 1032 }
+{ "_id": "4050-25480", "name": "Chip 'n' Dale Rescue Rangers", "sort": 1033 }
+{ "_id": "4050-86251", "name": "Silk", "sort": 1034 }
+{ "_id": "4050-18202", "name": "Crossing Midnight", "sort": 1035 }
+{ "_id": "4050-6003", "name": "Heroes for Hire", "sort": 1036 }
+{ "_id": "4050-4060", "name": "The Mutant Misadventures of Cloak and Dagger", "sort": 1037 }
+{ "_id": "4050-45518", "name": "Winter Soldier", "sort": 1038 }
+{ "_id": "4050-104045", "name": "Bombshells: United", "sort": 1039 }
+{ "_id": "4050-3600", "name": "The Green Lantern Corps", "sort": 1040 }
+{ "_id": "4050-95596", "name": "Invincible Iron Man", "sort": 1041 }
+{ "_id": "4050-18736", "name": "Rex Mundi", "sort": 1042 }
+{ "_id": "4050-90698", "name": "Captain America: Steve Rogers", "sort": 1043 }
+{ "_id": "4050-68919", "name": "Amazing X-Men", "sort": 1044 }
+{ "_id": "4050-3863", "name": "Strange Tales", "sort": 1045 }
+{ "_id": "4050-5792", "name": "Star Trek: Starfleet Academy", "sort": 1046 }
+{ "_id": "4050-86704", "name": "Lucifer", "sort": 1047 }
+{ "_id": "4050-20347", "name": "New Exiles", "sort": 1048 }
+{ "_id": "4050-9301", "name": "Superboy and the Ravers", "sort": 1049 }
+{ "_id": "4050-5505", "name": "Extreme Justice", "sort": 1050 }
+{ "_id": "4050-4060", "name": "The Mutant Misadventures of Cloak and Dagger", "sort": 1051 }
+{ "_id": "4050-3809", "name": "The Shadow", "sort": 1052 }
+{ "_id": "4050-7294", "name": "Outlaw Nation", "sort": 1053 }
+{ "_id": "4050-2500", "name": "DC 100-Page Super Spectacular", "sort": 1054 }
+{ "_id": "4050-71457", "name": "Ms. Marvel", "sort": 1055 }
+{ "_id": "4050-54622", "name": "Avengers Arena", "sort": 1056 }
+{ "_id": "4050-47809", "name": "Avengers Earth's Mightiest Heroes", "sort": 1057 }
+{ "_id": "4050-11068", "name": "Venom", "sort": 1058 }
+{ "_id": "4050-5994", "name": "Young Heroes In Love", "sort": 1059 }
+{ "_id": "4050-4802", "name": "Nightstalkers", "sort": 1060 }
+{ "_id": "4050-27388", "name": "Ultimate Avengers", "sort": 1061 }
+{ "_id": "4050-18503", "name": "Aquaman: Sword of Atlantis", "sort": 1062 }
+{ "_id": "4050-9573", "name": "Spider-Woman", "sort": 1063 }
+{ "_id": "4050-2957", "name": "Nova", "sort": 1064 }
+{ "_id": "4050-2433", "name": "Date with Debbi", "sort": 1065 }
+{ "_id": "4050-4513", "name": "DuckTales", "sort": 1066 }
+{ "_id": "4050-110566", "name": "DC Previews", "sort": 1067 }
+{ "_id": "4050-3821", "name": "Wasteland", "sort": 1068 }
+{ "_id": "4050-2836", "name": "DC Super Stars", "sort": 1069 }
+{ "_id": "4050-59185", "name": "Star Wars: Legacy", "sort": 1070 }
+{ "_id": "4050-52400", "name": "Talon", "sort": 1071 }
+{ "_id": "4050-18328", "name": "Punisher", "sort": 1072 }
+{ "_id": "4050-99849", "name": "Batwoman", "sort": 1073 }
+{ "_id": "4050-94643", "name": "Jessica Jones", "sort": 1074 }
+{ "_id": "4050-2635", "name": "The Frankenstein Monster", "sort": 1075 }
+{ "_id": "4050-85301", "name": "New Avengers", "sort": 1076 }
+{ "_id": "4050-57485", "name": "Justice League of America", "sort": 1077 }
+{ "_id": "4050-17988", "name": "Runaways", "sort": 1078 }
+{ "_id": "4050-3599", "name": "Electric Warrior", "sort": 1079 }
+{ "_id": "4050-92976", "name": "Superwoman", "sort": 1080 }
+{ "_id": "4050-4516", "name": "Mickey Mouse Adventures", "sort": 1081 }
+{ "_id": "4050-95750", "name": "Thanos", "sort": 1082 }
+{ "_id": "4050-35205", "name": "Marvel Masterworks: The Mighty Thor", "sort": 1083 }
+{ "_id": "4050-46147", "name": "Batman Beyond Unlimited", "sort": 1084 }
+{ "_id": "4050-30156", "name": "JSA All-Stars", "sort": 1085 }
+{ "_id": "4050-94410", "name": "Blue Beetle", "sort": 1086 }
+{ "_id": "4050-20819", "name": "Young Liars", "sort": 1087 }
+{ "_id": "4050-73241", "name": "Original Sin", "sort": 1088 }
+{ "_id": "4050-18014", "name": "Emma Frost", "sort": 1089 }
+{ "_id": "4050-69756", "name": "Scribblenauts Unmasked: A Crisis of Imagination", "sort": 1090 }
+{ "_id": "4050-9375", "name": "Webspinners: Tales of Spider-Man", "sort": 1091 }
+{ "_id": "4050-33418", "name": "Here's Howie Comics", "sort": 1092 }
+{ "_id": "4050-5296", "name": "Fantastic Force", "sort": 1093 }
+{ "_id": "4050-28873", "name": "Azrael", "sort": 1094 }
+{ "_id": "4050-4019", "name": "Power of the Atom", "sort": 1095 }
+{ "_id": "4050-19248", "name": "Simon Dark", "sort": 1096 }
+{ "_id": "4050-11766", "name": "Jughead Jones Comics Digest", "sort": 1097 }
+{ "_id": "4050-2737", "name": "Richard Dragon, Kung Fu Fighter", "sort": 1098 }
+{ "_id": "4050-5944", "name": "Challengers of the Unknown", "sort": 1099 }
+{ "_id": "4050-1823", "name": "Sergeant Bilko", "sort": 1100 }
+{ "_id": "4050-4966", "name": "Justice League International", "sort": 1101 }
+{ "_id": "4050-3468", "name": "V", "sort": 1102 }
+{ "_id": "4050-85426", "name": "Clean Room", "sort": 1103 }
+{ "_id": "4050-2411", "name": "The Silver Surfer", "sort": 1104 }
+{ "_id": "4050-67958", "name": "Hinterkind", "sort": 1105 }
+{ "_id": "4050-32590", "name": "Doc Savage", "sort": 1106 }
+{ "_id": "4050-26710", "name": "Top-Notch Laugh Comics", "sort": 1107 }
+{ "_id": "4050-19045", "name": "Judge Dredd", "sort": 1108 }
+{ "_id": "4050-11053", "name": "Doom Patrol", "sort": 1109 }
+{ "_id": "4050-4735", "name": "Eclipso", "sort": 1110 }
+{ "_id": "4050-110770", "name": "Venom", "sort": 1111 }
+{ "_id": "4050-3446", "name": "Hex", "sort": 1112 }
+{ "_id": "4050-82656", "name": "Doctor Fate", "sort": 1113 }
+{ "_id": "4050-2410", "name": "Nick Fury, Agent of SHIELD", "sort": 1114 }
+{ "_id": "4050-71949", "name": "Fantastic Four", "sort": 1115 }
+{ "_id": "4050-49243", "name": "Cartoon Network Starring", "sort": 1116 }
+{ "_id": "4050-31326", "name": "Marvel Adventures", "sort": 1117 }
+{ "_id": "4050-21604", "name": "Daily Bugle", "sort": 1118 }
+{ "_id": "4050-18426", "name": "R.E.B.E.L.S.", "sort": 1119 }
+{ "_id": "4050-5553", "name": "Professor Xavier and the X-Men", "sort": 1120 }
+{ "_id": "4050-4517", "name": "Roger Rabbit", "sort": 1121 }
+{ "_id": "4050-108263", "name": "The Silencer", "sort": 1122 }
+{ "_id": "4050-3054", "name": "Star Trek", "sort": 1123 }
+{ "_id": "4050-2176", "name": "Capt. Storm", "sort": 1124 }
+{ "_id": "4050-71943", "name": "Tomb Raider", "sort": 1125 }
+{ "_id": "4050-77219", "name": "Gotham Academy", "sort": 1126 }
+{ "_id": "4050-9247", "name": "The Power Company", "sort": 1127 }
+{ "_id": "4050-85791", "name": "Unfollow", "sort": 1128 }
+{ "_id": "4050-11298", "name": "New Thunderbolts", "sort": 1129 }
+{ "_id": "4050-5296", "name": "Fantastic Force", "sort": 1130 }
+{ "_id": "4050-4742", "name": "Green Lantern: Mosaic", "sort": 1131 }
+{ "_id": "4050-18864", "name": "Star Wars: Rebellion", "sort": 1132 }
+{ "_id": "4050-6015", "name": "Star Trek: Early Voyages", "sort": 1133 }
+{ "_id": "4050-4514", "name": "Goofy Adventures", "sort": 1134 }
+{ "_id": "4050-102882", "name": "Astonishing X-Men", "sort": 1135 }
+{ "_id": "4050-2746", "name": "The Champions", "sort": 1136 }
+{ "_id": "4050-76523", "name": "Rise of Incarnates", "sort": 1137 }
+{ "_id": "4050-64687", "name": "The Superior Foes of Spider-Man", "sort": 1138 }
+{ "_id": "4050-53735", "name": "Sonic Super Digest", "sort": 1139 }
+{ "_id": "4050-111582", "name": "Hawkman", "sort": 1140 }
+{ "_id": "4050-42791", "name": "Grifter", "sort": 1141 }
+{ "_id": "4050-29329", "name": "Deadpool Team-Up", "sort": 1142 }
+{ "_id": "4050-72112", "name": "Moon Knight", "sort": 1143 }
+{ "_id": "4050-19724", "name": "Amazing World of DC Comics", "sort": 1144 }
+{ "_id": "4050-56119", "name": "Uncanny X-Force", "sort": 1145 }
+{ "_id": "4050-50575", "name": "Captain Marvel", "sort": 1146 }
+{ "_id": "4050-5338", "name": "X-Men: The Early Years", "sort": 1147 }
+{ "_id": "4050-42686", "name": "Legion Lost", "sort": 1148 }
+{ "_id": "4050-21265", "name": "Blood of the Demon", "sort": 1149 }
+{ "_id": "4050-4378", "name": "Superboy: The Comic Book", "sort": 1150 }
+{ "_id": "4050-18988", "name": "Hawkgirl", "sort": 1151 }
+{ "_id": "4050-2224", "name": "Metamorpho", "sort": 1152 }
+{ "_id": "4050-9634", "name": "Justice League Quarterly", "sort": 1153 }
+{ "_id": "4050-3601", "name": "Hawkman", "sort": 1154 }
+{ "_id": "4050-71432", "name": "Loki: Agent of Asgard", "sort": 1155 }
+{ "_id": "4050-53921", "name": "Fantastic Four", "sort": 1156 }
+{ "_id": "4050-42970", "name": "Blue Beetle", "sort": 1157 }
+{ "_id": "4050-36469", "name": "Generation Hope", "sort": 1158 }
+{ "_id": "4050-20465", "name": "Batman Adventures", "sort": 1159 }
+{ "_id": "4050-18888", "name": "Star Wars: Dark Times", "sort": 1160 }
+{ "_id": "4050-6695", "name": "Angel", "sort": 1161 }
+{ "_id": "4050-102975", "name": "DC Releases", "sort": 1162 }
+{ "_id": "4050-2782", "name": "Super-Villain Team-Up", "sort": 1163 }
+{ "_id": "4050-76535", "name": "Sensation Comics Featuring Wonder Woman", "sort": 1164 }
+{ "_id": "4050-42793", "name": "Frankenstein, Agent of S.H.A.D.E.", "sort": 1165 }
+{ "_id": "4050-32663", "name": "The Spirit", "sort": 1166 }
+{ "_id": "4050-19770", "name": "Godzilla King of the Monsters", "sort": 1167 }
+{ "_id": "4050-62344", "name": "Adventures of Superman", "sort": 1168 }
+{ "_id": "4050-51107", "name": "Gambit", "sort": 1169 }
+{ "_id": "4050-73216", "name": "Justice League United", "sort": 1170 }
+{ "_id": "4050-86127", "name": "Spider-Woman", "sort": 1171 }
+{ "_id": "4050-70918", "name": "Miracleman", "sort": 1172 }
+{ "_id": "4050-33483", "name": "Pizzazz", "sort": 1173 }
+{ "_id": "4050-112206", "name": "Superman", "sort": 1174 }
+{ "_id": "4050-26883", "name": "Dark Wolverine", "sort": 1175 }
+{ "_id": "4050-98910", "name": "Super Sons", "sort": 1176 }
+{ "_id": "4050-22389", "name": "Marvel Milestones", "sort": 1177 }
+{ "_id": "4050-85112", "name": "Jughead", "sort": 1178 }
+{ "_id": "4050-7570", "name": "Warlord", "sort": 1179 }
+{ "_id": "4050-50701", "name": "Dark Avengers", "sort": 1180 }
+{ "_id": "4050-5523", "name": "Superman: The Man of Tomorrow", "sort": 1181 }
+{ "_id": "4050-33225", "name": "Legion of Super-Heroes", "sort": 1182 }
+{ "_id": "4050-26150", "name": "Wolverine Weapon X", "sort": 1183 }
+{ "_id": "4050-4240", "name": "The Punisher Magazine", "sort": 1184 }
+{ "_id": "4050-19091", "name": "Spyboy", "sort": 1185 }
+{ "_id": "4050-2444", "name": "Mad About Millie", "sort": 1186 }
+{ "_id": "4050-7515", "name": "Ultimate Marvel Team-Up", "sort": 1187 }
+{ "_id": "4050-5229", "name": "Anima", "sort": 1188 }
+{ "_id": "4050-2572", "name": "Hero for Hire", "sort": 1189 }
+{ "_id": "4050-111704", "name": "Tony Stark: Iron Man", "sort": 1190 }
+{ "_id": "4050-96661", "name": "Hawkeye", "sort": 1191 }
+{ "_id": "4050-79443", "name": "Fables: The Wolf Among Us", "sort": 1192 }
+{ "_id": "4050-48531", "name": "Dial H", "sort": 1193 }
+{ "_id": "4050-33183", "name": "Zatanna", "sort": 1194 }
+{ "_id": "4050-25512", "name": "Dark Avengers", "sort": 1195 }
+{ "_id": "4050-19039", "name": "Marvel Adventures Hulk", "sort": 1196 }
+{ "_id": "4050-6519", "name": "Deadenders", "sort": 1197 }
+{ "_id": "4050-4968", "name": "Kid Eternity", "sort": 1198 }
+{ "_id": "4050-2548", "name": "The Demon", "sort": 1199 }
+{ "_id": "4050-111034", "name": "Black Panther", "sort": 1200 }
+{ "_id": "4050-89992", "name": "Overwatch", "sort": 1201 }
+{ "_id": "4050-73100", "name": "Hulk", "sort": 1202 }
+{ "_id": "4050-36629", "name": "The All-New Batman: The Brave and the Bold", "sort": 1203 }
+{ "_id": "4050-26971", "name": "Greek Street", "sort": 1204 }
+{ "_id": "4050-18941", "name": "X-Men: First Class", "sort": 1205 }
+{ "_id": "4050-6352", "name": "Bishop: The Last X-Man", "sort": 1206 }
+{ "_id": "4050-4743", "name": "Guy Gardner", "sort": 1207 }
+{ "_id": "4050-112965", "name": "The Punisher", "sort": 1208 }
+{ "_id": "4050-2520", "name": "Special Marvel Edition", "sort": 1209 }
+{ "_id": "4050-107941", "name": "Damage", "sort": 1210 }
+{ "_id": "4050-3437", "name": "Amethyst, Princess of Gemworld", "sort": 1211 }
+{ "_id": "4050-66553", "name": "Batman Beyond Universe", "sort": 1212 }
+{ "_id": "4050-19954", "name": "Who's Who in the DC Universe", "sort": 1213 }
+{ "_id": "4050-5523", "name": "Superman: The Man of Tomorrow", "sort": 1214 }
+{ "_id": "4050-2520", "name": "Special Marvel Edition", "sort": 1215 }
+{ "_id": "4050-112206", "name": "Superman", "sort": 1216 }
+{ "_id": "4050-70918", "name": "Miracleman", "sort": 1217 }
+{ "_id": "4050-33225", "name": "Legion of Super-Heroes", "sort": 1218 }
+{ "_id": "4050-26971", "name": "Greek Street", "sort": 1219 }
+{ "_id": "4050-98910", "name": "Super Sons", "sort": 1220 }
+{ "_id": "4050-19954", "name": "Who's Who in the DC Universe", "sort": 1221 }
+{ "_id": "4050-85112", "name": "Jughead", "sort": 1222 }
+{ "_id": "4050-48531", "name": "Dial H", "sort": 1223 }
+{ "_id": "4050-3437", "name": "Amethyst, Princess of Gemworld", "sort": 1224 }
+{ "_id": "4050-6519", "name": "Deadenders", "sort": 1225 }
+{ "_id": "4050-112965", "name": "The Punisher", "sort": 1226 }
+{ "_id": "4050-96661", "name": "Hawkeye", "sort": 1227 }
+{ "_id": "4050-22389", "name": "Marvel Milestones", "sort": 1228 }
+{ "_id": "4050-19091", "name": "Spyboy", "sort": 1229 }
+{ "_id": "4050-2548", "name": "The Demon", "sort": 1230 }
+{ "_id": "4050-7570", "name": "Warlord", "sort": 1231 }
+{ "_id": "4050-50701", "name": "Dark Avengers", "sort": 1232 }
+{ "_id": "4050-26150", "name": "Wolverine Weapon X", "sort": 1233 }
+{ "_id": "4050-2649", "name": "War is Hell", "sort": 1234 }
+{ "_id": "4050-85359", "name": "Archie 75 Series", "sort": 1235 }
+{ "_id": "4050-6934", "name": "Major Bummer", "sort": 1236 }
+{ "_id": "4050-33087", "name": "Birds of Prey", "sort": 1237 }
+{ "_id": "4050-2583", "name": "Warlock", "sort": 1238 }
+{ "_id": "4050-19229", "name": "Sonic Super Special", "sort": 1239 }
+{ "_id": "4050-2175", "name": "80 Page Giant", "sort": 1240 }
+{ "_id": "4050-2912", "name": "Red Sonja", "sort": 1241 }
+{ "_id": "4050-2581", "name": "Supernatural Thrillers", "sort": 1242 }
+{ "_id": "4050-72272", "name": "Captain Marvel", "sort": 1243 }
+{ "_id": "4050-45781", "name": "Kevin Keller", "sort": 1244 }
+{ "_id": "4050-28208", "name": "Fables: The Deluxe Edition", "sort": 1245 }
+{ "_id": "4050-5762", "name": "Seekers into the Mystery", "sort": 1246 }
+{ "_id": "4050-2841", "name": "Karate Kid", "sort": 1247 }
+{ "_id": "4050-112685", "name": "Fantastic Four", "sort": 1248 }
+{ "_id": "4050-86716", "name": "Squadron Supreme", "sort": 1249 }
+{ "_id": "4050-71064", "name": "All-New Invaders", "sort": 1250 }
+{ "_id": "4050-44249", "name": "Green Lantern: The Animated Series", "sort": 1251 }
+{ "_id": "4050-27750", "name": "G.I. Joe European Missions", "sort": 1252 }
+{ "_id": "4050-21820", "name": "Bionicle Ignition", "sort": 1253 }
+{ "_id": "4050-5253", "name": "Primal Force", "sort": 1254 }
+{ "_id": "4050-2466", "name": "Super DC Giant", "sort": 1255 }
+{ "_id": "4050-101767", "name": "Cable", "sort": 1256 }
+{ "_id": "4050-5322", "name": "Sabretooth Classic", "sort": 1257 }
+{ "_id": "4050-2905", "name": "Iron Man Annual", "sort": 1258 }
+{ "_id": "4050-2741", "name": "Super-Team Family", "sort": 1259 }
+{ "_id": "4050-112027", "name": "Captain America", "sort": 1260 }
+{ "_id": "4050-85928", "name": "All-New, All-Different Avengers", "sort": 1261 }
+{ "_id": "4050-71614", "name": "X-Force", "sort": 1262 }
+{ "_id": "4050-33909", "name": "Green Arrow", "sort": 1263 }
+{ "_id": "4050-21551", "name": "Captain Britain and MI:13", "sort": 1264 }
+{ "_id": "4050-100082", "name": "Iron Fist", "sort": 1265 }
+{ "_id": "4050-11022", "name": "The Books of Magick: Life During Wartime", "sort": 1266 }
+{ "_id": "4050-79017", "name": "He-Man: The Eternity War", "sort": 1267 }
+{ "_id": "4050-5794", "name": "Star Trek: Voyager", "sort": 1268 }
+{ "_id": "4050-60539", "name": "The Victories", "sort": 1269 }
+{ "_id": "4050-4823", "name": "X-Men Adventures", "sort": 1270 }
+{ "_id": "4050-33312", "name": "Scribbly", "sort": 1271 }
+{ "_id": "4050-21104", "name": "Spelljammer", "sort": 1272 }
+{ "_id": "4050-2896", "name": "Black Panther", "sort": 1273 }
+{ "_id": "4050-10925", "name": "Agent X", "sort": 1274 }
+{ "_id": "4050-2392", "name": "DC Special", "sort": 1275 }
+{ "_id": "4050-5790", "name": "Star Trek: Deep Space Nine", "sort": 1276 }
+{ "_id": "4050-3989", "name": "COPS", "sort": 1277 }
+{ "_id": "4050-2845", "name": "Secret Society of Super-Villains", "sort": 1278 }
+{ "_id": "4050-97870", "name": "Mega Marvel Catalog", "sort": 1279 }
+{ "_id": "4050-72582", "name": "Silver Surfer", "sort": 1280 }
+{ "_id": "4050-56117", "name": "Young Avengers", "sort": 1281 }
+{ "_id": "4050-31034", "name": "Spider-Man Magazine", "sort": 1282 }
+{ "_id": "4050-18102", "name": "Heroes for Hire", "sort": 1283 }
+{ "_id": "4050-6800", "name": "Stars and S.T.R.I.P.E.", "sort": 1284 }
+{ "_id": "4050-5513", "name": "New Gods", "sort": 1285 }
+{ "_id": "4050-3237", "name": "The Official Handbook of the Marvel Universe", "sort": 1286 }
+{ "_id": "4050-2766", "name": "Iron Fist", "sort": 1287 }
+{ "_id": "4050-112455", "name": "Justice League Dark", "sort": 1288 }
+{ "_id": "4050-86552", "name": "Scarlet Witch", "sort": 1289 }
+{ "_id": "4050-72274", "name": "Secret Avengers", "sort": 1290 }
+{ "_id": "4050-36657", "name": "Gross Point", "sort": 1291 }
+{ "_id": "4050-23824", "name": "Venus Wars II", "sort": 1292 }
+{ "_id": "4050-11306", "name": "Spider-Man Unlimited", "sort": 1293 }
+{ "_id": "4050-6354", "name": "Earth X", "sort": 1294 }
+{ "_id": "4050-69851", "name": "Justice League 3000", "sort": 1295 }
+{ "_id": "4050-4077", "name": "Tales Of G.I. Joe", "sort": 1296 }
+{ "_id": "4050-22988", "name": "X-Men Annual", "sort": 1297 }
+{ "_id": "4050-2703", "name": "Tomb of Darkness", "sort": 1298 }
+{ "_id": "4050-111414", "name": "Deadpool", "sort": 1299 }
+{ "_id": "4050-10956", "name": "Katy Keene Pin-up Parade", "sort": 1300 }
+{ "_id": "4050-21104", "name": "Spelljammer", "sort": 1301 }
+{ "_id": "4050-86552", "name": "Scarlet Witch", "sort": 1302 }
+{ "_id": "4050-5322", "name": "Sabretooth Classic", "sort": 1303 }
+{ "_id": "4050-2896", "name": "Black Panther", "sort": 1304 }
+{ "_id": "4050-22988", "name": "X-Men Annual", "sort": 1305 }
+{ "_id": "4050-5794", "name": "Star Trek: Voyager", "sort": 1306 }
+{ "_id": "4050-2741", "name": "Super-Team Family", "sort": 1307 }
+{ "_id": "4050-97870", "name": "Mega Marvel Catalog", "sort": 1308 }
+{ "_id": "4050-5513", "name": "New Gods", "sort": 1309 }
+{ "_id": "4050-69851", "name": "Justice League 3000", "sort": 1310 }
+{ "_id": "4050-87449", "name": "Silver Surfer", "sort": 1311 }
+{ "_id": "4050-67223", "name": "Mighty Avengers", "sort": 1312 }
+{ "_id": "4050-47409", "name": "The Collector: Sonic Super Special Magazine", "sort": 1313 }
+{ "_id": "4050-32494", "name": "Archie's Rival Reggie", "sort": 1314 }
+{ "_id": "4050-118009", "name": "DC Super Hero Girls: Weird Science", "sort": 1315 }
+{ "_id": "4050-10973", "name": "Captain America & the Falcon", "sort": 1316 }
+{ "_id": "4050-55707", "name": "The New Archies Comics Digest Magazine", "sort": 1317 }
+{ "_id": "4050-46347", "name": "Age of Apocalypse", "sort": 1318 }
+{ "_id": "4050-26963", "name": "Official Index to the Marvel Universe", "sort": 1319 }
+{ "_id": "4050-3001", "name": "Amazing Adventures", "sort": 1320 }
+{ "_id": "4050-19327", "name": "District X", "sort": 1321 }
+{ "_id": "4050-1822", "name": "Robin Hood Tales", "sort": 1322 }
+{ "_id": "4050-9149", "name": "Universe X", "sort": 1323 }
+{ "_id": "4050-3817", "name": "Superman Annual", "sort": 1324 }
+{ "_id": "4050-104999", "name": "Despicable Deadpool", "sort": 1325 }
+{ "_id": "4050-85110", "name": "Invincible Iron Man", "sort": 1326 }
+{ "_id": "4050-50754", "name": "X-Treme X-Men", "sort": 1327 }
+{ "_id": "4050-38062", "name": "Cartoon Tales", "sort": 1328 }
+{ "_id": "4050-18444", "name": "Superman Confidential", "sort": 1329 }
+{ "_id": "4050-3587", "name": "Adventures of the Outsiders", "sort": 1330 }
+{ "_id": "4050-78534", "name": "Secret Six", "sort": 1331 }
+{ "_id": "4050-49112", "name": "Batman, Incorporated", "sort": 1332 }
+{ "_id": "4050-33492", "name": "Tales to Astonish", "sort": 1333 }
+{ "_id": "4050-22981", "name": "Official Handbook of the Marvel Universe A to Z", "sort": 1334 }
+{ "_id": "4050-11310", "name": "The Pulse", "sort": 1335 }
+{ "_id": "4050-3003", "name": "Fantasy Masterpieces", "sort": 1336 }
+{ "_id": "4050-2730", "name": "DC Special", "sort": 1337 }
+{ "_id": "4050-3012", "name": "The Spectacular Spider-Man Annual", "sort": 1338 }
+{ "_id": "4050-2554", "name": "Secrets of Sinister House", "sort": 1339 }
+{ "_id": "4050-46573", "name": "Saucer Country", "sort": 1340 }
+{ "_id": "4050-113886", "name": "Justice League Odyssey", "sort": 1341 }
+{ "_id": "4050-19887", "name": "Gunfire", "sort": 1342 }
+{ "_id": "4050-10745", "name": "X-Men Unlimited", "sort": 1343 }
+{ "_id": "4050-113236", "name": "The Dreaming", "sort": 1344 }
+{ "_id": "4050-19660", "name": "Batman and the Outsiders", "sort": 1345 }
+{ "_id": "4050-9255", "name": "Scarlett", "sort": 1346 }
+{ "_id": "4050-6312", "name": "Batman: Dark Victory", "sort": 1347 }
+{ "_id": "4050-64655", "name": "Trinity of Sin: Pandora", "sort": 1348 }
+{ "_id": "4050-3119", "name": "Night Force", "sort": 1349 }
+{ "_id": "4050-92947", "name": "All-Star Batman", "sort": 1350 }
+{ "_id": "4050-72791", "name": "Inhuman", "sort": 1351 }
+{ "_id": "4050-22775", "name": "Runaways", "sort": 1352 }
+{ "_id": "4050-11292", "name": "Excalibur", "sort": 1353 }
+{ "_id": "4050-4644", "name": "Venus Wars", "sort": 1354 }
+{ "_id": "4050-113487", "name": "House of Whispers", "sort": 1355 }
+{ "_id": "4050-19973", "name": "The Twelve", "sort": 1356 }
+{ "_id": "4050-6380", "name": "Xena: Warrior Princess", "sort": 1357 }
+{ "_id": "4050-23576", "name": "Silver Surfer", "sort": 1358 }
+{ "_id": "4050-7197", "name": "Uncanny Origins", "sort": 1359 }
+{ "_id": "4050-5288", "name": "Conan the Adventurer", "sort": 1360 }
+{ "_id": "4050-86119", "name": "Red Thorn", "sort": 1361 }
+{ "_id": "4050-65112", "name": "Wolverine: Japan's Most Wanted", "sort": 1362 }
+{ "_id": "4050-39122", "name": "Iron Man 2.0", "sort": 1363 }
+{ "_id": "4050-106260", "name": "DC Super Hero Girls: Spaced Out", "sort": 1364 }
+{ "_id": "4050-80592", "name": "Batman: Arkham Knight", "sort": 1365 }
+{ "_id": "4050-33429", "name": "Dodo and The Frog", "sort": 1366 }
+{ "_id": "4050-4007", "name": "Haywire", "sort": 1367 }
+{ "_id": "4050-18118", "name": "Deadman", "sort": 1368 }
+{ "_id": "4050-2510", "name": "Captain America Annual", "sort": 1369 }
+{ "_id": "4050-6684", "name": "X-Men Adventures", "sort": 1370 }
+{ "_id": "4050-5058", "name": "Transformers: Generation 2", "sort": 1371 }
+{ "_id": "4050-55408", "name": "Superduck", "sort": 1372 }
+{ "_id": "4050-6490", "name": "The Legion of Super-Heroes Archives", "sort": 1373 }
+{ "_id": "4050-2955", "name": "Laff-A-Lympics", "sort": 1374 }
+{ "_id": "4050-87590", "name": "The Adventures of Supergirl", "sort": 1375 }
+{ "_id": "4050-68168", "name": "Iron Man: Fatal Frontier", "sort": 1376 }
+{ "_id": "4050-40471", "name": "Judge Dredd Legends of the Law", "sort": 1377 }
+{ "_id": "4050-9547", "name": "Paradise X", "sort": 1378 }
+{ "_id": "4050-4024", "name": "Sgt. Rock Special", "sort": 1379 }
+{ "_id": "4050-2726", "name": "1st Issue Special", "sort": 1380 }
+{ "_id": "4050-3791", "name": "The Flash Annual", "sort": 1381 }
+{ "_id": "4050-11305", "name": "Slingers", "sort": 1382 }
+{ "_id": "4050-2354", "name": "Not Brand Echh", "sort": 1383 }
+{ "_id": "4050-52206", "name": "KISS", "sort": 1384 }
+{ "_id": "4050-65621", "name": "Mass Effect: Foundation", "sort": 1385 }
+{ "_id": "4050-108756", "name": "Sideways", "sort": 1386 }
+{ "_id": "4050-18351", "name": "New Mutants", "sort": 1387 }
+{ "_id": "4050-9400", "name": "The Filth", "sort": 1388 }
+{ "_id": "4050-5776", "name": "Captain America", "sort": 1389 }
+{ "_id": "4050-3004", "name": "Fun and Games Magazine", "sort": 1390 }
+{ "_id": "4050-105539", "name": "Jughead: The Hunger", "sort": 1391 }
+{ "_id": "4050-70756", "name": "Deadpool: The Gauntlet", "sort": 1392 }
+{ "_id": "4050-44137", "name": "Archie Archives", "sort": 1393 }
+{ "_id": "4050-35210", "name": "Marvel Masterworks: The Incredible Hulk", "sort": 1394 }
+{ "_id": "4050-26086", "name": "Katy Keene Fashion Book", "sort": 1395 }
+{ "_id": "4050-85420", "name": "The Astonishing Ant-Man", "sort": 1396 }
+{ "_id": "4050-18326", "name": "The Ultimates 2", "sort": 1397 }
+{ "_id": "4050-58822", "name": "Wolverine", "sort": 1398 }
+{ "_id": "4050-6822", "name": "Batman: The Long Halloween", "sort": 1399 }
+{ "_id": "4050-43021", "name": "Voodoo", "sort": 1400 }
+{ "_id": "4050-33496", "name": "Dennis the Menace", "sort": 1401 }
+{ "_id": "4050-5500", "name": "Black Lightning", "sort": 1402 }
+{ "_id": "4050-18737", "name": "Marvel Adventures: Iron Man", "sort": 1403 }
+{ "_id": "4050-1619", "name": "The Raccoon Kids", "sort": 1404 }
+{ "_id": "4050-18103", "name": "The Flash: The Fastest Man Alive", "sort": 1405 }
+{ "_id": "4050-6742", "name": "Avengers", "sort": 1406 }
+{ "_id": "4050-3860", "name": "Spider-Man Comics Magazine", "sort": 1407 }
+{ "_id": "4050-82719", "name": "Robin: Son of Batman", "sort": 1408 }
+{ "_id": "4050-56878", "name": "Fearless Defenders", "sort": 1409 }
+{ "_id": "4050-42917", "name": "Captain Atom", "sort": 1410 }
+{ "_id": "4050-29973", "name": "Disney's Beauty and the Beast", "sort": 1411 }
+{ "_id": "4050-18471", "name": "Green Goblin", "sort": 1412 }
+{ "_id": "4050-11868", "name": "X-51", "sort": 1413 }
+{ "_id": "4050-6013", "name": "Quicksilver", "sort": 1414 }
+{ "_id": "4050-3776", "name": "Action Comics Annual", "sort": 1415 }
+{ "_id": "4050-82532", "name": "Constantine: The Hellblazer", "sort": 1416 }
+{ "_id": "4050-52714", "name": "Legends of the Dark Knight", "sort": 1417 }
+{ "_id": "4050-39122", "name": "Iron Man 2.0", "sort": 1418 }
+{ "_id": "4050-26958", "name": "Deadpool: Merc With a Mouth", "sort": 1419 }
+{ "_id": "4050-67920", "name": "Marvel Universe Avengers Assemble", "sort": 1420 }
+{ "_id": "4050-18800", "name": "Iron Man", "sort": 1421 }
+{ "_id": "4050-4814", "name": "Terror Inc.", "sort": 1422 }
+{ "_id": "4050-1327", "name": "Rudolph the Red-Nosed Reindeer", "sort": 1423 }
+{ "_id": "4050-6219", "name": "Spider-Man: Chapter One", "sort": 1424 }
+{ "_id": "4050-42812", "name": "Resurrection Man", "sort": 1425 }
+{ "_id": "4050-9462", "name": "Fantastic Four", "sort": 1426 }
+{ "_id": "4050-47331", "name": "Avengers Vs. X-Men", "sort": 1427 }
+{ "_id": "4050-18327", "name": "The Ultimates", "sort": 1428 }
+{ "_id": "4050-86263", "name": "Venom: Space Knight", "sort": 1429 }
+{ "_id": "4050-34757", "name": "Marvel Masterworks: Daredevil", "sort": 1430 }
+{ "_id": "4050-68168", "name": "Iron Man: Fatal Frontier", "sort": 1431 }
+{ "_id": "4050-4024", "name": "Sgt. Rock Special", "sort": 1432 }
+{ "_id": "4050-108756", "name": "Sideways", "sort": 1433 }
+{ "_id": "4050-86119", "name": "Red Thorn", "sort": 1434 }
+{ "_id": "4050-55408", "name": "Superduck", "sort": 1435 }
+{ "_id": "4050-6490", "name": "The Legion of Super-Heroes Archives", "sort": 1436 }
+{ "_id": "4050-3791", "name": "The Flash Annual", "sort": 1437 }
+{ "_id": "4050-2726", "name": "1st Issue Special", "sort": 1438 }
+{ "_id": "4050-106260", "name": "DC Super Hero Girls: Spaced Out", "sort": 1439 }
+{ "_id": "4050-11305", "name": "Slingers", "sort": 1440 }
+{ "_id": "4050-2354", "name": "Not Brand Echh", "sort": 1441 }
+{ "_id": "4050-2510", "name": "Captain America Annual", "sort": 1442 }
+{ "_id": "4050-33429", "name": "Dodo and The Frog", "sort": 1443 }
+{ "_id": "4050-2955", "name": "Laff-A-Lympics", "sort": 1444 }
+{ "_id": "4050-11010", "name": "Little Archie", "sort": 1445 }
+{ "_id": "4050-94118", "name": "Gotham Academy: Second Semester", "sort": 1446 }
+{ "_id": "4050-4796", "name": "James Bond Jr.", "sort": 1447 }
+{ "_id": "4050-25900", "name": "Superman: World of New Krypton", "sort": 1448 }
+{ "_id": "4050-3309", "name": "Jemm, Son of Saturn", "sort": 1449 }
+{ "_id": "4050-18700", "name": "Nightcrawler", "sort": 1450 }
+{ "_id": "4050-2338", "name": "The Inferior Five", "sort": 1451 }
+{ "_id": "4050-9959", "name": "Soldier X", "sort": 1452 }
+{ "_id": "4050-2729", "name": "Claw the Unconquered", "sort": 1453 }
+{ "_id": "4050-25747", "name": "The Mighty", "sort": 1454 }
+{ "_id": "4050-18133", "name": "Nextwave: Agents of H.A.T.E.", "sort": 1455 }
+{ "_id": "4050-72361", "name": "Smallville: Lantern", "sort": 1456 }
+{ "_id": "4050-42997", "name": "Beyond The Fringe", "sort": 1457 }
+{ "_id": "4050-23492", "name": "Human Torch", "sort": 1458 }
+{ "_id": "4050-5993", "name": "Xero", "sort": 1459 }
+{ "_id": "4050-3622", "name": "Watchmen", "sort": 1460 }
+{ "_id": "4050-95851", "name": "Batman '66 Meets Wonder Woman '77", "sort": 1461 }
+{ "_id": "4050-71802", "name": "New Warriors", "sort": 1462 }
+{ "_id": "4050-33564", "name": "Binky's Buddies", "sort": 1463 }
+{ "_id": "4050-21670", "name": "Thor: Son of Asgard", "sort": 1464 }
+{ "_id": "4050-112561", "name": "Adventures of the Super Sons", "sort": 1465 }
+{ "_id": "4050-43230", "name": "Nexus Archives", "sort": 1466 }
+{ "_id": "4050-6171", "name": "JLA: Year One", "sort": 1467 }
+{ "_id": "4050-99242", "name": "America", "sort": 1468 }
+{ "_id": "4050-22371", "name": "Superman & Batman: Generations III", "sort": 1469 }
+{ "_id": "4050-70884", "name": "Injustice: Gods Among Us Year Two", "sort": 1470 }
+{ "_id": "4050-10977", "name": "Richard Dragon", "sort": 1471 }
+{ "_id": "4050-4033", "name": "The Unknown Soldier", "sort": 1472 }
+{ "_id": "4050-94114", "name": "Doom Patrol", "sort": 1473 }
+{ "_id": "4050-18389", "name": "Batman: Journey Into Knight", "sort": 1474 }
+{ "_id": "4050-19381", "name": "Captain America: Sentinel of Liberty", "sort": 1475 }
+{ "_id": "4050-112458", "name": "Mr. and Mrs. X", "sort": 1476 }
+{ "_id": "4050-5307", "name": "Disney's The Little Mermaid", "sort": 1477 }
+{ "_id": "4050-88554", "name": "Black Widow", "sort": 1478 }
+{ "_id": "4050-74673", "name": "Smallville: Chaos", "sort": 1479 }
+{ "_id": "4050-3641", "name": "Kickers, Inc.", "sort": 1480 }
+{ "_id": "4050-43162", "name": "The Shade", "sort": 1481 }
+{ "_id": "4050-2515", "name": "Marvel Feature", "sort": 1482 }
+{ "_id": "4050-19292", "name": "Vinyl Underground", "sort": 1483 }
+{ "_id": "4050-4584", "name": "Captain Planet and the Planeteers", "sort": 1484 }
+{ "_id": "4050-3441", "name": "Crisis on Infinite Earths", "sort": 1485 }
+{ "_id": "4050-116964", "name": "Daredevil", "sort": 1486 }
+{ "_id": "4050-109344", "name": "Weapon H", "sort": 1487 }
+{ "_id": "4050-83480", "name": "Cyborg", "sort": 1488 }
+{ "_id": "4050-73677", "name": "Cyclops", "sort": 1489 }
+{ "_id": "4050-35196", "name": "Marvel Masterworks: The Invincible Iron Man", "sort": 1490 }
+{ "_id": "4050-4081", "name": "Wolfpack", "sort": 1491 }
+{ "_id": "4050-3246", "name": "U.S. 1", "sort": 1492 }
+{ "_id": "4050-115055", "name": "The Green Lantern", "sort": 1493 }
+{ "_id": "4050-96372", "name": "Injustice: Ground Zero", "sort": 1494 }
+{ "_id": "4050-77494", "name": "Injustice: Gods Among Us Year Three", "sort": 1495 }
+{ "_id": "4050-70051", "name": "Ghost", "sort": 1496 }
+{ "_id": "4050-24231", "name": "Out of the Vortex", "sort": 1497 }
+{ "_id": "4050-6216", "name": "J2", "sort": 1498 }
+{ "_id": "4050-3802", "name": "Outcasts", "sort": 1499 }
+{ "_id": "4050-2732", "name": "Hercules Unbound", "sort": 1500 }
+{ "_id": "4050-112576", "name": "The Death of Superman", "sort": 1501 }
+{ "_id": "4050-94661", "name": "Shade, The Changing Girl", "sort": 1502 }
+{ "_id": "4050-76706", "name": "Smallville: Continuity", "sort": 1503 }
+{ "_id": "4050-65629", "name": "Superior Spider-Man Team-Up", "sort": 1504 }
+{ "_id": "4050-81088", "name": "Kanan", "sort": 1505 }
+{ "_id": "4050-72932", "name": "All-New Ultimates", "sort": 1506 }
+{ "_id": "4050-4012", "name": "The New Guardians", "sort": 1507 }
+{ "_id": "4050-3111", "name": "Camelot 3000", "sort": 1508 }
+{ "_id": "4050-114293", "name": "Red Hood: Outlaw", "sort": 1509 }
+{ "_id": "4050-20476", "name": "NFL Superpro", "sort": 1510 }
+{ "_id": "4050-93903", "name": "Archie 75th Anniversary Digest", "sort": 1511 }
+{ "_id": "4050-75711", "name": "Infinite Crisis: Fight For the Multiverse", "sort": 1512 }
+{ "_id": "4050-56384", "name": "Injustice: Gods Among Us", "sort": 1513 }
+{ "_id": "4050-4727", "name": "Black Condor", "sort": 1514 }
+{ "_id": "4050-3442", "name": "DC Challenge", "sort": 1515 }
+{ "_id": "4050-109942", "name": "Black Hammer: Age of Doom", "sort": 1516 }
+{ "_id": "4050-19120", "name": "Infinity Inc.", "sort": 1517 }
+{ "_id": "4050-109764", "name": "Exiles", "sort": 1518 }
+{ "_id": "4050-100590", "name": "Royals", "sort": 1519 }
+{ "_id": "4050-76531", "name": "The Strain: The Night Eternal", "sort": 1520 }
+{ "_id": "4050-69284", "name": "Smallville: Alien", "sort": 1521 }
+{ "_id": "4050-18110", "name": "Araña: Heart of the Spider", "sort": 1522 }
+{ "_id": "4050-6602", "name": "Chronos", "sort": 1523 }
+{ "_id": "4050-3517", "name": "The Vision and the Scarlet Witch", "sort": 1524 }
+{ "_id": "4050-108698", "name": "Batman: Sins of the Father", "sort": 1525 }
+{ "_id": "4050-98040", "name": "Angel Season 11", "sort": 1526 }
+{ "_id": "4050-75557", "name": "Spider-Man 2099", "sort": 1527 }
+{ "_id": "4050-43512", "name": "All Star Comics Archives", "sort": 1528 }
+{ "_id": "4050-21082", "name": "Young X-Men", "sort": 1529 }
+{ "_id": "4050-11250", "name": "The Hacker Files", "sort": 1530 }
+{ "_id": "4050-5314", "name": "Nightwatch", "sort": 1531 }
+{ "_id": "4050-2646", "name": "Uncanny Tales", "sort": 1532 }
+{ "_id": "4050-103397", "name": "Mister Miracle", "sort": 1533 }
+{ "_id": "4050-94694", "name": "DC Super Hero Girls: Past Times at Super Hero High", "sort": 1534 }
+{ "_id": "4050-75335", "name": "Legendary Star-Lord", "sort": 1535 }
+{ "_id": "4050-32562", "name": "The Flash", "sort": 1536 }
+{ "_id": "4050-19127", "name": "Suicide Squad", "sort": 1537 }
+{ "_id": "4050-101164", "name": "Bane: Conquest", "sort": 1538 }
+{ "_id": "4050-11088", "name": "The Book of Fate", "sort": 1539 }
+{ "_id": "4050-90531", "name": "Future Quest", "sort": 1540 }
+{ "_id": "4050-72934", "name": "Nightcrawler", "sort": 1541 }
+{ "_id": "4050-5286", "name": "ClanDestine", "sort": 1542 }
+{ "_id": "4050-22896", "name": "Li'l Kids", "sort": 1543 }
+{ "_id": "4050-2621", "name": "The Shadow", "sort": 1544 }
+{ "_id": "4050-18899", "name": "Civil War Chronicles", "sort": 1545 }
+{ "_id": "4050-9412", "name": "Moonshadow", "sort": 1546 }
+{ "_id": "4050-3647", "name": "Nightmask", "sort": 1547 }
+{ "_id": "4050-3352", "name": "Marvel Super Heroes Secret Wars", "sort": 1548 }
+{ "_id": "4050-104944", "name": "Gotham City Garage", "sort": 1549 }
+{ "_id": "4050-19164", "name": "Marvel Comics Presents", "sort": 1550 }
+{ "_id": "4050-92175", "name": "Conan the Slayer", "sort": 1551 }
+{ "_id": "4050-73718", "name": "Amazing Spider-Man: Who Am I?", "sort": 1552 }
+{ "_id": "4050-23035", "name": "Digimon", "sort": 1553 }
+{ "_id": "4050-11015", "name": "Avengers Forever", "sort": 1554 }
+{ "_id": "4050-5281", "name": "Blaze", "sort": 1555 }
+{ "_id": "4050-100719", "name": "DC Super Hero Girls: Out of the Bottle", "sort": 1556 }
+{ "_id": "4050-78325", "name": "Gotham by Midnight", "sort": 1557 }
+{ "_id": "4050-18117", "name": "Blade", "sort": 1558 }
+{ "_id": "4050-6779", "name": "Hulk", "sort": 1559 }
+{ "_id": "4050-57691", "name": "Once Upon A Time... in America", "sort": 1560 }
+{ "_id": "4050-108117", "name": "Raven: Daughter of Darkness", "sort": 1561 }
+{ "_id": "4050-86399", "name": "Spidey", "sort": 1562 }
+{ "_id": "4050-73678", "name": "Miles Morales: Ultimate Spider-Man", "sort": 1563 }
+{ "_id": "4050-31064", "name": "Marvel Super Hero Squad", "sort": 1564 }
+{ "_id": "4050-95211", "name": "Doctor Strange and the Sorcerers Supreme", "sort": 1565 }
+{ "_id": "4050-11239", "name": "Solo", "sort": 1566 }
+{ "_id": "4050-82816", "name": "Justice League 3001", "sort": 1567 }
+{ "_id": "4050-73677", "name": "Cyclops", "sort": 1568 }
+{ "_id": "4050-3993", "name": "Detective Comics Annual", "sort": 1569 }
+{ "_id": "4050-22289", "name": "Batman: Gotham After Midnight", "sort": 1570 }
+{ "_id": "4050-2646", "name": "Uncanny Tales", "sort": 1571 }
+{ "_id": "4050-20476", "name": "NFL Superpro", "sort": 1572 }
+{ "_id": "4050-5945", "name": "The Creeper", "sort": 1573 }
+{ "_id": "4050-3647", "name": "Nightmask", "sort": 1574 }
+{ "_id": "4050-93903", "name": "Archie 75th Anniversary Digest", "sort": 1575 }
+{ "_id": "4050-82527", "name": "Starfire", "sort": 1576 }
+{ "_id": "4050-72932", "name": "All-New Ultimates", "sort": 1577 }
+{ "_id": "4050-21549", "name": "War that Time Forgot", "sort": 1578 }
+{ "_id": "4050-19292", "name": "Vinyl Underground", "sort": 1579 }
+{ "_id": "4050-5281", "name": "Blaze", "sort": 1580 }
+{ "_id": "4050-3517", "name": "The Vision and the Scarlet Witch", "sort": 1581 }
+{ "_id": "4050-109348", "name": "Suicide Squad: Hell To Pay", "sort": 1582 }
+{ "_id": "4050-90125", "name": "Thunderbolts", "sort": 1583 }
+{ "_id": "4050-78355", "name": "Marvel Universe Ultimate Spider-Man: Web Warriors", "sort": 1584 }
+{ "_id": "4050-43250", "name": "Orchid", "sort": 1585 }
+{ "_id": "4050-21189", "name": "Grendel: Devil's Legacy", "sort": 1586 }
+{ "_id": "4050-4727", "name": "Black Condor", "sort": 1587 }
+{ "_id": "4050-3511", "name": "Squadron Supreme", "sort": 1588 }
+{ "_id": "4050-20764", "name": "Thanos", "sort": 1589 }
+{ "_id": "4050-72933", "name": "Iron Fist: The Living Weapon", "sort": 1590 }
+{ "_id": "4050-1617", "name": "Nutsy Squirrel", "sort": 1591 }
+{ "_id": "4050-3644", "name": "Mark Hazzard: Merc", "sort": 1592 }
+{ "_id": "4050-109764", "name": "Exiles", "sort": 1593 }
+{ "_id": "4050-92026", "name": "The Flintstones", "sort": 1594 }
+{ "_id": "4050-21251", "name": "WCW: World Championship Wrestling", "sort": 1595 }
+{ "_id": "4050-19159", "name": "The Adventures of Spider-Man", "sort": 1596 }
+{ "_id": "4050-74110", "name": "Batman '66 Meets the Green Hornet", "sort": 1597 }
+{ "_id": "4050-4012", "name": "The New Guardians", "sort": 1598 }
+{ "_id": "4050-95601", "name": "Mother Panic", "sort": 1599 }
+{ "_id": "4050-23918", "name": "Scare Tactics", "sort": 1600 }
+{ "_id": "4050-86393", "name": "Sheriff of Babylon", "sort": 1601 }
+{ "_id": "4050-6216", "name": "J2", "sort": 1602 }
+{ "_id": "4050-21082", "name": "Young X-Men", "sort": 1603 }
+{ "_id": "4050-11015", "name": "Avengers Forever", "sort": 1604 }
+{ "_id": "4050-5314", "name": "Nightwatch", "sort": 1605 }
+{ "_id": "4050-3352", "name": "Marvel Super Heroes Secret Wars", "sort": 1606 }
+{ "_id": "4050-100719", "name": "DC Super Hero Girls: Out of the Bottle", "sort": 1607 }
+{ "_id": "4050-90531", "name": "Future Quest", "sort": 1608 }
+{ "_id": "4050-73718", "name": "Amazing Spider-Man: Who Am I?", "sort": 1609 }
+{ "_id": "4050-31095", "name": "Superman: Metropolis", "sort": 1610 }
+{ "_id": "4050-19127", "name": "Suicide Squad", "sort": 1611 }
+{ "_id": "4050-98040", "name": "Angel Season 11", "sort": 1612 }
+{ "_id": "4050-9412", "name": "Moonshadow", "sort": 1613 }
+{ "_id": "4050-78325", "name": "Gotham by Midnight", "sort": 1614 }
+{ "_id": "4050-72934", "name": "Nightcrawler", "sort": 1615 }
+{ "_id": "4050-5009", "name": "Fantastic Four Unlimited", "sort": 1616 }
+{ "_id": "4050-25216", "name": "Vigilante", "sort": 1617 }
+{ "_id": "4050-2764", "name": "The Inhumans", "sort": 1618 }
+{ "_id": "4050-18110", "name": "Araña: Heart of the Spider", "sort": 1619 }
+{ "_id": "4050-6779", "name": "Hulk", "sort": 1620 }
+{ "_id": "4050-3647", "name": "Nightmask", "sort": 1621 }
+{ "_id": "4050-97772", "name": "U.S.Avengers", "sort": 1622 }
+{ "_id": "4050-76531", "name": "The Strain: The Night Eternal", "sort": 1623 }
+{ "_id": "4050-37097", "name": "Wolverine: The Best There Is", "sort": 1624 }
+{ "_id": "4050-23035", "name": "Digimon", "sort": 1625 }
+{ "_id": "4050-11250", "name": "The Hacker Files", "sort": 1626 }
+{ "_id": "4050-6602", "name": "Chronos", "sort": 1627 }
+{ "_id": "4050-3480", "name": "Eternals", "sort": 1628 }
+{ "_id": "4050-103397", "name": "Mister Miracle", "sort": 1629 }
+{ "_id": "4050-92175", "name": "Conan the Slayer", "sort": 1630 }
+{ "_id": "4050-75557", "name": "Spider-Man 2099", "sort": 1631 }
+{ "_id": "4050-32562", "name": "The Flash", "sort": 1632 }
+{ "_id": "4050-100590", "name": "Royals", "sort": 1633 }
+{ "_id": "4050-28062", "name": "Magog", "sort": 1634 }
+{ "_id": "4050-18117", "name": "Blade", "sort": 1635 }
+{ "_id": "4050-43512", "name": "All Star Comics Archives", "sort": 1636 }
+{ "_id": "4050-2621", "name": "The Shadow", "sort": 1637 }
+{ "_id": "4050-3517", "name": "The Vision and the Scarlet Witch", "sort": 1638 }
+{ "_id": "4050-108698", "name": "Batman: Sins of the Father", "sort": 1639 }
+{ "_id": "4050-94694", "name": "DC Super Hero Girls: Past Times at Super Hero High", "sort": 1640 }
+{ "_id": "4050-11088", "name": "The Book of Fate", "sort": 1641 }
+{ "_id": "4050-75335", "name": "Legendary Star-Lord", "sort": 1642 }
+{ "_id": "4050-5286", "name": "ClanDestine", "sort": 1643 }
+{ "_id": "4050-6784", "name": "Marvel: The Lost Generation", "sort": 1644 }
+{ "_id": "4050-82701", "name": "Plants Vs. Zombies", "sort": 1645 }
+{ "_id": "4050-2338", "name": "The Inferior Five", "sort": 1646 }
+{ "_id": "4050-6171", "name": "JLA: Year One", "sort": 1647 }
+{ "_id": "4050-3441", "name": "Crisis on Infinite Earths", "sort": 1648 }
+{ "_id": "4050-115055", "name": "The Green Lantern", "sort": 1649 }
+{ "_id": "4050-94114", "name": "Doom Patrol", "sort": 1650 }
+{ "_id": "4050-71802", "name": "New Warriors", "sort": 1651 }
+{ "_id": "4050-35196", "name": "Marvel Masterworks: The Invincible Iron Man", "sort": 1652 }
+{ "_id": "4050-22371", "name": "Superman & Batman: Generations III", "sort": 1653 }
+{ "_id": "4050-18133", "name": "Nextwave: Agents of H.A.T.E.", "sort": 1654 }
+{ "_id": "4050-4796", "name": "James Bond Jr.", "sort": 1655 }
+{ "_id": "4050-3309", "name": "Jemm, Son of Saturn", "sort": 1656 }
+{ "_id": "4050-114293", "name": "Red Hood: Outlaw", "sort": 1657 }
+{ "_id": "4050-88554", "name": "Black Widow", "sort": 1658 }
+{ "_id": "4050-70884", "name": "Injustice: Gods Among Us Year Two", "sort": 1659 }
+{ "_id": "4050-25900", "name": "Superman: World of New Krypton", "sort": 1660 }
+{ "_id": "4050-21670", "name": "Thor: Son of Asgard", "sort": 1661 }
+{ "_id": "4050-11010", "name": "Little Archie", "sort": 1662 }
+{ "_id": "4050-4033", "name": "The Unknown Soldier", "sort": 1663 }
+{ "_id": "4050-2729", "name": "Claw the Unconquered", "sort": 1664 }
+{ "_id": "4050-99242", "name": "America", "sort": 1665 }
+{ "_id": "4050-76706", "name": "Smallville: Continuity", "sort": 1666 }
+{ "_id": "4050-49364", "name": "Superman Family Adventures", "sort": 1667 }
+{ "_id": "4050-25747", "name": "The Mighty", "sort": 1668 }
+{ "_id": "4050-18700", "name": "Nightcrawler", "sort": 1669 }
+{ "_id": "4050-94118", "name": "Gotham Academy: Second Semester", "sort": 1670 }
+{ "_id": "4050-9959", "name": "Soldier X", "sort": 1671 }
+{ "_id": "4050-74673", "name": "Smallville: Chaos", "sort": 1672 }
+{ "_id": "4050-42997", "name": "Beyond The Fringe", "sort": 1673 }
+{ "_id": "4050-3802", "name": "Outcasts", "sort": 1674 }
+{ "_id": "4050-23492", "name": "Human Torch", "sort": 1675 }
+{ "_id": "4050-33564", "name": "Binky's Buddies", "sort": 1676 }
+{ "_id": "4050-3111", "name": "Camelot 3000", "sort": 1677 }
+{ "_id": "4050-112561", "name": "Adventures of the Super Sons", "sort": 1678 }
+{ "_id": "4050-83480", "name": "Cyborg", "sort": 1679 }
+{ "_id": "4050-19120", "name": "Infinity Inc.", "sort": 1680 }
+{ "_id": "4050-95851", "name": "Batman '66 Meets Wonder Woman '77", "sort": 1681 }
+{ "_id": "4050-10977", "name": "Richard Dragon", "sort": 1682 }
+{ "_id": "4050-43230", "name": "Nexus Archives", "sort": 1683 }
+{ "_id": "4050-24231", "name": "Out of the Vortex", "sort": 1684 }
+{ "_id": "4050-18389", "name": "Batman: Journey Into Knight", "sort": 1685 }
+{ "_id": "4050-3622", "name": "Watchmen", "sort": 1686 }
+{ "_id": "4050-72361", "name": "Smallville: Lantern", "sort": 1687 }
+{ "_id": "4050-5993", "name": "Xero", "sort": 1688 }
+{ "_id": "4050-20476", "name": "NFL Superpro", "sort": 1689 }
+{ "_id": "4050-4727", "name": "Black Condor", "sort": 1690 }
+{ "_id": "4050-3442", "name": "DC Challenge", "sort": 1691 }
+{ "_id": "4050-116964", "name": "Daredevil", "sort": 1692 }
+{ "_id": "4050-108117", "name": "Raven: Daughter of Darkness", "sort": 1693 }
+{ "_id": "4050-92026", "name": "The Flintstones", "sort": 1694 }
+{ "_id": "4050-73677", "name": "Cyclops", "sort": 1695 }
+{ "_id": "4050-43250", "name": "Orchid", "sort": 1696 }
+{ "_id": "4050-19292", "name": "Vinyl Underground", "sort": 1697 }
+{ "_id": "4050-4584", "name": "Captain Planet and the Planeteers", "sort": 1698 }
+{ "_id": "4050-3246", "name": "U.S. 1", "sort": 1699 }
+{ "_id": "4050-112576", "name": "The Death of Superman", "sort": 1700 }
+{ "_id": "4050-82527", "name": "Starfire", "sort": 1701 }
+{ "_id": "4050-72932", "name": "All-New Ultimates", "sort": 1702 }
+{ "_id": "4050-43162", "name": "The Shade", "sort": 1703 }
+{ "_id": "4050-11239", "name": "Solo", "sort": 1704 }
+{ "_id": "4050-4012", "name": "The New Guardians", "sort": 1705 }
+{ "_id": "4050-2515", "name": "Marvel Feature", "sort": 1706 }
+{ "_id": "4050-112458", "name": "Mr. and Mrs. X", "sort": 1707 }
+{ "_id": "4050-96372", "name": "Injustice: Ground Zero", "sort": 1708 }
+{ "_id": "4050-81088", "name": "Kanan", "sort": 1709 }
+{ "_id": "4050-65629", "name": "Superior Spider-Man Team-Up", "sort": 1710 }
+{ "_id": "4050-22289", "name": "Batman: Gotham After Midnight", "sort": 1711 }
+{ "_id": "4050-109344", "name": "Weapon H", "sort": 1712 }
+{ "_id": "4050-6216", "name": "J2", "sort": 1713 }
+{ "_id": "4050-93903", "name": "Archie 75th Anniversary Digest", "sort": 1714 }
+{ "_id": "4050-75711", "name": "Infinite Crisis: Fight For the Multiverse", "sort": 1715 }
+{ "_id": "4050-3641", "name": "Kickers, Inc.", "sort": 1716 }
+{ "_id": "4050-56384", "name": "Injustice: Gods Among Us", "sort": 1717 }
+{ "_id": "4050-101478", "name": "Generation X", "sort": 1718 }
+{ "_id": "4050-86393", "name": "Sheriff of Babylon", "sort": 1719 }
+{ "_id": "4050-4081", "name": "Wolfpack", "sort": 1720 }
+{ "_id": "4050-2732", "name": "Hercules Unbound", "sort": 1721 }
+{ "_id": "4050-70051", "name": "Ghost", "sort": 1722 }
+{ "_id": "4050-109942", "name": "Black Hammer: Age of Doom", "sort": 1723 }
+{ "_id": "4050-94661", "name": "Shade, The Changing Girl", "sort": 1724 }
+{ "_id": "4050-77494", "name": "Injustice: Gods Among Us Year Three", "sort": 1725 }
+{ "_id": "4050-5307", "name": "Disney's The Little Mermaid", "sort": 1726 }
+{ "_id": "4050-19381", "name": "Captain America: Sentinel of Liberty", "sort": 1727 }
+{ "_id": "4050-2464", "name": "Binky", "sort": 1728 }
+{ "_id": "4050-97422", "name": "Hulk", "sort": 1729 }
+{ "_id": "4050-22836", "name": "Breach", "sort": 1730 }
+{ "_id": "4050-57333", "name": "Darling Love", "sort": 1731 }
+{ "_id": "4050-3475", "name": "Cloak and Dagger", "sort": 1732 }
+{ "_id": "4050-33566", "name": "Debbi's Dates", "sort": 1733 }
+{ "_id": "4050-115897", "name": "Miles Morales: Spider-Man", "sort": 1734 }
+{ "_id": "4050-19529", "name": "Ghost in the Shell 2: Man-Machine Interface", "sort": 1735 }
+{ "_id": "4050-92564", "name": "Marvel Universe Ultimate Spider-Man Vs. The Sinister Six", "sort": 1736 }
+{ "_id": "4050-72399", "name": "American Vampire: Second Cycle", "sort": 1737 }
+{ "_id": "4050-5287", "name": "Conan Classic", "sort": 1738 }
+{ "_id": "4050-35388", "name": "The Batman Chronicles", "sort": 1739 }
+{ "_id": "4050-2290", "name": "Fantasy Masterpieces", "sort": 1740 }
+{ "_id": "4050-23510", "name": "Essential Amazing Spider-Man", "sort": 1741 }
+{ "_id": "4050-19398", "name": "Black Hood Comics", "sort": 1742 }
+{ "_id": "4050-3475", "name": "Cloak and Dagger", "sort": 1743 }
+{ "_id": "4050-106286", "name": "Doomsday Clock", "sort": 1744 }
+{ "_id": "4050-77817", "name": "Sonic Boom", "sort": 1745 }
+{ "_id": "4050-57333", "name": "Darling Love", "sort": 1746 }
+{ "_id": "4050-35207", "name": "Marvel Masterworks: Captain America", "sort": 1747 }
+{ "_id": "4050-22836", "name": "Breach", "sort": 1748 }
+{ "_id": "4050-18245", "name": "Civil War: Front Line", "sort": 1749 }
+{ "_id": "4050-2549", "name": "Forbidden Tales of Dark Mansion", "sort": 1750 }
+{ "_id": "4050-101195", "name": "Jean Grey", "sort": 1751 }
+{ "_id": "4050-76622", "name": "Sundowners", "sort": 1752 }
+{ "_id": "4050-48787", "name": "The Chronicles of King Conan", "sort": 1753 }
+{ "_id": "4050-34839", "name": "Namor: The First Mutant", "sort": 1754 }
+{ "_id": "4050-20471", "name": "Smallville", "sort": 1755 }
+{ "_id": "4050-6787", "name": "The New Warriors", "sort": 1756 }
+{ "_id": "4050-2464", "name": "Binky", "sort": 1757 }
+{ "_id": "4050-100840", "name": "Secret Empire", "sort": 1758 }
+{ "_id": "4050-75336", "name": "Rocket Raccoon", "sort": 1759 }
+{ "_id": "4050-39639", "name": "Herc", "sort": 1760 }
+{ "_id": "4050-18608", "name": "New Comics", "sort": 1761 }
+{ "_id": "4050-3239", "name": "The Saga of Crystar, Crystal Warrior", "sort": 1762 }
+{ "_id": "4050-101937", "name": "Iceman", "sort": 1763 }
+{ "_id": "4050-35030", "name": "Grendel: God and the Devil", "sort": 1764 }
+{ "_id": "4050-21196", "name": "Essential X-Men", "sort": 1765 }
+{ "_id": "4050-40403", "name": "Edgar Rice Burroughs' Tarzan: The Jesse Marsh Years", "sort": 1766 }
+{ "_id": "4050-116160", "name": "Superior Spider-Man", "sort": 1767 }
+{ "_id": "4050-97422", "name": "Hulk", "sort": 1768 }
+{ "_id": "4050-73240", "name": "Elektra", "sort": 1769 }
+{ "_id": "4050-6011", "name": "Marvel Team-Up", "sort": 1770 }
+{ "_id": "4050-37502", "name": "Black Panther: The Man Without Fear", "sort": 1771 }
+{ "_id": "4050-2463", "name": "All-Star Western", "sort": 1772 }
+{ "_id": "4050-32692", "name": "Lone Wolf 2100", "sort": 1773 }
+{ "_id": "4050-19488", "name": "Elvira's House of Mystery", "sort": 1774 }
+{ "_id": "4050-85753", "name": "Drax", "sort": 1775 }
+{ "_id": "4050-58436", "name": "Age of Ultron", "sort": 1776 }
+{ "_id": "4050-26105", "name": "Ultimate Spider-Man Hardcover", "sort": 1777 }
+{ "_id": "4050-19493", "name": "Deathlok", "sort": 1778 }
+{ "_id": "4050-103427", "name": "Captain America", "sort": 1779 }
+{ "_id": "4050-73215", "name": "Secret Origins", "sort": 1780 }
+{ "_id": "4050-3007", "name": "Marvel Spotlight", "sort": 1781 }
+{ "_id": "4050-36735", "name": "Gargoyles", "sort": 1782 }
+{ "_id": "4050-2394", "name": "Leave it to Binky", "sort": 1783 }
+{ "_id": "4050-23445", "name": "Disney's Aladdin", "sort": 1784 }
+{ "_id": "4050-11358", "name": "Babylon 5", "sort": 1785 }
+{ "_id": "4050-3006", "name": "Man-Thing", "sort": 1786 }
+{ "_id": "4050-116365", "name": "Captain Marvel", "sort": 1787 }
+{ "_id": "4050-85976", "name": "Web Warriors", "sort": 1788 }
+{ "_id": "4050-59676", "name": "Li'l Jinx Giant Laugh-Out", "sort": 1789 }
+{ "_id": "4050-32589", "name": "Iron Man: Legacy", "sort": 1790 }
+{ "_id": "4050-2633", "name": "Dead of Night", "sort": 1791 }
+{ "_id": "4050-114730", "name": "The Sandman 30th Anniversary Edition", "sort": 1792 }
+{ "_id": "4050-85778", "name": "Nova", "sort": 1793 }
+{ "_id": "4050-44528", "name": "The Strain", "sort": 1794 }
+{ "_id": "4050-30807", "name": "Marvel Masterworks: The Uncanny X-Men", "sort": 1795 }
+{ "_id": "4050-2505", "name": "The New Gods", "sort": 1796 }
+{ "_id": "4050-42249", "name": "Archie Annual Digest Magazine", "sort": 1797 }
+{ "_id": "4050-2884", "name": "Black Lightning", "sort": 1798 }
+{ "_id": "4050-115566", "name": "Dead Man Logan", "sort": 1799 }
+{ "_id": "4050-55426", "name": "DoubleDuck", "sort": 1800 }
+{ "_id": "4050-7213", "name": "Gunsmith Cats: Mister V", "sort": 1801 }
+{ "_id": "4050-85762", "name": "Howard the Duck", "sort": 1802 }
+{ "_id": "4050-108548", "name": "X-Men: Red", "sort": 1803 }
+{ "_id": "4050-75874", "name": "Storm", "sort": 1804 }
+{ "_id": "4050-2501", "name": "The Forever People", "sort": 1805 }
+{ "_id": "4050-25713", "name": "Marvel Heroes", "sort": 1806 }
+{ "_id": "4050-19331", "name": "Empowered", "sort": 1807 }
+{ "_id": "4050-86333", "name": "All-New Inhumans", "sort": 1808 }
+{ "_id": "4050-36387", "name": "Superboy", "sort": 1809 }
+{ "_id": "4050-22900", "name": "Toxic Avenger", "sort": 1810 }
+{ "_id": "4050-117047", "name": "Avengers: No Road Home", "sort": 1811 }
+{ "_id": "4050-22131", "name": "The Witching", "sort": 1812 }
+{ "_id": "4050-7405", "name": "Roachmill", "sort": 1813 }
+{ "_id": "4050-21462", "name": "Caravan Kidd Part 2", "sort": 1814 }
+{ "_id": "4050-4747", "name": "Justice Society of America", "sort": 1815 }
+{ "_id": "4050-114425", "name": "The Unstoppable Wasp", "sort": 1816 }
+{ "_id": "4050-78202", "name": "Spider-Woman", "sort": 1817 }
+{ "_id": "4050-20271", "name": "Blade: The Vampire Hunter", "sort": 1818 }
+{ "_id": "4050-40536", "name": "Ghost Rider", "sort": 1819 }
+{ "_id": "4050-4372", "name": "Ms. Tree Quarterly", "sort": 1820 }
+{ "_id": "4050-25466", "name": "Celebrate The Century Super Heroes Stamp Album", "sort": 1821 }
+{ "_id": "4050-18674", "name": "Disney Afternoon", "sort": 1822 }
+{ "_id": "4050-4411", "name": "The Punisher Armory", "sort": 1823 }
+{ "_id": "4050-112977", "name": "West Coast Avengers", "sort": 1824 }
+{ "_id": "4050-87304", "name": "Agents of S.H.I.E.L.D.", "sort": 1825 }
+{ "_id": "4050-68136", "name": "Afterlife With Archie", "sort": 1826 }
+{ "_id": "4050-37846", "name": "Robert E. Howard's Savage Sword", "sort": 1827 }
+{ "_id": "4050-19217", "name": "Omega the Unknown", "sort": 1828 }
+{ "_id": "4050-109761", "name": "Domino", "sort": 1829 }
+{ "_id": "4050-87152", "name": "A-Force", "sort": 1830 }
+{ "_id": "4050-5501", "name": "Chiaroscuro", "sort": 1831 }
+{ "_id": "4050-55398", "name": "All of Scrooge McDuck's Millions", "sort": 1832 }
+{ "_id": "4050-2024", "name": "Teen-Age Romance", "sort": 1833 }
+{ "_id": "4050-24053", "name": "Ultraman Tiga", "sort": 1834 }
+{ "_id": "4050-18442", "name": "Marvel Holiday Special", "sort": 1835 }
+{ "_id": "4050-4405", "name": "Mighty Mouse", "sort": 1836 }
+{ "_id": "4050-108916", "name": "Archie & Friends Digital Digest", "sort": 1837 }
+{ "_id": "4050-86989", "name": "Rocket Raccoon & Groot", "sort": 1838 }
+{ "_id": "4050-54461", "name": "Hellboy in Hell", "sort": 1839 }
+{ "_id": "4050-23475", "name": "Disney's Colossal Comics Collection", "sort": 1840 }
+{ "_id": "4050-11182", "name": "Over the Edge", "sort": 1841 }
+{ "_id": "4050-2843", "name": "Plastic Man", "sort": 1842 }
+{ "_id": "4050-116983", "name": "Old Man Quill", "sort": 1843 }
+{ "_id": "4050-97062", "name": "The Mighty Captain Marvel", "sort": 1844 }
+{ "_id": "4050-85088", "name": "Contest of Champions", "sort": 1845 }
+{ "_id": "4050-39611", "name": "Fear Itself", "sort": 1846 }
+{ "_id": "4050-21084", "name": "Hulk 2099", "sort": 1847 }
+{ "_id": "4050-5727", "name": "Aztek: The Ultimate Man", "sort": 1848 }
+{ "_id": "4050-2555", "name": "Supergirl", "sort": 1849 }
+{ "_id": "4050-18411", "name": "Bloodhound", "sort": 1850 }
+{ "_id": "4050-3520", "name": "Web of Spider-Man Annual", "sort": 1851 }
+{ "_id": "4050-101484", "name": "Luke Cage", "sort": 1852 }
+{ "_id": "4050-86279", "name": "Marvel Universe Guardians of the Galaxy Infinite Comic", "sort": 1853 }
+{ "_id": "4050-43641", "name": "The Superman Chronicles", "sort": 1854 }
+{ "_id": "4050-21236", "name": "Aliens: Colonial Marines", "sort": 1855 }
+{ "_id": "4050-6152", "name": "Chase", "sort": 1856 }
+{ "_id": "4050-116161", "name": "X-Force", "sort": 1857 }
+{ "_id": "4050-92360", "name": "Deadpool & The Mercs For Money", "sort": 1858 }
+{ "_id": "4050-109775", "name": "MAD Magazine", "sort": 1859 }
+{ "_id": "4050-87218", "name": "Marvel Universe Avengers Infinite Comic", "sort": 1860 }
+{ "_id": "4050-56295", "name": "Ghost Rider Special Edition", "sort": 1861 }
+{ "_id": "4050-2733", "name": "The Joker", "sort": 1862 }
+{ "_id": "4050-72271", "name": "Avengers Undercover", "sort": 1863 }
+{ "_id": "4050-25368", "name": "Sonic Select", "sort": 1864 }
+{ "_id": "4050-39611", "name": "Fear Itself", "sort": 1865 }
+{ "_id": "4050-19217", "name": "Omega the Unknown", "sort": 1866 }
+{ "_id": "4050-5727", "name": "Aztek: The Ultimate Man", "sort": 1867 }
+{ "_id": "4050-2733", "name": "The Joker", "sort": 1868 }
+{ "_id": "4050-116161", "name": "X-Force", "sort": 1869 }
+{ "_id": "4050-92360", "name": "Deadpool & The Mercs For Money", "sort": 1870 }
+{ "_id": "4050-68136", "name": "Afterlife With Archie", "sort": 1871 }
+{ "_id": "4050-37846", "name": "Robert E. Howard's Savage Sword", "sort": 1872 }
+{ "_id": "4050-18674", "name": "Disney Afternoon", "sort": 1873 }
+{ "_id": "4050-109775", "name": "MAD Magazine", "sort": 1874 }
+{ "_id": "4050-87152", "name": "A-Force", "sort": 1875 }
+{ "_id": "4050-5501", "name": "Chiaroscuro", "sort": 1876 }
+{ "_id": "4050-55398", "name": "All of Scrooge McDuck's Millions", "sort": 1877 }
+{ "_id": "4050-2555", "name": "Supergirl", "sort": 1878 }
+{ "_id": "4050-24053", "name": "Ultraman Tiga", "sort": 1879 }
+{ "_id": "4050-18411", "name": "Bloodhound", "sort": 1880 }
+{ "_id": "4050-4405", "name": "Mighty Mouse", "sort": 1881 }
+{ "_id": "4050-109761", "name": "Domino", "sort": 1882 }
+{ "_id": "4050-86989", "name": "Rocket Raccoon & Groot", "sort": 1883 }
+{ "_id": "4050-54461", "name": "Hellboy in Hell", "sort": 1884 }
+{ "_id": "4050-21236", "name": "Aliens: Colonial Marines", "sort": 1885 }
+{ "_id": "4050-11182", "name": "Over the Edge", "sort": 1886 }
+{ "_id": "4050-3520", "name": "Web of Spider-Man Annual", "sort": 1887 }
+{ "_id": "4050-101484", "name": "Luke Cage", "sort": 1888 }
+{ "_id": "4050-85088", "name": "Contest of Champions", "sort": 1889 }
+{ "_id": "4050-25466", "name": "Celebrate The Century Super Heroes Stamp Album", "sort": 1890 }
+{ "_id": "4050-18442", "name": "Marvel Holiday Special", "sort": 1891 }
+{ "_id": "4050-4411", "name": "The Punisher Armory", "sort": 1892 }
+{ "_id": "4050-2024", "name": "Teen-Age Romance", "sort": 1893 }
+{ "_id": "4050-11924", "name": "Samurai Executioner", "sort": 1894 }
+{ "_id": "4050-3919", "name": "Concrete", "sort": 1895 }
+{ "_id": "4050-108916", "name": "Archie & Friends Digital Digest", "sort": 1896 }
+{ "_id": "4050-86279", "name": "Marvel Universe Guardians of the Galaxy Infinite Comic", "sort": 1897 }
+{ "_id": "4050-43641", "name": "The Superman Chronicles", "sort": 1898 }
+{ "_id": "4050-21084", "name": "Hulk 2099", "sort": 1899 }
+{ "_id": "4050-6152", "name": "Chase", "sort": 1900 }
+{ "_id": "4050-116983", "name": "Old Man Quill", "sort": 1901 }
+{ "_id": "4050-97062", "name": "The Mighty Captain Marvel", "sort": 1902 }
+{ "_id": "4050-2843", "name": "Plastic Man", "sort": 1903 }
+{ "_id": "4050-72271", "name": "Avengers Undercover", "sort": 1904 }
+{ "_id": "4050-112977", "name": "West Coast Avengers", "sort": 1905 }
+{ "_id": "4050-87218", "name": "Marvel Universe Avengers Infinite Comic", "sort": 1906 }
+{ "_id": "4050-56295", "name": "Ghost Rider Special Edition", "sort": 1907 }
+{ "_id": "4050-25368", "name": "Sonic Select", "sort": 1908 }
+{ "_id": "4050-6152", "name": "Chase", "sort": 1909 }
+{ "_id": "4050-116702", "name": "Guardians of the Galaxy", "sort": 1910 }
+{ "_id": "4050-87304", "name": "Agents of S.H.I.E.L.D.", "sort": 1911 }
+{ "_id": "4050-3082", "name": "Bizarre Adventures", "sort": 1912 }
+{ "_id": "4050-39611", "name": "Fear Itself", "sort": 1913 }
+{ "_id": "4050-2024", "name": "Teen-Age Romance", "sort": 1914 }
+{ "_id": "4050-21950", "name": "The 'Nam Magazine", "sort": 1915 }
+{ "_id": "4050-4411", "name": "The Punisher Armory", "sort": 1916 }
+{ "_id": "4050-2868", "name": "Omega the Unknown", "sort": 1917 }
+{ "_id": "4050-43641", "name": "The Superman Chronicles", "sort": 1918 }
+{ "_id": "4050-23475", "name": "Disney's Colossal Comics Collection", "sort": 1919 }
+{ "_id": "4050-5501", "name": "Chiaroscuro", "sort": 1920 }
+{ "_id": "4050-116161", "name": "X-Force", "sort": 1921 }
+{ "_id": "4050-37846", "name": "Robert E. Howard's Savage Sword", "sort": 1922 }
+{ "_id": "4050-2843", "name": "Plastic Man", "sort": 1923 }
+{ "_id": "4050-72271", "name": "Avengers Undercover", "sort": 1924 }
+{ "_id": "4050-3520", "name": "Web of Spider-Man Annual", "sort": 1925 }
+{ "_id": "4050-2561", "name": "Weird Worlds", "sort": 1926 }
+{ "_id": "4050-97062", "name": "The Mighty Captain Marvel", "sort": 1927 }
+{ "_id": "4050-28353", "name": "Star Wars: 30th Anniversary Collection", "sort": 1928 }
+{ "_id": "4050-33959", "name": "The Official Handbook of the Marvel Universe", "sort": 1929 }
+{ "_id": "4050-21084", "name": "Hulk 2099", "sort": 1930 }
+{ "_id": "4050-3652", "name": "Star Brand", "sort": 1931 }
+{ "_id": "4050-101484", "name": "Luke Cage", "sort": 1932 }
+{ "_id": "4050-25368", "name": "Sonic Select", "sort": 1933 }
+{ "_id": "4050-87152", "name": "A-Force", "sort": 1934 }
+{ "_id": "4050-18411", "name": "Bloodhound", "sort": 1935 }
+{ "_id": "4050-3229", "name": "Kull the Conqueror", "sort": 1936 }
+{ "_id": "4050-116983", "name": "Old Man Quill", "sort": 1937 }
+{ "_id": "4050-86523", "name": "Dark Knight III: The Master Race Collector's Edition", "sort": 1938 }
+{ "_id": "4050-2919", "name": "Yogi Bear", "sort": 1939 }
+{ "_id": "4050-1241", "name": "Miss Beverly Hills of Hollywood", "sort": 1940 }
+{ "_id": "4050-21219", "name": "The Adventures of Luther Arkwright", "sort": 1941 }
+{ "_id": "4050-4068", "name": "Semper Fi", "sort": 1942 }
+{ "_id": "4050-113880", "name": "Heroes In Crisis", "sort": 1943 }
+{ "_id": "4050-32945", "name": "Spaceman", "sort": 1944 }
+{ "_id": "4050-18529", "name": "Neil Gaiman's Neverwhere", "sort": 1945 }
+{ "_id": "4050-63232", "name": "Superman Unchained", "sort": 1946 }
+{ "_id": "4050-2608", "name": "Black Magic", "sort": 1947 }
+{ "_id": "4050-2046", "name": "Linda Carter, Student Nurse", "sort": 1948 }
+{ "_id": "4050-87328", "name": "The Legend of Wonder Woman", "sort": 1949 }
+{ "_id": "4050-46254", "name": "Lux & Alby Sign On And Save The Universe", "sort": 1950 }
+{ "_id": "4050-116245", "name": "Conan the Barbarian", "sort": 1951 }
+{ "_id": "4050-76770", "name": "The Names", "sort": 1952 }
+{ "_id": "4050-22061", "name": "Pirates of Dark Water", "sort": 1953 }
+{ "_id": "4050-81833", "name": "Secret Wars", "sort": 1954 }
+{ "_id": "4050-18310", "name": "Ultimate Power", "sort": 1955 }
+{ "_id": "4050-44740", "name": "Gunsmith Cats", "sort": 1956 }
+{ "_id": "4050-2900", "name": "The Flintstones", "sort": 1957 }
+{ "_id": "4050-31466", "name": "Jackpot Comics", "sort": 1958 }
+{ "_id": "4050-20014", "name": "All True Crime Cases", "sort": 1959 }
+{ "_id": "4050-9169", "name": "The Brotherhood", "sort": 1960 }
+{ "_id": "4050-85141", "name": "Survivors' Club", "sort": 1961 }
+{ "_id": "4050-34040", "name": "Wanted, The World's Most Dangerous Villains", "sort": 1962 }
+{ "_id": "4050-20366", "name": "The End League", "sort": 1963 }
+{ "_id": "4050-116505", "name": "Marvel Comics Presents", "sort": 1964 }
+{ "_id": "4050-67024", "name": "The Star Wars", "sort": 1965 }
+{ "_id": "4050-40216", "name": "Alpha Flight", "sort": 1966 }
+{ "_id": "4050-2448", "name": "Tower of Shadows", "sort": 1967 }
+{ "_id": "4050-26078", "name": "Katy Keene Comics Digest Magazine", "sort": 1968 }
+{ "_id": "4050-19323", "name": "Gotham Underground", "sort": 1969 }
+{ "_id": "4050-7202", "name": "Famous First Edition", "sort": 1970 }
+{ "_id": "4050-116058", "name": "Freedom Fighters", "sort": 1971 }
+{ "_id": "4050-56984", "name": "Superman: The Man of Steel", "sort": 1972 }
+{ "_id": "4050-34387", "name": "Firebrand", "sort": 1973 }
+{ "_id": "4050-22146", "name": "The Official Marvel Index to the Amazing Spider-Man", "sort": 1974 }
+{ "_id": "4050-18905", "name": "Grendel: Behold The Devil", "sort": 1975 }
+{ "_id": "4050-3658", "name": "X-Factor Annual", "sort": 1976 }
+{ "_id": "4050-90521", "name": "Civil War II", "sort": 1977 }
+{ "_id": "4050-49447", "name": "General Mills Presents: Justice League", "sort": 1978 }
+{ "_id": "4050-34241", "name": "Avengers: The Children's Crusade", "sort": 1979 }
+{ "_id": "4050-7408", "name": "Gunsmith Cats: Bean Bandit", "sort": 1980 }
+{ "_id": "4050-65375", "name": "The Strain: The Fall", "sort": 1981 }
+{ "_id": "4050-35273", "name": "Freedom Fighters", "sort": 1982 }
+{ "_id": "4050-19196", "name": "X-Men Evolution", "sort": 1983 }
+{ "_id": "4050-3801", "name": "Mask", "sort": 1984 }
+{ "_id": "4050-52046", "name": "Team 7", "sort": 1985 }
+{ "_id": "4050-18459", "name": "Spider-Man Family", "sort": 1986 }
+{ "_id": "4050-86223", "name": "Dark Knight III: The Master Race", "sort": 1987 }
+{ "_id": "4050-44987", "name": "Heart of Empire: The Legacy of Luther Arkwright", "sort": 1988 }
+{ "_id": "4050-21937", "name": "Eternals", "sort": 1989 }
+{ "_id": "4050-10940", "name": "Batman: Death and the Maidens", "sort": 1990 }
+{ "_id": "4050-41552", "name": "Captain America and Bucky", "sort": 1991 }
+{ "_id": "4050-26266", "name": "Blackest Night", "sort": 1992 }
+{ "_id": "4050-25404", "name": "Star Wars: Clone Wars", "sort": 1993 }
+{ "_id": "4050-34378", "name": "Kid 'n Play", "sort": 1994 }
+{ "_id": "4050-2953", "name": "Devil Dinosaur", "sort": 1995 }
+{ "_id": "4050-116397", "name": "Young Justice", "sort": 1996 }
+{ "_id": "4050-21937", "name": "Eternals", "sort": 1997 }
+{ "_id": "4050-18310", "name": "Ultimate Power", "sort": 1998 }
+{ "_id": "4050-3506", "name": "Secret Wars II", "sort": 1999 }
+{ "_id": "4050-86223", "name": "Dark Knight III: The Master Race", "sort": 2000 }
+{ "_id": "4050-44987", "name": "Heart of Empire: The Legacy of Luther Arkwright", "sort": 2001 }
+{ "_id": "4050-31466", "name": "Jackpot Comics", "sort": 2002 }
+{ "_id": "4050-20014", "name": "All True Crime Cases", "sort": 2003 }
+{ "_id": "4050-81833", "name": "Secret Wars", "sort": 2004 }
+{ "_id": "4050-9169", "name": "The Brotherhood", "sort": 2005 }
+{ "_id": "4050-35273", "name": "Freedom Fighters", "sort": 2006 }
+{ "_id": "4050-2900", "name": "The Flintstones", "sort": 2007 }
+{ "_id": "4050-26078", "name": "Katy Keene Comics Digest Magazine", "sort": 2008 }
+{ "_id": "4050-19196", "name": "X-Men Evolution", "sort": 2009 }
+{ "_id": "4050-3801", "name": "Mask", "sort": 2010 }
+{ "_id": "4050-116505", "name": "Marvel Comics Presents", "sort": 2011 }
+{ "_id": "4050-56984", "name": "Superman: The Man of Steel", "sort": 2012 }
+{ "_id": "4050-34387", "name": "Firebrand", "sort": 2013 }
+{ "_id": "4050-22146", "name": "The Official Marvel Index to the Amazing Spider-Man", "sort": 2014 }
+{ "_id": "4050-18459", "name": "Spider-Man Family", "sort": 2015 }
+{ "_id": "4050-3777", "name": "Adventures of Superman Annual", "sort": 2016 }
+{ "_id": "4050-116058", "name": "Freedom Fighters", "sort": 2017 }
+{ "_id": "4050-52046", "name": "Team 7", "sort": 2018 }
+{ "_id": "4050-34241", "name": "Avengers: The Children's Crusade", "sort": 2019 }
+{ "_id": "4050-44740", "name": "Gunsmith Cats", "sort": 2020 }
+{ "_id": "4050-7408", "name": "Gunsmith Cats: Bean Bandit", "sort": 2021 }
+{ "_id": "4050-25404", "name": "Star Wars: Clone Wars", "sort": 2022 }
+{ "_id": "4050-116397", "name": "Young Justice", "sort": 2023 }
+{ "_id": "4050-34378", "name": "Kid 'n Play", "sort": 2024 }
+{ "_id": "4050-22061", "name": "Pirates of Dark Water", "sort": 2025 }
+{ "_id": "4050-3658", "name": "X-Factor Annual", "sort": 2026 }
+{ "_id": "4050-49447", "name": "General Mills Presents: Justice League", "sort": 2027 }
+{ "_id": "4050-34040", "name": "Wanted, The World's Most Dangerous Villains", "sort": 2028 }
+{ "_id": "4050-10940", "name": "Batman: Death and the Maidens", "sort": 2029 }
+{ "_id": "4050-2953", "name": "Devil Dinosaur", "sort": 2030 }
+{ "_id": "4050-19323", "name": "Gotham Underground", "sort": 2031 }
+{ "_id": "4050-65375", "name": "The Strain: The Fall", "sort": 2032 }
+{ "_id": "4050-2448", "name": "Tower of Shadows", "sort": 2033 }
+{ "_id": "4050-18905", "name": "Grendel: Behold The Devil", "sort": 2034 }
+{ "_id": "4050-90521", "name": "Civil War II", "sort": 2035 }
+{ "_id": "4050-20366", "name": "The End League", "sort": 2036 }
+{ "_id": "4050-85141", "name": "Survivors' Club", "sort": 2037 }
+{ "_id": "4050-41552", "name": "Captain America and Bucky", "sort": 2038 }
+{ "_id": "4050-7202", "name": "Famous First Edition", "sort": 2039 }
+{ "_id": "4050-26266", "name": "Blackest Night", "sort": 2040 }
+{ "_id": "4050-19531", "name": "Ghost in the Shell", "sort": 2041 }
+{ "_id": "4050-10088", "name": "Batgirl Year One", "sort": 2042 }
+{ "_id": "4050-89345", "name": "Amazing Spider-Man: Worldwide", "sort": 2043 }
+{ "_id": "4050-83202", "name": "Justice League: Gods and Monsters", "sort": 2044 }
+{ "_id": "4050-9097", "name": "Midnight Sons Unlimited", "sort": 2045 }
+{ "_id": "4050-51406", "name": "The Star Brand", "sort": 2046 }
+{ "_id": "4050-74703", "name": "Infinity Man and the Forever People", "sort": 2047 }
+{ "_id": "4050-2579", "name": "Red Wolf", "sort": 2048 }
+{ "_id": "4050-115379", "name": "American Carnage", "sort": 2049 }
+{ "_id": "4050-2387", "name": "Atom and Hawkman", "sort": 2050 }
+{ "_id": "4050-30147", "name": "Ragman", "sort": 2051 }
+{ "_id": "4050-4380", "name": "Time Masters", "sort": 2052 }
+{ "_id": "4050-76074", "name": "Bodies", "sort": 2053 }
+{ "_id": "4050-47330", "name": "The New Deadwardians", "sort": 2054 }
+{ "_id": "4050-27392", "name": "The Marvels Project", "sort": 2055 }
+{ "_id": "4050-19027", "name": "Metal Men", "sort": 2056 }
+{ "_id": "4050-2891", "name": "Shade, the Changing Man", "sort": 2057 }
+{ "_id": "4050-71942", "name": "Pariah", "sort": 2058 }
+{ "_id": "4050-42809", "name": "Mister Terrific", "sort": 2059 }
+{ "_id": "4050-22669", "name": "Amazing Spider-Man Family", "sort": 2060 }
+{ "_id": "4050-2691", "name": "The Human Torch", "sort": 2061 }
+{ "_id": "4050-55400", "name": "Mick de' Mouse's Stories", "sort": 2062 }
+{ "_id": "4050-42556", "name": "Hawk & Dove", "sort": 2063 }
+{ "_id": "4050-20627", "name": "Marvel Illustrated: The Iliad", "sort": 2064 }
+{ "_id": "4050-43206", "name": "Dorothy & the Wizard in Oz", "sort": 2065 }
+{ "_id": "4050-24442", "name": "Hellboy: The Wild Hunt", "sort": 2066 }
+{ "_id": "4050-2840", "name": "Isis", "sort": 2067 }
+{ "_id": "4050-63681", "name": "100 Bullets: Brother Lono", "sort": 2068 }
+{ "_id": "4050-42576", "name": "O.M.A.C.", "sort": 2069 }
+{ "_id": "4050-21076", "name": "Secret Invasion", "sort": 2070 }
+{ "_id": "4050-52640", "name": "Daredevil: End of Days", "sort": 2071 }
+{ "_id": "4050-32582", "name": "Black Widow", "sort": 2072 }
+{ "_id": "4050-19690", "name": "Avengers: Earth's Mightiest Heroes", "sort": 2073 }
+{ "_id": "4050-4561", "name": "Outlaws", "sort": 2074 }
+{ "_id": "4050-36705", "name": "Batman, Incorporated", "sort": 2075 }
+{ "_id": "4050-79269", "name": "The Unbeatable Squirrel Girl", "sort": 2076 }
+{ "_id": "4050-5624", "name": "Star Wars: Droids", "sort": 2077 }
+{ "_id": "4050-49912", "name": "Masters of the Universe", "sort": 2078 }
+{ "_id": "4050-29321", "name": "Archie's Vacation Special", "sort": 2079 }
+{ "_id": "4050-4134", "name": "Doc Stearn...Mr Monster", "sort": 2080 }
+{ "_id": "4050-11041", "name": "Jetsons", "sort": 2081 }
+{ "_id": "4050-19532", "name": "Ghost in the Shell 1.5: Human Error Processor", "sort": 2082 }
+{ "_id": "4050-19133", "name": "Suicide Squad", "sort": 2083 }
+{ "_id": "4050-1686", "name": "The Legends of Daniel Boone", "sort": 2084 }
+{ "_id": "4050-27165", "name": "Tales of the Unexpected", "sort": 2085 }
+{ "_id": "4050-18319", "name": "Mystery In Space", "sort": 2086 }
+{ "_id": "4050-2846", "name": "Starfire", "sort": 2087 }
+{ "_id": "4050-99266", "name": "Savage Things", "sort": 2088 }
+{ "_id": "4050-50919", "name": "Archie's Girls Betty and Veronica Annual", "sort": 2089 }
+{ "_id": "4050-24615", "name": "The Wonderful Wizard of Oz", "sort": 2090 }
+{ "_id": "4050-9243", "name": "Avengers: Celestial Quest", "sort": 2091 }
+{ "_id": "4050-2652", "name": "Worlds Unknown", "sort": 2092 }
+{ "_id": "4050-96675", "name": "Shadows On The Grave", "sort": 2093 }
+{ "_id": "4050-35213", "name": "Marvel Masterworks: The X-Men", "sort": 2094 }
+{ "_id": "4050-22380", "name": "Michael Chabon Presents: The Amazing Adventures of the Escapist", "sort": 2095 }
+{ "_id": "4050-5507", "name": "Goddess", "sort": 2096 }
+{ "_id": "4050-2441", "name": "Chamber of Darkness", "sort": 2097 }
+{ "_id": "4050-117089", "name": "Wonder Twins", "sort": 2098 }
+{ "_id": "4050-31809", "name": "Frontier Fighters", "sort": 2099 }
+{ "_id": "4050-19262", "name": "Death of the New Gods", "sort": 2100 }
+{ "_id": "4050-104938", "name": "Falcon", "sort": 2101 }
+{ "_id": "4050-4741", "name": "Green Lantern Corps Quarterly", "sort": 2102 }
+{ "_id": "4050-63917", "name": "Secret Origin: Leaf Candy Mini Comics", "sort": 2103 }
+{ "_id": "4050-97774", "name": "The Unstoppable Wasp", "sort": 2104 }
+{ "_id": "4050-36477", "name": "Ozma of Oz", "sort": 2105 }
+{ "_id": "4050-7077", "name": "Fray", "sort": 2106 }
+{ "_id": "4050-35113", "name": "The Man Called A-X", "sort": 2107 }
+{ "_id": "4050-111445", "name": "Sword Daughter", "sort": 2108 }
+{ "_id": "4050-4815", "name": "Toxic Crusaders", "sort": 2109 }
+{ "_id": "4050-75856", "name": "Star-Spangled War Stories", "sort": 2110 }
+{ "_id": "4050-31141", "name": "Joe the Barbarian", "sort": 2111 }
+{ "_id": "4050-18626", "name": "Martian Manhunter", "sort": 2112 }
+{ "_id": "4050-4566", "name": "Sgt. Rock", "sort": 2113 }
+{ "_id": "4050-77927", "name": "The Ghost Fleet", "sort": 2114 }
+{ "_id": "4050-104775", "name": "Batman: White Knight", "sort": 2115 }
+{ "_id": "4050-63626", "name": "Marvel Monthly Catalog", "sort": 2116 }
+{ "_id": "4050-11668", "name": "Trigger", "sort": 2117 }
+{ "_id": "4050-22985", "name": "Marvel Illustrated: The Odyssey", "sort": 2118 }
+{ "_id": "4050-20169", "name": "Conan: The Frazetta Cover Series", "sort": 2119 }
+{ "_id": "4050-2043", "name": "Amazing Adult Fantasy", "sort": 2120 }
+{ "_id": "4050-27662", "name": "The Plastic Man Archives", "sort": 2121 }
+{ "_id": "4050-3590", "name": "Angel Love", "sort": 2122 }
+{ "_id": "4050-26869", "name": "Anarky", "sort": 2123 }
+{ "_id": "4050-2665", "name": "OMAC", "sort": 2124 }
+{ "_id": "4050-23512", "name": "Batman: City of Light", "sort": 2125 }
+{ "_id": "4050-86359", "name": "Guardians of Infinity", "sort": 2126 }
+{ "_id": "4050-19175", "name": "Countdown to Mystery", "sort": 2127 }
+{ "_id": "4050-53927", "name": "Archie Comics Super Special", "sort": 2128 }
+{ "_id": "4050-3842", "name": "Fallen Angels", "sort": 2129 }
+{ "_id": "4050-35689", "name": "American Vampire", "sort": 2130 }
+{ "_id": "4050-22569", "name": "2099: World of Tomorrow", "sort": 2131 }
+{ "_id": "4050-18242", "name": "The Thing", "sort": 2132 }
+{ "_id": "4050-92079", "name": "Deadpool: Too Soon? Infinite Comic", "sort": 2133 }
+{ "_id": "4050-55400", "name": "Mick de' Mouse's Stories", "sort": 2134 }
+{ "_id": "4050-22570", "name": "OMAC", "sort": 2135 }
+{ "_id": "4050-82272", "name": "X-Men '92 Infinite Comic", "sort": 2136 }
+{ "_id": "4050-48120", "name": "Falling Skies: The Battle of Fitchburg", "sort": 2137 }
+{ "_id": "4050-2889", "name": "New Gods", "sort": 2138 }
+{ "_id": "4050-32514", "name": "JSA: All Stars", "sort": 2139 }
+{ "_id": "4050-21076", "name": "Secret Invasion", "sort": 2140 }
+{ "_id": "4050-6177", "name": "The Minx", "sort": 2141 }
+{ "_id": "4050-74652", "name": "Original Sin Special Edition", "sort": 2142 }
+{ "_id": "4050-42556", "name": "Hawk & Dove", "sort": 2143 }
+{ "_id": "4050-25909", "name": "Strange Adventures", "sort": 2144 }
+{ "_id": "4050-19810", "name": "Batman Archives", "sort": 2145 }
+{ "_id": "4050-4011", "name": "Millennium", "sort": 2146 }
+{ "_id": "4050-61796", "name": "The Green Team: Teen Trillionaires", "sort": 2147 }
+{ "_id": "4050-38094", "name": "Batman Beyond", "sort": 2148 }
+{ "_id": "4050-11036", "name": "Hanna-Barbera Presents", "sort": 2149 }
+{ "_id": "4050-78040", "name": "The Kitchen", "sort": 2150 }
+{ "_id": "4050-30541", "name": "Batman: The Dark Knight Archives", "sort": 2151 }
+{ "_id": "4050-4556", "name": "Justice Society of America", "sort": 2152 }
+{ "_id": "4050-67910", "name": "Grindhouse: Doors Open At Midnight", "sort": 2153 }
+{ "_id": "4050-24232", "name": "Propellerman", "sort": 2154 }
+{ "_id": "4050-3918", "name": "The American", "sort": 2155 }
+{ "_id": "4050-55665", "name": "Wolverine, Punisher & Ghost Rider: Official Index to the Marvel Universe", "sort": 2156 }
+{ "_id": "4050-22641", "name": "3x3 Eyes", "sort": 2157 }
+{ "_id": "4050-85452", "name": "Titans Hunt", "sort": 2158 }
+{ "_id": "4050-3507", "name": "Sectaurs", "sort": 2159 }
+{ "_id": "4050-34258", "name": "Thor: The Mighty Avenger", "sort": 2160 }
+{ "_id": "4050-43546", "name": "Superman Archives", "sort": 2161 }
+{ "_id": "4050-20627", "name": "Marvel Illustrated: The Iliad", "sort": 2162 }
+{ "_id": "4050-42044", "name": "Manga Mania", "sort": 2163 }
+{ "_id": "4050-19690", "name": "Avengers: Earth's Mightiest Heroes", "sort": 2164 }
+{ "_id": "4050-36750", "name": "Spider-Girl", "sort": 2165 }
+{ "_id": "4050-18550", "name": "X-Men: First Class", "sort": 2166 }
+{ "_id": "4050-52207", "name": "The Legend of Mother Sarah", "sort": 2167 }
+{ "_id": "4050-27662", "name": "The Plastic Man Archives", "sort": 2168 }
+{ "_id": "4050-104938", "name": "Falcon", "sort": 2169 }
+{ "_id": "4050-11041", "name": "Jetsons", "sort": 2170 }
+{ "_id": "4050-63681", "name": "100 Bullets: Brother Lono", "sort": 2171 }
+{ "_id": "4050-2691", "name": "The Human Torch", "sort": 2172 }
+{ "_id": "4050-36705", "name": "Batman, Incorporated", "sort": 2173 }
+{ "_id": "4050-24442", "name": "Hellboy: The Wild Hunt", "sort": 2174 }
+{ "_id": "4050-5624", "name": "Star Wars: Droids", "sort": 2175 }
+{ "_id": "4050-111445", "name": "Sword Daughter", "sort": 2176 }
+{ "_id": "4050-71942", "name": "Pariah", "sort": 2177 }
+{ "_id": "4050-27165", "name": "Tales of the Unexpected", "sort": 2178 }
+{ "_id": "4050-99266", "name": "Savage Things", "sort": 2179 }
+{ "_id": "4050-50919", "name": "Archie's Girls Betty and Veronica Annual", "sort": 2180 }
+{ "_id": "4050-2043", "name": "Amazing Adult Fantasy", "sort": 2181 }
+{ "_id": "4050-32582", "name": "Black Widow", "sort": 2182 }
+{ "_id": "4050-19532", "name": "Ghost in the Shell 1.5: Human Error Processor", "sort": 2183 }
+{ "_id": "4050-4380", "name": "Time Masters", "sort": 2184 }
+{ "_id": "4050-47330", "name": "The New Deadwardians", "sort": 2185 }
+{ "_id": "4050-30147", "name": "Ragman", "sort": 2186 }
+{ "_id": "4050-19027", "name": "Metal Men", "sort": 2187 }
+{ "_id": "4050-2891", "name": "Shade, the Changing Man", "sort": 2188 }
+{ "_id": "4050-77927", "name": "The Ghost Fleet", "sort": 2189 }
+{ "_id": "4050-42809", "name": "Mister Terrific", "sort": 2190 }
+{ "_id": "4050-4561", "name": "Outlaws", "sort": 2191 }
+{ "_id": "4050-96675", "name": "Shadows On The Grave", "sort": 2192 }
+{ "_id": "4050-31809", "name": "Frontier Fighters", "sort": 2193 }
+{ "_id": "4050-4134", "name": "Doc Stearn...Mr Monster", "sort": 2194 }
+{ "_id": "4050-79269", "name": "The Unbeatable Squirrel Girl", "sort": 2195 }
+{ "_id": "4050-29321", "name": "Archie's Vacation Special", "sort": 2196 }
+{ "_id": "4050-2840", "name": "Isis", "sort": 2197 }
+{ "_id": "4050-76074", "name": "Bodies", "sort": 2198 }
+{ "_id": "4050-27392", "name": "The Marvels Project", "sort": 2199 }
+{ "_id": "4050-104775", "name": "Batman: White Knight", "sort": 2200 }
+{ "_id": "4050-2387", "name": "Atom and Hawkman", "sort": 2201 }
+{ "_id": "4050-36477", "name": "Ozma of Oz", "sort": 2202 }
+{ "_id": "4050-49912", "name": "Masters of the Universe", "sort": 2203 }
+{ "_id": "4050-19133", "name": "Suicide Squad", "sort": 2204 }
+{ "_id": "4050-43206", "name": "Dorothy & the Wizard in Oz", "sort": 2205 }
+{ "_id": "4050-11668", "name": "Trigger", "sort": 2206 }
+{ "_id": "4050-42576", "name": "O.M.A.C.", "sort": 2207 }
+{ "_id": "4050-9243", "name": "Avengers: Celestial Quest", "sort": 2208 }
+{ "_id": "4050-52640", "name": "Daredevil: End of Days", "sort": 2209 }
+{ "_id": "4050-22669", "name": "Amazing Spider-Man Family", "sort": 2210 }

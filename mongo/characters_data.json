@@ -1,0 +1,263 @@
+{ "_id": "4005-1699", "name": "Batman", "sort": 1 }
+{ "_id": "4005-1807", "name": "Superman", "sort": 2 }
+{ "_id": "4005-1443", "name": "Spider-Man", "sort": 3 }
+{ "_id": "4005-1440", "name": "Wolverine", "sort": 4 }
+{ "_id": "4005-22182", "name": "Donald Duck", "sort": 5 }
+{ "_id": "4005-1442", "name": "Captain America", "sort": 6 }
+{ "_id": "4005-1459", "name": "Cyclops", "sort": 7 }
+{ "_id": "4005-1455", "name": "Iron Man", "sort": 8 }
+{ "_id": "4005-1444", "name": "Storm", "sort": 9 }
+{ "_id": "4005-1462", "name": "Beast", "sort": 10 }
+{ "_id": "4005-21532", "name": "Huey", "sort": 11 }
+{ "_id": "4005-21533", "name": "Dewey", "sort": 12 }
+{ "_id": "4005-21534", "name": "Louie", "sort": 13 }
+{ "_id": "4005-39413", "name": "Mickey Mouse", "sort": 14 }
+{ "_id": "4005-21543", "name": "Uncle Scrooge", "sort": 15 }
+{ "_id": "4005-2268", "name": "Thor", "sort": 16 }
+{ "_id": "4005-2114", "name": "Thing", "sort": 17 }
+{ "_id": "4005-1464", "name": "Iceman", "sort": 18 }
+{ "_id": "4005-1691", "name": "Dick Grayson", "sort": 19 }
+{ "_id": "4005-2839", "name": "Archie Andrews", "sort": 20 }
+{ "_id": "4005-2048", "name": "Wonder Woman", "sort": 21 }
+{ "_id": "4005-2936", "name": "Goofy", "sort": 22 }
+{ "_id": "4005-2267", "name": "Hulk", "sort": 23 }
+{ "_id": "4005-3552", "name": "Jean Grey", "sort": 24 }
+{ "_id": "4005-2840", "name": "Betty Cooper", "sort": 25 }
+{ "_id": "4005-2843", "name": "Veronica Lodge", "sort": 26 }
+{ "_id": "4005-1460", "name": "Colossus", "sort": 27 }
+{ "_id": "4005-2112", "name": "Angel", "sort": 28 }
+{ "_id": "4005-1505", "name": "Professor X", "sort": 29 }
+{ "_id": "4005-1461", "name": "Nightcrawler", "sort": 30 }
+{ "_id": "4005-2120", "name": "Human Torch", "sort": 31 }
+{ "_id": "4005-2151", "name": "Mr. Fantastic", "sort": 32 }
+{ "_id": "4005-1446", "name": "Rogue", "sort": 33 }
+{ "_id": "4005-2190", "name": "Invisible Woman", "sort": 34 }
+{ "_id": "4005-3548", "name": "Kitty Pryde", "sort": 35 }
+{ "_id": "4005-1728", "name": "Jughead Jones", "sort": 36 }
+{ "_id": "4005-1457", "name": "Emma Frost", "sort": 37 }
+{ "_id": "4005-1808", "name": "Lois Lane", "sort": 38 }
+{ "_id": "4005-1441", "name": "Magneto", "sort": 39 }
+{ "_id": "4005-1475", "name": "Hawkeye", "sort": 40 }
+{ "_id": "4005-1476", "name": "Namor", "sort": 41 }
+{ "_id": "4005-21550", "name": "Daisy Duck", "sort": 42 }
+{ "_id": "4005-1456", "name": "Doctor Strange", "sort": 43 }
+{ "_id": "4005-7001", "name": "Reggie Mantle", "sort": 44 }
+{ "_id": "4005-24694", "name": "Daredevil", "sort": 45 }
+{ "_id": "4005-11202", "name": "Hal Jordan", "sort": 46 }
+{ "_id": "4005-1499", "name": "Gambit", "sort": 47 }
+{ "_id": "4005-3176", "name": "Psylocke", "sort": 48 }
+{ "_id": "4005-3202", "name": "Nick Fury", "sort": 49 }
+{ "_id": "4005-5556", "name": "Alfred Pennyworth", "sort": 50 }
+{ "_id": "4005-1466", "name": "Scarlet Witch", "sort": 51 }
+{ "_id": "4005-3727", "name": "James Gordon", "sort": 52 }
+{ "_id": "4005-1496", "name": "Cannonball", "sort": 53 }
+{ "_id": "4005-21537", "name": "Gyro Gearloose", "sort": 54 }
+{ "_id": "4005-2357", "name": "Aquaman", "sort": 55 }
+{ "_id": "4005-21561", "name": "Carol Danvers", "sort": 56 }
+{ "_id": "4005-41952", "name": "Lex Luthor", "sort": 57 }
+{ "_id": "4005-22804", "name": "Barry Allen", "sort": 58 }
+{ "_id": "4005-34958", "name": "Minnie Mouse", "sort": 59 }
+{ "_id": "4005-2247", "name": "Hank Pym", "sort": 60 }
+{ "_id": "4005-5936", "name": "Green Arrow", "sort": 61 }
+{ "_id": "4005-2438", "name": "Conan", "sort": 62 }
+{ "_id": "4005-13380", "name": "Mary Jane", "sort": 63 }
+{ "_id": "4005-3200", "name": "Black Widow", "sort": 64 }
+{ "_id": "4005-1502", "name": "Wasp", "sort": 65 }
+{ "_id": "4005-3546", "name": "Havok", "sort": 66 }
+{ "_id": "4005-1468", "name": "Doctor Doom", "sort": 67 }
+{ "_id": "4005-1504", "name": "Vision", "sort": 68 }
+{ "_id": "4005-4563", "name": "Sabretooth", "sort": 69 }
+{ "_id": "4005-1467", "name": "Quicksilver", "sort": 70 }
+{ "_id": "4005-2157", "name": "Cable", "sort": 71 }
+{ "_id": "4005-3213", "name": "Jimmy Olsen", "sort": 72 }
+{ "_id": "4005-5368", "name": "Barbara Gordon", "sort": 73 }
+{ "_id": "4005-2047", "name": "Martian Manhunter", "sort": 74 }
+{ "_id": "4005-1487", "name": "J. Jonah Jameson", "sort": 75 }
+{ "_id": "4005-1702", "name": "Joker", "sort": 76 }
+{ "_id": "4005-7606", "name": "Deadpool", "sort": 77 }
+{ "_id": "4005-1450", "name": "Luke Cage", "sort": 78 }
+{ "_id": "4005-2351", "name": "Supergirl", "sort": 79 }
+{ "_id": "4005-8303", "name": "Magik", "sort": 80 }
+{ "_id": "4005-1477", "name": "Black Panther", "sort": 81 }
+{ "_id": "4005-1449", "name": "She-Hulk", "sort": 82 }
+{ "_id": "4005-1689", "name": "Black Canary", "sort": 83 }
+{ "_id": "4005-1469", "name": "Mystique", "sort": 84 }
+{ "_id": "4005-9290", "name": "Tim Drake", "sort": 85 }
+{ "_id": "4005-4644", "name": "Sunspot", "sort": 86 }
+{ "_id": "4005-1525", "name": "Punisher", "sort": 87 }
+{ "_id": "4005-4562", "name": "Jubilee", "sort": 88 }
+{ "_id": "4005-1503", "name": "Bishop", "sort": 89 }
+{ "_id": "4005-23879", "name": "Wally West", "sort": 90 }
+{ "_id": "4005-1780", "name": "Aunt May", "sort": 91 }
+{ "_id": "4005-1698", "name": "Catwoman", "sort": 92 }
+{ "_id": "4005-40195", "name": "Black Pete", "sort": 93 }
+{ "_id": "4005-3566", "name": "Rachel Grey", "sort": 94 }
+{ "_id": "4005-1473", "name": "Polaris", "sort": 95 }
+{ "_id": "4005-1809", "name": "Perry White", "sort": 96 }
+{ "_id": "4005-34083", "name": "Gladstone Gander", "sort": 97 }
+{ "_id": "4005-1498", "name": "Dazzler", "sort": 98 }
+{ "_id": "4005-2388", "name": "Cyborg", "sort": 99 }
+{ "_id": "4005-4557", "name": "Wolfsbane", "sort": 100 }
+{ "_id": "4005-1486", "name": "Venom", "sort": 101 }
+{ "_id": "4005-8337", "name": "Hawkman", "sort": 102 }
+{ "_id": "4005-58812", "name": "Norman Osborn", "sort": 103 }
+{ "_id": "4005-1451", "name": "Falcon", "sort": 104 }
+{ "_id": "4005-39456", "name": "Pluto", "sort": 105 }
+{ "_id": "4005-1453", "name": "Spider-Woman", "sort": 106 }
+{ "_id": "4005-1485", "name": "Doctor Octopus", "sort": 107 }
+{ "_id": "4005-2502", "name": "Silver Surfer", "sort": 108 }
+{ "_id": "4005-9708", "name": "Banshee", "sort": 109 }
+{ "_id": "4005-1492", "name": "Iron Fist", "sort": 110 }
+{ "_id": "4005-21528", "name": "Grandma Duck", "sort": 111 }
+{ "_id": "4005-2158", "name": "Warpath", "sort": 112 }
+{ "_id": "4005-1463", "name": "Moonstar", "sort": 113 }
+{ "_id": "4005-2350", "name": "Billy Batson", "sort": 114 }
+{ "_id": "4005-57108", "name": "Chief O'Hara", "sort": 115 }
+{ "_id": "4005-40470", "name": "Bucky Barnes", "sort": 116 }
+{ "_id": "4005-3560", "name": "X-23", "sort": 117 }
+{ "_id": "4005-2161", "name": "Domino", "sort": 118 }
+{ "_id": "4005-4324", "name": "Loki", "sort": 119 }
+{ "_id": "4005-2503", "name": "Hercules", "sort": 120 }
+{ "_id": "4005-38762", "name": "Fethry Duck", "sort": 121 }
+{ "_id": "4005-34051", "name": "Clarabelle Cow", "sort": 122 }
+{ "_id": "4005-3404", "name": "Roy Harper", "sort": 123 }
+{ "_id": "4005-4279", "name": "Forge", "sort": 124 }
+{ "_id": "4005-1489", "name": "Flash Thompson", "sort": 125 }
+{ "_id": "4005-21542", "name": "Big Bad Wolf", "sort": 126 }
+{ "_id": "4005-1445", "name": "Juggernaut", "sort": 127 }
+{ "_id": "4005-12663", "name": "Alan Scott", "sort": 128 }
+{ "_id": "4005-1696", "name": "Harley Quinn", "sort": 129 }
+{ "_id": "4005-2389", "name": "Starfire", "sort": 130 }
+{ "_id": "4005-7477", "name": "Captain Britain", "sort": 131 }
+{ "_id": "4005-1465", "name": "Wonder Man", "sort": 132 }
+{ "_id": "4005-4913", "name": "Donna Troy", "sort": 133 }
+{ "_id": "4005-2860", "name": "Bugs Bunny", "sort": 134 }
+{ "_id": "4005-2395", "name": "Jay Garrick", "sort": 135 }
+{ "_id": "4005-1483", "name": "Kingpin", "sort": 136 }
+{ "_id": "4005-8304", "name": "Moira MacTaggert", "sort": 137 }
+{ "_id": "4005-6903", "name": "Hawkgirl", "sort": 138 }
+{ "_id": "4005-3586", "name": "Beast Boy", "sort": 139 }
+{ "_id": "4005-2015", "name": "Mr. Weatherbee", "sort": 140 }
+{ "_id": "4005-2159", "name": "Boom-Boom", "sort": 141 }
+{ "_id": "4005-40456", "name": "Rockslide", "sort": 142 }
+{ "_id": "4005-39487", "name": "Morty", "sort": 143 }
+{ "_id": "4005-50488", "name": "Mindee Cuckoo", "sort": 144 }
+{ "_id": "4005-1470", "name": "Toad", "sort": 145 }
+{ "_id": "4005-3457", "name": "Thunderbolt Ross", "sort": 146 }
+{ "_id": "4005-1686", "name": "Kon-El", "sort": 147 }
+{ "_id": "4005-3182", "name": "Blob", "sort": 148 }
+{ "_id": "4005-4586", "name": "Dale", "sort": 149 }
+{ "_id": "4005-30209", "name": "Chip", "sort": 150 }
+{ "_id": "4005-50486", "name": "Celeste Cuckoo", "sort": 151 }
+{ "_id": "4005-2149", "name": "Galactus", "sort": 152 }
+{ "_id": "4005-1781", "name": "Jarvis", "sort": 153 }
+{ "_id": "4005-50489", "name": "Phoebe Cuckoo", "sort": 154 }
+{ "_id": "4005-10451", "name": "John Stewart", "sort": 155 }
+{ "_id": "4005-3190", "name": "Northstar", "sort": 156 }
+{ "_id": "4005-40431", "name": "Kyle Rayner", "sort": 157 }
+{ "_id": "4005-4915", "name": "Power Girl", "sort": 158 }
+{ "_id": "4005-34685", "name": "Ray Palmer", "sort": 159 }
+{ "_id": "4005-2469", "name": "Franklin Richards", "sort": 160 }
+{ "_id": "4005-7910", "name": "Madrox", "sort": 161 }
+{ "_id": "4005-3617", "name": "Jonathan Kent", "sort": 162 }
+{ "_id": "4005-40673", "name": "Pixie", "sort": 163 }
+{ "_id": "4005-1782", "name": "Robbie Robertson", "sort": 164 }
+{ "_id": "4005-39488", "name": "Ferdie", "sort": 165 }
+{ "_id": "4005-2164", "name": "Phoenix Force", "sort": 166 }
+{ "_id": "4005-40460", "name": "M", "sort": 167 }
+{ "_id": "4005-7612", "name": "Apocalypse", "sort": 168 }
+{ "_id": "4005-1926", "name": "War Machine", "sort": 169 }
+{ "_id": "4005-3618", "name": "Martha Kent", "sort": 170 }
+{ "_id": "4005-2012", "name": "Hiram Lodge", "sort": 171 }
+{ "_id": "4005-40458", "name": "Anole", "sort": 172 }
+{ "_id": "4005-3526", "name": "Dum Dum Dugan", "sort": 173 }
+{ "_id": "4005-4327", "name": "Medusa", "sort": 174 }
+{ "_id": "4005-1791", "name": "Guy Gardner", "sort": 175 }
+{ "_id": "4005-4885", "name": "Penguin", "sort": 176 }
+{ "_id": "4005-39988", "name": "Little Bad Wolf", "sort": 177 }
+{ "_id": "4005-5547", "name": "Lana Lang", "sort": 178 }
+{ "_id": "4005-3426", "name": "Husk", "sort": 179 }
+{ "_id": "4005-4444", "name": "Lockheed", "sort": 180 }
+{ "_id": "4005-3179", "name": "Mr. Sinister", "sort": 181 }
+{ "_id": "4005-3181", "name": "Siryn", "sort": 182 }
+{ "_id": "4005-3584", "name": "Raven", "sort": 183 }
+{ "_id": "4005-9849", "name": "Karma", "sort": 184 }
+{ "_id": "4005-1697", "name": "Poison Ivy", "sort": 185 }
+{ "_id": "4005-4329", "name": "Black Bolt", "sort": 186 }
+{ "_id": "4005-4442", "name": "Armor", "sort": 187 }
+{ "_id": "4005-4558", "name": "Magma", "sort": 188 }
+{ "_id": "4005-1480", "name": "Gwen Stacy", "sort": 189 }
+{ "_id": "4005-2248", "name": "Rick Jones", "sort": 190 }
+{ "_id": "4005-2175", "name": "Sebastian Shaw", "sort": 191 }
+{ "_id": "4005-5691", "name": "Zatanna", "sort": 192 }
+{ "_id": "4005-3329", "name": "John Constantine", "sort": 193 }
+{ "_id": "4005-5555", "name": "Two-Face", "sort": 194 }
+{ "_id": "4005-40824", "name": "Maria  Hill", "sort": 195 }
+{ "_id": "4005-7120", "name": "Watcher", "sort": 196 }
+{ "_id": "4005-2250", "name": "Red Skull", "sort": 197 }
+{ "_id": "4005-2115", "name": "Crystal", "sort": 198 }
+{ "_id": "4005-3507", "name": "Odin", "sort": 199 }
+{ "_id": "4005-57222", "name": "Practical Pig", "sort": 200 }
+{ "_id": "4005-57327", "name": "The Helper", "sort": 201 }
+{ "_id": "4005-2349", "name": "Darkseid", "sort": 202 }
+{ "_id": "4005-39839", "name": "Fiddler Pig", "sort": 203 }
+{ "_id": "4005-3175", "name": "Sunfire", "sort": 204 }
+{ "_id": "4005-1741", "name": "Ms. Grundy", "sort": 205 }
+{ "_id": "4005-39840", "name": "Fifer Pig", "sort": 206 }
+{ "_id": "4005-7223", "name": "Warlock", "sort": 207 }
+{ "_id": "4005-40454", "name": "Hellion", "sort": 208 }
+{ "_id": "4005-1493", "name": "Moon Knight", "sort": 209 }
+{ "_id": "4005-36325", "name": "Rockerduck", "sort": 210 }
+{ "_id": "4005-10988", "name": "Rictor", "sort": 211 }
+{ "_id": "4005-7599", "name": "Strong Guy", "sort": 212 }
+{ "_id": "4005-6270", "name": "Plastic Man", "sort": 213 }
+{ "_id": "4005-34472", "name": "José Carioca", "sort": 214 }
+{ "_id": "4005-1479", "name": "Black Cat", "sort": 215 }
+{ "_id": "4005-6849", "name": "Jason Todd", "sort": 216 }
+{ "_id": "4005-42413", "name": "Damian Wayne", "sort": 217 }
+{ "_id": "4005-21536", "name": "Gus Goose", "sort": 218 }
+{ "_id": "4005-6342", "name": "Darth Vader", "sort": 219 }
+{ "_id": "4005-3544", "name": "Sandman", "sort": 220 }
+{ "_id": "4005-2484", "name": "Betty Brant", "sort": 221 }
+{ "_id": "4005-1273", "name": "Saturn Girl", "sort": 222 }
+{ "_id": "4005-14860", "name": "Valerie Cooper", "sort": 223 }
+{ "_id": "4005-21369", "name": "Daffy Duck", "sort": 224 }
+{ "_id": "4005-2497", "name": "Mockingbird", "sort": 225 }
+{ "_id": "4005-10885", "name": "Wonder Girl", "sort": 226 }
+{ "_id": "4005-6315", "name": "Luke Skywalker", "sort": 227 }
+{ "_id": "4005-2244", "name": "Chamber", "sort": 228 }
+{ "_id": "4005-34054", "name": "Horace Horsecollar", "sort": 229 }
+{ "_id": "4005-33982", "name": "Magica De Spell", "sort": 230 }
+{ "_id": "4005-7607", "name": "Thanos", "sort": 231 }
+{ "_id": "4005-3726", "name": "Scarecrow", "sort": 232 }
+{ "_id": "4005-2478", "name": "Harry Osborn", "sort": 233 }
+{ "_id": "4005-3588", "name": "Deathstroke", "sort": 234 }
+{ "_id": "4005-4684", "name": "Brainiac", "sort": 235 }
+{ "_id": "4005-2361", "name": "Spectre", "sort": 236 }
+{ "_id": "4005-7645", "name": "Wildcat", "sort": 237 }
+{ "_id": "4005-1264", "name": "Cosmic Boy", "sort": 238 }
+{ "_id": "4005-49329", "name": "Hope Summers", "sort": 239 }
+{ "_id": "4005-3316", "name": "Hellcat", "sort": 240 }
+{ "_id": "4005-3718", "name": "Riddler", "sort": 241 }
+{ "_id": "4005-3172", "name": "Black Knight", "sort": 242 }
+{ "_id": "4005-4647", "name": "Bullseye", "sort": 243 }
+{ "_id": "4005-15789", "name": "Steve Trevor", "sort": 244 }
+{ "_id": "4005-2861", "name": "Elmer Fudd", "sort": 245 }
+{ "_id": "4005-14559", "name": "Cypher", "sort": 246 }
+{ "_id": "4005-2859", "name": "Porky Pig", "sort": 247 }
+{ "_id": "4005-4484", "name": "Scorpion", "sort": 248 }
+{ "_id": "4005-12605", "name": "Jim Hammond", "sort": 249 }
+{ "_id": "4005-1255", "name": "Brainiac 5", "sort": 250 }
+{ "_id": "4005-40583", "name": "Quentin Quire", "sort": 251 }
+{ "_id": "4005-3445", "name": "Betty Ross", "sort": 252 }
+{ "_id": "4005-7007", "name": "Moose Mason", "sort": 253 }
+{ "_id": "4005-40509", "name": "Surge", "sort": 254 }
+{ "_id": "4005-3725", "name": "Killer Croc", "sort": 255 }
+{ "_id": "4005-2353", "name": "Firestorm", "sort": 256 }
+{ "_id": "4005-10448", "name": "Sinestro", "sort": 257 }
+{ "_id": "4005-33545", "name": "Princess Leia", "sort": 258 }
+{ "_id": "4005-6144", "name": "Lilandra", "sort": 259 }
+{ "_id": "4005-6757", "name": "Longshot", "sort": 260 }
+{ "_id": "4005-1802", "name": "Elektra", "sort": 261 }
+{ "_id": "4005-10981", "name": "Madelyne Pryor", "sort": 262 }
+{ "_id": "4005-6809", "name": "Valkyrie", "sort": 263 }
