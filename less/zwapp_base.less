@@ -1,4 +1,5 @@
 @import 'vars';
+@import 'atomic';
 
 html {
 	.font-title;
@@ -13,13 +14,20 @@ button {
 	color: @font-color_default;
 }
 
+body {
+	&:extend(.flex-column, .flex-spread);
+}
 // Hide main while hero splashes:
-main {
-	animation-name: main-init;
+main, nav {
+	animation-name: fade-in;
 	animation-duration: @animation-init-duration;
 }
 
-@keyframes main-init {
+nav {
+	// width: 100%;
+}
+
+@keyframes fade-in {
 	0% {
 		opacity: 0;
 	}

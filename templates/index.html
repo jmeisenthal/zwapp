@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>{{ application }}</title>
-        <script src="https://kit.fontawesome.com/d6d448df16.js"></script>
+ {#       <script src="https://kit.fontawesome.com/d6d448df16.js"></script> #}
         {% block stylesheets %}
             <link href="css/zwapp.css" rel="stylesheet"/>
         {% endblock %}
@@ -17,10 +17,9 @@
                 </div>
             </div>
        </div>
-{#         <h1>Welcome to {{ application }}!</h1>
- #}        <main>
-            {% include 'radial_nav.html' with { state: 'initial' } %}
+        <main>
         </main>
+        {% include 'radial_nav.html' with { state: 'initial' } %}
     </body>
     <script type="text/javascript" src="main.js"></script>
 </html>

@@ -1,4 +1,5 @@
 require('../less/zwapp.less');
+require('@fortawesome/fontawesome-free/css/all.css')
 // require('../node_modules/normalize.css/normalize.css');
 window.$ = require('jquery');
 window._ = require('lodash');
@@ -37,4 +38,15 @@ $(function() {
 	.always(function() {
 		console.log("complete");
 	});
+
+	$('body').on('click', '.radial_nav__button', radial_nav__buttonClick);
 });
+
+radial_nav__buttonClick = function(e) {
+		// console.log("click!");
+		// debugger;
+		let $radial_nav = $(this).closest('.radial_nav');
+		if ($radial_nav.is('.radial_nav--state-initial')) {
+			$radial_nav.toggleClass('radial_nav--state-initial radial_nav--state-add-start');
+		}
+};
