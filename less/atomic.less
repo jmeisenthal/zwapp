@@ -10,31 +10,6 @@
 
 .border--default:extend(.border--solid, .border-color_default, .border-width_small all, .border-width-hover_small all, .border-radius_default all) {}
 
-@transit_limit: 5;
-@transit_offset: 180deg / (@transit_limit - 1);
-
-.transit {
-	display: flex;
-	align-items: flex-end;
-	transform-origin: left 50%;
-	width: 25%;
-	bottom: 0;
-	left: 50%;
-}
-
-.generate_transits(@count: @transit_limit) when (@count > 0) {
-	.generate_transits(@count - 1);
-
-	.transit:nth-child(@{count}) {
-		transform: rotate(-@transit_offset * (@transit_limit - @count));
-
-		.transit__inner {
-			transform: translateX(150%) rotate(@transit_offset * (@transit_limit - @count));
-		}
-	}
-}
-.generate_transits();
-
 .flex-row {
 	display: flex !important;
 	flex-direction: row !important;

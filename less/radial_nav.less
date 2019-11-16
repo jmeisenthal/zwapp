@@ -1,5 +1,6 @@
 @import 'vars';
 @import 'atomic';
+@import 'layout';
 
 .radial_nav {
 	&:extend(.flex-row);
@@ -57,7 +58,7 @@
 	
 	.radial_nav--state-add-start & {
 		border-bottom-style: solid;
-		transition: border-top-right-radius, border-top-left-radius, border-bottom-right-radius, border-bottom-left-radius;
+		transition-property: border-top-right-radius, border-top-left-radius, border-bottom-right-radius, border-bottom-left-radius;
 		transition-duration: 1s;
 		border-top-right-radius: 50%;
 		border-top-left-radius: 50%;
@@ -73,13 +74,15 @@
 .radial_nav__choice {
 	position: absolute;
 	z-index: -1; // Make sure unseen button containers don't interfere with main nav button
+	// transition-property: transform;
+	// transition-duration: 2s;
 	// width: 25%;
 	// bottom: 0;
 	// left: 50%;
 	// padding-left: 84px + 35px;
 	
 	.radial_nav--state-initial & {
-		display: none;
+		// display: none;
 	}
 }
 
