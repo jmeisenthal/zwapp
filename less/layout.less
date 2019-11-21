@@ -8,7 +8,6 @@
 	// display: none;
 	align-items: flex-end;
 	transform-origin: left 50%;
-	width: 25%;
 	bottom: 0;
 	left: 50%;
 	opacity: 0;
@@ -20,7 +19,6 @@
 
 	.fan--out & {
 		opacity: 1;
-		// display: flex;
 	}
 }
 
@@ -31,8 +29,10 @@
 		transform: rotate(-@fan-out_offset * (@fan-out_limit - @count));
 
 		.fan__inner {
-			transform: translateX(150%) rotate(@fan-out_offset * (@fan-out_limit - @count));
+			transform: translateX(@media_vars[@fan-radius]) rotate(@fan-out_offset * (@fan-out_limit - @count));
 		}
 	}
 }
-.generate_fans();
+.media({
+	.generate_fans();
+});
