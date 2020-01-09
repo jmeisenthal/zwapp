@@ -1,7 +1,28 @@
 @import (reference) 'vars';
 
-@fan-out_limit: 5;
-@fan-out_offset: 180deg / (@fan-out_limit - 1);
+// @fan-out_limit: 5;
+// @fan-out_offset: 180deg / (@fan-out_limit - 1);
+
+// .fan {
+// 	display: flex;
+// 	// display: none;
+// 	align-items: flex-end;
+// 	transform-origin: left 50%;
+// 	bottom: 0;
+// 	left: 50%;
+// 	opacity: 0;
+
+// 	&, .fan__inner {	
+// 		transition-property: transform, opacity;
+// 		transition-duration: 2s;
+// 	}
+
+// 	.fan--out & {
+// 		opacity: 1;
+// 	}
+// }
+@fan-out_limit: 10;
+@fan-out_offset: 30deg;
 
 .fan {
 	display: flex;
@@ -11,6 +32,10 @@
 	bottom: 0;
 	left: 50%;
 	opacity: 0;
+	transform: rotate(-1.5 *@fan-out_offset);
+	.fan__inner {
+		transform: rotate(1.5 * @fan-out_offset);
+	}
 
 	&, .fan__inner {	
 		transition-property: transform, opacity;
@@ -25,11 +50,12 @@
 .generate_fans(@count: @fan-out_limit) when (@count > 0) {
 	.generate_fans(@count - 1);
 
+	@angle: @fan-out_offset * (@count + 0.5);
 	.fan--out .fan:nth-child(@{count}) {
-		transform: rotate(-@fan-out_offset * (@fan-out_limit - @count));
+		transform: rotate(-@angle);
 
 		.fan__inner {
-			transform: translateX(@media_vars[@fan-radius]) rotate(@fan-out_offset * (@fan-out_limit - @count));
+			transform: translateX(@media_vars[@fan-radius]) rotate(@angle);
 		}
 	}
 }
