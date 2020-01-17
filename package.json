@@ -4,7 +4,11 @@
   "description": "Zwapp Comicbook Curator",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init_data_characters": "mongoimport --db zwapp --collection characters --drop --file ./mongo/characters_data.json",
+    "init_data_volumes": "mongoimport --db zwapp --collection volumes --drop --file ./mongo/volumes_data.json",
+    "init_data_publishers": "mongoimport --db zwapp --collection publishers --drop --file ./mongo/publishers_data.json",
+    "init_data": "npm run init_data_characters && npm run init_data_volumes && npm run init_data_publishers"
   },
   "repository": {
     "type": "git",
