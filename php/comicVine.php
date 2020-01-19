@@ -18,7 +18,6 @@ abstract class Query
 
 	function __construct($type, $query_data, $id = NULL)
 	{
-		error_log("Test3");
 		$this->type = $type;
 		$this->query_data = self::ComicVine_KEY + $query_data;
 		$this->id = $id;
