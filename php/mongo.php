@@ -22,10 +22,18 @@
 			$this->collection = $collection;
 		}
 
+		abstract function create($documemt);
+
 		function getList() {
 			if ($this->list == NULL) {
-				$cursor = $this.collection.aggregate([{$sort: {sort: 1}}])
+				$cursor = $this.collection.aggregate([{$sort: {sort: 1}}]);
+				$this->list = array();
+				forreach($cursor as document) {
+					array_push($this->list, create(document));
+				}
 			}
+
+			return $this->list;
 		}
 	}
 
