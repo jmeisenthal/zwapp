@@ -12,17 +12,26 @@
 		private $collection;
 		private $id;
 		private $cv_init;
+
+		function __construct($id, $collection) {
+			$this->id = $id;
+			$this->collection = $collection;
+		}
+
+		function __get($property) {
+			
+		}
 	}
 
 	abstract class Collection {
 		private $collection;
 		private $list;
 
-		function _construct($collection) {
+		function __construct($collection) {
 			$this->collection = $collection;
 		}
 
-		abstract function create($documemt);
+		abstract function create($document);
 
 		function getList() {
 			if ($this->list == NULL) {
@@ -35,6 +44,10 @@
 
 			return $this->list;
 		}
+	}
+
+	class Publisher extends Document {
+
 	}
 
 ?>
