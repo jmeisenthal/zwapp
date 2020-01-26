@@ -1,6 +1,9 @@
 <?php
-	namespace Mongo;
+	namespace ZwappMongo;
 	require 'vendor/autoload.php'; // include Composer's autoloader
+
+	use MongoDB;
+	use ComicVine;
 
 	$client = new MongoDB\Client("mongodb://localhost:27017");
 	// $collection = $client->demo->beers;
@@ -8,10 +11,7 @@
 	// Collections in Zwapp are initialized via curated scrapes from the ComicVine wiki. 
 	// Accessing Zwapp DB objects transparently get and cache properties needed from the ComicVine API.
 	
-	abstract class Document {
-		// private $collection;
-		// private $id;
-
+	class Document {
 		function __construct(ComicVine\Query $cv_query, MongoDB\Collection $collection) {
 			$this->cv_query = $cv_query;
 			$this->collection = $collection;
@@ -22,7 +22,7 @@
 			if ($property == "id") {
 				return $this->cv_query->id;
 			}
-			$doc = $this->collection.find({['_id' => $this->id]})->toArray()[0];
+			$doc = $this->collection.find(['_id' => $this->id])->toArray()[0];
 
 			if (!$doc->cv_init) {
 				$doc = $this->setData();
@@ -33,44 +33,58 @@
 
 		function setData() {
 			$doc = array('_id' => $this->id);
-			foreach ($$cv_query.to_array() as $prop => $value) {
+			foreach ($cv_query.to_array() as $prop => $value) {
 				$doc[$prop] = $value;
 			}
 			$doc->cv_init = true;
 
-			$collection->updateOne({['_id' => $this->id]},$doc);
+			$collection->updateOne(['_id' => $this->id],$doc);
 
 			return $doc;
 		}
 	}
 
-	abstract class Collection {
+	class Collection {
 		private $collection;
-		private $list;
+		private $list, $map;
 
-		function __construct(ComicVine\Query $cv_query, MongoDB\Collection $collection) {
+		function __construct($cv_queryLambda, MongoDB\Collection $collection) {
+			$this->cv_queryLambda = $cv_queryLambda;
 			$this->collection = $collection;
 		}
 
-		abstract function create($document);
-
-		function getList() {
+		private function init() {
 			if ($this->list == NULL) {
-				$cursor = $this.collection.aggregate([{$sort: {sort: 1}}]);
 				$this->list = array();
-				forreach($cursor as document) {
-					array_push($this->list, create(document));
+				$this->map = array();
+				$cursor = $this->collection->aggregate(array(array('$sort' => array('sort' => 1))));
+				foreach($cursor as $data) {
+					$document = new Document($this->cv_queryLambda($data->_id), $this->collection);
+					array_push($this->list, $document);
+					$this->map[$this->cv_query->id] = $document;
 				}
 			}
+		}
+
+		function getList() {
+			$this->init();
 
 			return $this->list;
 		}
-	}
 
-	public static
+		function getMap() {
+			$this->init();
 
-	class Publisher extends Document {
+			return $this->map;
+		}
 
+		public static function getPublishers() {
+			$client = new MongoDB\Client("mongodb://localhost:27017");
+
+			// SOMETHING'S WRONG HERE:
+			$queryLambda = function($id) { return new ComicVine\Publisher($id); };
+			return new Collection($queryLambda, $client->zwapp->publishers);
+		}
 	}
 
 ?>
