@@ -5,8 +5,11 @@ require 'vendor/autoload.php'; // include Composer's autoloader
 use PHPUnit\Framework\TestCase;
 
 final class ZwappTest extends TestCase {
-	protected function setUp(): void {
+	public static function setUpBeforeClass(): void {
 		exec("npm run init_data");
+	}
+
+	protected function setUp(): void {
 	}
 
 	public function testInitData() {

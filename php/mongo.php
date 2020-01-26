@@ -25,18 +25,22 @@
 			$doc = $this->collection.find({['_id' => $this->id]})->toArray()[0];
 
 			if (!$doc->cv_init) {
-				$this->setData();
+				$doc = $this->setData();
 			}
+
+			return $doc[$property];
 		}
 
-		function getSetDocument() {
-			$doc = $this->collection.find({['_id' => $this->id]})->toArray()[0];
-
-			if (!$doc->cv_init) {
-				$this->setData();
+		function setData() {
+			$doc = array('_id' => $this->id);
+			foreach ($$cv_query.to_array() as $prop => $value) {
+				$doc[$prop] = $value;
 			}
+			$doc->cv_init = true;
 
+			$collection->updateOne({['_id' => $this->id]},$doc);
 
+			return $doc;
 		}
 	}
 
@@ -44,7 +48,7 @@
 		private $collection;
 		private $list;
 
-		function __construct($collection) {
+		function __construct(ComicVine\Query $cv_query, MongoDB\Collection $collection) {
 			$this->collection = $collection;
 		}
 
@@ -62,6 +66,8 @@
 			return $this->list;
 		}
 	}
+
+	public static
 
 	class Publisher extends Document {
 
