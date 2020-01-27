@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 require 'vendor/autoload.php'; // include Composer's autoloader
-// require('php/comicVine.php');
+require('php/comicVine.php');
 require('php/mongo.php');
 
 use PHPUnit\Framework\TestCase;

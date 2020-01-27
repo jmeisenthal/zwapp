@@ -12,7 +12,7 @@
 	// Accessing Zwapp DB objects transparently get and cache properties needed from the ComicVine API.
 	
 	class Document {
-		function __construct(ComicVine\Query $cv_query, MongoDB\Collection $collection) {
+		function __construct($cv_query, MongoDB\Collection $collection) {
 			$this->cv_query = $cv_query;
 			$this->collection = $collection;
 		}
@@ -45,7 +45,7 @@
 	}
 
 	class Collection {
-		private $collection;
+		private $cv_queryLambda,$collection;
 		private $list, $map;
 
 		function __construct($cv_queryLambda, MongoDB\Collection $collection) {
@@ -58,8 +58,9 @@
 				$this->list = array();
 				$this->map = array();
 				$cursor = $this->collection->aggregate(array(array('$sort' => array('sort' => 1))));
+				$cv_creator = $this->cv_queryLambda;
 				foreach($cursor as $data) {
-					$document = new Document($this->cv_queryLambda($data->_id), $this->collection);
+					$document = new Document($cv_creator($data->_id), $this->collection);
 					array_push($this->list, $document);
 					$this->map[$this->cv_query->id] = $document;
 				}
@@ -81,8 +82,9 @@
 		public static function getPublishers() {
 			$client = new MongoDB\Client("mongodb://localhost:27017");
 
-			// SOMETHING'S WRONG HERE:
-			$queryLambda = function($id) { return new ComicVine\Publisher($id); };
+			$queryLambda = function($id) { 
+				return new ComicVine\Publisher($id); 
+			};
 			return new Collection($queryLambda, $client->zwapp->publishers);
 		}
 	}
