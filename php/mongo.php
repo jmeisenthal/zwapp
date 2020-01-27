@@ -22,7 +22,7 @@
 			if ($property == "id") {
 				return $this->cv_query->id;
 			}
-			$doc = $this->collection.find(['_id' => $this->id])->toArray()[0];
+			$doc = $this->collection->find(['_id' => $this->id])->toArray()[0];
 
 			if (!$doc->cv_init) {
 				$doc = $this->setData();
@@ -33,12 +33,12 @@
 
 		function setData() {
 			$doc = array('_id' => $this->id);
-			foreach ($cv_query.to_array() as $prop => $value) {
+			foreach ($this->cv_query->to_array() as $prop => $value) {
 				$doc[$prop] = $value;
 			}
 			$doc->cv_init = true;
 
-			$collection->updateOne(['_id' => $this->id],$doc);
+			$this->collection->updateOne(['_id' => $this->id],['$set'=>$doc]);
 
 			return $doc;
 		}
@@ -62,7 +62,7 @@
 				foreach($cursor as $data) {
 					$document = new Document($cv_creator($data->_id), $this->collection);
 					array_push($this->list, $document);
-					$this->map[$this->cv_query->id] = $document;
+					$this->map["$data->_id"] = $document;
 				}
 			}
 		}
