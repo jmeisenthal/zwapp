@@ -26,14 +26,15 @@ function comicVineQuery(queryType, params, callback) {
 
 $(function() {
 	$.ajax({
-		url: 'php/service/publisher.php?id=10,31,364,101,521',
+		// url: 'php/service/publisher.php?id=10,31,364,101,521',
+		url: 'php/service/publishers.php',
 	})
 	.done(function(response) {
-		console.log("success");
+		// console.log("success: " + response); 
 		$('.radial_nav__choices').html(response)
 	})
-	.fail(function() {
-		console.log("error");
+	.fail(function(xhr) {
+		console.log("error: " + xhr.responseText);
 	})
 	.always(function() {
 		console.log("complete");

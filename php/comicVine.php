@@ -63,9 +63,79 @@ class Publisher extends Query
 	function __construct($id)
 	{
 		parent::__construct('publisher', ["format"=>"json", "field_list"=>"image,id,name"], $id);
+		// parent::__construct('publisher', ["format"=>"json", "field_list"=>"image,id,name,characters"], $id);
 	}
 
 	protected function getProperties() {
+		return ["id", "name", "icon_url"];
+	}
+
+	public function __get($prop) {
+		if ($prop == 'icon_url') {
+			return $this->get_result()->image->icon_url;
+		}
+		return parent::__get($prop);
+	}
+}
+
+/**
+ * 
+ */
+class Character extends Query
+{
+	
+	function __construct($id)
+	{
+		parent::__construct('publisher', ["format"=>"json", "field_list"=>"image,id,name"], $id);
+	}
+
+	public function getProperties() {
+		return ["id", "name", "icon_url"];
+	}
+
+	public function __get($prop) {
+		if ($prop == 'icon_url') {
+			return $this->get_result()->image->icon_url;
+		}
+		return parent::__get($prop);
+	}
+}
+
+/**
+ * 
+ */
+class Volume extends Query
+{
+	
+	function __construct($id)
+	{
+		parent::__construct('publisher', ["format"=>"json", "field_list"=>"image,id,name"], $id);
+	}
+
+	public function getProperties() {
+		return ["id", "name", "icon_url"];
+	}
+
+	public function __get($prop) {
+		if ($prop == 'icon_url') {
+			return $this->get_result()->image->icon_url;
+		}
+		return parent::__get($prop);
+	}
+}
+
+/**
+ * 
+ */
+class Issue extends Query
+{
+	
+	function __construct($id)
+	{
+		parent::__construct('publisher', ["format"=>"json", "field_list"=>"image,id,name"], $id);
+	}
+
+	public function getProperties() {
 		return ["id", "name", "icon_url"];
 	}
 

@@ -1,11 +1,12 @@
 <?php
 	namespace ZwappMongo;
-	require 'vendor/autoload.php'; // include Composer's autoloader
+	// require 'vendor/autoload.php'; // include Composer's autoloader
 
 	use MongoDB;
 	use ComicVine;
 
-	$client = new MongoDB\Client("mongodb://localhost:27017");
+	// TODO: this is a problem:
+	// $client = new MongoDB\Client("mongodb://localhost:27017");
 	// $collection = $client->demo->beers;
 
 	// Collections in Zwapp are initialized via curated scrapes from the ComicVine wiki. 
