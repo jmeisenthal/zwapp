@@ -33,9 +33,6 @@
 	left: 50%;
 	opacity: 0;
 	transform: rotate(-1.5 *@fan-out_offset);
-	.fan__inner {
-		transform: rotate(1.5 * @fan-out_offset);
-	}
 
 	&, .fan__inner {	
 		transition-property: transform, opacity;
@@ -60,5 +57,10 @@
 	}
 }
 .media({
+	.fan {
+		.fan__inner {
+			transform: translateX(@media_vars[@fan-radius]) rotate(1.5 * @fan-out_offset);
+		}
+	}
 	.generate_fans();
 });
