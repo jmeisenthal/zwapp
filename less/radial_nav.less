@@ -9,12 +9,12 @@
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+	transition-property: bottom;
+	transition-duration: 1s;
 	// text-align: center;
 	// z-index: 100;
 	// 
 	&.radial_nav--state-add-start {
-		transition: all;
-		transition-duration: 1s;
 		bottom: 35%;
 
 		// animation-name: radial_nav--add-start;
@@ -29,7 +29,6 @@
 .radial_nav__button {
 	&:extend(.border-width_large all, .border-width-hover_large all);
 	border-style: solid;
-	border-bottom-style: none;
 	border-color: @color_orange;
 	border-top-right-radius: 100%;
 	border-top-left-radius: 100%;
@@ -45,6 +44,10 @@
 	height: 2em;
 	box-sizing: content-box;
 	// position: absolute;
+	
+	transition-property: border-top-right-radius, border-top-left-radius, border-bottom-right-radius, border-bottom-left-radius;
+	transition-duration: 1s;
+
 	& i {	
 		transform: rotate(0);
 		transition-property: transform;
@@ -56,15 +59,11 @@
 	}
 	
 	.radial_nav--state-initial & {
-		// left: 50%;
-		// bottom:0;
-		// transform: translateX(-50%);		
+		transition-property: border-bottom-width;
+		border-bottom-width: 0;
 	}
 	
 	.radial_nav--state-add-start & {
-		border-bottom-style: solid;
-		transition-property: border-top-right-radius, border-top-left-radius, border-bottom-right-radius, border-bottom-left-radius;
-		transition-duration: 1s;
 		border-top-right-radius: 50%;
 		border-top-left-radius: 50%;
 		border-bottom-right-radius: 50%;

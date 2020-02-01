@@ -50,5 +50,7 @@ radial_nav__buttonClick = function(e) {
 		if ($radial_nav.is('.radial_nav--state-initial')) {
 			$radial_nav.toggleClass('radial_nav--state-initial radial_nav--state-add-start');
 			$radial_nav.addClass('fan--out');
+		} else {
+			$radial_nav.toggleClass('radial_nav--state-initial radial_nav--state-add-start fan--out');
 		}
 };
