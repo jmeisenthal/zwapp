@@ -14,6 +14,13 @@ final class ZwappTest extends TestCase {
 	protected function setUp(): void {
 	}
 
+	public function testComicVineURL() {
+		$marvel = new ComicVine\Publisher("31");
+		$url = $marvel->build_query_url("id,name,image");
+		$expected_url = "https://comicvine.gamespot.com/api/publisher/31/?api_key=a587d36b7356338e04d0b132d105c9384a11691a&format=json&field_list=id%2Cname%2Cimage";
+		$this->assertEquals($expected_url, $url, "URL formulation incorrect: was \"$url\"; should be \"$expected_url\"");
+	}
+
 	public function testInitData() {
 		$client = new MongoDB\Client("mongodb://localhost:27017");
 
@@ -31,6 +38,7 @@ final class ZwappTest extends TestCase {
 		$this->assertEquals(9, $mapCount, "Publisher map should have 9 entries. It has $mapCount.");
 
 		$marvel = $map["31"];
+
 		$this->assertNotNull($marvel, "Publisher with id-31 (Marvel) is missing");
 		$this->assertNotNull($marvel->cv_query, "The ComicVine query for Marvel should not be null");
 

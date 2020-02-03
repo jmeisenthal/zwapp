@@ -13,31 +13,41 @@ abstract class Query
 
 	private $type;
 	private $result;
-	private $query_data;
+	private $children;
+	private $field_list;
 	private $id;
 
-	function __construct($type, $query_data, $id = NULL)
+	function __construct($type, $field_list, $id = NULL)
 	{
 		$this->type = $type;
-		$this->query_data = self::ComicVine_KEY + $query_data;
+		$this->field_list = $field_list;
+		// $this->query_data = self::ComicVine_KEY + $query_data;
 		$this->id = $id;
 	}
 
-	private function execute_query() {
-		$url = self::ComicVine_API . $this->type . ($this->id ? ('/' . $this->id) : '') .'/?' . http_build_query($this->query_data);
-		$this->result = json_decode(file_get_contents($url))->results;
-		// Should check for errors etc here:
-		
+	function build_query_url($a_field_list):string {
+		$query_params = http_build_query(self::ComicVine_KEY + ["format"=>"json", "field_list"=>$a_field_list]);
+		$url = self::ComicVine_API . $this->type . ($this->id ? ('/' . $this->id) : '') .'/?' . $query_params;
+		return $url;
+	}
+
+	function execute_query($a_field_list = NULL) {
+		$a_field_list = $a_field_list ?: $this->field_list;
+		$url = $this->build_query_url($a_field_list);
+		$a_result = json_decode(file_get_contents($url))->results;
+		return $a_result;
 	}
 
 	protected function get_result() {
 		if (is_null($this->result)) {
-			$this->execute_query();
+			$this->result = $this->execute_query();
 		}
 
 		// error_log("Result name: " . print_r($this->result->name, true));
 		return $this->result;
 	}
+
+	abstract public function getChildren();
 
 	public function __get($prop) {
 		return $this->get_result()->$prop;
@@ -62,12 +72,16 @@ class Publisher extends Query
 	
 	function __construct($id)
 	{
-		parent::__construct('publisher', ["format"=>"json", "field_list"=>"image,id,name"], $id);
+		parent::__construct('publisher', "image,id,name", $id);
 		// parent::__construct('publisher', ["format"=>"json", "field_list"=>"image,id,name,characters"], $id);
 	}
 
 	protected function getProperties() {
 		return ["id", "name", "icon_url"];
+	}
+
+	public function getChildren() {
+
 	}
 
 	public function __get($prop) {
@@ -93,6 +107,10 @@ class Character extends Query
 		return ["id", "name", "icon_url"];
 	}
 
+	public function getChildren() {
+		
+	}
+
 	public function __get($prop) {
 		if ($prop == 'icon_url') {
 			return $this->get_result()->image->icon_url;
@@ -116,6 +134,10 @@ class Volume extends Query
 		return ["id", "name", "icon_url"];
 	}
 
+	public function getChildren() {
+		
+	}
+
 	public function __get($prop) {
 		if ($prop == 'icon_url') {
 			return $this->get_result()->image->icon_url;
@@ -137,6 +159,10 @@ class Issue extends Query
 
 	public function getProperties() {
 		return ["id", "name", "icon_url"];
+	}
+
+	public function getChildren() {
+		
 	}
 
 	public function __get($prop) {
