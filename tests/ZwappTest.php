@@ -54,5 +54,33 @@ final class ZwappTest extends TestCase {
 		$actual_url = $marvel->icon_url;
 		$this->assertEquals($actual_url, $expected_url, "The 'icon_url' property should be '$expected_url'; instead it is '$actual_url'");
 	}
+
+	/**
+	 * 
+	 * @depends testPublisherCacheCreation
+	 */
+	public function testPublisherGetChildren($marvel) {
+		$start = microtime(TRUE);
+		$children = $marvel->getChildren();
+		$stop = microtime(TRUE);
+		$time1 = $stop - $start;
+		print_r("\nTime1: $time1\n");
+		// print_r("\nChildren:\n");
+		// var_dump($children);
+
+		// Test that we get the right count of characters (may change over time)
+		$this->assertNotNull($children, "The children value retrieved for publisher \"$marvel->name\" should not be null");
+		$this->assertGreaterThan(0, count($children));
+		
+		// Test for a particular character
+		
+		// Test that the second time is much faster
+		$start = microtime(TRUE);
+		$children = $marvel->getChildren();
+		$stop = microtime(TRUE);
+		$time2 = $stop - $start;
+		print_r("\nTime2: $time2\n");
+		$this->assertGreaterThan($time2, $time1);
+	}
 }
 ?>

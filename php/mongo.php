@@ -13,6 +13,8 @@
 	// Accessing Zwapp DB objects transparently get and cache properties needed from the ComicVine API.
 	
 	class Document {
+		private $children;
+
 		function __construct($cv_query, MongoDB\Collection $collection) {
 			$this->cv_query = $cv_query;
 			$this->collection = $collection;
@@ -42,6 +44,22 @@
 			$this->collection->updateOne(['_id' => $this->id],['$set'=>$doc]);
 
 			return $doc;
+		}
+
+		function getChildren() {
+			$doc = $this->collection->find(['_id' => $this->id])->toArray()[0];
+			if (is_null($doc->children)) {
+				$children = [];
+				$cv_children = $this->cv_query->getChildren();
+				foreach($cv_children as $child) {
+					// save as a map of name values keyed by id:
+					$children[$child->id] = $child->name;
+				}
+
+				$this->collection->updateOne(['_id' => $this->id],['$set'=>array('childen'=>$children)]);
+			}
+
+			return $children;
 		}
 	}
 

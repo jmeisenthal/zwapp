@@ -14,13 +14,15 @@ abstract class Query
 	private $type;
 	private $result;
 	private $children;
+	private $children_prop;
 	private $field_list;
 	private $id;
 
-	function __construct($type, $field_list, $id = NULL)
+	function __construct($type, $field_list, $children_prop, $id = NULL)
 	{
 		$this->type = $type;
 		$this->field_list = $field_list;
+		$this->children_prop = $children_prop;
 		// $this->query_data = self::ComicVine_KEY + $query_data;
 		$this->id = $id;
 	}
@@ -47,7 +49,14 @@ abstract class Query
 		return $this->result;
 	}
 
-	abstract public function getChildren();
+	public function getChildren() {
+		if (is_null($this->children) && !is_null($this->children_prop)) {
+			// Return the array within the children property within the results property:
+			$results = $this->execute_query($this->children_prop);
+			$this->children = $results->{$this->children_prop};
+		}
+		return $this->children;
+	}
 
 	public function __get($prop) {
 		return $this->get_result()->$prop;
@@ -72,16 +81,12 @@ class Publisher extends Query
 	
 	function __construct($id)
 	{
-		parent::__construct('publisher', "image,id,name", $id);
+		parent::__construct('publisher', "image,id,name", "characters", $id);
 		// parent::__construct('publisher', ["format"=>"json", "field_list"=>"image,id,name,characters"], $id);
 	}
 
 	protected function getProperties() {
 		return ["id", "name", "icon_url"];
-	}
-
-	public function getChildren() {
-
 	}
 
 	public function __get($prop) {
@@ -100,15 +105,11 @@ class Character extends Query
 	
 	function __construct($id)
 	{
-		parent::__construct('publisher', ["format"=>"json", "field_list"=>"image,id,name"], $id);
+		parent::__construct('publisher', ["format"=>"json", "field_list"=>"image,id,name"], "volumes", $id);
 	}
 
 	public function getProperties() {
 		return ["id", "name", "icon_url"];
-	}
-
-	public function getChildren() {
-		
 	}
 
 	public function __get($prop) {
@@ -127,15 +128,11 @@ class Volume extends Query
 	
 	function __construct($id)
 	{
-		parent::__construct('publisher', ["format"=>"json", "field_list"=>"image,id,name"], $id);
+		parent::__construct('publisher', ["format"=>"json", "field_list"=>"image,id,name"], "issues", $id);
 	}
 
 	public function getProperties() {
 		return ["id", "name", "icon_url"];
-	}
-
-	public function getChildren() {
-		
 	}
 
 	public function __get($prop) {
@@ -154,15 +151,11 @@ class Issue extends Query
 	
 	function __construct($id)
 	{
-		parent::__construct('publisher', ["format"=>"json", "field_list"=>"image,id,name"], $id);
+		parent::__construct('publisher', ["format"=>"json", "field_list"=>"image,id,name"], NULL, $id);
 	}
 
 	public function getProperties() {
 		return ["id", "name", "icon_url"];
-	}
-
-	public function getChildren() {
-		
 	}
 
 	public function __get($prop) {
