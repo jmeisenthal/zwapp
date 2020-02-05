@@ -6,9 +6,9 @@
 	use ComicVine;
 
 	// TODO: this is a problem:
-	// $client = new MongoDB\Client("mongodb://localhost:27017");
-	// $collection = $client->demo->beers;
+	// static $client = new MongoDB\Client("mongodb://localhost:27017");
 
+	// $collection = $client->demo->beers;
 	// Collections in Zwapp are initialized via curated scrapes from the ComicVine wiki. 
 	// Accessing Zwapp DB objects transparently get and cache properties needed from the ComicVine API.
 	
@@ -61,9 +61,17 @@
 
 			return $children;
 		}
+
+		/***************************************
+		* Get the top children of this document in sort order according to the children's collection
+		*/
+		function getTopChildren($size = 9) {
+
+		}
 	}
 
 	class Collection {
+		static $client = NULL;
 		private $cv_queryLambda,$collection;
 		private $list, $map;
 
@@ -98,13 +106,26 @@
 			return $this->map;
 		}
 
-		public static function getPublishers() {
-			$client = new MongoDB\Client("mongodb://localhost:27017");
+		private static function getClient() {
+			if (is_null(self::$client)) {
+				self::$client = new MongoDB\Client("mongodb://localhost:27017");
+			}
 
+			return self::$client;
+		}
+
+		public static function getPublishers() {
 			$queryLambda = function($id) { 
 				return new ComicVine\Publisher($id); 
 			};
-			return new Collection($queryLambda, $client->zwapp->publishers);
+			return new Collection($queryLambda, self::getClient()->zwapp->publishers);
+		}
+
+		public static function getCharacters() {
+			$queryLambda = function($id) { 
+				return new ComicVine\Character($id); 
+			};
+			return new Collection($queryLambda, self::getClient()->zwapp->characters);
 		}
 	}
 

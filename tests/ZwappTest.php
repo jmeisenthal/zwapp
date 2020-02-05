@@ -82,5 +82,21 @@ final class ZwappTest extends TestCase {
 		print_r("\nTime2: $time2\n");
 		$this->assertGreaterThan($time2, $time1);
 	}
+
+	public function testCharacterCacheCreation() {
+		$characters = ZwappMongo\Collection::getCharacters();
+		$this->assertCount(263, $characters->getList());
+
+		$map = $characters->getMap();
+		$mapCount = count($map);
+		$this->assertEquals(263, $mapCount, "Character map should have 263 entries. It has $mapCount.");
+
+		$black_panther = $map["4005-1477"];
+
+		$this->assertNotNull($black_panther, "Character with id=\"4005-1477\" (Black Panther) is missing");
+		$this->assertNotNull($black_panther->cv_query, "The ComicVine query for Black Panther should not be null");
+
+		return $marvel;
+	}
 }
 ?>
