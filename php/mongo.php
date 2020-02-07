@@ -14,10 +14,14 @@
 	
 	class Document {
 		private $children;
+		private static function getChildId_default($child) { 
+			return $child->id; 
+		}
 
-		function __construct($cv_query, MongoDB\Collection $collection) {
+		function __construct($cv_query, MongoDB\Collection $collection, $getChildId) {
 			$this->cv_query = $cv_query;
 			$this->collection = $collection;
+			$this->getChildId = $getChildId;
 		}
 
 		function __get($property) {
@@ -51,9 +55,11 @@
 			if (is_null($doc->children)) {
 				$children = [];
 				$cv_children = $this->cv_query->getChildren();
+				$childIdGetter = $this->getChildId;
 				foreach($cv_children as $child) {
 					// save as a map of name values keyed by id:
-					$children[$child->id] = $child->name;
+					$index = $this->getChildId ? $childIdGetter($child) : self::getChildId_default($child);
+					$children[$index] = $child->name;
 				}
 
 				$this->collection->updateOne(['_id' => $this->id],['$set'=>array('childen'=>$children)]);
@@ -64,20 +70,54 @@
 
 		/***************************************
 		* Get the top children of this document in sort order according to the children's collection
-		*/
+		****************************************/
 		function getTopChildren($size = 9) {
+			$topChildren = [];
+			$childrenIds = $this->getChildren();
+			$childCollectionList = [];
 
+			// Get the collection list for the child type
+			// TODO: ideally more seamless, but for now, do via a switch statement
+			switch ($this->cv_query->children_prop) {
+				case 'character':
+					$childCollectionList = self::getCharacters()->getList();
+					break;
+				
+				default:
+					throw new \Exception("No handler for child prop \"{$this->cv_query->children_prop}\"");
+					# code...
+					break;
+			}
+
+			foreach($childCollectionList as $child_doc) {
+				if (array_key_exists($child_doc->id, $childrenIds)) {
+					$topChildren[] = $child_doc;
+					print_r("Found child {$child_doc->id}\n");
+					if (count($topChildren) === $size) {
+						return $topChildren;
+					}
+				}
+				else {
+					print_r("Not found child {$child_doc->id}\n");
+
+				}
+			}
+			return $topChildren;
 		}
 	}
 
 	class Collection {
 		static $client = NULL;
+		// private static function getChildId_default($child) { 
+		// 	return $child->id; 
+		// }
 		private $cv_queryLambda,$collection;
 		private $list, $map;
 
-		function __construct($cv_queryLambda, MongoDB\Collection $collection) {
+		function __construct($cv_queryLambda, MongoDB\Collection $collection, $getChildId = NULL) {
 			$this->cv_queryLambda = $cv_queryLambda;
 			$this->collection = $collection;
+			$this->getChildId = $getChildId;
 		}
 
 		private function init() {
@@ -85,9 +125,10 @@
 				$this->list = array();
 				$this->map = array();
 				$cursor = $this->collection->aggregate(array(array('$sort' => array('sort' => 1))));
+				// Can't call lambda as a member directly
 				$cv_creator = $this->cv_queryLambda;
 				foreach($cursor as $data) {
-					$document = new Document($cv_creator($data->_id), $this->collection);
+					$document = new Document($cv_creator($data->_id), $this->collection, $this->getChildId);
 					array_push($this->list, $document);
 					$this->map["$data->_id"] = $document;
 				}
@@ -118,7 +159,8 @@
 			$queryLambda = function($id) { 
 				return new ComicVine\Publisher($id); 
 			};
-			return new Collection($queryLambda, self::getClient()->zwapp->publishers);
+			$getChildId = function($child) { return "4005-" . $child->id; };
+			return new Collection($queryLambda, self::getClient()->zwapp->publishers, $getChildId);
 		}
 
 		public static function getCharacters() {

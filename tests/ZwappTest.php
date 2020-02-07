@@ -52,6 +52,8 @@ final class ZwappTest extends TestCase {
 	public function testPublisherCacheValid($marvel) {
 		$expected_url = "https://comicvine.gamespot.com/api/image/square_avatar/426367-marvel.gif";
 		$actual_url = $marvel->icon_url;
+		// print_r("\nmarvel:\n");
+		// var_dump($marvel);
 		$this->assertEquals($actual_url, $expected_url, "The 'icon_url' property should be '$expected_url'; instead it is '$actual_url'");
 	}
 
@@ -83,6 +85,17 @@ final class ZwappTest extends TestCase {
 		$this->assertGreaterThan($time2, $time1);
 	}
 
+	/**
+	 * 
+	 * @depends testPublisherCacheCreation
+	 */
+	public function testPublisherGetTopChildren($marvel) {
+		$characters = $marvel->getTopChildren();
+		print_r("\ncharacters:\n");
+		var_dump($characters);
+		$this->assertEquals("4005-1443", $characters[0]->id, "Expecting top character at marvel to be Spider-Man (4005-1443). Instead got {$characters[0]->name} ({$characters[0]->id})");
+	}
+
 	public function testCharacterCacheCreation() {
 		$characters = ZwappMongo\Collection::getCharacters();
 		$this->assertCount(263, $characters->getList());
@@ -91,12 +104,27 @@ final class ZwappTest extends TestCase {
 		$mapCount = count($map);
 		$this->assertEquals(263, $mapCount, "Character map should have 263 entries. It has $mapCount.");
 
+		// $black_panther = $map["1477"];
 		$black_panther = $map["4005-1477"];
+		// print_r("\nbp:\n");
+		// var_dump($black_panther);
 
 		$this->assertNotNull($black_panther, "Character with id=\"4005-1477\" (Black Panther) is missing");
 		$this->assertNotNull($black_panther->cv_query, "The ComicVine query for Black Panther should not be null");
 
-		return $marvel;
+		return $black_panther;
+	}
+
+	/**
+	 * 
+	 * @depends testCharacterCacheCreation
+	 */
+	public function testCharacterCacheValid($black_panther) {
+		$expected_url = "https://comicvine.gamespot.com/api/image/square_avatar/5011137-blap2016001-cov-d6d2a.jpg";
+		$actual_url = $black_panther->icon_url;
+		// print_r("\nbp:\n");
+		// var_dump($black_panther);
+		$this->assertEquals($actual_url, $expected_url, "The 'icon_url' property should be '$expected_url'; instead it is '$actual_url'");
 	}
 }
 ?>
