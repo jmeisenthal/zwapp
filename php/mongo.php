@@ -71,18 +71,19 @@
 		/***************************************
 		* Get the top children of this document in sort order according to the children's collection
 		****************************************/
-		function getTopChildren($size = 9) {
-			$topChildren = [];
-			$childrenIds = $this->getChildren();
-			$childCollectionList = [];
+		function getTopChildren($length = 9) {
+			// $topChildren = [];
+			$childrenIds = array_keys($this->getChildren());
+			// $childCollectionList = [];
 
-			// Get the collection list for the child type
+			// // Get the collection list for the child type
 			// TODO: ideally more seamless, but for now, do via a switch statement
 			$children_prop = $this->cv_query->children_prop;
+			$childCollection;
 
 			switch ($children_prop) {
 				case 'characters':
-					$childCollectionList = Collection::getCharacters()->getList();
+					$childCollection = Collection::getCharacters();
 					break;
 				
 				default:
@@ -92,20 +93,7 @@
 					break;
 			}
 
-			foreach($childCollectionList as $child_doc) {
-				if (array_key_exists($child_doc->id, $childrenIds)) {
-					// $topChildren[] = $child_doc;
-					// print_r("Found child {$child_doc->id}\n");
-					// if (count($topChildren) === $size) {
-					// 	return $topChildren;
-					// }
-				}
-				else {
-					// print_r("Not found child {$child_doc->id}\n");
-
-				}
-			}
-			return $topChildren;
+			return array_slice($childCollection->getTopMatches($childrenIds), 0, $length);
 		}
 	}
 
@@ -150,17 +138,14 @@
 			return $this->map;
 		}
 
-		function getTopMatches($id_array) {
+		public function getTopMatches($id_array) {
 			$cursor = $this->collection->aggregate([['$match' => ['_id' => ['$in' => $id_array]]], ['$sort' => ['sort' => 1]]]);
-			// var_dump($cursor);
+
 			$top_matches = [];
 			$map = $this->getMap();
 
 			foreach($cursor as $match) {
-					// array_push($this->list, $document);
-				// array_push($top_matches, $match);
 				$top_matches[] = $map[$match->_id];
-				print_r("\nMatch id? {$map[$match->_id]->id}\n");
 			}
 			return $top_matches;
 			// $cursor = $this->collection->aggregate([['$match' => ['id' => ['$in' => $id_array]]], ['$sort' => ['sort' => 1]]]);
