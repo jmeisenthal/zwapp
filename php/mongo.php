@@ -78,27 +78,30 @@
 
 			// Get the collection list for the child type
 			// TODO: ideally more seamless, but for now, do via a switch statement
-			switch ($this->cv_query->children_prop) {
-				case 'character':
-					$childCollectionList = self::getCharacters()->getList();
+			$children_prop = $this->cv_query->children_prop;
+
+			switch ($children_prop) {
+				case 'characters':
+					$childCollectionList = Collection::getCharacters()->getList();
 					break;
 				
 				default:
-					throw new \Exception("No handler for child prop \"{$this->cv_query->children_prop}\"");
+					throw new \Exception("No handler for child prop \"$children_prop\"");
+					// throw new \Exception("No handler for child prop \"{$this->cv_query->children_prop}\"");
 					# code...
 					break;
 			}
 
 			foreach($childCollectionList as $child_doc) {
 				if (array_key_exists($child_doc->id, $childrenIds)) {
-					$topChildren[] = $child_doc;
-					print_r("Found child {$child_doc->id}\n");
-					if (count($topChildren) === $size) {
-						return $topChildren;
-					}
+					// $topChildren[] = $child_doc;
+					// print_r("Found child {$child_doc->id}\n");
+					// if (count($topChildren) === $size) {
+					// 	return $topChildren;
+					// }
 				}
 				else {
-					print_r("Not found child {$child_doc->id}\n");
+					// print_r("Not found child {$child_doc->id}\n");
 
 				}
 			}
@@ -124,7 +127,7 @@
 			if ($this->list == NULL) {
 				$this->list = array();
 				$this->map = array();
-				$cursor = $this->collection->aggregate(array(array('$sort' => array('sort' => 1))));
+				$cursor = $this->collection->aggregate([['$sort' => ['sort' => 1]]]);
 				// Can't call lambda as a member directly
 				$cv_creator = $this->cv_queryLambda;
 				foreach($cursor as $data) {
@@ -145,6 +148,22 @@
 			$this->init();
 
 			return $this->map;
+		}
+
+		function getTopMatches($id_array) {
+			$cursor = $this->collection->aggregate([['$match' => ['_id' => ['$in' => $id_array]]], ['$sort' => ['sort' => 1]]]);
+			// var_dump($cursor);
+			$top_matches = [];
+			$map = $this->getMap();
+
+			foreach($cursor as $match) {
+					// array_push($this->list, $document);
+				// array_push($top_matches, $match);
+				$top_matches[] = $map[$match->_id];
+				print_r("\nMatch id? {$map[$match->_id]->id}\n");
+			}
+			return $top_matches;
+			// $cursor = $this->collection->aggregate([['$match' => ['id' => ['$in' => $id_array]]], ['$sort' => ['sort' => 1]]]);
 		}
 
 		private static function getClient() {

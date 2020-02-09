@@ -85,16 +85,16 @@ final class ZwappTest extends TestCase {
 		$this->assertGreaterThan($time2, $time1);
 	}
 
-	/**
-	 * 
-	 * @depends testPublisherCacheCreation
-	 */
-	public function testPublisherGetTopChildren($marvel) {
-		$characters = $marvel->getTopChildren();
-		print_r("\ncharacters:\n");
-		var_dump($characters);
-		$this->assertEquals("4005-1443", $characters[0]->id, "Expecting top character at marvel to be Spider-Man (4005-1443). Instead got {$characters[0]->name} ({$characters[0]->id})");
-	}
+	// /**
+	//  * 
+	//  * @depends testPublisherCacheCreation
+	//  */
+	// public function testPublisherGetTopChildren($marvel) {
+	// 	$characters = $marvel->getTopChildren();
+	// 	print_r("\ncharacters:\n");
+	// 	var_dump($characters);
+	// 	$this->assertEquals("4005-1443", $characters[0]->id, "Expecting top character at marvel to be Spider-Man (4005-1443). Instead got {$characters[0]->name} ({$characters[0]->id})");
+	// }
 
 	public function testCharacterCacheCreation() {
 		$characters = ZwappMongo\Collection::getCharacters();
@@ -125,6 +125,23 @@ final class ZwappTest extends TestCase {
 		// print_r("\nbp:\n");
 		// var_dump($black_panther);
 		$this->assertEquals($actual_url, $expected_url, "The 'icon_url' property should be '$expected_url'; instead it is '$actual_url'");
+	}
+
+	public function testGetTopCharacters() {
+		$id_array = ["4005-2268", "4005-1525", "4005-3202", "4005-1502", "4005-1443"]; // Thor, Punisher, Nick Fury, Wasp, Spider-Man
+		$top_characters = ZwappMongo\Collection::getCharacters()->getTopMatches($id_array);
+		// print_r("top characters:\n");
+		// var_dump($top_characters);
+
+		// Spider-Man should be first
+		$top_character = $top_characters[0];
+		// print_r("top character:\n");
+		// var_dump($top_character);
+		$this->assertEquals("4005-1443", $top_character->id, "Top character in list should be Spider-Man (4005-1443). Instead got {$top_character->id}");
+		
+		// Punisher should be last
+		
+		// Check nicj Fury's icon_url
 	}
 }
 ?>

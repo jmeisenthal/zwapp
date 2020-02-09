@@ -14,9 +14,9 @@ abstract class Query
 	private $type;
 	private $result;
 	private $children;
-	private $children_prop;
+	public $children_prop; // public for testing etc.
 	private $field_list;
-	private $id;
+	public $id;
 
 	function __construct($type, $field_list, $children_prop, $id = NULL)
 	{
