@@ -39,7 +39,7 @@
 		transition-duration: 2s;
 	}
 
-	.fan--out & {
+	:not(.ajax-loading).fan--out & {
 		opacity: 1;
 	}
 }
@@ -48,7 +48,7 @@
 	.generate_fans(@count - 1);
 
 	@angle: @fan-out_offset * (@count + 0.5);
-	.fan--out .fan:nth-child(@{count}) {
+	:not(.ajax-loading).fan--out .fan:nth-child(@{count}) {
 		transform: rotate(-@angle);
 
 		.fan__inner {

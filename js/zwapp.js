@@ -25,13 +25,16 @@ function comicVineQuery(queryType, params, callback) {
 };
 
 $(function() {
+	$('.radial_nav').addClass('ajax-loading');
 	$.ajax({
 		// url: 'php/service/publisher.php?id=10,31,364,101,521',
 		url: 'php/service/publishers.php',
 	})
 	.done(function(response) {
 		// console.log("success: " + response); 
-		$('.radial_nav__choices').html(response)
+		$('.radial_nav__choices').html(response);
+		// Call via setTimeout with no delay so render cycle completes first, allowing transistion to trigger:
+		setTimeout(function() {$('.radial_nav').removeClass('ajax-loading');}, 0);
 	})
 	.fail(function(xhr) {
 		console.log("error: " + xhr.responseText);
