@@ -44,6 +44,7 @@ $(function() {
 	});
 
 	$('body').on('click', '.radial_nav__button', radial_nav__buttonClick);
+	$('body').on('click', '.radial_nav__choice_button', radial_nav__choice_buttonClick)
 });
 
 radial_nav__buttonClick = function(e) {
@@ -55,5 +56,14 @@ radial_nav__buttonClick = function(e) {
 			$radial_nav.addClass('fan--out');
 		} else {
 			$radial_nav.toggleClass('radial_nav--state-initial radial_nav--state-add-start fan--out');
+		}
+};
+
+radial_nav__choice_buttonClick = function(e) {
+		// console.log("click!");
+		// debugger;
+		let $radial_nav = $(this).closest('.radial_nav');
+		if ($radial_nav.is('.radial_nav--state-add-start')) {
+			$radial_nav.toggleClass('radial_nav--state-add-start radial_nav--state-add-middle');
 		}
 };
