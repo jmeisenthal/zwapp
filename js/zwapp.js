@@ -34,7 +34,7 @@ $(function() {
 		// console.log("success: " + response); 
 		$('.radial_nav__choices').html(response);
 		// Call via setTimeout with no delay so render cycle completes first, allowing transistion to trigger:
-		setTimeout(function() {$('.radial_nav').removeClass('ajax-loading');}, 5000);
+		setTimeout(function() {$('.radial_nav').removeClass('ajax-loading');}, 0);
 	})
 	.fail(function(xhr) {
 		console.log("error: " + xhr.responseText);
@@ -43,17 +43,30 @@ $(function() {
 		console.log("complete");
 	});
 
-	$('body').on('click', '.radial_nav__button', radial_nav__buttonClick);
+	$('body').on('click', '.radial_nav__button--add', action__add);
+	$('body').on('click', '.radial_nav__button--back', action__back);
 	$('body').on('click', '.radial_nav__choice_button', radial_nav__choice_buttonClick)
 });
 
-radial_nav__buttonClick = function(e) {
+action__add = function(e) {
 	// console.log("click!");
 	// debugger;
 	let $radial_nav = $(this).closest('.radial_nav');
 	if ($radial_nav.is('.radial_nav--state-initial')) {
 		$radial_nav.toggleClass('radial_nav--state-initial radial_nav--state-add-start');
 		$radial_nav.addClass('fan--out');
+	} else {
+		$radial_nav.toggleClass('radial_nav--state-initial radial_nav--state-add-start fan--out');
+	}
+};
+
+action__back = function(e) {
+	// console.log("click!");
+	// debugger;
+	let $radial_nav = $(this).closest('.radial_nav');
+	if ($radial_nav.is('.radial_nav--state-add-middle')) {
+		$radial_nav.toggleClass('radial_nav--state-add-middle radial_nav--state-add-start');
+		// $radial_nav.addClass('fan--out');
 	} else {
 		$radial_nav.toggleClass('radial_nav--state-initial radial_nav--state-add-start fan--out');
 	}
