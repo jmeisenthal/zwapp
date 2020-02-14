@@ -36,7 +36,7 @@ abstract class Query
 	function execute_query($a_field_list = NULL) {
 		$a_field_list = $a_field_list ?: $this->field_list;
 		$url = $this->build_query_url($a_field_list);
-		// print_r("\nURL: $url\n");
+	 	// print_r("\nURL: $url\n");
 		$a_result = json_decode(file_get_contents($url))->results;
 		return $a_result;
 	}
@@ -106,7 +106,7 @@ class Character extends Query
 	
 	function __construct($id)
 	{
-		parent::__construct('character', ["format"=>"json", "field_list"=>"image,id,name"], "volumes", $id);
+		parent::__construct('character', "image,id,name", "volumes", $id);
 	}
 
 	public function getProperties() {
@@ -129,7 +129,7 @@ class Volume extends Query
 	
 	function __construct($id)
 	{
-		parent::__construct('volume', ["format"=>"json", "field_list"=>"image,id,name"], "issues", $id);
+		parent::__construct('volume', "image,id,name", "issues", $id);
 	}
 
 	public function getProperties() {
@@ -152,7 +152,7 @@ class Issue extends Query
 	
 	function __construct($id)
 	{
-		parent::__construct('issue', ["format"=>"json", "field_list"=>"image,id,name"], NULL, $id);
+		parent::__construct('issue', "image,id,name", NULL, $id);
 	}
 
 	public function getProperties() {

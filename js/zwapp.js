@@ -34,7 +34,7 @@ $(function() {
 		// console.log("success: " + response); 
 		$('.radial_nav__choices').html(response);
 		// Call via setTimeout with no delay so render cycle completes first, allowing transistion to trigger:
-		setTimeout(function() {$('.radial_nav').removeClass('ajax-loading');}, 0);
+		setTimeout(function() {$('.radial_nav').removeClass('ajax-loading');}, 5000);
 	})
 	.fail(function(xhr) {
 		console.log("error: " + xhr.responseText);
@@ -48,22 +48,67 @@ $(function() {
 });
 
 radial_nav__buttonClick = function(e) {
-		// console.log("click!");
-		// debugger;
-		let $radial_nav = $(this).closest('.radial_nav');
-		if ($radial_nav.is('.radial_nav--state-initial')) {
-			$radial_nav.toggleClass('radial_nav--state-initial radial_nav--state-add-start');
-			$radial_nav.addClass('fan--out');
-		} else {
-			$radial_nav.toggleClass('radial_nav--state-initial radial_nav--state-add-start fan--out');
-		}
+	// console.log("click!");
+	// debugger;
+	let $radial_nav = $(this).closest('.radial_nav');
+	if ($radial_nav.is('.radial_nav--state-initial')) {
+		$radial_nav.toggleClass('radial_nav--state-initial radial_nav--state-add-start');
+		$radial_nav.addClass('fan--out');
+	} else {
+		$radial_nav.toggleClass('radial_nav--state-initial radial_nav--state-add-start fan--out');
+	}
 };
 
+/**
+ * What happens when a nav choice is selected: 
+ *   1a. The other nav choices fade.
+ *   1b. Start getting the child choices. They are hidden initially, in case they are available before other steps completed.
+ *   2. This choice fades.
+ *   3a. The background burst flickers (i.e. "Loading...")
+ *   3b. The old now hidden choices leave the layout (by setting display none?)
+ *   4a. Fade-in the new choices as soon as they are available once old choices gone.
+ *   4b. Stop the backgrounf flickering
+ *   5. Make back button visible.
+ *   
+ * @param  {[type]} e [description]
+ * @return {[type]}   [description]
+ */
 radial_nav__choice_buttonClick = function(e) {
-		// console.log("click!");
-		// debugger;
-		let $radial_nav = $(this).closest('.radial_nav');
-		if ($radial_nav.is('.radial_nav--state-add-start')) {
-			$radial_nav.toggleClass('radial_nav--state-add-start radial_nav--state-add-middle');
-		}
+	let $radial_nav = $(this).closest('.radial_nav');
+	let $button = $(e.target).closest('button');
+	let $choice = $button.closest('.radial_nav__choice');
+	console.log("Type: " + $button.data('type'));
+
+	// 1. Fade out other choices:
+	$radial_nav.find('.radial_nav__choice').addClass('fade-out-1s');
+	$choice.removeClass('fade-out-1s');
+	$.ajax({
+		// url: 'php/service/publisher.php?id=10,31,364,101,521',
+		url: 'php/service/characters.php?publisher=' + $button.data('id'),
+	})
+	.done(function(response) {
+		// console.log("success: " + response); 
+		$('.radial_nav__choices').html(response);
+		// Call via setTimeout with no delay so render cycle completes first, allowing transistion to trigger:
+		setTimeout(function() {$('.radial_nav').removeClass('ajax-loading');}, 5000);
+	})
+	.fail(function(xhr) {
+		console.log("error: " + xhr.responseText);
+	})
+	.always(function() {
+		console.log("complete");
+	});
+
+	setTimeout(function() {
+		$choice.addClass('fade-out-1s');
+
+		setTimeout(function() {
+			// $radial_nav.find('.radial_nav__background').removeClass("background-loading");
+
+			if ($radial_nav.is('.radial_nav--state-add-start')) {
+				$radial_nav.toggleClass('radial_nav--state-add-start radial_nav--state-add-middle');
+				$radial_nav.addClass("ajax-loading");
+			}
+		}, 1000);
+	}, 1000);
 };
