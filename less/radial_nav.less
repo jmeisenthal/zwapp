@@ -2,28 +2,26 @@
 @import 'atomic';
 @import 'layout';
 
+.nav-state--initial {
+	bottom: 0;
+}
+
+.nav-state--add {
+	bottom: 35%;	
+}
+
+.nav-state--add-publisher, .nav-state--add-character, .nav-state--add-volume, .nav-state--add-issue {
+	&:extend(.nav-state--add all);
+}
+
 .radial_nav {
 	&:extend(.flex-row);
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	bottom: 0;
 	width: 100%;
 	transition-property: bottom;
 	transition-duration: 1s;
-	// text-align: center;
-	// z-index: 100;
-	// 
-	&.radial_nav--state-add-start, &.radial_nav--state-add-middle {
-		bottom: 35%;
-
-		// animation-name: radial_nav--add-start;
-		// animation-duration: 2s;
-		// animation-fill-mode: forwards;
-
-		// border-bottom-style: solid;
-		// min-height: 200px;
-	}
 }
 
 .radial_nav__button {
@@ -89,12 +87,12 @@
 		transition-duration: 2s;
 	}
 	
-	.radial_nav--state-initial & {
+	.nav-state--initial & {
 		transition-property: border-bottom-width;
 		border-bottom-width: 0;
 	}
 	
-	.radial_nav--state-add-start &, .radial_nav--state-add-middle & {
+	.nav-state--add & {
 		border-top-right-radius: 50%;
 		border-top-left-radius: 50%;
 		border-bottom-right-radius: 50%;
@@ -103,10 +101,11 @@
 			transform: rotate(45deg);
 		}
 	}	
-	.radial_nav--state-add-middle & {
-		transition-property: transform;
-		transform: translateX(55%);
-	}
+
+	// .radial_nav--state-add-middle & {
+	// 	transition-property: transform;
+	// 	transform: translateX(55%);
+	// }
 }
 
 .radial_nav__choice {
@@ -160,7 +159,7 @@
 	transition-property: transform;
 	transition-duration: 2s;
 
-	.radial_nav--state-add-start &, .radial_nav--state-add-middle & {
+	.nav-state--add & {
 		opacity: 0.6;
 		transform: translateY(50%) scale(1);
 

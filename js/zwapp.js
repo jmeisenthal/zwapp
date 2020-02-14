@@ -44,7 +44,7 @@ $(function() {
 	});
 
 	$('body').on('click', '.radial_nav__button--add', action__add);
-	$('body').on('click', '.radial_nav__button--back', action__back);
+	// $('body').on('click', '.radial_nav__button--back', action__back);
 	$('body').on('click', '.radial_nav__choice_button', radial_nav__choice_buttonClick)
 });
 
@@ -52,25 +52,25 @@ action__add = function(e) {
 	// console.log("click!");
 	// debugger;
 	let $radial_nav = $(this).closest('.radial_nav');
-	if ($radial_nav.is('.radial_nav--state-initial')) {
-		$radial_nav.toggleClass('radial_nav--state-initial radial_nav--state-add-start');
+	if ($radial_nav.is('.nav-state--initial')) {
+		$radial_nav.toggleClass('nav-state--initial nav-state--add-publisher');
 		$radial_nav.addClass('fan--out');
-	} else {
-		$radial_nav.toggleClass('radial_nav--state-initial radial_nav--state-add-start fan--out');
+	} else if ($radial_nav.is('.nav-state--add-publisher')) {
+		$radial_nav.toggleClass('nav-state--add-publisher nav-state--add-character');
 	}
 };
 
-action__back = function(e) {
-	// console.log("click!");
-	// debugger;
-	let $radial_nav = $(this).closest('.radial_nav');
-	if ($radial_nav.is('.radial_nav--state-add-middle')) {
-		$radial_nav.toggleClass('radial_nav--state-add-middle radial_nav--state-add-start');
-		// $radial_nav.addClass('fan--out');
-	} else {
-		$radial_nav.toggleClass('radial_nav--state-initial radial_nav--state-add-start fan--out');
-	}
-};
+// action__back = function(e) {
+// 	// console.log("click!");
+// 	// debugger;
+// 	let $radial_nav = $(this).closest('.radial_nav');
+// 	if ($radial_nav.is('.radial_nav--state-add-middle')) {
+// 		$radial_nav.toggleClass('radial_nav--state-add-middle radial_nav--state-add-start');
+// 		// $radial_nav.addClass('fan--out');
+// 	} else {
+// 		$radial_nav.toggleClass('radial_nav--state-initial radial_nav--state-add-start fan--out');
+// 	}
+// };
 
 /**
  * What happens when a nav choice is selected: 
@@ -118,10 +118,10 @@ radial_nav__choice_buttonClick = function(e) {
 		setTimeout(function() {
 			// $radial_nav.find('.radial_nav__background').removeClass("background-loading");
 
-			if ($radial_nav.is('.radial_nav--state-add-start')) {
-				$radial_nav.toggleClass('radial_nav--state-add-start radial_nav--state-add-middle');
+			// if ($radial_nav.is('.radial_nav--state-add-start')) {
+				$radial_nav.toggleClass('nav-state--add-publisher nav-state--add-character');
 				$radial_nav.addClass("ajax-loading");
-			}
+			// }
 		}, 1000);
 	}, 1000);
 };

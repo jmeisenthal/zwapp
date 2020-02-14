@@ -1,6 +1,6 @@
 {% set state = state ?: 'initial' %}
 
-<nav class="radial_nav radial_nav--state-{{ state }}">
+<nav class="radial_nav nav-state--{{ state }}">
 	<div class="radial_nav__choices">
 		{# {% block choices %} #}
 			{# {% include 'radial_nav__choice.html' %} #}
@@ -11,12 +11,13 @@
 			{% include 'starburst-explosion-2.svg' %}	
 		</div>
 		<div class="flex-row">
-		<button id="nav-back" class="radial_nav__button radial_nav__button--back">
+{# 		<button id="nav-back" class="radial_nav__button radial_nav__button--back">
 			<i class="fas fa-arrow-left"></i>
 		</button>
-		<button id="nav-add" class="radial_nav__button radial_nav__button--add">
-			<i class="fas fa-plus"></i>
-		</button>
+ #}		
+ 			<button id="nav-add" class="radial_nav__button radial_nav__button--add">
+				<i class="fas fa-plus"></i>
+			</button>
 		</div>
-</div>
+	</div>
 </nav>
