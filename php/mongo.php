@@ -9,7 +9,7 @@
 
 	// print_r("Logger:");
 	// var_dump($logger);
-	$logger->debug("Logger in mongo.php");
+	// $logger->debug("Logger in mongo.php");
 
 	// Collections in Zwapp are initialized via curated scrapes from the ComicVine wiki. 
 	// Accessing Zwapp DB objects transparently get and cache properties needed from the ComicVine API.
@@ -24,6 +24,8 @@
 			$this->cv_query = $cv_query;
 			$this->collection = $collection;
 			$this->getChildId = $getChildId;
+			global $logger;
+			$this->logger = $logger;
 		}
 
 		function __get($property) {
@@ -41,8 +43,7 @@
 		}
 
 		function setData() {
-			$logger->debug("SETTING DATA!!!!");
-			print_r("SETTING DATA!!!!");
+			$this->logger->debug("SETTING DATA!!!!");
 			$doc = array('_id' => $this->id);
 			foreach ($this->cv_query->to_array() as $prop => $value) {
 				$doc[$prop] = $value;
@@ -58,15 +59,7 @@
 			$doc = $this->collection->findOne(['_id' => $this->id]);
 			if (is_null($doc["$$children"])) {
 				$doc_children = $doc->children;
-				error_log("gettingChildren logger: ");
-			    ob_start();                    // start buffer capture
-			    var_dump( $logger );           // dump the values
-			    $contents = ob_get_contents(); // put the buffer into a variable
-			    ob_end_clean();                // end capture
-			    error_log( $contents );        // log contents of the result of var_dump( $object )
-				$logger->debug("GETTING CHILDREN!!!!");
-				print_r("GETTING CHILDREN!!!! Doc:");
-				var_dump($doc_children);
+				$this->logger->debug("GETTING CHILDREN!!!!");
 				$children = [];
 				$cv_children = $this->cv_query->getChildren();
 				$childIdGetter = $this->getChildId;
