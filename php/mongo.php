@@ -5,10 +5,12 @@
 	use MongoDB;
 	use ComicVine;
 
-	// TODO: this is a problem:
-	// static $client = new MongoDB\Client("mongodb://localhost:27017");
+	require_once '/Development/zwapp/public/php/init_logger.php';
 
-	// $collection = $client->demo->beers;
+	// print_r("Logger:");
+	// var_dump($logger);
+	$logger->debug("Logger in mongo.php");
+
 	// Collections in Zwapp are initialized via curated scrapes from the ComicVine wiki. 
 	// Accessing Zwapp DB objects transparently get and cache properties needed from the ComicVine API.
 	
@@ -29,9 +31,9 @@
 			if ($property == "id") {
 				return $this->cv_query->id;
 			}
-			$doc = $this->collection->find(['_id' => $this->id])->toArray()[0];
+			$doc = $this->collection->findOne(['_id' => $this->id]);
 
-			if (!$doc->cv_init) {
+			if (is_null($doc["cv_init"])) {
 				$doc = $this->setData();
 			}
 
@@ -39,11 +41,13 @@
 		}
 
 		function setData() {
+			$logger->debug("SETTING DATA!!!!");
+			print_r("SETTING DATA!!!!");
 			$doc = array('_id' => $this->id);
 			foreach ($this->cv_query->to_array() as $prop => $value) {
 				$doc[$prop] = $value;
 			}
-			$doc->cv_init = true;
+			$doc["cv_init"] = "true";
 
 			$this->collection->updateOne(['_id' => $this->id],['$set'=>$doc]);
 
@@ -51,8 +55,18 @@
 		}
 
 		function getChildren() {
-			$doc = $this->collection->find(['_id' => $this->id])->toArray()[0];
-			if (is_null($doc->children)) {
+			$doc = $this->collection->findOne(['_id' => $this->id]);
+			if (is_null($doc["$$children"])) {
+				$doc_children = $doc->children;
+				error_log("gettingChildren logger: ");
+			    ob_start();                    // start buffer capture
+			    var_dump( $logger );           // dump the values
+			    $contents = ob_get_contents(); // put the buffer into a variable
+			    ob_end_clean();                // end capture
+			    error_log( $contents );        // log contents of the result of var_dump( $object )
+				$logger->debug("GETTING CHILDREN!!!!");
+				print_r("GETTING CHILDREN!!!! Doc:");
+				var_dump($doc_children);
 				$children = [];
 				$cv_children = $this->cv_query->getChildren();
 				$childIdGetter = $this->getChildId;
@@ -72,6 +86,7 @@
 		* Get the top children of this document in sort order according to the children's collection
 		****************************************/
 		function getTopChildren($length = 9) {
+			$time1 = microtime(TRUE);
 			// $topChildren = [];
 			$childrenIds = array_keys($this->getChildren());
 			// $childCollectionList = [];
@@ -80,6 +95,7 @@
 			// TODO: ideally more seamless, but for now, do via a switch statement
 			$children_prop = $this->cv_query->children_prop;
 			$childCollection;
+			$time2 = microtime(TRUE);
 
 			switch ($children_prop) {
 				case 'characters':
@@ -92,8 +108,19 @@
 					# code...
 					break;
 			}
+			$time3 = microtime(TRUE);
 
-			return array_slice($childCollection->getTopMatches($childrenIds), 0, $length);
+			$topChildren = array_slice($childCollection->getTopMatches($childrenIds), 0, $length);
+
+			$time4 = microtime(TRUE);
+
+			$diff1 = $time2 - $time1;
+			$diff2 = $time3 - $time2;
+			$diff3 = $time4 - $time3;
+			print_r("getChildren: $diff1");
+			print_r("getCharacters: $diff2");
+			print_r("getTopMatches: $diff3");
+			return $topChildren;
 		}
 	}
 

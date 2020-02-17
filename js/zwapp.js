@@ -55,8 +55,11 @@ action__add = function(e) {
 	if ($radial_nav.is('.nav-state--initial')) {
 		$radial_nav.toggleClass('nav-state--initial nav-state--add-publisher');
 		$radial_nav.addClass('fan--out');
-	} else if ($radial_nav.is('.nav-state--add-publisher')) {
-		$radial_nav.toggleClass('nav-state--add-publisher nav-state--add-character');
+	} 
+	// Cancel add:
+	else {
+		$radial_nav.removeClass('nav-state--add-publisher nav-state--add-character fan--out');
+		$radial_nav.addClass('nav-state--initial');
 	}
 };
 
@@ -96,14 +99,14 @@ radial_nav__choice_buttonClick = function(e) {
 	$radial_nav.find('.radial_nav__choice').addClass('fade-out-1s');
 	$choice.removeClass('fade-out-1s');
 	$.ajax({
-		// url: 'php/service/publisher.php?id=10,31,364,101,521',
+		// url: 'php/service/characters.php',
 		url: 'php/service/characters.php?publisher=' + $button.data('id'),
 	})
 	.done(function(response) {
 		// console.log("success: " + response); 
 		$('.radial_nav__choices').html(response);
 		// Call via setTimeout with no delay so render cycle completes first, allowing transistion to trigger:
-		setTimeout(function() {$('.radial_nav').removeClass('ajax-loading');}, 5000);
+		setTimeout(function() {$('.radial_nav').removeClass('ajax-loading');}, 0);
 	})
 	.fail(function(xhr) {
 		console.log("error: " + xhr.responseText);

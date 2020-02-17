@@ -21,6 +21,6 @@
 		$pub_formatted['icon_url'] = $publisher->icon_url;
 		$pub_formatted['type'] = "publisher";
 
-		$twig->load($template)->display($pub_formatted);			
+		$twig->load($template)->display($pub_formatted);
 	}
  ?>

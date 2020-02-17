@@ -6,8 +6,16 @@
 	$characters = [];
 	$publisher_id = $_GET['publisher'];
 	if (isset($publisher_id) && $publisher_id) {
+		$start = microtime(TRUE);
 		$publisher = ZwappMongo\Collection::getPublishers()->getMap()[$publisher_id];
+		$stop = microtime(TRUE);
+		$time1 = $stop - $start;
+		print_r("\nTime1: $time1\n");
+		$start = microtime(TRUE);
 		$characters = $publisher->getTopChildren();
+		$stop = microtime(TRUE);
+		$time1 = $stop - $start;
+		print_r("\nTime2: $time1\n");
 	}
 	else {
 		$characters = ZwappMongo\Collection::getCharacters()->getList();

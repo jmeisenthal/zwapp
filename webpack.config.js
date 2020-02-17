@@ -54,7 +54,8 @@ module.exports = {
     new CopyPlugin([
     	{ from: './php/index.php'},
     	{ from: './php/**/*'},
-     	{ from: './img/*'}
+     	{ from: './img/*'},
+     	{ from: './vendor/**/*'}
 	])
   ],
 };
