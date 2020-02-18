@@ -60,8 +60,8 @@
 			// $test = $doc['children'];
 			// $this->logger->debug("db children: $test");
 			$children = [];
-			if (!is_null($children)) {
-				$children_doc = $doc['children'];
+			$children_doc = $doc['children'];
+			if (!is_null($children_doc)) {
 				$doc_count = $children_doc->count();
 				$this->logger->debug("getChildren doc count: $doc_count");
 				foreach($children_doc as $id=>$child) {
