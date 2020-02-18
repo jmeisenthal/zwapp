@@ -2,6 +2,7 @@
 	require('../comicVine.php');
 	require('../mongo.php');
 	require('../init_twig.php');
+	require '../init_logger.php';
 
 	$characters = [];
 	$publisher_id = $_GET['publisher'];
@@ -10,12 +11,12 @@
 		$publisher = ZwappMongo\Collection::getPublishers()->getMap()[$publisher_id];
 		$stop = microtime(TRUE);
 		$time1 = $stop - $start;
-		print_r("\nTime1: $time1\n");
+		$logger->debug("characters.php: getPublishers time: $time1 for publisher {$publisher->name}");
 		$start = microtime(TRUE);
 		$characters = $publisher->getTopChildren();
 		$stop = microtime(TRUE);
 		$time1 = $stop - $start;
-		print_r("\nTime2: $time1\n");
+		$logger->debug("characters.php: getTopChildren time: $time1\n");
 	}
 	else {
 		$characters = ZwappMongo\Collection::getCharacters()->getList();

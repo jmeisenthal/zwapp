@@ -57,8 +57,19 @@
 
 		function getChildren() {
 			$doc = $this->collection->findOne(['_id' => $this->id]);
-			if (is_null($doc["$$children"])) {
-				$doc_children = $doc->children;
+			// $test = $doc['children'];
+			// $this->logger->debug("db children: $test");
+			$children = [];
+			if (!is_null($children)) {
+				$children_doc = $doc['children'];
+				$doc_count = $children_doc->count();
+				$this->logger->debug("getChildren doc count: $doc_count");
+				foreach($children_doc as $id=>$child) {
+					$children[$id] = $child;
+					// $this->logger->debug("Id: $id, Child: $child");
+				}
+			} else {
+				// $doc_children = $doc->children;
 				$this->logger->debug("GETTING CHILDREN!!!!");
 				$children = [];
 				$cv_children = $this->cv_query->getChildren();
@@ -69,7 +80,7 @@
 					$children[$index] = $child->name;
 				}
 
-				$this->collection->updateOne(['_id' => $this->id],['$set'=>array('childen'=>$children)]);
+				$this->collection->updateOne(['_id' => $this->id],['$set'=>array('children'=>$children)]);
 			}
 
 			return $children;
@@ -81,8 +92,15 @@
 		function getTopChildren($length = 9) {
 			$time1 = microtime(TRUE);
 			// $topChildren = [];
+			$this->logger->debug("getTopChildren...");
 			$childrenIds = array_keys($this->getChildren());
+			// $childrenIds = array_keys($this->getChildren());
 			// $childCollectionList = [];
+			// $count = count($childrenIds);
+			$isnull = is_null($childrenIds);
+			// $class = get_class($childrenIds);
+			// $methods = join(get_class_methods($class), ",");
+			$this->logger->debug("getTopChildren2: childrenIds: $isnull");
 
 			// // Get the collection list for the child type
 			// TODO: ideally more seamless, but for now, do via a switch statement
@@ -102,17 +120,19 @@
 					break;
 			}
 			$time3 = microtime(TRUE);
+			$this->logger->debug("getTopChildren3");
 
 			$topChildren = array_slice($childCollection->getTopMatches($childrenIds), 0, $length);
+			$this->logger->debug("getTopChildren4");
 
 			$time4 = microtime(TRUE);
 
 			$diff1 = $time2 - $time1;
 			$diff2 = $time3 - $time2;
 			$diff3 = $time4 - $time3;
-			print_r("getChildren: $diff1");
-			print_r("getCharacters: $diff2");
-			print_r("getTopMatches: $diff3");
+			$this->logger->debug("getChildren: $diff1");
+			$this->logger->debug("getCharacters: $diff2");
+			$this->logger->debug("getTopMatches: $diff3");
 			return $topChildren;
 		}
 	}
@@ -159,6 +179,14 @@
 		}
 
 		public function getTopMatches($id_array) {
+			// $id_array = [];
+			global $logger;
+			$isnull = is_null($id_array);
+			$logger->debug("getTopMatches: id_array null? $isnull");
+			$type = gettype($id_array);
+			$logger->debug("getTopMatches: id_array is a $type");
+			// $id_test = join($id_array, ",");
+			// $logger->debug("getTopMatches(id_array) : $id_test");
 			$cursor = $this->collection->aggregate([['$match' => ['_id' => ['$in' => $id_array]]], ['$sort' => ['sort' => 1]]]);
 
 			$top_matches = [];
