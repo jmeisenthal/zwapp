@@ -93,38 +93,41 @@ radial_nav__choice_buttonClick = function(e) {
 	let $radial_nav = $(this).closest('.radial_nav');
 	let $button = $(e.target).closest('button');
 	let $choice = $button.closest('.radial_nav__choice');
-	console.log("Type: " + $button.data('type'));
+	console.log("Type: " + $button.data('type'));https://comicvine1.cbsistatic.com/uploads/square_avatar/12/124259/6813787-732893_589a6c3085173ec7e7877d12a86293fede9c7f36.jpg
 
 	// 1. Fade out other choices:
-	$radial_nav.find('.radial_nav__choice').addClass('fade-out-1s');
-	$choice.removeClass('fade-out-1s');
-	$.ajax({
-		// url: 'php/service/characters.php',
-		url: 'php/service/characters.php?publisher=' + $button.data('id'),
-	})
-	.done(function(response) {
-		// console.log("success: " + response); 
-		$('.radial_nav__choices').html(response);
-		// Call via setTimeout with no delay so render cycle completes first, allowing transistion to trigger:
-		setTimeout(function() {$('.radial_nav').removeClass('ajax-loading');}, 0);
-	})
-	.fail(function(xhr) {
-		console.log("error: " + xhr.responseText);
-	})
-	.always(function() {
-		console.log("complete");
+	initialFade = new Promise((resolve) => {
+		$radial_nav.find('.radial_nav__choice').addClass('fade-out-1s');
+		$choice.removeClass('fade-out-1s');
+		setTimeout(() => {
+			$choice.addClass('fade-out-1s');
+			setTimeout(resolve, 600);
+		}, 600);
+	});
+	loadPHP = new Promise((resolve) => {
+		$radial_nav.addClass('ajax-loading');
+		$.ajax({
+			// url: 'php/service/characters.php',
+			url: 'php/service/characters.php?publisher=' + $button.data('id'),
+		})
+		.done(function(response) {
+			// console.log("success: " + response); 
+			$('.radial_nav__choices').html(response);
+			// Call via setTimeout with no delay so render cycle completes first, allowing transistion to trigger:
+			setTimeout(function() {$radial_nav.removeClass('ajax-loading');}, 0);
+			resolve();
+		})
+		.fail(function(xhr) {
+			console.log("error: " + xhr.responseText);
+		})
+		.always(function() {
+			console.log("complete");
+		});
+
 	});
 
-	setTimeout(function() {
-		$choice.addClass('fade-out-1s');
-
-		setTimeout(function() {
-			// $radial_nav.find('.radial_nav__background').removeClass("background-loading");
-
-			// if ($radial_nav.is('.radial_nav--state-add-start')) {
-				$radial_nav.toggleClass('nav-state--add-publisher nav-state--add-character');
-				$radial_nav.addClass("ajax-loading");
-			// }
-		}, 1000);
-	}, 1000);
+	Promise.all([initialFade, loadPHP]).then(() => {
+		$radial_nav.toggleClass('nav-state--add-publisher nav-state--add-character');
+		$radial_nav.removeClass('ajax-loading');
+	})
 };
