@@ -96,38 +96,40 @@ radial_nav__choice_buttonClick = function(e) {
 	console.log("Type: " + $button.data('type'));https://comicvine1.cbsistatic.com/uploads/square_avatar/12/124259/6813787-732893_589a6c3085173ec7e7877d12a86293fede9c7f36.jpg
 
 	// 1. Fade out other choices:
-	initialFade = new Promise((resolve) => {
+	new Promise((resolve) => {
 		$radial_nav.find('.radial_nav__choice').addClass('fade-out-1s');
 		$choice.removeClass('fade-out-1s');
 		setTimeout(() => {
 			$choice.addClass('fade-out-1s');
-			setTimeout(resolve, 600);
-		}, 600);
-	});
-	loadPHP = new Promise((resolve) => {
-		$radial_nav.addClass('ajax-loading');
-		$.ajax({
-			// url: 'php/service/characters.php',
-			url: 'php/service/characters.php?publisher=' + $button.data('id'),
-		})
-		.done(function(response) {
-			// console.log("success: " + response); 
-			$('.radial_nav__choices').html(response);
-			// Call via setTimeout with no delay so render cycle completes first, allowing transistion to trigger:
-			setTimeout(function() {$radial_nav.removeClass('ajax-loading');}, 0);
-			resolve();
-		})
-		.fail(function(xhr) {
-			console.log("error: " + xhr.responseText);
-		})
-		.always(function() {
-			console.log("complete");
+			$radial_nav.addClass('ajax-loading');
+			setTimeout(function() {
+				// $radial_nav.addClass('ajax-loading');
+				// $radial_nav.removeClass('fan--out');
+				resolve();
+			}, 1000);
+		}, 1000);
+	}).then(() => {
+		return new Promise((resolve) => {
+			$.ajax({
+				// url: 'php/service/characters.php',
+				url: 'php/service/characters.php?publisher=' + $button.data('id'),
+			})
+			.done(function(response) {
+				// console.log("success: " + response); 
+				$('.radial_nav__choices').html(response);
+				// Call via setTimeout with no delay so render cycle completes first, allowing transistion to trigger:
+				// setTimeout(function() {$radial_nav.removeClass('ajax-loading');}, 0);
+				resolve();
+			})
+			.fail(function(xhr) {
+				console.log("error: " + xhr.responseText);
+			})
+			.always(function() {
+				console.log("complete");
+			});
 		});
-
-	});
-
-	Promise.all([initialFade, loadPHP]).then(() => {
+	}).then(() => {
 		$radial_nav.toggleClass('nav-state--add-publisher nav-state--add-character');
-		$radial_nav.removeClass('ajax-loading');
-	})
+		setTimeout(() => {$radial_nav.removeClass('ajax-loading');	},0);
+	});
 };
