@@ -32,7 +32,9 @@ $(function() {
 	})
 	.done(function(response) {
 		// console.log("success: " + response); 
-		$('.radial_nav__choices').html(response);
+		let backButton = '<div class="radial_nav__choice fan"><div class="radial_nav__choice_inner fan__inner"><button class="radial_nav__choice_button radial_nav__back_button"><i class="fas fa-arrow-left"></i></button></div></div>';
+		$('.radial_nav__choices').html(response + backButton);
+		// $('.radial_nav__choices').add($backButton);
 		// Call via setTimeout with no delay so render cycle completes first, allowing transistion to trigger:
 		setTimeout(function() {$('.radial_nav').removeClass('ajax-loading');}, 0);
 	})
