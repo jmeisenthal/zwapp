@@ -45,7 +45,7 @@ $(function() {
 		console.log("complete");
 	});
 
-	$('body').on('click', '.radial_nav__button--add', action__add);
+	$('body').on('click', '.radial_nav__add_button', action__add);
 	// $('body').on('click', '.radial_nav__button--back', action__back);
 	$('body').on('click', '.radial_nav__choice_button', radial_nav__choice_buttonClick)
 });

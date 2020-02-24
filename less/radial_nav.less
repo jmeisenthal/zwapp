@@ -40,18 +40,18 @@
 	}
 }
 
-.radial_nav__button {
-	&:extend(.nav_button--theme all);
-	display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    // margin-left: auto;
-    // margin-right: auto;	
-    width: 2em;
-	height: 2em;
-	z-index: 10;
-}
+// .radial_nav__button {
+// 	&:extend(.nav_button--theme all);
+// 	display: flex;
+//     // flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     // margin-left: auto;
+//     // margin-right: auto;	
+//  //    width: 2em;
+// 	// height: 2em;
+// 	// z-index: 10;
+// }
 
 // .radial_nav__button--back {
 // 	border-top-right-radius: 50%;
@@ -81,10 +81,17 @@
 // 	}
 // }
 
-.radial_nav__button--add {
+.radial_nav__add_button {
+	&:extend(.nav_button--theme all);
 	border-top-right-radius: 100%;
 	border-top-left-radius: 100%;
 	border-bottom-width: 0;
+    width: 2em;
+	height: 2em;
+	&:extend(.nav_button--theme all);
+	display: flex;
+    justify-content: center;
+    align-items: center;
 
 	// Hidden by default
 	&, &:hover {
@@ -258,11 +265,11 @@
 	// 		width: @button-img-size;
 	// 	}
 	// }
-	.radial_nav__button {
+	.nav_button--theme {
 		font-size: @media_vars[@icon-size-large-button];
-		&:active {
-			font-size: @media_vars[@icon-size-large-button-hover];
-		}
+		// &:active {
+		// 	font-size: @media_vars[@icon-size-large-button-hover];
+		// }
 	}
 
 	.radial_nav__choice {
