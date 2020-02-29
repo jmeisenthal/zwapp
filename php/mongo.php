@@ -15,7 +15,9 @@
 	// Accessing Zwapp DB objects transparently get and cache properties needed from the ComicVine API.
 	
 	class Document {
-		private $children;
+        // Make members public so not accessed via __get & __set:
+		public $children;
+        public $cv_query, $collection, $getChildId, $logger;
 		private static function getChildId_default($child) { 
 			return $child->id; 
 		}
@@ -42,6 +44,10 @@
 			return $doc[$property];
 		}
 
+        function __set($property, $value) {
+            $this->collection->updateOne(['_id' => $this->id],['$set'=>array($property=>$value)]);
+        }
+
 		function setData() {
 			$this->logger->debug("SETTING DATA!!!!");
 			$doc = array('_id' => $this->id);
@@ -55,36 +61,71 @@
 			return $doc;
 		}
 
-		function getChildren() {
-			$doc = $this->collection->findOne(['_id' => $this->id]);
-			// $test = $doc['children'];
-			// $this->logger->debug("db children: $test");
-			$children = [];
-			$children_doc = $doc['children'];
-			if (!is_null($children_doc)) {
-				$doc_count = $children_doc->count();
-				$this->logger->debug("getChildren doc count: $doc_count");
-				foreach($children_doc as $id=>$child) {
-					$children[$id] = $child;
-					// $this->logger->debug("Id: $id, Child: $child");
-				}
-			} else {
-				// $doc_children = $doc->children;
-				$this->logger->debug("GETTING CHILDREN!!!!");
-				$children = [];
-				$cv_children = $this->cv_query->getChildren();
-				$childIdGetter = $this->getChildId;
-				foreach($cv_children as $child) {
-					// save as a map of name values keyed by id:
-					$index = $this->getChildId ? $childIdGetter($child) : self::getChildId_default($child);
-					$children[$index] = $child->name;
-				}
+        function getChildren() {
+            $doc = $this->collection->findOne(['_id' => $this->id]);
+            print_r("\nDoc: ");
+            var_dump($doc);
+            // $test = $doc['children'];
+            // $this->logger->debug("db children: $test");
+            $children = [];
+            $children_doc = $doc['children'];
+            if (!is_null($children_doc)) {
+                $doc_count = $children_doc->count();
+                $this->logger->debug("getChildren doc count: $doc_count");
+                foreach($children_doc as $id=>$child) {
+                    $children[$id] = $child;
+                    // $this->logger->debug("Id: $id, Child: $child");
+                }
+            } else {
+                // $doc_children = $doc->children;
+                $this->logger->debug("GETTING CHILDREN!!!!");
+                $children = [];
+                $cv_children = $this->cv_query->getChildren();
+                $childIdGetter = $this->getChildId;
+                foreach($cv_children as $child) {
+                    // save as a map of name values keyed by id:
+                    $index = $this->getChildId ? $childIdGetter($child) : self::getChildId_default($child);
+                    $children[$index] = $child->name;
+                }
 
-				$this->collection->updateOne(['_id' => $this->id],['$set'=>array('children'=>$children)]);
-			}
+                $this->collection->updateOne(['_id' => $this->id],['$set'=>array('children'=>$children)]);
+            }
 
-			return $children;
-		}
+            return $children;
+        }
+
+        function getListProp($prop) {
+            $doc = $this->collection->findOne(['_id' => $this->id]);
+            // print_r("\nDoc: ");
+            // var_dump($doc);
+            // $test = $doc['children'];
+            // $this->logger->debug("db children: $test");
+            $list = [];
+            $list_doc = $doc[$prop];
+            if (!is_null($list_doc)) {
+                $doc_count = $list_doc->count();
+                $this->logger->debug("getlist doc count: $doc_count");
+                foreach($list_doc as $id=>$item) {
+                    $list[$id] = $item;
+                    // $this->logger->debug("Id: $id, Child: $child");
+                }
+            } else {
+                // $doc_children = $doc->children;
+                $this->logger->debug("GETTING CHILDREN!!!!");
+                $list = [];
+                $cv_list = $this->cv_query->getProp($prop);
+                $listItemIdGetter = $this->getListItemId;
+                foreach($cv_list as $item) {
+                    // save as a map of name values keyed by id:
+                    $index = $this->getListId ? $listItemIdGetter($child) : self::getChildId_default($item);
+                    $list[$index] = $item->name;
+                }
+
+                $this->collection->updateOne(['_id' => $this->id],['$set'=>array($prop=>$list)]);
+            }
+
+            return $list;
+        }
 
 		/***************************************
 		* Get the top children of this document in sort order according to the children's collection
@@ -112,7 +153,10 @@
 				case 'characters':
 					$childCollection = Collection::getCharacters();
 					break;
-				
+                case 'volumes':
+                    $childCollection = Collection::getVolumes();
+                    break;
+
 				default:
 					throw new \Exception("No handler for child prop \"$children_prop\"");
 					// throw new \Exception("No handler for child prop \"{$this->cv_query->children_prop}\"");
@@ -207,6 +251,67 @@
 			return self::$client;
 		}
 
+        /*
+         * Maps out the chracter--volume relationships for the given publisher ID, 
+         * and determine the relative weights of the characters' significance within the publisher.
+         */
+        private static function mapPublisherCharactersVolumes($publisher) {
+            // Test to make sure only called once:
+            if (is_null($publisher->volumes)) {
+                $publisher_volumes = array_keys($publisher->getListProp("volumes")); // List of volume id's
+                
+                $volumes = self::getVolumes()->getMap();
+                $characters = self::getCharacters()->getMap();
+
+                foreach($publisher_volumes as $volume_id) {
+                    $volume = $volumes[$volume_id];
+                    $character_credits = $volume->getListProp("character_credits");
+                    $place = 1;
+                    foreach($character_credits as $character_credit) {
+                        // Consider first 20 characters to be potentially main characters
+                        if ($place > 20) {
+                            break;
+                        }
+
+                        $character = $characters[$character_credit->id];
+
+                        // Record the volume and place for character (the place determines the significance of the volume to the character):
+                        $character_volumes = $character->volumes;
+                        if (is_null($character_volumes)) {
+                            $character_volumes = [];
+                            $character->volumes = $character_volumes;
+                        }
+                        $character_volumes[$volume_id] = $place;
+
+                        // Add to the sum of appearances for the character (determines the significance of the character to the publisher):
+                        $character_appearances_count = $character->appearances_count;
+                        if (is_null($character_appearances_count)) {
+                            $character_appearances_count = 0;
+                        }
+                        $character->appearances_count = $character_appearances_count + $character_credit->count;
+
+                        $place++;
+                    }
+                }
+            }
+        }
+
+        private static function getPublisherCharacters(Document $publisher) {
+            // Init the mapping:
+            self::mapPublisherCharactersVolumes($publisher);
+
+            // Find the characters for this publisher sorted by appearances_count:
+            $collection = self::getClient()->zwapp->characters;
+            $cursor = $characters.aggregate([['publisher->id' => $publisher->id], ['$sort' => ['appearances_count' => 1]]]);
+        }
+
+        private static function getCharacterVolumes(Document $character) {
+            if (is_null($character->volumes)) {
+            }
+
+            return $character->volumes;
+        }
+
 		public static function getPublishers() {
 			$queryLambda = function($id) { 
 				return new ComicVine\Publisher($id); 
@@ -215,12 +320,22 @@
 			return new Collection($queryLambda, self::getClient()->zwapp->publishers, $getChildId);
 		}
 
-		public static function getCharacters() {
-			$queryLambda = function($id) { 
-				return new ComicVine\Character($id); 
-			};
-			return new Collection($queryLambda, self::getClient()->zwapp->characters);
-		}
-	}
+        public static function getCharacters() {
+            $queryLambda = function($id) { 
+                return new ComicVine\Character($id); 
+            };
+            $getChildren = function() {
+
+            };
+            return new Collection($queryLambda, self::getClient()->zwapp->characters);
+        }
+
+        public static function getVolumes() {
+            $queryLambda = function($id) { 
+                return new ComicVine\Volume($id); 
+            };
+            return new Collection($queryLambda, self::getClient()->zwapp->volumes);
+        }
+    }
 
 ?>

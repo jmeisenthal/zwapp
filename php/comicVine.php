@@ -1,7 +1,10 @@
 <?php 
 
 namespace ComicVine;
-	ini_set('user_agent','Mozilla/4.0 (compatible; MSIE 6.0)'); 
+ini_set('user_agent','Mozilla/4.0 (compatible; MSIE 6.0)'); 
+
+
+require_once '/Development/zwapp/public/php/init_logger.php';
 
 /**
  * 
@@ -25,6 +28,8 @@ abstract class Query
 		$this->children_prop = $children_prop;
 		// $this->query_data = self::ComicVine_KEY + $query_data;
 		$this->id = $id;
+        global $logger;
+        $this->logger = $logger;
 	}
 
 	function build_query_url($a_field_list):string {
@@ -50,7 +55,11 @@ abstract class Query
 		return $this->result;
 	}
 
+    public function getProp($prop) {
+        return $this->execute_query($prop)->{$prop};
+    }
 	public function getChildren() {
+ //        $this->logger->debug("Comicvine getChildren...");
 		if (is_null($this->children) && !is_null($this->children_prop)) {
 			// Return the array within the children property within the results property:
 			$results = $this->execute_query($this->children_prop);
@@ -82,7 +91,7 @@ class Publisher extends Query
 	
 	function __construct($id)
 	{
-		parent::__construct('publisher', "image,id,name", "characters", $id);
+		parent::__construct('publisher', "image,id,name", NULL, $id);
 		// parent::__construct('publisher', ["format"=>"json", "field_list"=>"image,id,name,characters"], $id);
 	}
 
@@ -106,7 +115,7 @@ class Character extends Query
 	
 	function __construct($id)
 	{
-		parent::__construct('character', "image,id,name", "volumes", $id);
+		parent::__construct('character', "image,id,name,publisher", NULL, $id);
 	}
 
 	public function getProperties() {
@@ -129,7 +138,7 @@ class Volume extends Query
 	
 	function __construct($id)
 	{
-		parent::__construct('volume', "image,id,name", "issues", $id);
+		parent::__construct('volume', "image,id,name,first_issue,last_issue", "character_credits", $id);
 	}
 
 	public function getProperties() {
@@ -152,7 +161,7 @@ class Issue extends Query
 	
 	function __construct($id)
 	{
-		parent::__construct('issue', "image,id,name", NULL, $id);
+		parent::__construct('issue', "image,id,name,issue_number", NULL, $id);
 	}
 
 	public function getProperties() {

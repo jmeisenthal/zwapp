@@ -1,8 +1,11 @@
 <?php
 declare(strict_types=1);
-require 'vendor/autoload.php'; // include Composer's autoloader
-require('php/comicVine.php');
-require('php/mongo.php');
+	// require_once '/Development/zwapp/public/php/init_logger.php';
+// include_once(__DIR__ . '/../vendor/autoload.php');
+include_once('vendor/autoload.php');
+include_once('php/mongo.php');
+include('php/comicVine.php');
+// require_once 'php/mongo.php';
 
 use PHPUnit\Framework\TestCase;
 
@@ -50,7 +53,7 @@ final class ZwappTest extends TestCase {
 	 * @depends testPublisherCacheCreation
 	 */
 	public function testPublisherCacheValid($marvel) {
-		$expected_url = "https://comicvine.gamespot.com/api/image/square_avatar/426367-marvel.gif";
+		$expected_url = "https://comicvine1.cbsistatic.com/uploads/square_avatar/0/2/426367-marvel.gif";
 		$actual_url = $marvel->icon_url;
 		// print_r("\nmarvel:\n");
 		// var_dump($marvel);
@@ -120,7 +123,7 @@ final class ZwappTest extends TestCase {
 	 * @depends testCharacterCacheCreation
 	 */
 	public function testCharacterCacheValid($black_panther) {
-		$expected_url = "https://comicvine.gamespot.com/api/image/square_avatar/5011137-blap2016001-cov-d6d2a.jpg";
+		$expected_url = "https://comicvine1.cbsistatic.com/uploads/square_avatar/3/31666/5011137-blap2016001-cov-d6d2a.jpg";
 		$actual_url = $black_panther->icon_url;
 		// print_r("\nbp:\n");
 		// var_dump($black_panther);
@@ -143,7 +146,7 @@ final class ZwappTest extends TestCase {
 		$this->assertEquals("4005-1525", $top_characters[4]->id, "Last character in list should be The Punisher (4005-1525). Instead got {$top_characters[4]->id}");
 		
 		// Check nicj Fury's icon_url
-		$expected_url = "https://comicvine.gamespot.com/api/image/square_avatar/4076005-untitled-2.jpg";
+		$expected_url = "https://comicvine1.cbsistatic.com/uploads/square_avatar/10/100647/4076005-untitled-2.jpg";
 		$this->assertEquals($expected_url, $top_characters[2]->icon_url, "Icon URL for third in list (Nick Fury) should be \"$expected_url\". Instead got \"{$top_characters[2]->icon_url}\"");
 	}
 }

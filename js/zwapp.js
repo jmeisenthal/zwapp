@@ -9,8 +9,8 @@ var $ = require('jquery');
 
 const STATE_INITIAL = 'nav-state--initial';
 const STATE_ADD_PUBLISHER = 'nav-state--add-publisher';
-// const STATE_ADD_CHARACTER = 'nav-state--add-character';
-// const STATE_ADD_VOLUME = 'nav-state--add-volume';
+const STATE_ADD_CHARACTER = 'nav-state--add-character';
+const STATE_ADD_VOLUME = 'nav-state--add-volume';
 
 
 let states = [STATE_INITIAL];
@@ -148,11 +148,23 @@ let action__back = function() {
  * @param  {[type]} e [description]
  * @return {[type]}   [description]
  */
-let radial_nav__choice_buttonClick = function(e) {
+let radial_nav__choice_buttonClick = function() {
     let $radial_nav = $(this).closest('.radial_nav');
-    let $button = $(e.target).closest('button');
+    let $button = $(this).closest('button');
     let $choice = $button.closest('.radial_nav__choice');
-    console.log("Type: " + $button.data('type'));//https://comicvine1.cbsistatic.com/uploads/square_avatar/12/124259/6813787-732893_589a6c3085173ec7e7877d12a86293fede9c7f36.jpg
+    let id = $button.data('id');
+    let nextState = null;
+    let url = null;
+    switch(states[states.length-1]) {
+        case STATE_ADD_PUBLISHER: 
+            nextState = STATE_ADD_CHARACTER;
+            url = 'php/service/characters.php?publisher=';
+            break;
+        case STATE_ADD_CHARACTER:
+            nextState = STATE_ADD_VOLUME;
+            url = 'php/service/volumes.php?character=';
+            break;
+    }
 
     // 1. Fade out other choices:
     new Promise((resolve) => {
@@ -162,33 +174,33 @@ let radial_nav__choice_buttonClick = function(e) {
             $choice.addClass('fade-out-1s');
             $radial_nav.addClass('ajax-loading');
             setTimeout(function() {
-                // $radial_nav.addClass('ajax-loading');
-                // $radial_nav.removeClass('fan--out');
                 resolve();
             }, 1000);
         }, 1000);
     }).then(() => {
-        return new Promise((resolve) => {
-            $.ajax({
-                // url: 'php/service/characters.php',
-                url: 'php/service/characters.php?publisher=' + $button.data('id'),
-            })
-            .done(function(response) {
-                // console.log("success: " + response);
-                $('.radial_nav__choices').html(response);
-                // Call via setTimeout with no delay so render cycle completes first, allowing transistion to trigger:
-                // setTimeout(function() {$radial_nav.removeClass('ajax-loading');}, 0);
-                resolve();
-            })
-            .fail(function(xhr) {
-                console.log("error: " + xhr.responseText);
-            })
-            .always(function() {
-                console.log("complete");
-            });
-        });
-    }).then(() => {
-        $radial_nav.toggleClass('nav-state--add-publisher nav-state--add-character');
-        setTimeout(() => {$radial_nav.removeClass('ajax-loading');    },0);
+        goToState(nextState, $(this), url+id);
+        // return new Promise((resolve) => {
+        //     $.ajax({
+        //         // url: 'php/service/characters.php',
+        //         url: 'php/service/characters.php?publisher=' + $button.data('id'),
+        //     })
+        //     .done(function(response) {
+        //         // console.log("success: " + response);
+        //         $('.radial_nav__choices').html(response);
+        //         // Call via setTimeout with no delay so render cycle completes first, allowing transistion to trigger:
+        //         // setTimeout(function() {$radial_nav.removeClass('ajax-loading');}, 0);
+        //         resolve();
+        //     })
+        //     .fail(function(xhr) {
+        //         console.log("error: " + xhr.responseText);
+        //     })
+        //     .always(function() {
+        //         console.log("complete");
+        //     });
+        // });
+    // })
+    // .then(() => {
+    //     $radial_nav.toggleClass('nav-state--add-publisher nav-state--add-character');
+    //     setTimeout(() => {$radial_nav.removeClass('ajax-loading');    },0);
     });
 };
