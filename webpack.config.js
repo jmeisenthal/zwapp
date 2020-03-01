@@ -7,8 +7,8 @@ module.exports = {
   mode: 'development',
   entry: './js/zwapp.js',
   output: {
-  	filename: 'main.js',
-  	path: __dirname + '/public',
+    filename: 'main.js',
+    path: __dirname + '/public',
 
   },
   module: {
@@ -16,27 +16,27 @@ module.exports = {
       {
         test: /\.less|css$/,
         use: [
-        	{ 
-        		loader: MiniCssExtractPlugin.loader,
-        	},
-        	{ loader: 'css-loader' },
-        	{ loader: 'less-loader' }
-    	]
+          { 
+                loader: MiniCssExtractPlugin.loader,
+            },
+            { loader: 'css-loader' },
+            { loader: 'less-loader' }
+        ]
       },
       // {
-      // 	test: /\.svg$/,
-      // 	// loader: 'svg-inline-loader'
-      // 	loader: 'url-loader'
-      // 	// loader: 'file-loader?name=../img/[name].[ext]'
+      //     test: /\.svg$/,
+      //     // loader: 'svg-inline-loader'
+      //     loader: 'url-loader'
+      //     // loader: 'file-loader?name=../img/[name].[ext]'
       // },
       {
-      	test: /\.png|svg$/,
-      	loader: 'file-loader',
-      	options: {
-      		name: '[name].[ext]',
-      		outputPath: 'img',
-      		publicPath: '../img' // For url()'s caled in .less; otherwise url resolves to css/img/...'
-      	}
+          test: /\.png|svg$/,
+          loader: 'file-loader',
+          options: {
+              name: '[name].[ext]',
+              outputPath: 'img',
+              publicPath: '../img' // For url()'s caled in .less; otherwise url resolves to css/img/...'
+          }
       },
       {
         test: /\.(woff(2)?|ttf|TTF|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -50,12 +50,12 @@ module.exports = {
    ],
   },
   plugins: [
-  	extractLess,
+      extractLess,
     new CopyPlugin([
-    	{ from: './php/index.php'},
-    	{ from: './php/**/*'},
-     	{ from: './img/*'},
-     	{ from: './vendor/**/*'}
-	])
+        { from: './php/index.php'},
+        { from: './php/**/*'},
+         { from: './img/*'},
+         { from: './vendor/**/*'}
+    ])
   ],
 };

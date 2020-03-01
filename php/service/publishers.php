@@ -6,8 +6,8 @@
 	// TODO: Make this or the URL a global property or via PHP globals
 	// $client = new MongoDB\Client("mongodb://localhost:27017");
 
-	$publishers = ZwappMongo\Collection::getPublishers();
-	foreach($publishers->getList() as $publisher) {
+	$publishers = ZwappMongo\Collection::getPublishers()->getList();
+	foreach($publishers as $publisher) {
 		$template = $_GET['template'] ?: 'radial_nav__choice.html';
 		$pub_formatted = [];
 		// var_dump($publisher);

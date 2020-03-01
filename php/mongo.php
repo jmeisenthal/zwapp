@@ -49,7 +49,7 @@
         }
 
 		function setData() {
-			$this->logger->debug("SETTING DATA!!!!");
+			$this->logger->debug("Setting data for {$this->id}");
 			$doc = array('_id' => $this->id);
 			foreach ($this->cv_query->to_array() as $prop => $value) {
 				$doc[$prop] = $value;

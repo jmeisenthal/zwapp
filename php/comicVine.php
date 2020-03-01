@@ -25,6 +25,7 @@ abstract class Query
 	{
 		$this->type = $type;
 		$this->field_list = $field_list;
+        $this->properties = array_slice($field_list,",");
 		$this->children_prop = $children_prop;
 		// $this->query_data = self::ComicVine_KEY + $query_data;
 		$this->id = $id;
@@ -58,6 +59,7 @@ abstract class Query
     public function getProp($prop) {
         return $this->execute_query($prop)->{$prop};
     }
+
 	public function getChildren() {
  //        $this->logger->debug("Comicvine getChildren...");
 		if (is_null($this->children) && !is_null($this->children_prop)) {
@@ -72,12 +74,13 @@ abstract class Query
 		return $this->get_result()->$prop;
 	}
 
-	abstract protected function getProperties();
-
 	public function to_array() {
 		$arr = [];
-		foreach ($this->getProperties() as $value) {
-			$arr[$value] = $this->$value;
+		foreach (explode(",",$this->field_list) as $field) {
+            if ($field == "image") {
+                $field = "icon_url";
+            }
+			$arr[$field] = $this->$field;
 		}
 		return $arr;
 	}
@@ -115,11 +118,7 @@ class Character extends Query
 	
 	function __construct($id)
 	{
-		parent::__construct('character', "image,id,name,publisher", NULL, $id);
-	}
-
-	public function getProperties() {
-		return ["id", "name", "icon_url"];
+        parent::__construct('character', "image,id,name,publisher", NULL, $id);
 	}
 
 	public function __get($prop) {
@@ -141,10 +140,6 @@ class Volume extends Query
 		parent::__construct('volume', "image,id,name,first_issue,last_issue", "character_credits", $id);
 	}
 
-	public function getProperties() {
-		return ["id", "name", "icon_url"];
-	}
-
 	public function __get($prop) {
 		if ($prop == 'icon_url') {
 			return $this->get_result()->image->icon_url;
@@ -162,10 +157,6 @@ class Issue extends Query
 	function __construct($id)
 	{
 		parent::__construct('issue', "image,id,name,issue_number", NULL, $id);
-	}
-
-	public function getProperties() {
-		return ["id", "name", "icon_url"];
 	}
 
 	public function __get($prop) {
