@@ -148,59 +148,50 @@ let action__back = function() {
  * @param  {[type]} e [description]
  * @return {[type]}   [description]
  */
-let radial_nav__choice_buttonClick = function() {
-    let $radial_nav = $(this).closest('.radial_nav');
-    let $button = $(this).closest('button');
-    let $choice = $button.closest('.radial_nav__choice');
-    let id = $button.data('id');
+let radial_nav__choice_buttonClick = function(e) {
     let nextState = null;
     let url = null;
+    let id = $(e.target).closest('button').data('id');
     switch(states[states.length-1]) {
         case STATE_ADD_PUBLISHER: 
             nextState = STATE_ADD_CHARACTER;
-            url = 'php/service/characters.php?publisher=';
+            url = 'php/service/characters.php?publisher='+id;
             break;
         case STATE_ADD_CHARACTER:
             nextState = STATE_ADD_VOLUME;
-            url = 'php/service/volumes.php?character=';
+            url = 'php/service/volumes.php?character='+id;
             break;
     }
+    goToState(nextState, $(this), url);
+    // let $radial_nav = $(this).closest('.radial_nav');
+    // let $button = $(this).closest('button');
+    // let $choice = $button.closest('.radial_nav__choice');
+    // let id = $button.data('id');
+    // let nextState = null;
+    // let url = null;
+    // switch(states[states.length-1]) {
+    //     case STATE_ADD_PUBLISHER: 
+    //         nextState = STATE_ADD_CHARACTER;
+    //         url = 'php/service/characters.php?publisher=';
+    //         break;
+    //     case STATE_ADD_CHARACTER:
+    //         nextState = STATE_ADD_VOLUME;
+    //         url = 'php/service/volumes.php?character=';
+    //         break;
+    // }
 
-    // 1. Fade out other choices:
-    new Promise((resolve) => {
-        $radial_nav.find('.radial_nav__choice').addClass('fade-out-1s');
-        $choice.removeClass('fade-out-1s');
-        setTimeout(() => {
-            $choice.addClass('fade-out-1s');
-            $radial_nav.addClass('ajax-loading');
-            setTimeout(function() {
-                resolve();
-            }, 1000);
-        }, 1000);
-    }).then(() => {
-        goToState(nextState, $(this), url+id);
-        // return new Promise((resolve) => {
-        //     $.ajax({
-        //         // url: 'php/service/characters.php',
-        //         url: 'php/service/characters.php?publisher=' + $button.data('id'),
-        //     })
-        //     .done(function(response) {
-        //         // console.log("success: " + response);
-        //         $('.radial_nav__choices').html(response);
-        //         // Call via setTimeout with no delay so render cycle completes first, allowing transistion to trigger:
-        //         // setTimeout(function() {$radial_nav.removeClass('ajax-loading');}, 0);
-        //         resolve();
-        //     })
-        //     .fail(function(xhr) {
-        //         console.log("error: " + xhr.responseText);
-        //     })
-        //     .always(function() {
-        //         console.log("complete");
-        //     });
-        // });
-    // })
-    // .then(() => {
-    //     $radial_nav.toggleClass('nav-state--add-publisher nav-state--add-character');
-    //     setTimeout(() => {$radial_nav.removeClass('ajax-loading');    },0);
-    });
+//    // 1. Fade out other choices:
+    // new Promise((resolve) => {
+    //     $radial_nav.find('.radial_nav__choice').addClass('fade-out-1s');
+    //     $choice.removeClass('fade-out-1s');
+    //     setTimeout(() => {
+    //         $choice.addClass('fade-out-1s');
+    //         $radial_nav.addClass('ajax-loading');
+    //         setTimeout(function() {
+    //             resolve();
+    //         }, 1000);
+    //     }, 1000);
+    // }).then(() => {
+    //     goToState(nextState, $(this), url+id);
+    // });
 };

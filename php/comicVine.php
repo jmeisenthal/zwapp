@@ -118,7 +118,7 @@ class Character extends Query
 	
 	function __construct($id)
 	{
-        parent::__construct('character', "image,id,name,publisher", NULL, $id);
+        parent::__construct('character', "image,id,name,publisher,site_detail_url", NULL, $id);
 	}
 
 	public function __get($prop) {

@@ -24,8 +24,9 @@ class CharacterVolumes {
         $crawler = self::getClient()->request('GET', $this->url);
         // volumes to be an array of id => count pairs
         $volumes = [];
-        $test=0;
-        foreach($crawler->filter('ul.issue-grid > li')->siblings() as $li) {
+
+        // Needed to treat as a collection of DOMElelements; the Goutte->each() wasn't working for me
+        foreach($crawler->filter('ul.issue-grid > li') as $li) {
             $a = NULL;
             $test2 = "";
             foreach($li->childNodes as $node) {

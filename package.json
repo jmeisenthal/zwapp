@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "./vendor/bin/phpunit --bootstrap vendor/autoload.php tests/ZwappTest",
+    "mongod": "mongod --config mongod.conf",
     "init_data_characters": "mongoimport --db zwapp --collection characters --drop --file ./mongo/characters_data.json",
     "init_data_volumes": "mongoimport --db zwapp --collection volumes --drop --file ./mongo/volumes_data.json",
     "init_data_publishers": "mongoimport --db zwapp --collection publishers --drop --file ./mongo/publishers_data.json",
@@ -27,7 +28,7 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.11.2",
+    "@fortawesome/fontawesome-free": "^5.12.1",
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.1.0",
     "extract-text-webpack-plugin": "^3.0.2",

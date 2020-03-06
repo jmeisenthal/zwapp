@@ -5,6 +5,7 @@ declare(strict_types=1);
 include_once('vendor/autoload.php');
 include_once('php/mongo.php');
 include('php/comicVine.php');
+include('php/crawler.php');
 // require_once 'php/mongo.php';
 
 use PHPUnit\Framework\TestCase;
@@ -31,6 +32,17 @@ final class ZwappTest extends TestCase {
 		$this->assertEquals(263, $client->zwapp->characters->count());
 		$this->assertEquals(1838, $client->zwapp->volumes->count());
 	}
+
+    public function testCharacterVolumesCrawl() {
+        $crawler = new Crawler\CharacterVolumes("https://comicvine.gamespot.com/batman/4005-1699");
+
+        $this->assertEquals("https://comicvine.gamespot.com/batman/4005-1699/issues-cover", $crawler->getUrl());
+        $volumes = $crawler->getVolumes();
+        $this->assertEquals(32, count($volumes),"Volume[0]: ".(array_values($volumes)[0]));
+
+        // World's Finest:
+        $this->assertEquals("4050-18058", array_keys($volumes)[0]);
+    }
 
 	public function testPublisherCacheCreation() {
 		$publishers = ZwappMongo\Collection::getPublishers();

@@ -45,7 +45,13 @@
 		}
 
         function __set($property, $value) {
+            $logger->debug("Setting $property to $value");
             $this->collection->updateOne(['_id' => $this->id],['$set'=>array($property=>$value)]);
+        }
+
+        function setPropData($property, $value) {
+            $logger->debug("Setting $property to $value");
+            $this->collection->updateOne(['_id' => $this->id],['$set'=>[$property=>$value]]);
         }
 
 		function setData() {
@@ -61,40 +67,40 @@
 			return $doc;
 		}
 
-        function getChildren() {
-            $doc = $this->collection->findOne(['_id' => $this->id]);
-            print_r("\nDoc: ");
-            var_dump($doc);
-            // $test = $doc['children'];
-            // $this->logger->debug("db children: $test");
-            $children = [];
-            $children_doc = $doc['children'];
-            if (!is_null($children_doc)) {
-                $doc_count = $children_doc->count();
-                $this->logger->debug("getChildren doc count: $doc_count");
-                foreach($children_doc as $id=>$child) {
-                    $children[$id] = $child;
-                    // $this->logger->debug("Id: $id, Child: $child");
-                }
-            } else {
-                // $doc_children = $doc->children;
-                $this->logger->debug("GETTING CHILDREN!!!!");
-                $children = [];
-                $cv_children = $this->cv_query->getChildren();
-                $childIdGetter = $this->getChildId;
-                foreach($cv_children as $child) {
-                    // save as a map of name values keyed by id:
-                    $index = $this->getChildId ? $childIdGetter($child) : self::getChildId_default($child);
-                    $children[$index] = $child->name;
-                }
+        // function getChildren() {
+        //     $doc = $this->collection->findOne(['_id' => $this->id]);
+        //     print_r("\nDoc: ");
+        //     var_dump($doc);
+        //     // $test = $doc['children'];
+        //     // $this->logger->debug("db children: $test");
+        //     $children = [];
+        //     $children_doc = $doc['children'];
+        //     if (!is_null($children_doc)) {
+        //         $doc_count = $children_doc->count();
+        //         $this->logger->debug("getChildren doc count: $doc_count");
+        //         foreach($children_doc as $id=>$child) {
+        //             $children[$id] = $child;
+        //             // $this->logger->debug("Id: $id, Child: $child");
+        //         }
+        //     } else {
+        //         // $doc_children = $doc->children;
+        //         $this->logger->debug("GETTING CHILDREN!!!!");
+        //         $children = [];
+        //         $cv_children = $this->cv_query->getChildren();
+        //         $childIdGetter = $this->getChildId;
+        //         foreach($cv_children as $child) {
+        //             // save as a map of name values keyed by id:
+        //             $index = $this->getChildId ? $childIdGetter($child) : self::getChildId_default($child);
+        //             $children[$index] = $child->name;
+        //         }
 
-                $this->collection->updateOne(['_id' => $this->id],['$set'=>array('children'=>$children)]);
-            }
+        //         $this->collection->updateOne(['_id' => $this->id],['$set'=>array('children'=>$children)]);
+        //     }
 
-            return $children;
-        }
+        //     return $children;
+        // }
 
-        function getListProp($prop) {
+        function getListProp($prop, $prefix = '') {
             $doc = $this->collection->findOne(['_id' => $this->id]);
             // print_r("\nDoc: ");
             // var_dump($doc);
@@ -117,7 +123,8 @@
                 $listItemIdGetter = $this->getListItemId;
                 foreach($cv_list as $item) {
                     // save as a map of name values keyed by id:
-                    $index = $this->getListId ? $listItemIdGetter($child) : self::getChildId_default($item);
+                    // $index = $this->getListId ? $listItemIdGetter($child) : self::getChildId_default($item);
+                    $index = $prefix . $item->id;//self::getChildId_default($item);
                     $list[$index] = $item->name;
                 }
 
@@ -222,26 +229,26 @@
 			return $this->map;
 		}
 
-		public function getTopMatches($id_array) {
-			// $id_array = [];
-			global $logger;
-			$isnull = is_null($id_array);
-			$logger->debug("getTopMatches: id_array null? $isnull");
-			$type = gettype($id_array);
-			$logger->debug("getTopMatches: id_array is a $type");
-			// $id_test = join($id_array, ",");
-			// $logger->debug("getTopMatches(id_array) : $id_test");
-			$cursor = $this->collection->aggregate([['$match' => ['_id' => ['$in' => $id_array]]], ['$sort' => ['sort' => 1]]]);
+		// public function getTopMatches($id_array) {
+		// 	// $id_array = [];
+		// 	global $logger;
+		// 	$isnull = is_null($id_array);
+		// 	$logger->debug("getTopMatches: id_array null? $isnull");
+		// 	$type = gettype($id_array);
+		// 	$logger->debug("getTopMatches: id_array is a $type");
+		// 	// $id_test = join($id_array, ",");
+		// 	// $logger->debug("getTopMatches(id_array) : $id_test");
+		// 	$cursor = $this->collection->aggregate([['$match' => ['_id' => ['$in' => $id_array]]], ['$sort' => ['sort' => 1]]]);
 
-			$top_matches = [];
-			$map = $this->getMap();
+		// 	$top_matches = [];
+		// 	$map = $this->getMap();
 
-			foreach($cursor as $match) {
-				$top_matches[] = $map[$match->_id];
-			}
-			return $top_matches;
-			// $cursor = $this->collection->aggregate([['$match' => ['id' => ['$in' => $id_array]]], ['$sort' => ['sort' => 1]]]);
-		}
+		// 	foreach($cursor as $match) {
+		// 		$top_matches[] = $map[$match->_id];
+		// 	}
+		// 	return $top_matches;
+		// 	// $cursor = $this->collection->aggregate([['$match' => ['id' => ['$in' => $id_array]]], ['$sort' => ['sort' => 1]]]);
+		// }
 
 		private static function getClient() {
 			if (is_null(self::$client)) {
@@ -252,10 +259,11 @@
 		}
 
         /*
-         * Maps out the chracter--volume relationships for the given publisher ID, 
+         * Maps out the chracter--volume relationships for the given publisher Document, 
          * and determine the relative weights of the characters' significance within the publisher.
          */
-        private static function mapPublisherCharactersVolumes($publisher) {
+        private static function mapPublisherCharactersVolumes(Document $publisher) {
+            global $logger;
             // Test to make sure only called once:
             if (is_null($publisher->volumes)) {
                 $publisher_volumes = array_keys($publisher->getListProp("volumes")); // List of volume id's
@@ -263,13 +271,23 @@
                 $volumes = self::getVolumes()->getMap();
                 $characters = self::getCharacters()->getMap();
 
+                $test = count($publisher_volumes);
+                $logger->debug("mapPublisherCharactersVolumes() publisher_volumes count: $test");
                 foreach($publisher_volumes as $volume_id) {
+                    $volume_id = "4050-".$volume_id;
                     $volume = $volumes[$volume_id];
-                    $character_credits = $volume->getListProp("character_credits");
+                    if (is_null($volume)) {
+                        // $logger->error("No volume found for id $volume_id");
+                    }
+                    else {
+                        $character_credits = $volume->getListProp("character_credits");
+                    $test = count($character_credits);
+                    $logger->debug("mapPublisherCharactersVolumes() character_credits for a volume: count: $test");
                     $place = 1;
                     foreach($character_credits as $character_credit) {
                         // Consider first 20 characters to be potentially main characters
-                        if ($place > 20) {
+                        // if ($place > 20) {
+                        if ($place > 1) {
                             break;
                         }
 
@@ -288,24 +306,52 @@
                         if (is_null($character_appearances_count)) {
                             $character_appearances_count = 0;
                         }
-                        $character->appearances_count = $character_appearances_count + $character_credit->count;
+                        $logger->debug("Setting appearances count for {$character->name}: $character_appearances_count + {$character_credit->count}");
+                        $character->setPropData('appearances_count',$character_appearances_count + $character_credit->count);
 
                         $place++;
                     }
                 }
+                }
             }
         }
 
-        private static function getPublisherCharacters(Document $publisher) {
-            // Init the mapping:
-            self::mapPublisherCharactersVolumes($publisher);
+        public static function getPublisherCharacters(String $publisher_id, $length = 9) {
+            global $logger;
+            $logger->debug("getPublisherCharacters starting...");
+            $publisher = self::getPublishers()->getMap()[$publisher_id];
+            $logger->debug("getPublisherCharacters 1");
+            $all_characters = self::getCharacters()->getMap();
 
-            // Find the characters for this publisher sorted by appearances_count:
+            $publisher_character_ids = array_keys($publisher->getListProp("characters","4005-"));
+            $test = count($publisher_character_ids);
+            $test2 = $publisher_character_ids[0];
+            $logger->debug("getPublisherCharacters 2. Checking for $test characters, the first of which is $test2 ...");
             $collection = self::getClient()->zwapp->characters;
-            $cursor = $characters.aggregate([['publisher->id' => $publisher->id], ['$sort' => ['appearances_count' => 1]]]);
+            $cursor = $collection->aggregate([['$match' => ['_id' => ['$in' => $publisher_character_ids]]], ['$sort' => ['sort' => 1]]]);
+
+            $publisher_characters = [];
+
+            // // Init the mapping:
+            // $logger->debug("mapPublisherCharactersVolumes()...");
+            // // self::mapPublisherCharactersVolumes($publisher);
+            // $logger->debug("mapPublisherCharactersVolumes() completed.");
+
+            // // Find the characters for this publisher sorted by appearances_count:
+            // $collection = self::getClient()->zwapp->characters;
+            // $cursor = $collection->aggregate([['$match'=>['publisher.id' => intval($publisher_id)]], ['$sort' => ['appearances_count' => -1]]]);
+
+            $count = 0;
+            foreach($cursor as $character_doc) {
+                if ($count++ >= $length) {
+                    break;
+                }
+                $publisher_characters[] = $all_characters[$character_doc->_id];
+            }
+            return $publisher_characters;
         }
 
-        private static function getCharacterVolumes(Document $character) {
+        public static function getCharacterVolumes(Document $character) {
             if (is_null($character->volumes)) {
             }
 
@@ -323,9 +369,6 @@
         public static function getCharacters() {
             $queryLambda = function($id) { 
                 return new ComicVine\Character($id); 
-            };
-            $getChildren = function() {
-
             };
             return new Collection($queryLambda, self::getClient()->zwapp->characters);
         }

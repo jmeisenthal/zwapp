@@ -6,9 +6,13 @@
 
 	$characters = [];
 	$publisher_id = $_GET['publisher'];
+	global $logger;
+	$logger->debug("service/characters publisher: $publisher_id");
 	if (isset($publisher_id) && $publisher_id) {
-		$publisher = ZwappMongo\Collection::getPublishers()->getMap()[$publisher_id];
-		$characters = $publisher->getTopChildren();
+	$logger->debug("service/characters publisher: 2");
+		$characters = ZwappMongo\Collection::getPublisherCharacters($publisher_id);
+		// $publisher = ZwappMongo\Collection::getPublishers()->getMap()[$publisher_id];
+		// $characters = $publisher->getTopChildren();
 	}
 	else {
 		$characters = ZwappMongo\Collection::getCharacters()->getList();
