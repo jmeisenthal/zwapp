@@ -42,6 +42,19 @@
 	transition-duration: 1s;
 }
 
+.hidden {
+    display: none !important;
+}
+
+.placeholder {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3em;
+    opacity: 0.5;
+    z-index: -1;
+}
+
 // Media-adjusted classes:
 .media({
 	@sizes: small medium large;
