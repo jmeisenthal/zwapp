@@ -7,8 +7,7 @@
     $volumes = [];
     $character_id = $_GET['character'];
     if (isset($character_id) && $character_id) {
-        $character = ZwappMongo\Collection::getCharacters()->getMap()[$character_id];
-        $volumes = $character->getTopChildren();
+        $volumes = ZwappMongo\Collection::getCharacterVolumes($character_id);
     }
     else {
         $volumes = ZwappMongo\Collection::getVolumes()->getList();

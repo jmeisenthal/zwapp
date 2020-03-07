@@ -4,8 +4,10 @@
 
 	use MongoDB;
 	use ComicVine;
+    use Crawler;
 
 	require_once '/Development/zwapp/public/php/init_logger.php';
+    require('crawler.php');
 
 	// print_r("Logger:");
 	// var_dump($logger);
@@ -332,15 +334,6 @@
 
             $publisher_characters = [];
 
-            // // Init the mapping:
-            // $logger->debug("mapPublisherCharactersVolumes()...");
-            // // self::mapPublisherCharactersVolumes($publisher);
-            // $logger->debug("mapPublisherCharactersVolumes() completed.");
-
-            // // Find the characters for this publisher sorted by appearances_count:
-            // $collection = self::getClient()->zwapp->characters;
-            // $cursor = $collection->aggregate([['$match'=>['publisher.id' => intval($publisher_id)]], ['$sort' => ['appearances_count' => -1]]]);
-
             $count = 0;
             foreach($cursor as $character_doc) {
                 if ($count++ >= $length) {
@@ -351,11 +344,26 @@
             return $publisher_characters;
         }
 
-        public static function getCharacterVolumes(Document $character) {
-            if (is_null($character->volumes)) {
-            }
+        public static function getCharacterVolumes(String $character_id, $length = 9) {
+            $character = self::getCharacters()->getMap()[$character_id];
+            $all_volumes = self::getVolumes()->getMap();
 
-            return $character->volumes;
+            // Call crawler class:
+            $crawlerVolumes = new Crawler\CharacterVolumes($character->site_detail_url);
+            $character_volume_ids = array_keys($crawlerVolumes->getVolumes());
+            $collection = self::getClient()->zwapp->volumes;
+            $cursor = $collection->aggregate([['$match' => ['_id' => ['$in' => $character_volume_ids]]], ['$sort' => ['sort' => 1]]]);
+
+            $character_volumes = [];
+
+            $count = 0;
+            foreach($cursor as $volume_doc) {
+                if ($count++ >= $length) {
+                    break;
+                }
+                $character_volumes[] = $all_volumes[$volume_doc->_id];
+            }
+            return $character_volumes;
         }
 
 		public static function getPublishers() {
