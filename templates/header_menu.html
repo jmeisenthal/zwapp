@@ -1,3 +1,14 @@
+{% set about %}
+    Welcome to Zwapp! While not intended for "real world" use, Zwapp is meant to be a conceptual app that showcases my abilities as a UI/UX developer. It also serves as my first project using PHP and MongoDB. This app illustrates possible use cases for easily finding a particular comicbook issue, for example to entered into a comicbook collection. Zwapp is also intended as a "mobile-first" application in which the workflows can be intuitively followed using a single finger on a touch screen, while providing good responsiveness for use with a desktop browser.
+
+    <p>Because the focus of this app is on user interaction and app front-end design, many of the theoretical workflows will only go so far as to demonstrate the UI. With that in mind, please enjoy!</p>
+{% endset %}
+{% set origin %}
+{% endset %}
+{% set bio %}
+    Hello! My name is Josh Eisenthal. I am an experienced front-end software developer with a passion for user interaction (UX). I also have had a life-long love for comics and the world of super heroes! I live in Massachusetts with my wife and 2 children. I spent the early yers of my career building desktop applications using Java Swing. About 5 years ago I transitioned to front-end work for single page web apps, first using the Backbone framework, then moving on to React. A lot of my recent work has focused on the implementation of UX concepts and designs, developing large sets of CSS on top of a UX reference implementation of the final product.
+    <p>Please visit "Contacts" to find out how to contact me and learn more about my professional experienc.</p>
+{% endset %}
 <div class="header-menu">
     <button type="button" class="header-menu__button">
         <i class="fas fa-bars"></i>
@@ -10,12 +21,24 @@
             <div class="header-menu__pane">
                 <div class="header-menu__group">
                     {% include 'header_menu__option.html' with { id: 'button-about', icon: 'meteor', text: 'About this app...'} %}
-                    {% include 'header_menu__dialog.html' with { title: 'About Zwapp!', img: '', svg: 'zwapp.svg', text: "This is the about text."} %}
-                </div>
-                {% include 'header_menu__option.html' with { id: 'button-origin', icon: 'bolt', text: 'Origin Story...'} %}
-                {% include 'header_menu__option.html' with { id: 'button-bio', icon: 'mask', text: 'The man behind the mask...'} %}
-                {% include 'header_menu__option.html' with { id: 'button-arch', icon: 'atom', text: 'Notes on architecture...'} %}
-                {% include 'header_menu__option.html' with { id: 'button-contact', icon: 'rocket', text: 'Contacts...'} %}
+                    {% include 'header_menu__dialog.html' with { title: 'About Zwapp!', img: '', svg: 'zwapp.svg', text: about} %}
+               </div>
+                <div class="header-menu__group">
+                    {% include 'header_menu__option.html' with { id: 'button-origin', icon: 'bolt', text: 'Origin Story...'} %}
+                    {% include 'header_menu__dialog.html' with { title: 'About Zwapp!', img: '', svg: 'zwapp.svg', text: about} %}
+               </div>
+               <div class="header-menu__group">
+                    {% include 'header_menu__option.html' with { id: 'button-bio', icon: 'mask', text: 'The man behind the mask...'} %}
+                    {% include 'header_menu__dialog.html' with { title: 'A Little Bit About Me', img: 'img/Josh Profile sqr.jpg', svg: '', text: bio} %}
+               </div>
+                <div class="header-menu__group">
+                    {% include 'header_menu__option.html' with { id: 'button-arch', icon: 'atom', text: 'Notes on architecture...'} %}
+                    {% include 'header_menu__dialog.html' with { title: 'About Zwapp!', img: '', svg: 'zwapp.svg', text: about} %}
+               </div>
+                <div class="header-menu__group">
+                    {% include 'header_menu__option.html' with { id: 'button-contact', icon: 'rocket', text: 'Contacts...'} %}
+                    {% include 'header_menu__dialog.html' with { title: 'About Zwapp!', img: '', svg: 'zwapp.svg', text: about} %}
+               </div>
             </div>
         </div>
     </div>

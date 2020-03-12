@@ -132,9 +132,30 @@ header {
         height: calc(100% - 32px);
     }
 }
+.header-menu__dialog__title {
+    &:extend(.flex-row);
+    justify-content: space-between;
+}
+.header-menu__dialog__content {
+    padding: 24px;
+}
 
 .header-menu__dialog__content__illustration {
     width: 25%;
+    float: left;
+    margin-right: 8px;
+    // height: calc(100% - 32px);
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: flex-end;
+}
+
+.header-menu__dialog__title {
+    background-color: @color_white;
+    border-bottom: solid 2px @color_black;
+    padding: 8px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
 }
 
 .modal-container {

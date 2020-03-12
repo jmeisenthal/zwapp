@@ -1,11 +1,16 @@
 <section class="header-menu__dialog">
     <div class="header-menu__dialog__title">
-        {{ title }}
+        <span>{{ title }}</span>
+        <button type="button" class="header-menu__dialog__title__back">
+            <i class="fas fa-arrow-left"></i>
+        </button>
     </div>
     <div class="header-menu__dialog__content">
-        <div class="header-menu__dialog__content__illustration">
-            <img src="{{ img }}">
-            {% include svg %}
+        <div class="header-menu__dialog__content__illustration"">
+            <img width="100%" src="{{ img }}">
+            {% if svg is not empty %}
+                {% include svg %}
+            {% endif %}
         </div>
         <div class="header-menu__dialog__content__text">
             {{ text }}

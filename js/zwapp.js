@@ -98,7 +98,14 @@ $(function() {
     $('.modal__close').on('click', action__toggle_menu);
     $('body').on('click', action__maybe_close_modal);
     $('.header-menu__option').on('click', action__open_dialog);
+    $('.header-menu__dialog__title__back').on('click', action__close_dialog);
 });
+
+let action__close_dialog = function() {
+    $(this).closest('.header-menu__group').removeClass('header-menu__group--show-dialog');
+    $(this).closest('.header-menu__pane').removeClass('header-menu__pane--hide-options');
+    $(this).closest('.modal-container').removeClass('modal--hide-close modal--expand');
+};
 
 let action__open_dialog = function() {
     $(this).closest('.header-menu__group').addClass('header-menu__group--show-dialog');
