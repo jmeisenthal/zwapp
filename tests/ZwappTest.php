@@ -2,10 +2,11 @@
 declare(strict_types=1);
 	// require_once '/Development/zwapp/public/php/init_logger.php';
 // include_once(__DIR__ . '/../vendor/autoload.php');
+// include_once('php/init_logger.php');
 include_once('vendor/autoload.php');
 include_once('php/mongo.php');
-include('php/comicVine.php');
-include('php/crawler.php');
+include_once('php/comicVine.php');
+include_once('php/crawler.php');
 // require_once 'php/mongo.php';
 
 use PHPUnit\Framework\TestCase;
@@ -140,24 +141,24 @@ final class ZwappTest extends TestCase {
         $this->assertNotNull($publisher, "No publisher found for character Black Panther");
 	}
 
-	public function testGetTopCharacters() {
-		$id_array = ["4005-2268", "4005-1525", "4005-3202", "4005-1502", "4005-1443"]; // Thor, Punisher, Nick Fury, Wasp, Spider-Man
-		$top_characters = ZwappMongo\Collection::getCharacters()->getTopMatches($id_array);
-		// print_r("top characters:\n");
-		// var_dump($top_characters);
+	// public function testGetTopCharacters() {
+	// 	$id_array = ["4005-2268", "4005-1525", "4005-3202", "4005-1502", "4005-1443"]; // Thor, Punisher, Nick Fury, Wasp, Spider-Man
+	// 	$top_characters = ZwappMongo\Collection::getCharacters()->getTopMatches($id_array);
+	// 	// print_r("top characters:\n");
+	// 	// var_dump($top_characters);
 
-		// Spider-Man should be first
-		$top_character = $top_characters[0];
-		// print_r("top character:\n");
-		// var_dump($top_character);
-		$this->assertEquals("4005-1443", $top_character->id, "Top character in list should be Spider-Man (4005-1443). Instead got {$top_character->id}");
+	// 	// Spider-Man should be first
+	// 	$top_character = $top_characters[0];
+	// 	// print_r("top character:\n");
+	// 	// var_dump($top_character);
+	// 	$this->assertEquals("4005-1443", $top_character->id, "Top character in list should be Spider-Man (4005-1443). Instead got {$top_character->id}");
 		
-		// Punisher should be last
-		$this->assertEquals("4005-1525", $top_characters[4]->id, "Last character in list should be The Punisher (4005-1525). Instead got {$top_characters[4]->id}");
+	// 	// Punisher should be last
+	// 	$this->assertEquals("4005-1525", $top_characters[4]->id, "Last character in list should be The Punisher (4005-1525). Instead got {$top_characters[4]->id}");
 		
-		// Check nicj Fury's icon_url
-		$expected_url = "https://comicvine1.cbsistatic.com/uploads/square_avatar/10/100647/4076005-untitled-2.jpg";
-		$this->assertEquals($expected_url, $top_characters[2]->icon_url, "Icon URL for third in list (Nick Fury) should be \"$expected_url\". Instead got \"{$top_characters[2]->icon_url}\"");
-	}
+	// 	// Check nicj Fury's icon_url
+	// 	$expected_url = "https://comicvine1.cbsistatic.com/uploads/square_avatar/10/100647/4076005-untitled-2.jpg";
+	// 	$this->assertEquals($expected_url, $top_characters[2]->icon_url, "Icon URL for third in list (Nick Fury) should be \"$expected_url\". Instead got \"{$top_characters[2]->icon_url}\"");
+	// }
 }
 ?>

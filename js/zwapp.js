@@ -47,7 +47,7 @@ function goToState(state, $this, url = null, service = null) {
         let backButton = $('#back_button_template').html();
         $('.radial_nav__choices').html(response + backButton);
 
-        // Call via setTimeout with no delay so render cycle completes first, allowing transistion to trigger:
+        // Call via setTimeout with no <nav class=​"radial_nav nav-state--add-publisher fan--out">​…​</nav>​delay so render cycle completes first, allowing transistion to trigger:
         setTimeout(() => {
             $radial_nav.removeClass('ajax-loading');
             $radial_nav.addClass('fan--out');
@@ -94,7 +94,31 @@ $(function() {
     $('body').on('click', '.radial_nav__add_button', action__add);
     $('body').on('click', '.radial_nav__back_button', action__back);
     $('body').on('click', '.radial_nav__choice_button:not(.radial_nav__back_button)', radial_nav__choice_buttonClick)
+    $('.header-menu__button').on('click', action__toggle_menu);
+    $('.modal__close').on('click', action__toggle_menu);
+    $('body').on('click', action__maybe_close_modal);
+    $('.header-menu__option').on('click', action__open_dialog);
 });
+
+let action__open_dialog = function() {
+    $(this).closest('.header-menu__group').addClass('header-menu__group--show-dialog');
+    $(this).closest('.header-menu__pane').addClass('header-menu__pane--hide-options');
+    $(this).closest('.modal-container').addClass('modal--hide-close modal--expand');
+};
+
+let action__maybe_close_modal = function(e) {
+    let $modal = $(e.target).closest('.modal');
+    // Close menu if click was not in the menu modal or on the menu button:
+    if ($modal.length == 0 && $(e.target).closest('.header-menu__button').length == 0) {
+        $('.header-menu__button').removeClass('header-menu__button--hide');
+        $('.modal').removeClass('modal--show');
+    }
+};
+
+let action__toggle_menu = function() {
+    $('.header-menu__button').toggleClass('header-menu__button--hide');
+    $('.modal').toggleClass('modal--show');
+};
 
 let action__add = function() {
     goToState(STATE_ADD_PUBLISHER, $(this), null, initialPromise);
@@ -121,7 +145,7 @@ let action__back = function() {
             setTimeout(() => {
                 $radial_nav.removeClass('ajax-loading');
                 $radial_nav.addClass('fan--out');
-            }, 0);
+            }, 10);
         });
     }
     // if ($radial_nav.is('.nav-state--add-character')) {

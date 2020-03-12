@@ -6,8 +6,8 @@
 	use ComicVine;
     use Crawler;
 
-	require_once '/Development/zwapp/public/php/init_logger.php';
-    require('crawler.php');
+	require_once 'init_logger.php';
+    require_once('crawler.php');
 
 	// print_r("Logger:");
 	// var_dump($logger);
@@ -345,12 +345,15 @@
         }
 
         public static function getCharacterVolumes(String $character_id, $length = 9) {
+            global $logger;
             $character = self::getCharacters()->getMap()[$character_id];
             $all_volumes = self::getVolumes()->getMap();
 
             // Call crawler class:
             $crawlerVolumes = new Crawler\CharacterVolumes($character->site_detail_url);
             $character_volume_ids = array_keys($crawlerVolumes->getVolumes());
+            $test = count($crawlerVolumes->getVolumes());
+            $logger->debug("getCharacterVolumes() crawler retrieved $test volumes for character $character_id");
             $collection = self::getClient()->zwapp->volumes;
             $cursor = $collection->aggregate([['$match' => ['_id' => ['$in' => $character_volume_ids]]], ['$sort' => ['sort' => 1]]]);
 
@@ -358,6 +361,7 @@
 
             $count = 0;
             foreach($cursor as $volume_doc) {
+                $logger->debug("getCharacterVolumes() volume count: $count of length $length");
                 if ($count++ >= $length) {
                     break;
                 }

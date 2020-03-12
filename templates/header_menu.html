@@ -1,0 +1,22 @@
+<div class="header-menu">
+    <button type="button" class="header-menu__button">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="modal-container">
+        <div class="modal">
+            <button type="button" class="modal__close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="header-menu__pane">
+                <div class="header-menu__group">
+                    {% include 'header_menu__option.html' with { id: 'button-about', icon: 'meteor', text: 'About this app...'} %}
+                    {% include 'header_menu__dialog.html' with { title: 'About Zwapp!', img: '', svg: 'zwapp.svg', text: "This is the about text."} %}
+                </div>
+                {% include 'header_menu__option.html' with { id: 'button-origin', icon: 'bolt', text: 'Origin Story...'} %}
+                {% include 'header_menu__option.html' with { id: 'button-bio', icon: 'mask', text: 'The man behind the mask...'} %}
+                {% include 'header_menu__option.html' with { id: 'button-arch', icon: 'atom', text: 'Notes on architecture...'} %}
+                {% include 'header_menu__option.html' with { id: 'button-contact', icon: 'rocket', text: 'Contacts...'} %}
+            </div>
+        </div>
+    </div>
+</div>

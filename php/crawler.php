@@ -21,12 +21,15 @@ class CharacterVolumes {
     }
 
     function getVolumes() {
+        global $logger;
         $crawler = self::getClient()->request('GET', $this->url);
         // volumes to be an array of id => count pairs
         $volumes = [];
 
         // Needed to treat as a collection of DOMElelements; the Goutte->each() wasn't working for me
+        $logger_count = 0;
         foreach($crawler->filter('ul.issue-grid > li') as $li) {
+            $logger_count++;
             $a = NULL;
             $test2 = "";
             foreach($li->childNodes as $node) {
@@ -47,6 +50,9 @@ class CharacterVolumes {
                 $volumes[$id] = $count;
             }
         };
+
+        $logger->debug("Crawler found $logger_count items.");
+        // print_r("\n++++++++++++Crawler found $logger_count items\n");
 
         return $volumes;
     }

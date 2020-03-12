@@ -24,8 +24,18 @@
 	justify-content: space-between;
 }
 
+.flex-centered {
+    &:extend(.flex-row);
+    align-items: center !important;
+    justify-content: center !important;
+}
+
 .flex-column--align-centered {
 	align-items: center;
+}
+
+.align-items-end {
+    align-items: flex-end !important;
 }
 
 .position-relative {
@@ -44,6 +54,10 @@
 
 .hidden {
     display: none !important;
+}
+
+.margin-medium {
+    margin: 16px !important;
 }
 
 .placeholder {
