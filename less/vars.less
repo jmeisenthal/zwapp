@@ -24,6 +24,11 @@
 // Animations
 @animation-init-duration: 2s;
 
+@layout-space-mini: 4px;
+@layout-space-small: 8px;
+@layout-space-medium: 16px;
+@layout-space-large: 32px;
+
 // Media-sensitive values: define values in each namespace per resolution range. 
 // Detached rule sets can then be defined in terms of the variables. 
 // The .media() mixin can than apply each namespace scope for each media rangle for that ruleset.
@@ -45,9 +50,11 @@
 	@background-hero-size: 240px;
 
 	// Font sizes
-	@font-size-title-small: 14px;
+    @font-size-title-small: 14px;
+    @font-size-title-medium: 18px;
 	@hero-title-font-size: 64px;
 	@hero-title-cap-font-size: 96px;
+    @font-size-content: 16px;
 
 	@fan-radius: 80%;
 };
@@ -71,10 +78,12 @@
  
 	// Font sizes
 	@font-size-title-small: 32px;
+    @font-size-title-medium: 36px;
 	// @hero-title-font-size: 96px;
 	// @hero-title-cap-font-size: 144px;
 	@hero-title-font-size: 64px;
 	@hero-title-cap-font-size: 96px;
+    @font-size-content: 32px;
 
 	@fan-radius: 150%;
 };

@@ -8,7 +8,6 @@
 @bubble-arrow-size: 15px;
 @bubble-data-uri: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.59607 142.21489" version="1.1" width="@{bubble-arrow-size}" height="@{bubble-arrow-size}" style="enable-background:new"><g transform="translate(-43.070584,-42.704396)"><path style="fill:@{bubble-bg_esc};stroke:none;stroke-width:21;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 46.869047,181.33929 C 100.54167,88.357143 56.696428,43.755952 56.696428,43.755952 l 91.470232,0.755952 C 147.84193,170.44874 84.311133,162.58719 46.869047,181.33929 Z" /><path style="fill:none;stroke:@{bubble-fg_esc};stroke-width:21;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 148.16666,44.511904 C 147.84193,170.44874 84.311133,162.58719 46.869047,181.33929 100.54167,88.357143 56.696428,43.755952 56.696428,43.755952" /></g></svg>';
 
-
 .speech-bubble {
 	&:extend(.font-title, .padding_small all);
 	background-color: @bubble-bg;
@@ -33,6 +32,25 @@
 	fill: @bubble-bg;
 }
 
+.definition {
+    &:extend(.margin-top-medium);
+    &:extend(.margin-left-medium);
+    &:extend(.flex-row);
+}
+
+.definition__name {
+    // display: inline-block;
+    width: 6em;
+    min-width: 6em;
+    text-align: right;
+    font-weight: bold;
+    margin-right: @layout-space-small;
+
+    &::after {
+        content: ':'
+    }
+}
+
 header {
     position: relative;
 }
@@ -55,6 +73,7 @@ header {
 
     &.header-menu__button--hide {
         opacity: 0;
+        z-index: 0;
     }
 }
 
@@ -99,9 +118,9 @@ header {
     background-color: @color_white;
     border: solid 2px @color_black;
     z-index:100;
-    padding: 4px;
-    padding-left: 20px;
-    margin-left: -16px;
+    padding: @layout-space-mini;
+    padding-left: @layout-space-mini + @layout-space-medium;
+    margin-left: -@layout-space-medium;
     box-sizing: border-box;
 
     .header-menu__option:hover & {
@@ -111,15 +130,16 @@ header {
 }
 
 .header-menu__dialog {
+    &:extend(.flex-column);
     position: absolute;
     background-color: @color_cambridge-blue;
     border-radius: 16px;
     border: solid 2px @color_black;
     opacity: 0;
-    left: 16px;
-    right: 16px;
-    top: 16px;
-    bottom: 16px;
+    left: @layout-space-medium;
+    right: @layout-space-medium;
+    top: @layout-space-medium;
+    bottom: @layout-space-medium;
     width: 0;
     height: 0;
     z-index: 0;
@@ -128,22 +148,37 @@ header {
     .header-menu__group--show-dialog & {
         z-index: 200;
         opacity: 1;
-        width: calc(100% - 32px);
-        height: calc(100% - 32px);
+        width: calc(100% - @layout-space-medium - @layout-space-medium);
+        height: calc(100% - @layout-space-medium - @layout-space-medium);
     }
 }
 .header-menu__dialog__title {
     &:extend(.flex-row);
+    &:extend(.font-size-title-medium all);
     justify-content: space-between;
 }
+
+.header-menu__dialog__title__back {
+    border: none;
+    background: none;
+    height: 20px;
+
+    &:hover {
+        font-size: 18px;
+    }
+}
+
 .header-menu__dialog__content {
-    padding: 24px;
+    &:extend(.font-size-content all);
+    padding: @layout-space-medium;
+    overflow-y: auto;
+    max-height: ~'calc(100% - 38px)';
 }
 
 .header-menu__dialog__content__illustration {
     width: 25%;
     float: left;
-    margin-right: 8px;
+    margin-right: @layout-space-medium;
     // height: calc(100% - 32px);
     // display: flex;
     // flex-direction: column;
@@ -153,7 +188,7 @@ header {
 .header-menu__dialog__title {
     background-color: @color_white;
     border-bottom: solid 2px @color_black;
-    padding: 8px;
+    padding: @layout-space-small;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
 }
@@ -179,7 +214,7 @@ header {
     // TODO: the top transition not working;
     right: -100%;
     top: -100%;
-    padding: 16px;
+    padding: @layout-space-medium;
     opacity: 0;
     transition-property: top, right, left, bottom, opacity;
     transition-duration: 1s;
@@ -204,7 +239,7 @@ header {
     }
 
     .modal--expand & {
-        height: calc(100% - 32px);
+        height: calc(100% - @layout-space-medium - @layout-space-medium);
     }
 }
 
