@@ -7,7 +7,9 @@
     </div>
     <div class="header-menu__dialog__content">
         <div class="header-menu__dialog__content__illustration"">
-            <img width="100%" src="{{ img }}">
+            {% if img is not empty %}
+                <img width="100%" src="{{ img }}">
+            {% endif %}
             {% if svg is not empty %}
                 {% include svg %}
             {% endif %}
