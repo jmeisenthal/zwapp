@@ -4,7 +4,7 @@ namespace ComicVine;
 ini_set('user_agent','Mozilla/4.0 (compatible; MSIE 6.0)'); 
 
 
-require_once '/Development/zwapp/public/php/init_logger.php';
+//require_once '/Development/zwapp/public/php/init_logger.php';
 
 /**
  * 
