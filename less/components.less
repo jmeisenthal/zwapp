@@ -199,12 +199,15 @@ header {
     overflow: hidden;
     top: 0;
     right: 0;
-    z-index: 5;
-    // z-index: -10;
+    z-index: -10;
     
     &.modal--expand {
         left: 0;
         bottom: 0;
+    }
+
+    &.modal--show {
+        z-index: 5;
     }
 }
 
@@ -232,7 +235,7 @@ header {
         z-index: 10;
     }
 
-    &.modal--show {
+    .modal--show &{
         right: 0;
         top: 0;
         opacity: 1;

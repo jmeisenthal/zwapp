@@ -14,7 +14,7 @@ const STATE_ADD_VOLUME = 'nav-state--add-volume';
 
 
 let states = [STATE_INITIAL];
-let urls = [null];
+let urls = [];
 
 let initialPromise = makePublishersPromise();
 
@@ -63,34 +63,7 @@ function makePublishersPromise() {
     return makeServicePromise('php/service/publishers.php');
 }
 
-// function makeCharactersPromise(publisherId) {
-//     return makeServicePromise('php/service/characters.php?publisher=' + publisherId);
-// }
-
-// var servicePromise = makePromisePublishers();
-
 $(function() {
-    // $('.radial_nav').addClass('ajax-loading');
-    // $.ajax({
-    //     // url: 'php/service/publisher.php?id=10,31,364,101,521',
-    //     url: 'php/service/publishers.php',
-    // })
-    // .done(function(response) {
-    //     // console.log("success: " + response);
-    //
-    //     let backButton = '<div class="radial_nav__choice fan"><div class="radial_nav__choice_inner fan__inner"><button class="radial_nav__choice_button radial_nav__back_button"><i class="fas fa-arrow-left"></i></button></div></div>';
-    //     $('.radial_nav__choices').html(response + backButton);
-    //     // $('.radial_nav__choices').add($backButton);
-    //     // Call via setTimeout with no delay so render cycle completes first, allowing transistion to trigger:
-    //     setTimeout(function() {$('.radial_nav').removeClass('ajax-loading');}, 0);
-    // })
-    // .fail(function(xhr) {
-    //     console.log("error: " + xhr.responseText);
-    // })
-    // .always(function() {
-    //     console.log("complete");
-    // });
-
     $('body').on('click', '.radial_nav__add_button', action__add);
     $('body').on('click', '.radial_nav__back_button', action__back);
     $('body').on('click', '.radial_nav__choice_button:not(.radial_nav__back_button)', radial_nav__choice_buttonClick)
@@ -118,13 +91,13 @@ let action__maybe_close_modal = function(e) {
     // Close menu if click was not in the menu modal or on the menu button:
     if ($modal.length == 0 && $(e.target).closest('.header-menu__button').length == 0) {
         $('.header-menu__button').removeClass('header-menu__button--hide');
-        $('.modal').removeClass('modal--show');
+        $('.modal-container').removeClass('modal--show');
     }
 };
 
 let action__toggle_menu = function() {
     $('.header-menu__button').toggleClass('header-menu__button--hide');
-    $('.modal').toggleClass('modal--show');
+    $('.modal-container').toggleClass('modal--show');
 };
 
 let action__add = function() {
@@ -139,12 +112,24 @@ let action__back = function() {
     $radial_nav.removeClass(oldState)
     $radial_nav.removeClass('fan--out');
     $radial_nav.addClass(states[states.length-1]);
+    if (urls.length == 0) {
+        return;
+    }
     let url = urls[urls.length-1];
-    if (url == null) {
-        initialPromise = makePublishersPromise();
-    } else {
+    let servicePromise = url == null ? makePublishersPromise() : makeServicePromise(url);
+   //  if (url == null) {
+   //      initialPromise = makePublishersPromise();
+   //      initialPromise.then((response) => {
+   //          $('.radial_nav__choices').html(response);
+   //            // Call via setTimeout with no delay so render cycle completes first, allowing transistion to trigger:
+   //          setTimeout(() => {
+   //              $radial_nav.removeClass('ajax-loading');
+   //              $radial_nav.addClass('fan--out');
+   //          }, 10);
+   //     });
+   // } else {
         $radial_nav.addClass('ajax-loading');
-        makeServicePromise(url).then((response) => {
+        servicePromise.then((response) => {
             let backButton = $('#back_button_template').html();
             $('.radial_nav__choices').html(response + backButton);
 
@@ -154,7 +139,7 @@ let action__back = function() {
                 $radial_nav.addClass('fan--out');
             }, 10);
         });
-    }
+    // }
     // if ($radial_nav.is('.nav-state--add-character')) {
     //     // servicePromise = makePublishersPromise();
     //     action__add();
