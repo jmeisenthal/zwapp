@@ -143,13 +143,16 @@ header {
     width: 0;
     height: 0;
     z-index: 0;
-    transition-property: opacity, width, height;
+    transition-property: opacity, left, bottom;
+    transition-duration: 1s;
 
     .header-menu__group--show-dialog & {
         z-index: 200;
         opacity: 1;
         width: calc(100% - @layout-space-medium - @layout-space-medium);
         height: calc(100% - @layout-space-medium - @layout-space-medium);
+        left: @layout-space-medium;
+        bottom: @layout-space-medium;
     }
 }
 .header-menu__dialog__title {
@@ -200,10 +203,31 @@ header {
     top: 0;
     right: 0;
     z-index: -10;
+
     
+    &.modal--expand-start {
+        // Gives slide-in effect:;
+        margin-left: ~'calc(50% + 16px) !important';
+        margin-right: ~'calc(-50% + 16px) !important';
+    }
+    
+    &.modal--expand-stop {
+        left: 0;
+        bottom: 0;
+        // Gives slide-in effect:;
+        margin-left: ~'calc(50% + 16px) !important';
+        margin-right: ~'calc(-50% + 16px) !important';
+        transition-duration: 1s;
+        transition-property: margin-left, margin-right;
+
+    }
     &.modal--expand {
         left: 0;
         bottom: 0;
+        margin-left: 16px !important;
+        margin-right: 16px !important;
+        transition-duration: 1s;
+        transition-property: margin-left, margin-right;
     }
 
     &.modal--show {
@@ -241,7 +265,7 @@ header {
         opacity: 1;
     }
 
-    .modal--expand & {
+    .modal--expand &, .modal--expand-stop & {
         height: calc(100% - @layout-space-medium - @layout-space-medium);
     }
 }
