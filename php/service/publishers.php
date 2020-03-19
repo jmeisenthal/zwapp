@@ -1,8 +1,8 @@
 <?php 
-	require('../comicVine.php');
-	require('../mongo.php');
-	require('../init_twig.php');
-	require '../init_logger.php';
+	require_once('../comicVine.php');
+	require_once('../mongo.php');
+	require_once('../init_twig.php');
+	require_once '../init_logger.php';
 
 	// TODO: Make this or the URL a global property or via PHP globals
 	// $client = new MongoDB\Client("mongodb://localhost:27017");

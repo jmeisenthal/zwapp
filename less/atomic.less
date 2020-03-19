@@ -1,5 +1,4 @@
 @import (reference) 'vars';
-
 .border--solid {
 	border-style: solid !important;
 }
@@ -79,6 +78,11 @@
 
 // Media-adjusted classes:
 .media({
+    .button {
+        padding-left: @media_vars[@button-padding-medium];
+        padding-right: @media_vars[@button-padding-medium];
+    }
+
 	@sizes: small medium large;
 	each(@sizes, {
 		.border-width_@{value} {

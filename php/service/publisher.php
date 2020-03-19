@@ -1,6 +1,6 @@
 <?php 
-	require('../comicVine.php');
-	require('../init_twig.php');
+	require_once('../comicVine.php');
+	require_once('../init_twig.php');
 
 	$ids = $_GET['id'];
 	if (isset($ids) && $ids) {

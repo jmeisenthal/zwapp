@@ -1,8 +1,8 @@
 <?php 
-    require('../comicVine.php');
-    require('../mongo.php');
-    require('../init_twig.php');
-    require '../init_logger.php';
+    require_once('../comicVine.php');
+    require_once('../mongo.php');
+    require_once('../init_twig.php');
+    require_once '../init_logger.php';
 
     $volumes = [];
     $character_id = $_GET['character'];

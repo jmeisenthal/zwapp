@@ -29,8 +29,8 @@ abstract class Query
 		$this->children_prop = $children_prop;
 		// $this->query_data = self::ComicVine_KEY + $query_data;
 		$this->id = $id;
-        global $logger;
-        $this->logger = $logger;
+        // global $logger;
+        // $this->logger = $logger;
 	}
 
 	function build_query_url($a_field_list):string {
