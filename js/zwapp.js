@@ -76,17 +76,24 @@ $(function() {
 
 let action__close_dialog = function() {
     // $(this).closest('.modal-container').toggleClass('modal--expand modal--expand-start');
-
+     $(this).closest('.modal-container').toggleClass('modal--expand modal--expand-stop');
+        $(this).closest('.header-menu__group').removeClass('header-menu__group--show-dialog');
+   
     setTimeout(() => {
-            $(this).closest('.modal-container').addClass('modal--expand-stop');
-           $(this).closest('.modal-container').removeClass('modal--expand');
-    }, 0);
-    setTimeout(() => {
-     $(this).closest('.header-menu__group').removeClass('header-menu__group--show-dialog');
-    $(this).closest('.header-menu__pane').removeClass('header-menu__pane--hide-options');
-    $(this).closest('.modal-container').removeClass('modal--hide-close');
-            $(this).closest('.modal-container').removeClass('modal--expand-stop');
+        $(this).closest('.header-menu__pane').removeClass('header-menu__pane--hide-options');
+        $(this).closest('.modal-container').removeClass('modal--hide-close modal--expand-stop');
     }, 1000);
+
+    // setTimeout(() => {
+    //     $(this).closest('.modal-container').addClass('modal--expand-stop');
+    //     $(this).closest('.modal-container').removeClass('modal--expand');
+    //     $(this).closest('.header-menu__group').removeClass('header-menu__group--show-dialog');
+    // }, 0);
+    // setTimeout(() => {
+    //     $(this).closest('.header-menu__pane').removeClass('header-menu__pane--hide-options');
+    //     $(this).closest('.modal-container').removeClass('modal--hide-close');
+    //     $(this).closest('.modal-container').removeClass('modal--expand-stop');
+    // }, 5000);
 };
 
 let action__open_dialog = function() {

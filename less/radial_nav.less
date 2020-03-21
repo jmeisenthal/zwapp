@@ -34,52 +34,15 @@
 	transition-property: opacity;
 	transition-duration: 1s;
     padding: 0;
+
+    .media({&{
+        font-size: @media_vars[@icon-size-large-button];
+    }});
 	
 	&:focus {
 		outline: none;
 	}
 }
-
-// .radial_nav__button {
-// 	&:extend(.nav_button--theme all);
-// 	display: flex;
-//     // flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     // margin-left: auto;
-//     // margin-right: auto;	
-//  //    width: 2em;
-// 	// height: 2em;
-// 	// z-index: 10;
-// }
-
-// .radial_nav__button--back {
-// 	border-top-right-radius: 50%;
-// 	border-top-left-radius: 50%;
-// 	border-bottom-right-radius: 50%;
-// 	border-bottom-left-radius: 50%;
-
-// 	position: absolute;
-// 	transform: translateX(0);
-// 	margin-right: 0;
-
-// 	// margin-bottom: -100%;
-
-// 	// transform: translateY(100%) translateX(0);
-
-// 	transition-property: transform, margin-right;
-// 	transition-duration: 2s;
-
-// 	.radial_nav--state-initial & {
-// 		display: none;
-// 	}
-
-// 	.radial_nav--state-add-middle & {
-// 		// transform:  translateY(100%) translateX(-100%);
-// 		margin-right: 20px;
-// 		transform: translateX(-55%);
-// 	}
-// }
 
 .radial_nav__add_button {
 	&:extend(.nav_button--theme all);
@@ -98,53 +61,21 @@
 		opacity: 0;
 		visibility: 0;
 	}
-
-	// & i {	
-	// 	transform: rotate(0);
-	// 	transition-property: transform;
-	// 	transition-duration: 2s;
-	// }
 	
 	.nav-state--initial & {
 		&:extend(.dynamic-opacity all);
-		// opacity: 0.8;
-
-		// &:hover {
-		// 	opacity: 1;
-		// }
-	// 	// transition-property: border-bottom-width;
-	// 	// border-bottom-width: 0;
 	}
-	
-	// .nav-state--add & {
-	// 	border-top-right-radius: 50%;
-	// 	border-top-left-radius: 50%;
-	// 	border-bottom-right-radius: 50%;
-	// 	border-bottom-left-radius: 50%;
-	// 	& i {	
-	// 		transform: rotate(45deg);
-	// 	}
-	// }	
-
-	// .radial_nav--state-add-middle & {
-	// 	transition-property: transform;
-	// 	transform: translateX(55%);
-	// }
 }
 
 .radial_nav__choice {
 	position: absolute;
 	z-index: -1; // Make sure unseen button containers don't interfere with main nav button
-	// transition-property: transform;
-	// transition-duration: 2s;
-	// width: 25%;
-	// bottom: 0;
-	// left: 50%;
-	// padding-left: 84px + 35px;
-	
-	.radial_nav--state-initial & {
-		// display: none;
-	}
+
+    .media({&{
+        // padding-laft offsets the distance of choice button from the center
+        // half of nav button: @icon-size-large-button + @border-width_thick
+        padding-left: @media_vars[@icon-size-large-button] + @media_vars[@border-width_large];
+    }});
 
 	.speech-bubble {
 		display: none;
@@ -156,16 +87,26 @@
 }
 
 .radial_nav__choices{
-	// position: absolute;
 	z-index: 5;
 }
 
 .radial_nav__choice_button {
 	&:extend(.strip-button all);
-	// padding: 3px;
-	// margin-left: (84px - 50px)/2;
-	// margin-right: (84px - 50px)/2;
 	
+    .media({&{
+        margin-left: (84px - @media_vars[@button-img-size])/2; 
+        margin-right: (84px - @media_vars[@button-img-size])/2;
+
+        img, i {
+            height: @media_vars[@button-img-size];
+            width: @media_vars[@button-img-size];
+        }
+
+        i {
+            line-height: @media_vars[@button-img-size];
+        }
+    }});
+
 	img {
 		object-fit: contain;
 	}
@@ -173,37 +114,29 @@
 
 .radial_nav__back_button {
 	&:extend(.nav_button--theme all);
-	// &:extend(.strip-button all);
-	// border-color: @color_orange !important;
-	// background-color: @color_daffodil;
-	// display: flex;
- //    flex-direction: column;
- //    justify-content: center;
- //    align-items: center;
-    // margin-left: auto;
-    // margin-right: auto;	
-    // width: 2em;
-	// height: 2em;
-	// box-sizing: content-box;
-	// position: relative;
-	// z-index: 10;
 }
 
 .radial_nav__background {
-	width: 600px;
 	position:absolute;
 	bottom: 100%;
-	transform: translateY(50%) scale(0);
-	left: ~"calc(50% - 300px)";
+    transform: translateY(50%) scale(0);
 	z-index: -1;
 	opacity: 0;
 	// transition-property: opacity, transform;
 	transition-property: transform;
 	transition-duration: 2s;
 
+    .media({&{
+        width: @media_vars[@nav-background-width];
+        left: ~"calc(50% - " @media_vars[@nav-background-width]/2 ~")";
+
+    }});
+
 	.nav-state--add & {
 		opacity: 0.6;
-		transform: translateY(50%) scale(1);
+        .media({&{
+            transform: translateY(calc(35% + @media_vars[@nav-background-vert-offset])) scale(1);
+        }});
 
 		.ajax-loading& {
 			animation-name: nav-loading;
@@ -215,86 +148,49 @@
 	}
 }
 
-.background_loading {
-	animation-name: nav-loading;
-	animation-duration: 0.8s;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease-in-out;
-}
-
-@keyframes nav-loading {
-	0% { opacity: 0.2; }
-	30% { opacity: 0.6; }
-	50% { opacity: 0.8; }
-	70% { opacity: 0.6; }
-	100% { opacity: 0.2; }
-}
-
 //========================================
 //
 //	Responsive styles
 //	
 //====================
-.media({
-	// .radial_nav__button {
-	// 	border-width: @border-width_thick;
-	// 	&:hover, &:active {
-	// 		border-width: @border-width-hover_thick;
-	// 	}
-
-	// 	font-size: @icon-size-large-button;
-	// 	&:active {
-	// 		font-size: @icon-size-large-button-hover;
-	// 	}
+// .media({
+	// .nav_button--theme {
+	// 	font-size: @media_vars[@icon-size-large-button];
 	// }
 
 	// .radial_nav__choice {
 	// 	// padding-laft offsets the distance of choice button from the center
 	// 	// half of nav button: @icon-size-large-button + @border-width_thick
-	// 	padding-left: @icon-size-large-button + @border-width_thick;
+	// 	padding-left: @media_vars[@icon-size-large-button] + @media_vars[@border-width_large];
 	// }
 
 
-	// .radial_nav__choice_button {
-	// 	padding: @button-padding-small;
-	// 	margin-left: (84px - @button-img-size)/2; 
-	// 	margin-right: (84px - @button-img-size)/2;
+// 	.radial_nav__choice_button {
+// 		margin-left: (84px - @media_vars[@button-img-size])/2; 
+// 		margin-right: (84px - @media_vars[@button-img-size])/2;
 
-	// 	img {
-	// 		height: @button-img-size;
-	// 		width: @button-img-size;
-	// 	}
-	// }
-	.nav_button--theme {
-		font-size: @media_vars[@icon-size-large-button];
-		// &:active {
-		// 	font-size: @media_vars[@icon-size-large-button-hover];
-		// }
-	}
+// 		img, i {
+// 			height: @media_vars[@button-img-size];
+// 			width: @media_vars[@button-img-size];
+// 		}
 
-	.radial_nav__choice {
-		// padding-laft offsets the distance of choice button from the center
-		// half of nav button: @icon-size-large-button + @border-width_thick
-		padding-left: @media_vars[@icon-size-large-button] + @media_vars[@border-width_large];
-	}
+// 		i {
+// 			line-height: @media_vars[@button-img-size];
+// 		}
+// 	}
+// });
 
+.background_loading {
+    animation-name: nav-loading;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
 
-	.radial_nav__choice_button {
-		// Set width to be ~equal to the total height of button + label
-		// width: @media_vars[@button-img-size] + 2 * ()
-		margin-left: (84px - @media_vars[@button-img-size])/2; 
-		margin-right: (84px - @media_vars[@button-img-size])/2;
-
-		img, i {
-			height: @media_vars[@button-img-size];
-			width: @media_vars[@button-img-size];
-		}
-
-		i {
-			line-height: @media_vars[@button-img-size];
-		}
-	}
-});
-
-
-
+@keyframes nav-loading {
+    0% { opacity: 0.2; }
+    30% { opacity: 0.6; }
+    50% { opacity: 0.8; }
+    70% { opacity: 0.6; }
+    100% { opacity: 0.2; }
+}
