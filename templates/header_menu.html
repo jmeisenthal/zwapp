@@ -58,7 +58,7 @@
     </button>
     <div class="modal-container">
         <div class="modal">
-            <button type="button" class="modal__close">
+            <button type="button" class="modal__close button">
                 <i class="fas fa-times"></i>
             </button>
             <div class="header-menu__pane">
@@ -68,7 +68,7 @@
                </div>
                 <div class="header-menu__group">
                     {% include 'header_menu__option.html' with { id: 'button-origin', icon: 'bolt', text: 'Origin Story...'} %}
-                    {% include 'header_menu__dialog.html' with { title: 'About Zwapp!', img: '', svg: 'zwapp.svg', text: origin} %}
+                    {% include 'header_menu__dialog.html' with { title: 'About Zwapp!', img: 'img/doctor-doom.png', svg: '', text: origin} %}
                </div>
                <div class="header-menu__group">
                     {% include 'header_menu__option.html' with { id: 'button-bio', icon: 'mask', text: 'The man behind the mask...'} %}
