@@ -4,7 +4,7 @@
 
     // Get IP address of user
     function getUserIP() {    
-        foreach (array('HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_FORWARDED', 'HTTP_X_CLUSTER_CLIENT_IP', 'HTTP_FORWARDED_FOR', 'HTTP_FORWARDED', 'REMOTE_ADDR') as $key){
+        foreach (array('HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_FORWARDED', 'HTTP_X_CLUSTER_CLIENT_IP', 'HTTP_FORWARDED_FOR', 'HTTP_FORWARDED') as $key){
             if (array_key_exists($key, $_SERVER) === true){
                 foreach (explode(',', $_SERVER[$key]) as $ip){
                     $ip = trim($ip); // just to be safe
@@ -15,7 +15,7 @@
                 }
             }
         }
-        return null;
+        return $_SERVER['REMOTE_ADDR'];
 
       // if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
       //   $ip = $_SERVER['HTTP_CLIENT_IP'];
