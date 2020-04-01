@@ -1,4 +1,5 @@
 @import (reference) 'vars';
+@import 'media';
 
 // @fan-out_limit: 5;
 // @fan-out_offset: 180deg / (@fan-out_limit - 1);
@@ -64,3 +65,39 @@
 	}
 	.generate_fans();
 });
+
+
+@col_width_rule: {
+		width: 100*@count/12%;
+};
+
+.generate_cols_sm(@count: 12) when (@count > 0) {
+	.generate_cols_sm(@count - 1);
+	.media-small({
+		&--sm@{count} { @col_width_rule(); } 
+		});
+}
+
+.generate_cols_md(@count: 12) when (@count > 0) {
+	.generate_cols_md(@count - 1);
+	.media-medium({
+		&--md@{count} { @col_width_rule(); } 
+		});
+}
+
+.generate_cols_lg(@count: 12) when (@count > 0) {
+	.generate_cols_lg(@count - 1);
+	.media-large({
+		&--lg@{count} { @col_width_rule(); } 
+		});
+}
+.row {
+	&:extend(.flex-row);
+	flex-wrap: wrap;
+}
+.col {
+	&:extend(.flex-column);
+	.generate_cols_sm();	
+	.generate_cols_md();
+	.generate_cols_lg();
+}

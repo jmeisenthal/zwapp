@@ -1,0 +1,47 @@
+
+// @import 'atomic';
+// .media_chain(@root_chain: @media_rulesets) when (@root_chain[chain] = false) {
+// }
+// .media_chain(@root_chain: @media_rulesets) {
+// 	.foo {
+// 		myfoo: @root_chain[ruleset];
+// 	}
+// 	// .media_chain(@root_chain[chain]);
+// 	// if(@media_chain[ruleset] != false){
+// 	// @myruleset: @root_chain[ruleset];
+// 	// @myruleset();
+// 	// }
+// }
+// @media (-webkit-min-device-pixel-ratio: 2.1), (min-resolution: 201.6dpi){ 
+// 	#media_hi-res();
+// 	.media_chain(@media_rulesets)
+// 	// @media_vars:#media_hi-res.vars();
+// 	// #media_hi-res();
+// 		// @ruleset();		
+// }
+
+// #media_default();
+// // .media_chain(@media_rulesets);
+
+@screen-width-sm: 414px;
+@screen-width-md: 828px;
+@media-mobile: ~"(-webkit-min-device-pixel-ratio: 2) and (max-device-width: 414px)";
+.media-small(@ruleset) {
+    // @media only screen and (max-width: @screen-width-sm) {
+    // @media only screen and (min-width: @screen-width-sm) {
+        @ruleset();
+    // }
+}
+
+.media-medium(@ruleset) {
+    // @media only screen and (min-width: @screen-width-sm) and (max-width: @screen-width-md) {
+    @media only screen and (min-width: @screen-width-sm) {
+        @ruleset();
+    }
+}
+
+.media-large(@ruleset) {
+    @media only screen and (min-width: @screen-width-md) {
+        @ruleset();
+    }
+}

@@ -94,23 +94,13 @@ header {
         top: @media_vars[@layout-space-medium];
         bottom: @media_vars[@layout-space-medium];
         }});
-    width: 0;
-    height: 0;
     z-index: 0;
-    transition-property: opacity, left, bottom;
+    transition-property: opacity;//, left, bottom;
     transition-duration: 1s;
 
     .header-menu__group--show-dialog & {
         z-index: 200;
         opacity: 1;
-        .media({&{
-            width: calc(100% - @media_vars[@layout-space-medium] - @media_vars[@layout-space-medium]);
-            height: calc(100% - @media_vars[@layout-space-medium] - @media_vars[@layout-space-medium]);
-            left: @media_vars[@layout-space-medium];
-            bottom: @media_vars[@layout-space-medium];           
-            }});
-    transition-property: opacity, left, bottom;
-    transition-duration: 1s;
     }
 }
 .header-menu__dialog__title {
