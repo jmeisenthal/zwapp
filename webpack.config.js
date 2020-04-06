@@ -53,6 +53,7 @@ module.exports = {
       extractLess,
     new CopyPlugin([
         { from: './php/index.php'},
+        { from: './php/dialtest.php'},
         { from: './php/**/*'},
          { from: './img/*'},
          { from: './vendor/**/*'}

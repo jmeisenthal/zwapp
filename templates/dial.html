@@ -1,0 +1,22 @@
+<section class="dial" data-first="{{ first }}" data-last="{{ last }}" data-id="{{ id }}" data-name="{{ name }}">
+    <canvas id="dial__track" class="dial__track"></canvas>
+    <div class="dial__thumb"></div>
+    <div class="dial__content">
+        <div class="dial__content__external"></div>
+        <div class="dial__content_value">{{ first }}</div>
+    </div>
+    <script type="text/javascript">
+        var canvas = document.getElementById('dial__track');
+        // if (canvas.getContext) {
+            canvas.width = canvas.height = 240;
+            var ctx = canvas.getContext('2d');
+
+            ctx.arc(120,120,100,Math.PI/4, -Math.PI/4);
+            ctx.strokeStyle = "#381A3F";
+            ctx.lineWidth = 20;
+            ctx.lineCap = 'round';
+            ctx.stroke();
+            console.log("Do you see it?");
+        // }
+   </script>
+</section>

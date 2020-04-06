@@ -23,29 +23,7 @@
             {# {% include 'slide_button.html' with { id: 'button-origin', icon: 'meteor', text: 'Origin Story...'} %} #}
             {% include 'header_menu.html' %}
        </header>
-       <section class="details_pane">
-            <div class="row details_list">
-                <div class="detail">
-                    <div class="detail__name">Publisher</div>
-                    <div class="detail__value">Marvel</div>
-                </div>
-                <div class="detail">
-                    <div class="detail__name">Character</div>
-                    <div class="detail__value">Hulk</div>
-                </div>
-                <div class="detail">
-                    <div class="detail__name">Volume</div>
-                    <div class="detail__value">The Incredible Hulk</div>
-                </div>
-                <div class="detail">
-                    <div class="detail__name">Issue</div>
-                    <div class="detail__value">234</div>
-                </div>
-            </div>
-            <div class="details_pane__book">
-                <img height="100%" src="https://comicvine1.cbsistatic.com/uploads/scale_small/8/84205/3657120-%24_57.jpg">
-            </div>
-       </section>
+       {% include 'details.html' %}
         <main>
         </main>
         {% include 'radial_nav.html' with { state: 'initial' } %}

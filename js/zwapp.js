@@ -11,6 +11,7 @@ const STATE_INITIAL = 'nav-state--initial';
 const STATE_ADD_PUBLISHER = 'nav-state--add-publisher';
 const STATE_ADD_CHARACTER = 'nav-state--add-character';
 const STATE_ADD_VOLUME = 'nav-state--add-volume';
+const STATE_ADD_ISSUE = 'nav-state--add-issue';
 
 
 let states = [STATE_INITIAL];
@@ -72,6 +73,9 @@ $(function() {
     $('body').on('click', action__maybe_close_modal);
     $('.header-menu__option').on('click', action__open_dialog);
     $('.header-menu__dialog__title__back').on('click', action__close_dialog);
+    $('body').on('mousedown', '.dial', dial__move_start);
+    $('body').on('mousemove', '.dial', dial__move_drag);
+    $('body').on('mouseup', '.dial', dial__move_end);
 });
 
 let action__close_dialog = function() {
@@ -125,6 +129,7 @@ let action__add = function() {
 };
 
 let action__back = function() {
+    removeLastDetail();
     urls.pop();
     let oldState = states.pop();
 
@@ -187,15 +192,24 @@ let action__back = function() {
 let radial_nav__choice_buttonClick = function(e) {
     let nextState = null;
     let url = null;
-    let id = $(e.target).closest('button').data('id');
+    let button = $(e.target).closest('button');
+    let id = button.data('id');
+    let name = button.data('name');
     switch(states[states.length-1]) {
         case STATE_ADD_PUBLISHER: 
             nextState = STATE_ADD_CHARACTER;
             url = 'php/service/characters.php?publisher='+id;
+            addDetail("Publisher", name);
             break;
         case STATE_ADD_CHARACTER:
             nextState = STATE_ADD_VOLUME;
             url = 'php/service/volumes.php?character='+id;
+            addDetail("Character", name);
+            break;
+        case STATE_ADD_VOLUME:
+            nextState = STATE_ADD_ISSUE;
+            url = 'php/service/volumes.php?character='+id;
+            addDetail("Volume", name);
             break;
     }
     goToState(nextState, $(this), url);
@@ -231,3 +245,83 @@ let radial_nav__choice_buttonClick = function(e) {
     //     goToState(nextState, $(this), url+id);
     // });
 };
+
+let addDetail = function(name, value) {
+    let $detailsPane = $('.details_pane');
+    $detailsPane.removeClass("hidden");
+    let $list = $detailsPane.find('.details_list');
+    let $detail = $($detailsPane.find('._template').html());
+    $list.append($detail);
+    $detail.find('.detail__name').text(name);
+    $detail.find('.detail__value').text(value);
+}
+
+let removeLastDetail = function() {
+    let $details = $('.details_pane .details_list').find('.detail');
+    $details.last().remove();
+    if ($details.length <= 1) {
+        $('.details_pane').addClass('hidden');
+    }
+
+}
+
+// function drawDialTrack() {
+//     var canvas = document.getElementById('dial__track');
+//     if (canvas.getContext) {
+//         var ctx = canvas.getContext('2d');
+//         ctx.arc(120,120,120,Math.PI/4, -Math.PI/4);
+//         ctx.strokeStyle = "#381A3F";
+//         ctx.lineWidth = 20;
+//         ctx.lineCap = 'round';
+//         ctx.stroke();
+//     }
+// }
+// 
+
+let dial__move_start = function(e) {
+    dial__move(e);
+}
+
+let dial__move_drag = function(e) {
+    // dial__move(e);
+}
+
+let dial__move = function(e) {
+    let $self = $(e.target);
+    let $dial = $self.closest(".dial");
+    let dialOffset = $dial.offset();
+    let x = e.pageX - dialOffset.left - $dial.width()/2;
+    let y = -e.pageY + dialOffset.top + $dial.height()/2; 
+    console.log("Info: height:" + $dial.height() + ", width: " + $dial.width() + ", x: " + x + ", y: " + y);
+    let angle = Math.atan(y/x);
+    if (x < 0 && y > 0) {
+        angle = Math.PI + angle;
+    }
+    if (x < 0 && y < 0) {
+        angle = Math.PI + angle;
+    }
+    if (x > 0 && y < 0) {
+        angle = 2*Math.PI + angle;
+    }
+
+    // angle less than 45deg treated as 45deg
+    angle = Math.max(angle, Math.PI/4);
+    // angle greater than 315deg treated as 315deg:
+    angle = Math.min(angle, 1.75* Math.PI);
+
+    let fraction = (angle - Math.PI/4) / (1.5 * Math.PI);
+
+    console.log("Angle: " + angle/Math.PI/2*360 + ", fraction: " + fraction);
+
+    dial__setValue(fraction, $dial) ;
+}
+
+let dial__move_end = function() {
+
+}
+
+let dial__setValue = function(fraction, $dial) {
+    let angle = (fraction * 1.5 * Math.PI + Math.PI/4) * 180 / Math.PI;
+    let $thumb = $dial.find('.dial__thumb');
+    $thumb.css('transform', 'rotate(-'+angle+'deg)');
+}

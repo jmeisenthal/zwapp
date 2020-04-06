@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <link rel="shortcut icon" href="img/starburst-explosion.ico">
+        <title>{{ application }}</title>
+        {% block stylesheets %}
+            <link href="css/zwapp.css" rel="stylesheet"/>
+        {% endblock %}
+    </head>
+    <body>
+        foo
+        {% include 'dial.html' with { first: 1, last: 458, id:"4232", name: "Green Lantern"} %}
+        <p>bar</p>
+    </body>
+    <script type="text/javascript" src="main.js"></script>
+</html>
