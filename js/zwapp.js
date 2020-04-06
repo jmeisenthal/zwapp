@@ -76,6 +76,7 @@ $(function() {
     $('body').on('mousedown', '.dial', dial__move_start);
     $('body').on('mousemove', '.dial', dial__move_drag);
     $('body').on('mouseup', '.dial', dial__move_end);
+    $('body').on('mouseleave', '.dial', dial__move_end);
 });
 
 let action__close_dialog = function() {
@@ -279,11 +280,18 @@ let removeLastDetail = function() {
 // 
 
 let dial__move_start = function(e) {
+    let $self = $(e.target);
+    let $dial = $self.closest(".dial");
+    $dial.data('mouse_down', true);
     dial__move(e);
 }
 
 let dial__move_drag = function(e) {
-    // dial__move(e);
+    let $self = $(e.target);
+    let $dial = $self.closest(".dial");
+    if ($dial.data('mouse_down')) {
+        dial__move(e);        
+    }
 }
 
 let dial__move = function(e) {
@@ -294,13 +302,13 @@ let dial__move = function(e) {
     let y = -e.pageY + dialOffset.top + $dial.height()/2; 
     console.log("Info: height:" + $dial.height() + ", width: " + $dial.width() + ", x: " + x + ", y: " + y);
     let angle = Math.atan(y/x);
-    if (x < 0 && y > 0) {
+    if (x < 0 && y >= 0) {
         angle = Math.PI + angle;
     }
     if (x < 0 && y < 0) {
         angle = Math.PI + angle;
     }
-    if (x > 0 && y < 0) {
+    if (x >= 0 && y <= 0) {
         angle = 2*Math.PI + angle;
     }
 
@@ -316,8 +324,10 @@ let dial__move = function(e) {
     dial__setValue(fraction, $dial) ;
 }
 
-let dial__move_end = function() {
-
+let dial__move_end = function(e) {
+    let $self = $(e.target);
+    let $dial = $self.closest(".dial");
+    $dial.data('mouse_down', false);
 }
 
 let dial__setValue = function(fraction, $dial) {
