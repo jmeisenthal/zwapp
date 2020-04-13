@@ -139,55 +139,55 @@
 		/***************************************
 		* Get the top children of this document in sort order according to the children's collection
 		****************************************/
-		function getTopChildren($length = 9) {
-			$time1 = microtime(TRUE);
-			// $topChildren = [];
-			$this->logger->debug("getTopChildren...");
-			$childrenIds = array_keys($this->getChildren());
-			// $childrenIds = array_keys($this->getChildren());
-			// $childCollectionList = [];
-			// $count = count($childrenIds);
-			$isnull = is_null($childrenIds);
-			// $class = get_class($childrenIds);
-			// $methods = join(get_class_methods($class), ",");
-			$this->logger->debug("getTopChildren2: childrenIds: $isnull");
+        function getTopChildren($length = 9) {
+            $time1 = microtime(TRUE);
+            // $topChildren = [];
+            $this->logger->debug("getTopChildren...");
+            $childrenIds = array_keys($this->getChildren());
+            // $childrenIds = array_keys($this->getChildren());
+            // $childCollectionList = [];
+            // $count = count($childrenIds);
+            $isnull = is_null($childrenIds);
+            // $class = get_class($childrenIds);
+            // $methods = join(get_class_methods($class), ",");
+            $this->logger->debug("getTopChildren2: childrenIds: $isnull");
 
-			// // Get the collection list for the child type
-			// TODO: ideally more seamless, but for now, do via a switch statement
-			$children_prop = $this->cv_query->children_prop;
-			$childCollection;
-			$time2 = microtime(TRUE);
+            // // Get the collection list for the child type
+            // TODO: ideally more seamless, but for now, do via a switch statement
+            $children_prop = $this->cv_query->children_prop;
+            $childCollection;
+            $time2 = microtime(TRUE);
 
-			switch ($children_prop) {
-				case 'characters':
-					$childCollection = Collection::getCharacters();
-					break;
+            switch ($children_prop) {
+                case 'characters':
+                    $childCollection = Collection::getCharacters();
+                    break;
                 case 'volumes':
                     $childCollection = Collection::getVolumes();
                     break;
 
-				default:
-					throw new \Exception("No handler for child prop \"$children_prop\"");
-					// throw new \Exception("No handler for child prop \"{$this->cv_query->children_prop}\"");
-					# code...
-					break;
-			}
-			$time3 = microtime(TRUE);
-			$this->logger->debug("getTopChildren3");
+                default:
+                    throw new \Exception("No handler for child prop \"$children_prop\"");
+                    // throw new \Exception("No handler for child prop \"{$this->cv_query->children_prop}\"");
+                    # code...
+                    break;
+            }
+            $time3 = microtime(TRUE);
+            $this->logger->debug("getTopChildren3");
 
-			$topChildren = array_slice($childCollection->getTopMatches($childrenIds), 0, $length);
-			$this->logger->debug("getTopChildren4");
+            $topChildren = array_slice($childCollection->getTopMatches($childrenIds), 0, $length);
+            $this->logger->debug("getTopChildren4");
 
-			$time4 = microtime(TRUE);
+            $time4 = microtime(TRUE);
 
-			$diff1 = $time2 - $time1;
-			$diff2 = $time3 - $time2;
-			$diff3 = $time4 - $time3;
-			$this->logger->debug("getChildren: $diff1");
-			$this->logger->debug("getCharacters: $diff2");
-			$this->logger->debug("getTopMatches: $diff3");
-			return $topChildren;
-		}
+            $diff1 = $time2 - $time1;
+            $diff2 = $time3 - $time2;
+            $diff3 = $time4 - $time3;
+            $this->logger->debug("getChildren: $diff1");
+            $this->logger->debug("getCharacters: $diff2");
+            $this->logger->debug("getTopMatches: $diff3");
+            return $topChildren;
+        }
 	}
 
 	class Collection {
@@ -370,12 +370,52 @@
             return $character_volumes;
         }
 
+        public static function getVolumeIssue(String $volume_id, $issue_number) {
+            global $logger;
+
+            // Get volume from DB:
+            $volume = self::getVolumes()->getMap()[$volume_id];
+
+            $issues = self::getClient()->zwapp->issues;
+
+            // Does volume have issues?
+            if (!$volume->has_issues) {
+                // Get issues from CV:
+                $cv_volume = new ComicVine\VolumeDetail($volume_id);
+                $cv_issues = $cv_volume->issues;
+
+                // Add each issue to issues DB collection:
+                foreach($cv_issues as $cv_issue) {
+                    $id = "4000-".$cv_issue->id;
+                    $issues->updateOne(
+                        ['_id' => $id], 
+                        [
+                            '$set' => [
+                                'name' => $cv_issue->name,
+                                'issue_number' => $cv_issue->issue_number,
+                                'volume' => $volume_id
+                            ]
+                        ],
+                        [upsert => true]
+                    );
+                }
+                // Set hasIssues flag on volume
+                $volume->has_issues = true;
+            }
+            // Get issue id from issues collection by its issue_number & volume
+            $issue = $issues->findOne([volume=>$volume_id, issue_number=>$issue_number]);
+
+            // var_dump($issue);
+            // return issue as a document
+            return new Document(new ComicVine\Issue($issue->_id), $issues, null);
+        }
+
 		public static function getPublishers() {
-			$queryLambda = function($id) { 
-				return new ComicVine\Publisher($id); 
-			};
-			$getChildId = function($child) { return "4005-" . $child->id; };
-			return new Collection($queryLambda, self::getClient()->zwapp->publishers, $getChildId);
+            $queryLambda = function($id) { 
+                return new ComicVine\Publisher($id); 
+            };
+            $getChildId = function($child) { return "4005-" . $child->id; };
+            return new Collection($queryLambda, self::getClient()->zwapp->publishers, $getChildId);
 		}
 
         public static function getCharacters() {

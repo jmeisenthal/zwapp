@@ -151,6 +151,36 @@ class Volume extends Query
 /**
  * 
  */
+class VolumeDetail extends Query
+{
+	
+	function __construct($id)
+	{
+		parent::__construct('volume', "issues", null, $id);
+	}
+
+	public function __get($prop) {
+		if ($prop == 'icon_url') {
+			return $this->get_result()->image->icon_url;
+		}
+		return parent::__get($prop);
+	}
+
+	public static function getVolumeIssues($id) {
+		$issuesMap = [];
+		$volume = new VolumeDetail($id);
+		$issues = $volume->issues;
+		foreach($issues as $issue) {
+			$issuesMap[$issue->issue_number] = $issue;
+		}
+
+		return $issuesMap;
+	}
+}
+
+/**
+ * 
+ */
 class Issue extends Query
 {
 	

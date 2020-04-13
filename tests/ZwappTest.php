@@ -7,7 +7,7 @@ include_once('vendor/autoload.php');
 include_once('php/mongo.php');
 include_once('php/comicVine.php');
 include_once('php/crawler.php');
-// require_once 'php/mongo.php';
+require_once 'php/mongo.php';
 
 use PHPUnit\Framework\TestCase;
 
@@ -139,6 +139,21 @@ final class ZwappTest extends TestCase {
 		$this->assertEquals($actual_url, $expected_url, "The 'icon_url' property should be '$expected_url'; instead it is '$actual_url'");
         $publisher = $black_panther->publisher;
         $this->assertNotNull($publisher, "No publisher found for character Black Panther");
+	}
+
+	public function testGetVolumeIssues() {
+		$thor = "4050-2294";
+		// $volume = new ComicVine\VolumeDetail($thor);
+		// $this->assertNotNull($volume);
+		// $issues = $volume->issues;
+		$volume = new ComicVine\Volume($thor);
+		// var_dump($volume);
+		$last = $volume->last_issue->issue_number;
+		// print_r("Last issue: $last");
+		$issues = ComicVine\VolumeDetail::getVolumeIssues($thor);
+		$this->assertEquals(293, count($issues));
+		$this->assertEquals($last, $issues[$last]->issue_number);
+//		var_dump($issues);
 	}
 
 	// public function testGetTopCharacters() {

@@ -334,4 +334,23 @@ let dial__setValue = function(fraction, $dial) {
     let angle = (fraction * 1.5 * Math.PI + Math.PI/4) * 180 / Math.PI;
     let $thumb = $dial.find('.dial__thumb');
     $thumb.css('transform', 'rotate(-'+angle+'deg)');
+
+    let issue = Math.round(fraction * ($dial.data('last') - $dial.data('first'))) + $dial.data('first');
+    $dial.find('.dial__content__value').text(issue);
+
+    let volume = "4050-" + $dial.data('id');
+    $.ajax({
+        url: "php/service/issue.php?volume="+volume+"&issue_number="+issue,
+    })
+    .done(function(response) {
+        console.log("Response: " + response);
+        $dial.find(".dial__content__external").html(response);
+    })
+    .fail(function(xhr) {
+        console.log("error: " + xhr.responseText);
+    })
+    .always(function(xhr) {
+        console.log("complete response \"" + xhr + "\"");
+    });
+
 }
