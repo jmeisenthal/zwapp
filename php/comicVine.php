@@ -191,7 +191,7 @@ class Issue extends Query
 
 	public function __get($prop) {
 		if ($prop == 'icon_url') {
-			return $this->get_result()->image->icon_url;
+			return $this->get_result()->image->small_url;
 		}
 		return parent::__get($prop);
 	}

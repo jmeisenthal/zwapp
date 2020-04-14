@@ -51,6 +51,16 @@
 	transition-duration: 1s;
 }
 
+.fade {
+    opacity: 0 !important;
+    transition-property: opacity;
+    transition-duration: 1s;
+
+    &--in {
+        opacity: 1 !important;
+    }
+}
+
 .hidden {
     display: none !important;
 }

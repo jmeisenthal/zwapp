@@ -45,13 +45,19 @@ function goToState(state, $this, url = null, service = null) {
     $radial_nav.addClass('ajax-loading');
     let servicePromise = service != null ? service : makeServicePromise(url);
     servicePromise.then((response) => {
-        let backButton = $('#back_button_template').html();
+        let backButton = state != STATE_ADD_ISSUE ? $('#back_button_template').html() : '';
         $('.radial_nav__choices').html(response + backButton);
 
         // Call via setTimeout with no <nav class=​"radial_nav nav-state--add-publisher fan--out">​…​</nav>​delay so render cycle completes first, allowing transistion to trigger:
         setTimeout(() => {
             $radial_nav.removeClass('ajax-loading');
             $radial_nav.addClass('fan--out');
+ 
+            if (state == STATE_ADD_ISSUE) {
+                let $dial = $('.radial_nav__choices').find('.dial');
+                dial__setValue(0, $dial);
+                $dial.addClass('fade--in');
+            }
         }, 0);
 
         states.push(state);
@@ -209,7 +215,7 @@ let radial_nav__choice_buttonClick = function(e) {
             break;
         case STATE_ADD_VOLUME:
             nextState = STATE_ADD_ISSUE;
-            url = 'php/service/volumes.php?character='+id;
+            url = 'php/service/issues.php?volume='+id;
             addDetail("Volume", name);
             break;
     }
@@ -338,7 +344,8 @@ let dial__setValue = function(fraction, $dial) {
     let issue = Math.round(fraction * ($dial.data('last') - $dial.data('first'))) + $dial.data('first');
     $dial.find('.dial__content__value').text(issue);
 
-    let volume = "4050-" + $dial.data('id');
+    let volume = $dial.data('id');
+    // let volume = "4050-" + $dial.data('id');
     $.ajax({
         url: "php/service/issue.php?volume="+volume+"&issue_number="+issue,
     })

@@ -47,7 +47,7 @@
 		}
 
         function __set($property, $value) {
-            $logger->debug("Setting $property to $value");
+            // $logger->debug("Setting $property to $value");
             $this->collection->updateOne(['_id' => $this->id],['$set'=>array($property=>$value)]);
         }
 

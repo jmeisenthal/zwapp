@@ -1,4 +1,4 @@
-<section class="dial" data-first="{{ first }}" data-last="{{ last }}" data-id="{{ id }}" data-name="{{ name }}">
+<section class="dial fade" data-first="{{ first }}" data-last="{{ last }}" data-id="{{ id }}" data-name="{{ name }}">
     <canvas id="dial__track" class="dial__track"></canvas>
     <div class="dial__thumb"></div>
     <div class="dial__content">
@@ -7,11 +7,13 @@
     </div>
     <script type="text/javascript">
         var canvas = document.getElementById('dial__track');
+        let dial = document.getElementsByClassName('dial')[0];
+        let size = dial.offsetWidth;
         // if (canvas.getContext) {
-            canvas.width = canvas.height = 240;
+            canvas.width = canvas.height = size;
             var ctx = canvas.getContext('2d');
 
-            ctx.arc(120,120,100,Math.PI/4, -Math.PI/4);
+            ctx.arc(size/2,size/2,(size/2-20),Math.PI/4, -Math.PI/4);
             ctx.strokeStyle = "#381A3F";
             ctx.lineWidth = 20;
             ctx.lineCap = 'round';

@@ -20,6 +20,8 @@
         $volume_formatted['id'] = $volume->id; 
         $volume_formatted['name'] = $volume->name;
         $volume_formatted['icon_url'] = $volume->icon_url;
+        $volume_formatted['first'] = $volume->first_issue->issue_number;
+        $volume_formatted['last'] = $volume->last_issue->issue_number;
         $volume_formatted['type'] = "volume";
 
         $twig->load($template)->display($volume_formatted);          

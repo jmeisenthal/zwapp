@@ -2,9 +2,12 @@
 @import 'atomic';
 
 .dial {
-    height: 240px;
-    width: 240px;
-    position: relative;
+    @dial_size: 300px;
+    height: @dial_size;
+    width: @dial_size;
+    position: absolute;
+    bottom: calc(50% - @dial_size/2);
+    left: calc(50% - @dial_size/2);
 
     &__track {
         position: absolute;
@@ -14,7 +17,7 @@
 //        height: 100%;
         // border-radius: 50%;
         // border: solid 20px @color_dark-purple;
-        background-color: @color_cambridge-blue;
+        // background-color: @color_cambridge-blue;
         // box-sizing: border-box;
     }
 
@@ -46,11 +49,13 @@
 
     &__content {
         &:extend(.flex-column);
+        @content_width: @dial_size/3;
+        @content_height: @dial_size/2;
         position: absolute;
-        left: calc(50% - 60px);
-        top: calc(50% - 60px);
-        width: 120px;
-        height: 120px;
+        left: calc(50% - @content_width/2);
+        top: calc(50% - @content_height/2);
+        width: @content_width;
+        height: @content_height;
         justify-content: space-between;
         align-items: center;
         background-color: @color_white;
@@ -59,11 +64,11 @@
         &::before {
             font-family: 'Font Awesome 5 Free';
             font-weight: 900;
-            font-size: 90px;
+            font-size: 46px;
             margin: auto;
             position: absolute;
-            // top: 10px;
-             left: 15px;
+            left: calc(50% - 23px);
+            top: calc(50% - 26px);
             // right: 10px;
             // bottom: 10px;
             content: "\f666";
@@ -80,6 +85,12 @@
         }
 
         &__external {
+            z-index: 100;
+
+            & img {
+                height: 80%;
+                object-fit: contain;
+            }
         }
     }
 }
