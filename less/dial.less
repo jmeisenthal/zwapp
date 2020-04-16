@@ -2,12 +2,16 @@
 @import 'atomic';
 
 .dial {
-    @dial_size: 300px;
-    height: @dial_size;
-    width: @dial_size;
     position: absolute;
-    bottom: calc(50% - @dial_size/2);
-    left: calc(50% - @dial_size/2);
+
+    .media({&{
+        @dial_size: @media_vars[@dial_size];
+        height: @dial_size;
+        width: @dial_size;
+        bottom: calc(50% - @dial_size/2);
+        left: calc(50% - @dial_size/2);
+
+        }});
 
     &__track {
         position: absolute;
@@ -23,21 +27,28 @@
 
     &__thumb {
         position: absolute;
-        width: ~'calc(50% - 5px)';
-        height: 20px;
-        // background-color: @color_daffodil;
-        // border-radius: 50%;
-        // border: solid 5px @color_orange;
-        top: ~'calc(50% - 10px)';
-        right: 5px;
+        .media({&{
+            @thumb_size: @media_vars[@dial__thumb_size];
+            @track_width: @media_vars[@dial__track_width];
+            @overflow: (@thumb_size - @track_width)/2;
+            width: ~'calc(50% - ' @overflow ~')';
+            height: @track_width;
+            // background-color: @color_daffodil;
+            // border-radius: 50%;
+            // border: solid 5px @color_orange;
+            top: ~'calc(50% - '  @overflow*2 ~')';
+            right: @overflow;
+        }});
         transform-origin: left center;
         transform: rotate(-45deg);
 
         &::after {
             content: '';
             position: absolute;
-            width: 30px;
-            height: 30px;
+            .media({&{
+                width: @media_vars[@dial__thumb_size];
+                height: @media_vars[@dial__thumb_size];       
+            }});
             top: 0;
             right: 0;
             background-color: @color_daffodil;
@@ -49,13 +60,17 @@
 
     &__content {
         &:extend(.flex-column);
-        @content_width: @dial_size/3;
-        @content_height: @dial_size/2;
         position: absolute;
-        left: calc(50% - @content_width/2);
-        top: calc(50% - @content_height/2);
-        width: @content_width;
-        height: @content_height;
+        .media({&{
+            @dial_size: @media_vars[@dial_size];
+            @content_width: @dial_size/3;
+            @content_height: @dial_size/2;
+            left: calc(50% - @content_width/2);
+            top: calc(50% - @content_height/2);
+            width: @content_width;
+            height: @content_height;
+
+            }});
         justify-content: space-between;
         align-items: center;
         background-color: @color_white;

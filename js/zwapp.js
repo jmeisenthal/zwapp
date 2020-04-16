@@ -4,7 +4,7 @@ require('../less/zwapp.less');
 require('@fortawesome/fontawesome-free/css/all.css');
 // require('../node_modules/normalize.css/normalize.css');
 var $ = require('jquery');
-// var _ = require('lodash');
+var _ = require('lodash');
 
 
 const STATE_INITIAL = 'nav-state--initial';
@@ -344,8 +344,30 @@ let dial__setValue = function(fraction, $dial) {
     let issue = Math.round(fraction * ($dial.data('last') - $dial.data('first'))) + $dial.data('first');
     $dial.find('.dial__content__value').text(issue);
 
-    let volume = $dial.data('id');
+    // let volume = $dial.data('id');
     // let volume = "4050-" + $dial.data('id');
+    // $.ajax({
+    //     url: "php/service/issue.php?volume="+volume+"&issue_number="+issue,
+    // })
+    // .done(function(response) {
+    //     console.log("Response: " + response);
+    //     $dial.find(".dial__content__external").html(response);
+    // })
+    // .fail(function(xhr) {
+    //     console.log("error: " + xhr.responseText);
+    // })
+    // .always(function(xhr) {
+    //     console.log("complete response \"" + xhr + "\"");
+    // });   
+    
+    dial__update_issue();
+    // _.throttle(_.bind(dial__update_issue, this, $dial, issue), 500);
+}
+
+let dial__update_issue = _.throttle(function() {
+    let $dial = $('.dial');
+    let issue = $dial.find('.dial__content__value').text();
+    let volume = $dial.data('id');
     $.ajax({
         url: "php/service/issue.php?volume="+volume+"&issue_number="+issue,
     })
@@ -358,6 +380,5 @@ let dial__setValue = function(fraction, $dial) {
     })
     .always(function(xhr) {
         console.log("complete response \"" + xhr + "\"");
-    });
-
-}
+    });   
+}, 500);
