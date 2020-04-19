@@ -9,7 +9,7 @@
 	global $logger;
 	$logger->debug("service/characters publisher: $publisher_id");
 	if (isset($publisher_id) && $publisher_id) {
-	$logger->debug("service/characters publisher: 2");
+		$logger->debug("service/characters publisher: 2");
 		$characters = ZwappMongo\Collection::getPublisherCharacters($publisher_id);
 		// $publisher = ZwappMongo\Collection::getPublishers()->getMap()[$publisher_id];
 		// $characters = $publisher->getTopChildren();

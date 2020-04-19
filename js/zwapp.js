@@ -80,9 +80,12 @@ $(function() {
     $('.header-menu__option').on('click', action__open_dialog);
     $('.header-menu__dialog__title__back').on('click', action__close_dialog);
     $('body').on('mousedown', '.dial', dial__move_start);
+    $('body').on('touchstart', '.dial', dial__move_start);
     $('body').on('mousemove', '.dial', dial__move_drag);
+    $('body').on('touchmove', '.dial', dial__move_drag);
     $('body').on('mouseup', '.dial', dial__move_end);
     $('body').on('mouseleave', '.dial', dial__move_end);
+    $('body').on('touchend', '.dial', dial__move_end);
 });
 
 let action__close_dialog = function() {
@@ -286,6 +289,7 @@ let removeLastDetail = function() {
 // 
 
 let dial__move_start = function(e) {
+    e.preventDefault();
     let $self = $(e.target);
     let $dial = $self.closest(".dial");
     $dial.data('mouse_down', true);
@@ -293,6 +297,7 @@ let dial__move_start = function(e) {
 }
 
 let dial__move_drag = function(e) {
+    e.preventDefault();
     let $self = $(e.target);
     let $dial = $self.closest(".dial");
     if ($dial.data('mouse_down')) {
@@ -331,6 +336,7 @@ let dial__move = function(e) {
 }
 
 let dial__move_end = function(e) {
+    e.preventDefault();
     let $self = $(e.target);
     let $dial = $self.closest(".dial");
     $dial.data('mouse_down', false);

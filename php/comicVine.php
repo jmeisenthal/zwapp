@@ -113,12 +113,31 @@ class Publisher extends Query
 /**
  * 
  */
+class PublisherDetail extends Query
+{
+	
+	function __construct($id)
+	{
+		parent::__construct('publisher', "characters", null, $id);
+	}
+
+	public function __get($prop) {
+		if ($prop == 'icon_url') {
+			return $this->get_result()->image->icon_url;
+		}
+		return parent::__get($prop);
+	}
+}
+
+/**
+ * 
+ */
 class Character extends Query
 {
 	
 	function __construct($id)
 	{
-        parent::__construct('character', "image,id,name,publisher,site_detail_url", NULL, $id);
+        parent::__construct('character', "image,id,name,site_detail_url", NULL, $id);
 	}
 
 	public function __get($prop) {

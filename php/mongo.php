@@ -325,23 +325,86 @@
             $logger->debug("getPublisherCharacters 1");
             $all_characters = self::getCharacters()->getMap();
 
-            $publisher_character_ids = array_keys($publisher->getListProp("characters","4005-"));
+            $publisher_characters = $publisher->getListProp("characters","4005-");
+            $publisher_character_ids = array_keys($publisher_characters);
             $test = count($publisher_character_ids);
             $test2 = $publisher_character_ids[0];
             $logger->debug("getPublisherCharacters 2. Checking for $test characters, the first of which is $test2 ...");
             $collection = self::getClient()->zwapp->characters;
             $cursor = $collection->aggregate([['$match' => ['_id' => ['$in' => $publisher_character_ids]]], ['$sort' => ['sort' => 1]]]);
+            $cursor_array = $cursor->toArray();
+        
+            // Some publishers have no popular characters. The following adds random characters to the DB to allow the UI to function:
+            if (count($cursor_array) == 0) {
+                $logger->debug("getPublisherCharacters() none of the ".count($publisher_characters)." characters are in the DB");
+                foreach($publisher_characters as $id => $character) {
+                    $collection->updateOne(
+                        ['_id' => $id], 
+                        [
+                            '$set' => [
+                                'name' => $character->name,
+                                'publisher' => $publisher_id
+                            ]
+                        ],
+                        [upsert => true]
+                    );
+                }
+                $cursor = $collection->aggregate([['$match' => ['_id' => ['$in' => $publisher_character_ids]]], ['$sort' => ['sort' => 1]]]);
+                $cursor_array = $cursor->toArray();
+            }
 
+            // Return the top characters for this publisher:
             $publisher_characters = [];
 
             $count = 0;
-            foreach($cursor as $character_doc) {
+            foreach($cursor_array as $character_doc) {
                 if ($count++ >= $length) {
                     break;
                 }
                 $publisher_characters[] = $all_characters[$character_doc->_id];
             }
+
+
             return $publisher_characters;
+
+           //              global $logger;
+           //  $publisher = self::getPublishers()->getMap()[$publisher_id];
+           //  $all_characters = self::getCharacters()->getMap();
+           //  $publisher_characters = $publisher->getListProp("characters","4005-");
+           //  $publisher_character_ids = array_keys($publisher_characters);
+           //  $characters = self::getClient()->zwapp->characters;
+           //  $cursor = $characters->aggregate([['$match' => ['_id' => ['$in' => $publisher_character_ids]]], ['$sort' => ['sort' => 1]]]);
+           //  $cursor_array = $cursor->toArray();
+           //  // $characters = self::getClient()->zwapp->characters;
+           //  // $cursor = $characters->aggregate([['$match' => ['publisher' => $publisher_id]]]);
+           //  $count = count($cursor_array);
+           //  $logger->debug("getPublisherCharacters() characters count: $count");
+           //  if ($count == 0) {
+           //      $cv_publisher = new ComicVine\PublisherDetail($publisher_id);
+           //      $cv_characters = $cv_publisher->characters;
+
+           //      $count = count($cv_characters);
+           //      // $count = count($publisher_characters);
+           //      $logger->debug("getPublisherCharacters() cv_characters count: $count");
+           //      // var_dump($cv_characters[0]);
+           //      foreach($cv_characters as $cv_character) {
+           //          $id = "4005-".$cv_character->id;
+           //          $characters->updateOne(
+           //              ['_id' => $id], 
+           //              [
+           //                  '$set' => [
+           //                      'name' => $cv_character->name,
+           //                      'publisher' => $publisher_id
+           //                  ]
+           //              ],
+           //              [upsert => true]
+           //          );
+           //      }
+
+           //      $publisher->hasCharacters = true;
+           //      $cursor = $characters->aggregate([['$match' => ['publisher' => $publisher_id]], ['$sort' => ['sort' => 1]]]);
+           // }
+
         }
 
         public static function getCharacterVolumes(String $character_id, $length = 9) {
