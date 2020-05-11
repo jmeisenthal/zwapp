@@ -1,0 +1,71 @@
+@import 'vars';
+@import 'atomic';
+
+@bubble-fg: @font-color_default;
+@bubble-fg_esc: escape("@{bubble-fg}");
+@bubble-bg: @color_white;
+@bubble-bg_esc: escape("@{bubble-bg}");
+@bubble-arrow-size: 15px;
+@bubble-arrow-uri: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.59607 142.21489" version="1.1" width="@{bubble-arrow-size}" height="@{bubble-arrow-size}" style="enable-background:new"><g transform="translate(-43.070584,-42.704396)"><path style="fill:@{bubble-bg_esc};stroke:none;stroke-width:21;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 46.869047,181.33929 C 100.54167,88.357143 56.696428,43.755952 56.696428,43.755952 l 91.470232,0.755952 C 147.84193,170.44874 84.311133,162.58719 46.869047,181.33929 Z" /><path style="fill:none;stroke:@{bubble-fg_esc};stroke-width:21;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 148.16666,44.511904 C 147.84193,170.44874 84.311133,162.58719 46.869047,181.33929 100.54167,88.357143 56.696428,43.755952 56.696428,43.755952" /></g></svg>';
+@bubble-up-arrow-uri: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.59607 142.21489" version="1.1" width="@{bubble-arrow-size}" height="@{bubble-arrow-size}" style="enable-background:new"><g transform="matrix(1,0,0,-1,-43.070584,180)"><path style="fill:@{bubble-bg_esc};stroke:none;stroke-width:21;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 46.869047,181.33929 C 100.54167,88.357143 56.696428,43.755952 56.696428,43.755952 l 91.470232,0.755952 C 147.84193,170.44874 84.311133,162.58719 46.869047,181.33929 Z" /><path style="fill:none;stroke:@{bubble-fg_esc};stroke-width:21;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 148.16666,44.511904 C 147.84193,170.44874 84.311133,162.58719 46.869047,181.33929 100.54167,88.357143 56.696428,43.755952 56.696428,43.755952" /></g></svg>';
+
+.speech-bubble {
+	&:extend(.font-title, .padding_small all);
+	background-color: @bubble-bg;
+	color: @bubble-fg;
+	border-style: solid;
+	position: absolute;
+	bottom: 100%;
+    white-space: nowrap;
+    margin-bottom: @bubble-arrow-size - 3px; // bubble-arrow height - border-width
+    border-radius: 6px;
+
+    .media({&{		
+        font-size: @media_vars[@font-size-title-small];
+        border-width: @media_vars[@border-width_medium];
+    }});
+
+	&::after {
+		content: url(@bubble-arrow-uri);
+
+        width: @bubble-arrow-size;
+        height: @bubble-arrow-size;
+        bottom: -@bubble-arrow-size + 1px;
+        position: absolute;
+		right: 15%;
+    }
+    
+    &--up {
+        bottom: unset;
+        top: 100%;
+        margin-bottom: unset;
+        margin-top: @bubble-arrow-size - 3px; // bubble-arrow height - border-width
+
+        &::after {
+            content: url(@bubble-up-arrow-uri);
+            bottom: unset;
+            top: -@bubble-arrow-size + 1px;
+        }
+    }
+}
+
+.bubble-arrow__stroke {
+	stroke: @bubble-fg;
+}
+.bubble-arrow__fill {
+	fill: @bubble-bg;
+}
+.media({
+	.bubble-arrow__stroke {
+		stroke-width: 3;
+	}
+
+
+	// .strip-button {
+	// 	// border-radius: 3px;
+
+	// 	&:hover {
+	// 		border-width: @border-width-hover_default;
+	// 	}
+	// }
+});

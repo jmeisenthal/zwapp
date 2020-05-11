@@ -48,7 +48,6 @@ function goToState(state, $this, url = null, service = null) {
         let backButton = state != STATE_ADD_ISSUE ? $('#back_button_template').html() : '';
         $('.radial_nav__choices').html(response + backButton);
 
-        // Call via setTimeout with no <nav class=​"radial_nav nav-state--add-publisher fan--out">​…​</nav>​delay so render cycle completes first, allowing transistion to trigger:
         setTimeout(() => {
             $radial_nav.removeClass('ajax-loading');
             $radial_nav.addClass('fan--out');
@@ -388,3 +387,13 @@ let dial__update_issue = _.throttle(function() {
         console.log("complete response \"" + xhr + "\"");
     });   
 }, 500);
+
+$(function() {
+// display suggestions after a delay unless an action is taken first
+var menuClicked = false;
+var addClicked = false;
+
+setTimeout(function() {}, 3000);
+
+// Sugestions fade once action is taken    
+})
