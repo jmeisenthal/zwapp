@@ -41,6 +41,15 @@
 	position: relative !important;
 }
 
+.position-absolute {
+	position: absolute !important;
+}
+
+.justify-right {
+    &:extend(.position-absolute);
+    right: 0 !important;
+}
+
 .animation-init-duration {
 	animation-duration: @animation-init-duration;
 }

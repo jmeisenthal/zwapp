@@ -392,8 +392,25 @@ $(function() {
 // display suggestions after a delay unless an action is taken first
 var menuClicked = false;
 var addClicked = false;
+$('.header-menu__button').one('click', function() {
+    menuClicked = true;
+    $('#header-menu-hint').removeClass('fade--in');
 
-setTimeout(function() {}, 3000);
+});
+$('#nav-add').one('click', function() {
+    addClicked = true;
+    $('#nav-add-hint').removeClass('fade--in');
+});
+
+setTimeout(function() {
+    if (!menuClicked) {
+        $('#header-menu-hint').addClass('fade--in');
+    }
+
+    if (!addClicked) {
+        $('#nav-add-hint').addClass('fade--in');
+    }
+}, 3000);
 
 // Sugestions fade once action is taken    
 })
