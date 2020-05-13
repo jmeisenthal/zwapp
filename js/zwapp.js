@@ -45,7 +45,7 @@ function goToState(state, $this, url = null, service = null) {
     $radial_nav.addClass('ajax-loading');
     let servicePromise = service != null ? service : makeServicePromise(url);
     servicePromise.then((response) => {
-        let backButton = state != STATE_ADD_ISSUE ? $('#back_button_template').html() : '';
+        let backButton = $('#back_button_template').html();
         $('.radial_nav__choices').html(response + backButton);
 
         setTimeout(() => {

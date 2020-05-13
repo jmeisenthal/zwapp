@@ -22,7 +22,7 @@
 // 		opacity: 1;
 // 	}
 // }
-@fan-out_limit: 10;
+@fan-out_limit: 12;
 @fan-out_offset: 30deg;
 
 .fan {
@@ -49,7 +49,7 @@
 	.generate_fans(@count - 1);
 
 	@angle: @fan-out_offset * (@count + 0.5);
-	:not(.ajax-loading).fan--out .fan:nth-child(@{count}) {
+	:not(.ajax-loading).fan--out .fan:nth-child(@{count}),:not(.ajax-loading).fan--out .fan.fan--@{count} {
 		transform: rotate(-@angle);
 
 		.fan__inner {
