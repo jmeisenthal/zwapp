@@ -179,7 +179,7 @@
     &:extend(.font-size-content all);
     &:extend(.margin-medium all);
     &:extend(.padding-medium all);
-    &:extend(.flex-column all);
+    &:extend(.flex-row all);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -231,12 +231,12 @@
             content: ": ";
         }    
         text-align: right;   
-        width: 40%;
+        width: 6em;
     }
 
     &__value {
         &:extend(.padding-left-small all);
-        width: 60%;
+        // width: 60%;
         // white-space: nowrap;
     }
 }

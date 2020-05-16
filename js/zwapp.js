@@ -389,28 +389,19 @@ let dial__update_issue = _.throttle(function() {
 }, 500);
 
 $(function() {
-// display suggestions after a delay unless an action is taken first
-var menuClicked = false;
-var addClicked = false;
-$('.header-menu__button').one('click', function() {
-    menuClicked = true;
-    $('#header-menu-hint').removeClass('fade--in');
+var ignoreHint = false;
+// When hint targets clicked, dismiss hints if already visible; ignore showing them if not yet visible
+$('.header-menu__button,#nav-add').one('click', function() {
+    ignoreHint = true;
+    $('.js_hint').removeClass('fade--in');
 
 });
-$('#nav-add').one('click', function() {
-    addClicked = true;
-    $('#nav-add-hint').removeClass('fade--in');
-});
-
+// Show hint after 3 seconds of inaction:
 setTimeout(function() {
-    if (!menuClicked) {
-        $('#header-menu-hint').addClass('fade--in');
+    if (!ignoreHint) {
+        $('.js_hint').addClass('fade--in');
     }
 
-    if (!addClicked) {
-        $('#nav-add-hint').addClass('fade--in');
-    }
 }, 3000);
 
-// Sugestions fade once action is taken    
 })
