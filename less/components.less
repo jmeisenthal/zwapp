@@ -2,6 +2,8 @@
 @import 'atomic';
 @import 'layout';
 @import 'bubble';
+@import 'choice_detail';
+
 .definition {
     &:extend(.margin-top-medium);
     &:extend(.margin-left-medium);
@@ -238,5 +240,28 @@
         &:extend(.padding-left-small all);
         // width: 60%;
         // white-space: nowrap;
+    }
+}
+
+.placeholder-spinner {
+    &::before {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        font-size: 46px;
+        margin: auto;
+        position: absolute;
+        left: calc(50% - 23px);
+        top: calc(50% - 26px);
+        content: "\f666";
+        animation-duration: 0.7s;
+        animation-timing-function: steps(8);
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation-play-state: running;
+        animation-name: fa-spin;
+        opacity: 0.3;
+        color: @color_yale-blue;
     }
 }

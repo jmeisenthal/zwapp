@@ -1,9 +1,9 @@
 <section class="dial fade" data-first="{{ first }}" data-last="{{ last }}" data-id="{{ id }}" data-name="{{ name }}">
     <canvas id="dial__track" class="dial__track"></canvas>
     <div class="dial__thumb"></div>
-    <div class="dial__content">
-        <div class="dial__content__external"></div>
-        <div class="dial__content__value">{{ first }}</div>
+    <div class="choice_detail js_select_choice strip-button placeholder-spinner">
+        <!-- <div class="dial__content__external"></div>
+        <div class="dial__content__value">{{ first }}</div> -->
     </div>
     <script type="text/javascript">
         let canvas = document.getElementById('dial__track');

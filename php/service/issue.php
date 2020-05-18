@@ -8,11 +8,12 @@
     $issue_number = $_GET['issue_number'];
     $issue = ZwappMongo\Collection::getVolumeIssue($volume_id, $issue_number);
 
-    $template = $_GET['template'] ?: 'dial__content__external.html';
+    $template = $_GET['template'] ?: 'dial__content.html';
     $issue_formatted = [];
     
     $issue_formatted['id'] = $issue->id; 
     $issue_formatted['name'] = $issue->name;
+    $issue_formatted['number'] = $issue_number;
     $issue_formatted['icon_url'] = $issue->icon_url;
     $issue_formatted['type'] = "issue";
     // print_r("Name: ".($issue->name));

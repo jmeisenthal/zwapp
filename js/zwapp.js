@@ -12,6 +12,7 @@ const STATE_ADD_PUBLISHER = 'nav-state--add-publisher';
 const STATE_ADD_CHARACTER = 'nav-state--add-character';
 const STATE_ADD_VOLUME = 'nav-state--add-volume';
 const STATE_ADD_ISSUE = 'nav-state--add-issue';
+const STATE_ISSUE_ACTION = 'nav-state--issue-action';
 
 
 let states = [STATE_INITIAL];
@@ -62,7 +63,6 @@ function goToState(state, $this, url = null, service = null) {
         states.push(state);
         urls.push(url);
     });
-
 }
 
 function makePublishersPromise() {
@@ -72,6 +72,8 @@ function makePublishersPromise() {
 $(function() {
     $('body').on('click', '.radial_nav__add_button', action__add);
     $('body').on('click', '.radial_nav__back_button', action__back);
+    $('body').on('click', '.js_choice_detail,.js_select_choice', action__select_choice);
+ //   $('body').on('webkitmouseforcedown', '.radial_nav__choice_button:not(.radial_nav__back_button)', radial_nav__choice_buttonClick)
     $('body').on('click', '.radial_nav__choice_button:not(.radial_nav__back_button)', radial_nav__choice_buttonClick)
     $('.header-menu__button').on('click', action__toggle_menu);
     $('.modal__close').on('click', action__toggle_menu);
@@ -137,8 +139,10 @@ let action__add = function() {
     goToState(STATE_ADD_PUBLISHER, $(this), null, initialPromise);
 };
 
-let action__back = function() {
+let action__back = function(e) {
+    e.preventDefault();
     removeLastDetail();
+    $('.js_select_choice').addClass('hidden');
     urls.pop();
     let oldState = states.pop();
 
@@ -184,6 +188,18 @@ let action__back = function() {
     // }
 };
 
+let radial_nav__choice_buttonClick = function(e) {
+    e.preventDefault();
+    let $button = $(e.target).closest('button');
+    let id = $button.data('id');
+    let name = $button.data('name');
+    let $img = $button.find('img').clone();
+    $('.choice_detail__image').html($img);
+    $('.choice_detail__value').html(name);
+    $('.choice_detail').data('id', id);
+    $('.choice_detail').data('name', name);
+    $('.choice_detail').removeClass('hidden');
+}
 /**
  * What happens when a nav choice is selected:
  *   1a. The other nav choices fade.
@@ -198,10 +214,13 @@ let action__back = function() {
  * @param  {[type]} e [description]
  * @return {[type]}   [description]
  */
-let radial_nav__choice_buttonClick = function(e) {
+let action__select_choice = function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log("action__select_choice");
     let nextState = null;
     let url = null;
-    let button = $(e.target).closest('button');
+    let button = $(e.target).closest('.js_select_choice');
     let id = button.data('id');
     let name = button.data('name');
     switch(states[states.length-1]) {
@@ -220,8 +239,15 @@ let radial_nav__choice_buttonClick = function(e) {
             url = 'php/service/issues.php?volume='+id;
             addDetail("Volume", name);
             break;
+        case STATE_ADD_ISSUE:
+            nextState = STATE_ISSUE_ACTION;
+            url = 'php/service/issue_action.php?issue='+id;
+            addDetail("Issue", name);
+            break;
     }
+    
     goToState(nextState, $(this), url);
+    $('.js_select_choice').addClass('hidden');
     // let $radial_nav = $(this).closest('.radial_nav');
     // let $button = $(this).closest('button');
     // let $choice = $button.closest('.radial_nav__choice');
@@ -305,6 +331,7 @@ let dial__move_drag = function(e) {
 }
 
 let dial__move = function(e) {
+    console.log("dial__move");
     let $self = $(e.target);
     let $dial = $self.closest(".dial");
     let dialOffset = $dial.offset();
@@ -347,7 +374,7 @@ let dial__setValue = function(fraction, $dial) {
     $thumb.css('transform', 'rotate(-'+angle+'deg)');
 
     let issue = Math.round(fraction * ($dial.data('last') - $dial.data('first'))) + $dial.data('first');
-    $dial.find('.dial__content__value').text(issue);
+    // $dial.find('.dial__content__value').text(issue);
 
     // let volume = $dial.data('id');
     // let volume = "4050-" + $dial.data('id');
@@ -365,20 +392,27 @@ let dial__setValue = function(fraction, $dial) {
     //     console.log("complete response \"" + xhr + "\"");
     // });   
     
-    dial__update_issue();
+    dial__update_issue(issue);
     // _.throttle(_.bind(dial__update_issue, this, $dial, issue), 500);
 }
 
-let dial__update_issue = _.throttle(function() {
+let dial__update_issue = _.throttle(function(issue) {
     let $dial = $('.dial');
-    let issue = $dial.find('.dial__content__value').text();
+    // let issue = $dial.find('.dial__content__value').text();
     let volume = $dial.data('id');
+    // let $button = $dial.find('.js_select_choice');
+    // $button.data('id', issue);
+    // $button.data('name', '#'+issue); 
     $.ajax({
         url: "php/service/issue.php?volume="+volume+"&issue_number="+issue,
     })
     .done(function(response) {
         console.log("Response: " + response);
-        $dial.find(".dial__content__external").html(response);
+        let $dial__content = $dial.find(".choice_detail");
+        $dial__content.html(response);
+        let $value = $dial__content.find('.choice_detail__value');
+        $dial__content.data('id', $value.data('id'));
+        $dial__content.data('name', $value.data('name'));
     })
     .fail(function(xhr) {
         console.log("error: " + xhr.responseText);
