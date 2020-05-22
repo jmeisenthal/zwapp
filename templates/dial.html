@@ -6,21 +6,21 @@
         <div class="dial__content__value">{{ first }}</div> -->
     </div>
     <script type="text/javascript">
+    {
         let canvas = document.getElementById('dial__track');
         let dial = document.getElementsByClassName('dial')[0];
         let thumb = document.getElementsByClassName('dial__thumb')[0];
         let size = dial.offsetWidth;
         let lineWidth = thumb.offsetHeight;
-        // if (canvas.getContext) {
-            canvas.width = canvas.height = size;
-            var ctx = canvas.getContext('2d');
+        canvas.width = canvas.height = size;
+        var ctx = canvas.getContext('2d');
 
-            ctx.arc(size/2,size/2,(size/2-lineWidth),Math.PI/4, -Math.PI/4);
-            ctx.strokeStyle = "#381A3F";
-            ctx.lineWidth = lineWidth;
-            ctx.lineCap = 'round';
-            ctx.stroke();
-            console.log("Do you see it?");
-        // }
+        ctx.arc(size/2,size/2,(size/2-lineWidth),Math.PI/4, -Math.PI/4);
+        ctx.strokeStyle = "#381A3F";
+        ctx.lineWidth = lineWidth;
+        ctx.lineCap = 'round';
+        ctx.stroke();
+        console.log("Do you see it?");
+    }
    </script>
 </section>

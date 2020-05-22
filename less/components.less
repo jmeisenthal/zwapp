@@ -265,3 +265,29 @@
         color: @color_yale-blue;
     }
 }
+
+.issue_action {
+    position: absolute;
+    left: 50%;
+    bottom: 35%;
+    transform: translateX(-50%);
+}
+
+.zwapp-button {
+    &:extend(.border--default all, .padding-medium all, .margin-medium);
+    position: relative;
+    background-color: transparent;
+
+    &::before {
+        content: '';
+        &:extend(.border--solid,.border-width_medium all);
+        border-color: @color_orange;
+        background-color: @color_daffodil;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
