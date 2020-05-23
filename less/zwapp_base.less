@@ -1,5 +1,6 @@
 @import 'vars';
 @import 'atomic';
+@import 'media';
 
 html {
 	.font-title;
@@ -8,6 +9,12 @@ html {
 	background-repeat: repeat;
 	// background-size: cover;
 	color: @font-color_default;
+
+	// Set rem for responsiveness
+	font-size: @rem-default;
+	@media @media-mobile {
+		font-size: @rem-mobile;
+	}
 }
 
 button {

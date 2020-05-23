@@ -75,6 +75,8 @@ $(function() {
  //   $('body').on('webkitmouseforcedown', '.radial_nav__choice_button:not(.radial_nav__back_button)', radial_nav__choice_buttonClick)
     $('body').on('click', '.radial_nav__choice_button:not(.radial_nav__back_button)', radial_nav__choice_buttonClick);
     $('body').on('dblclick', '.radial_nav__choice_button:not(.radial_nav__back_button)', action__select_choice);
+ //   $('body').on('touchstart', '.radial_nav__choice_button:not(.radial_nav__back_button)', action__start_select_choice);
+ //   $('body').on('touchend', '.radial_nav__choice_button:not(.radial_nav__back_button)', action__stop_select_choice);
     $('.header-menu__button').on('click', action__toggle_menu);
     $('.modal__close').on('click', action__toggle_menu);
     $('body').on('click', action__maybe_close_modal);
@@ -188,6 +190,30 @@ let radial_nav__choice_buttonClick = function(e) {
     $('.choice_detail').data('id', id);
     $('.choice_detail').data('name', name);
     $('.choice_detail').removeClass('hidden');
+}
+
+let action__start_select_choice = function(e) {
+    e.preventDefault();
+    let $target = $(e.target);
+    $target.data('timeTouchStarted',true);
+
+    setTimeout(function() {
+        if (!$target.data('timeTouchCancelled')) {
+            action__select_choice(e);
+            $target.data('timeTouchStarted',false);
+        } else {
+            $target.data('timeTouchCancelled',false);
+        }
+    }, 3000);
+}
+
+let action__stop_select_choice = function(e) {
+    e.preventDefault();
+    let $target = $(e.target);
+
+    if ($target.data('timeTouchStarted')) {
+        $target.data('timeTouchCancelled', true);
+    }
 }
 /**
  * What happens when a nav choice is selected:
