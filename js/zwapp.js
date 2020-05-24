@@ -192,29 +192,29 @@ let radial_nav__choice_buttonClick = function(e) {
     $('.choice_detail').removeClass('hidden');
 }
 
-let action__start_select_choice = function(e) {
-    e.preventDefault();
-    let $target = $(e.target);
-    $target.data('timeTouchStarted',true);
+// let action__start_select_choice = function(e) {
+//     e.preventDefault();
+//     let $target = $(e.target);
+//     $target.data('timeTouchStarted',true);
 
-    setTimeout(function() {
-        if (!$target.data('timeTouchCancelled')) {
-            action__select_choice(e);
-            $target.data('timeTouchStarted',false);
-        } else {
-            $target.data('timeTouchCancelled',false);
-        }
-    }, 3000);
-}
+//     setTimeout(function() {
+//         if (!$target.data('timeTouchCancelled')) {
+//             action__select_choice(e);
+//             $target.data('timeTouchStarted',false);
+//         } else {
+//             $target.data('timeTouchCancelled',false);
+//         }
+//     }, 3000);
+// }
 
-let action__stop_select_choice = function(e) {
-    e.preventDefault();
-    let $target = $(e.target);
+// let action__stop_select_choice = function(e) {
+//     e.preventDefault();
+//     let $target = $(e.target);
 
-    if ($target.data('timeTouchStarted')) {
-        $target.data('timeTouchCancelled', true);
-    }
-}
+//     if ($target.data('timeTouchStarted')) {
+//         $target.data('timeTouchCancelled', true);
+//     }
+// }
 /**
  * What happens when a nav choice is selected:
  *   1a. The other nav choices fade.
@@ -238,6 +238,7 @@ let action__select_choice = function(e) {
     let button = $(e.target).closest('.js_select_choice,button');
     let id = button.data('id');
     let name = button.data('name');
+    var img_url;
     switch(states[states.length-1]) {
         case STATE_ADD_PUBLISHER: 
             nextState = STATE_ADD_CHARACTER;
@@ -256,8 +257,12 @@ let action__select_choice = function(e) {
             break;
         case STATE_ADD_ISSUE:
             nextState = STATE_ISSUE_ACTION;
-            url = 'php/service/issue_action.php?issue='+id+'&name='+name;
+            var $dial = button.closest('.dial');
+            var volumeName = $dial.data('name');
+            url = 'php/service/issue_action.php?issue='+id+'&name='+name+'&volume_name='+volumeName;
             addDetail("Issue", name);
+            img_url = button.find('img').prop('src');
+            addDetailImg(img_url);
             break;
     }
     
@@ -304,6 +309,12 @@ let addDetail = function(name, value) {
     $list.append($detail);
     $detail.find('.detail__name').text(name);
     $detail.find('.detail__value').text(value);
+}
+
+let addDetailImg = function(img_url) {
+    let $detailsPane = $('.details_pane');
+    let $detailsPaneBook = $detailsPane.find('.details_pane__book');
+    $detailsPaneBook.append('<img src="'+img_url+'">');
 }
 
 let removeLastDetail = function() {

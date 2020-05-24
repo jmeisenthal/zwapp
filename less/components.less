@@ -196,17 +196,23 @@
     }
 
     &__book {
-        &:extend(.margin-top-small);
+        // &:extend(.margin-top-small);
         height: 150px;
         align-self: center;
         text-align: center;
+        margin-left: 2rem;
 
         @media @media-mobile {
             height: 250px;
         }
 
+        img {
+            height: 100%;
+        }
+
         &:empty {
             height: 0;
+            margin-left: 0;
         }
     }
 }
@@ -267,10 +273,13 @@
 }
 
 .issue_action {
+    &:extend(.flex-row);
     position: absolute;
     left: 50%;
     bottom: 35%;
     transform: translateX(-50%);
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .zwapp-button {

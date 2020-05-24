@@ -201,11 +201,17 @@
 
 	// Hi Res Mobile:
 	// Select media on hi-res (DPR) combined with small device width:;
-	@media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 414px) { 
+	// @media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 414px) { 
+	// 	@media_vars: @media_hi-res;
+	// 	// #media_hi-res();
+   	// 	@ruleset();		
+    // }
+    
+    @media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 2) and (orientation : portrait) {
 		@media_vars: @media_hi-res;
 		// #media_hi-res();
    		@ruleset();		
-	}
+    }
 }
 
 // .hi-res-mobile(@rule) {

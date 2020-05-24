@@ -1,14 +1,20 @@
 .choice_detail {
 	&:extend(.flex-column);
 	position: absolute;
+	@choice_detail_width: @dial_size/3;
+	@choice_detail_height: @dial_size/2;
+	left: calc(50% - @choice_detail_width/2);
+	top: calc(50% - @choice_detail_height/2);
+	width: @choice_detail_width;
+	height: @choice_detail_height;
 	.media({&{
-		@dial_size: @media_vars[@dial_size];
-		@content_width: @dial_size/3;
-		@content_height: @dial_size/2;
-		left: calc(50% - @content_width/2);
-		top: calc(50% - @content_height/2);
-		width: @content_width;
-		height: @content_height;
+		// @dial_size: @media_vars[@dial_size];
+		// @content_width: @dial_size/3;
+		// @content_height: @dial_size/2;
+		// left: calc(50% - @content_width/2);
+		// top: calc(50% - @content_height/2);
+		// width: @content_width;
+		// height: @content_height;
 		font-size: @media_vars[@font-size-title-medium];
 		// &__image {
 		// 	height: @dial_size/3 - 2*(4px + 3px); // Account for strip button padding & border
@@ -22,11 +28,16 @@
 
 	&__image {
 		z-index: 100;
-		height: calc(100% - 1.6em);
+		height: @choice_detail_width; // square image by default
+		// height: calc(100% - 1.6em);
 		& img {
             height: 100%;
             max-width: 100%;
 			object-fit: contain;
+		}
+
+		&--book {
+			height: calc(100% - 1.6em);
 		}
 	}
 

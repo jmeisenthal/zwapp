@@ -25,7 +25,8 @@
 
 @screen-width-sm: 414px;
 @screen-width-md: 828px;
-@media-mobile: ~"(-webkit-min-device-pixel-ratio: 2) and (max-device-width: 414px)";
+// @media-mobile: ~"(-webkit-min-device-pixel-ratio: 2) and (max-device-width: 414px)";
+@media-mobile: ~"(min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 2) and (orientation : portrait)";
 .media-small(@ruleset) {
     // @media only screen and (max-width: @screen-width-sm) {
     // @media only screen and (min-width: @screen-width-sm) {

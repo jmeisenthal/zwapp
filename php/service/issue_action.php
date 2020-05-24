@@ -5,10 +5,9 @@
     require_once '../init_logger.php';
 
     $template = $_GET['template'] ?: 'issue_action.html';
-    $issue_formatted = ['id'        =>  $_GET['id'],
-                        'name'      =>  $_GET['name'],
-                        'icon_url'  =>  $_GET['icon_url'],
-                        'number'    =>  $_GET['number']
+    $issue_formatted = ['id'            =>  $_GET['id'],
+                        'name'          =>  $_GET['name'],
+                        'volume_name'   =>  $_GET['volume_name']
                     ];
     
 
