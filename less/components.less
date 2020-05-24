@@ -118,6 +118,44 @@
     }
 }
 
+.container-modal-dialog {
+    &:extend(.modal-container all);
+    // z-index: 10;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+}
+
+.modal-dialog {
+    &:extend(.modal all, .flex-column all);
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    .modal--show &{
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.dialog-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 0.5rem;
+    opacity: 0.6;
+
+    &::before {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+      
+        content: '\f00d'
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
 
 .strip-button {
 	&:extend(.border--default all, .padding_small all);
@@ -300,4 +338,13 @@
         bottom: 0;
         z-index: -1;
     }
+}
+
+.thanks-dialog {
+    position: absolute;
+    padding: 3rem;
+    background-color: @color_white;
+    color: @color_black;
+    font-size: 2rem;
+    z-index: 100;
 }

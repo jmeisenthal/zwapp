@@ -90,6 +90,8 @@ $(function() {
     $('body').on('mouseleave', '.dial', dial__move_end);
     $('body').on('touchend', '.dial', dial__move_end);
     $('body').on('click', '.js_select_choice', action__select_choice);
+    $('body').on('click', '.zwapp-button', show_thanks_dialog);
+    $('.modal-dialog').on('click', action_dismiss_dialog);
 });
 
 let action__close_dialog = function() {
@@ -453,6 +455,23 @@ let dial__update_issue = _.throttle(function(issue) {
         console.log("complete response \"" + xhr + "\"");
     });   
 }, 500);
+
+let show_thanks_dialog = function() {
+    $('.container-modal-dialog').addClass('modal--show')
+}
+
+let action_dismiss_dialog = function(e) {
+    var shouldDismiss;
+    if ($(e.target).closest('.dialog-close').length) {
+        shouldDismiss = true;
+    } else {
+       shouldDismiss = !$(e.target).closest('.thanks-dialog').length
+    }
+
+    if (shouldDismiss) {
+        $('.container-modal-dialog').removeClass('modal--show') 
+    }
+}
 
 $(function() {
 var ignoreHint = false;
