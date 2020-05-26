@@ -43,6 +43,9 @@
         <span class="definition__content">Comic provides vast amounts of data on comic books available via their web API.</span>
     </div>
 {% endset %}
+{% set phone %}
+    Remember rotary phones? They're a rare sight today, but they were an ubiquitous household appliance during the golden age of comics! Notice the particular circular pattern used throughout Zwapp? It is an affordance indended to remind you of those days of yester-year!
+{% endset %}
 {% set contact %}
     Please get in touch!
     <div class="definition">
@@ -84,6 +87,10 @@
                     {% include 'header_menu__option.html' with { id: 'button-bio', icon: 'mask', text: 'The man behind the mask...'} %}
                     {% include 'header_menu__dialog.html' with { title: 'A Little Bit About Me', img: 'img/Josh Profile sqr.jpg', svg: '', text: bio} %}
                </div>
+               <div class="header-menu__group">
+                    {% include 'header_menu__option.html' with { id: 'button-phone', icon: 'phone', text: 'Thinking about the Bat-Phone?'} %}
+                    {% include 'header_menu__dialog.html' with { title: 'The User Interface is Phone-ey', img: 'img/retro-telephone.png', svg: '', text: phone} %}
+                </div>
                 <div class="header-menu__group">
                     {% include 'header_menu__option.html' with { id: 'button-arch', icon: 'atom', text: 'Notes on architecture...'} %}
                     {% include 'header_menu__dialog.html' with { title: 'Architectures and Libraries I Used', img: '', svg: 'arch_logos.svg', text: arch} %}
