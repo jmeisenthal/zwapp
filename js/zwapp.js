@@ -65,6 +65,24 @@ function goToState(state, $this, url = null, service = null) {
     });
 }
 
+function init_hint(hintID) {
+    var ignoreHint = false;
+    // When hint targets clicked, dismiss hints if already visible; ignore showing them if not yet visible
+    $('body').one('click', '.js_hint_' + hintID + '_target', function() {
+        ignoreHint = true;
+        $('.js_hint_' + hintID).removeClass('fade--in');
+    
+    });
+    // Show hint after 3 seconds of inaction:
+    setTimeout(function() {
+        if (!ignoreHint) {
+            $('.js_hint_' + hintID).addClass('fade--in');
+        }
+    
+    }, 3000);
+    
+}
+
 function makePublishersPromise() {
     return makeServicePromise('php/service/publishers.php');
 }
@@ -140,7 +158,12 @@ let action__toggle_menu = function() {
     $('.modal-container').toggleClass('modal--show');
 };
 
+var hint2Initialized = false;
 let action__add = function() {
+    if (!hint2Initialized) {
+        init_hint('2');
+        hint2Initialized = true;
+    }
     goToState(STATE_ADD_PUBLISHER, $(this), null, initialPromise);
 };
 
@@ -181,8 +204,11 @@ let action__back = function(e) {
     });
 };
 
+var js_hint_3_dismissed = false;
+var js_hint_4_dismissed = false;
+
 let radial_nav__choice_buttonClick = function(e) {
-    e.preventDefault();
+    // e.preventDefault();
     let $button = $(e.target).closest('button');
     let id = $button.data('id');
     let name = $button.data('name');
@@ -192,6 +218,11 @@ let radial_nav__choice_buttonClick = function(e) {
     $('.choice_detail').data('id', id);
     $('.choice_detail').data('name', name);
     $('.choice_detail').removeClass('hidden');
+
+    if (!js_hint_3_dismissed) {
+        init_hint('3');
+        js_hint_3_dismissed = true;
+    }
 }
 
 // let action__start_select_choice = function(e) {
@@ -233,7 +264,7 @@ let radial_nav__choice_buttonClick = function(e) {
  */
 let action__select_choice = function(e) {
     e.preventDefault();
-    e.stopPropagation();
+    // e.stopPropagation();
     console.log("action__select_choice");
     let nextState = null;
     let url = null;
@@ -256,6 +287,10 @@ let action__select_choice = function(e) {
             nextState = STATE_ADD_ISSUE;
             url = 'php/service/issues.php?volume='+id;
             addDetail("Volume", name);
+            if (!js_hint_4_dismissed) {
+                init_hint('4');
+                js_hint_4_dismissed = true;
+            }
             break;
         case STATE_ADD_ISSUE:
             nextState = STATE_ISSUE_ACTION;
@@ -474,19 +509,20 @@ let action_dismiss_dialog = function(e) {
 }
 
 $(function() {
-var ignoreHint = false;
-// When hint targets clicked, dismiss hints if already visible; ignore showing them if not yet visible
-$('.header-menu__button,#nav-add').one('click', function() {
-    ignoreHint = true;
-    $('.js_hint').removeClass('fade--in');
+    init_hint('1');
+// var ignoreHint = false;
+// // When hint targets clicked, dismiss hints if already visible; ignore showing them if not yet visible
+// $('.js_hint_1_target').one('click', function() {
+//     ignoreHint = true;
+//     $('.js_hint_1').removeClass('fade--in');
 
-});
-// Show hint after 3 seconds of inaction:
-setTimeout(function() {
-    if (!ignoreHint) {
-        $('.js_hint').addClass('fade--in');
-    }
+// });
+// // Show hint after 3 seconds of inaction:
+// setTimeout(function() {
+//     if (!ignoreHint) {
+//         $('.js_hint_1').addClass('fade--in');
+//     }
 
-}, 3000);
+// }, 3000);
 
 })

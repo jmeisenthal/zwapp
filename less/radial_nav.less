@@ -77,13 +77,16 @@
         padding-left: @media_vars[@icon-size-large-button] + @media_vars[@border-width_large];
     }});
 
-	.speech-bubble {
-		display: none;
-	}
+	// &:not(:nth-child(3)) .speech-bubble {
+	// 	display: none!important;
+	// }
+	// // .speech-bubble {
+	// 	display: none;
+	// }
 
-	&:hover:not(:focus) .speech-bubble {
-		display: block;
-	}
+	// &:hover:not(:focus) .speech-bubble {
+	// 	display: block;
+	// }
 
 	&--top {
 		z-index: 1;
